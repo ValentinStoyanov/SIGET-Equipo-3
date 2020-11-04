@@ -1,0 +1,24 @@
+-------------------------------------------------------------------------------
+Test set: es.uclm.esi.RunCucumberTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 12.938 s <<< FAILURE! - in es.uclm.esi.RunCucumberTest
+el cliente llama al saludo  Time elapsed: 4.494 s  <<< ERROR!
+org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8080/tareas/saludo/": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+Caused by: java.net.ConnectException: Connection refused: connect
+
+Buen Login  Time elapsed: 2.136 s  <<< ERROR!
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8080/api/auth/signin/": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+Caused by: java.net.ConnectException: Connection refused: connect
+
+Mal Login  Time elapsed: 2.067 s  <<< ERROR!
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8080/api/auth/signin/": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+Caused by: java.net.ConnectException: Connection refused: connect
+
+Mal Login 2  Time elapsed: 2.075 s  <<< ERROR!
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8080/api/auth/signin/": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+Caused by: java.net.ConnectException: Connection refused: connect
+
+Mal Login 3  Time elapsed: 2.074 s  <<< ERROR!
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8080/api/auth/signin/": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+Caused by: java.net.ConnectException: Connection refused: connect
+

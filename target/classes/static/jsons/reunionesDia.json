@@ -1,0 +1,31 @@
+{
+	"dia" : 26,
+	"mes" : 10,
+	"ano" : 2020,
+	"reuniones" : {
+		"0001" : {
+			"id": 0001,
+			"titulo": "Frontend",
+			"hora":"11:30",
+			"duracion":90,
+			"asistentes": ["Jesus Cabanero","Victor Ramirez","German Rolando","Fatima Sanchez","Angel Villaseñor","Edilberto Pozo"],
+			"descripcion":"Una reunion para determinar el diseno del frontend"
+		},
+		"0002" : {
+			"id": 0002,
+			"titulo": "daily",
+			"hora":"22:00",
+			"duracion":15,
+			"asistentes": ["Jesus Cabanero","Victor Ramirez","German Rolando","Fatima Sanchez","Angel Villaseñor","Edilberto Pozo"],
+			"descripcion":"Reunion daily para comentar el estado del proyecto"},
+		},
+		"0003" : {
+			"id": 0003,
+			"titulo": "Revision del Sprint",
+			"hora":"16:50",
+			"duracion":120,
+			"asistentes": ["Jesus Cabanero","Victor Ramirez","German Rolando","Fatima Sanchez","Angel Villaseñor","Edilberto Pozo"],
+			"descripcion":"Reunion para ver los resultados del sprint"
+		}
+	}
+}
