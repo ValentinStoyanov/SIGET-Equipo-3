@@ -15,29 +15,63 @@ import io.cucumber.java.en.When;
 public class ModificarReunionStepDefinitions extends SpringIntegrationTest {
 	 
     ResponseEntity<String> response ;
-    String url = DEFAULT_URL + "api/auth/signin/";
+    String url = DEFAULT_URL + "reunion/modificar/";
     Map<String, String> params = new HashMap<String, String>();
     Integer codigo;
     
-    @When("Hago login con {string} y {string}")
-    public void hago_login_con_y(String string, String string2) {
-    	params.put("username", string);
-    	params.put("password", string2);
-    	try {
-        	response = restTemplate.postForEntity(url, params, String.class);
-        	codigo = response.getStatusCode().value();
-        	}catch(HttpClientErrorException e) {
-        		codigo = e.getRawStatusCode();
-        	}
-    	//System.out.println(string+" y "+string2+" = "+codigo.toString());
+    
+    @When("Modifico la reunion {int} con el token de usuario {string}")
+    public void modifico_la_reunion_con_el_token_de_usuario(Integer int1, String string) {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
     }
-    @Then("el codigo de respuesta debe ser {int}")
-    public void el_codigo_de_respuesta_debe_ser(Integer int1) {
-    	assertEquals(int1, codigo);
+
+    @When("cambio el titulo a {string}")
+    public void cambio_el_titulo_a(String string) {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
     }
-    @Then("el codigo de respuesta no debe ser {int}")
-    public void el_codigo_de_respuesta_no_debe_ser(Integer int1) {
-    	assertNotEquals(int1, codigo);
+    @When("cambio la fecha a {string}")
+    public void cambio_la_fecha_a(String string) {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
     }
+    @When("cambio la hora a {string}")
+    public void cambio_la_hora_a(String string) {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+    @When("cambio los asistentes a {string}")
+    public void cambio_los_asistentes_a(String string) {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+    @Then("la repuesta sera {int}")
+    public void la_repuesta_sera(Integer int1) {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+    @Then("el nuevo titulo sera {string}")
+    public void el_nuevo_titulo_sera(String string) {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+    @Then("la nueva fecha sera {string}")
+    public void la_nueva_fecha_sera(String string) {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+    @Then("la nueva hora sera {string}")
+    public void la_nueva_hora_sera(String string) {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+    @Then("los nuevos asistentes seran {string}")
+    public void los_nuevos_asistentes_seran(String string) {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+    
+    
     
 }
