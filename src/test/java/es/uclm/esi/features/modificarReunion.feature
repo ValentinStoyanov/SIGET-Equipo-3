@@ -9,6 +9,8 @@ Feature: Modificar Reunion
     Then la repuesta sera <codigo>
     And el nuevo titulo sera <nuevotitulo>
     And la nueva fecha sera <nuevafecha>
+    And la nueva hora sera <nuevahora>
+    And los nuevos asistentes seran <asistentes>
     
 
  
