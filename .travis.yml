@@ -3,9 +3,7 @@ install: mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 addons:
   sonarcloud:
     organization: "germanuclm"
-    token:
-        secure: "mtOJBZw3Yb1lDG2qumKb85LoN0FBnB+A3uRURECsqouC2ezE6MHhHHOmSTr73bp4E/JiMwPXOBMKAg3kk0j1oYJDj81fyH6w0UF31fSRo2xqG5z5fFRrwmzFcycUu9NdMloGIHKJjptYUlG0l19Er5m+v27E3kvSF2e4Wi7PJ5kmv2jf9ypn12M5F/OLJZ6ZEpGW/51VPesOL+xQdMoNRao/j7z5Nl6G+HRMfzep4BF9REPlZYWyezFhWY99HUhKs3NmdI02/yK+S4qBk90tWZ0QgKLnJiz8fubrB0D5xDB3HetMosTpHlIFvUwVeVHABfrJlUr1Pe+VxWRqWJ19MJpTEPJPfbSTxSKECHSKYJDuXlewFLecv3YzhDUPCdr8UvpPdg9UMfkJz0anjbOD9Dw0A+L/BV0dmyvdTV8LXN+XZk3V24UF9gmzN3sb3zPGlJg2I0oO5PnbC70UW6yfGGbWaq2iK/yA+Y0VyjyA02OYEEY0Lk2+q0bmOvZHedBn2ozObzTCbvFVN4Qeol9YLPpWDjX1YZuG17cl5KfMt4aFUTcERa4s0ntJ5iIKfpc1wmdxZCBy9ZM75+hQJtvIqPOgcCT/3o1SyEf0iHPKxCMoWS1XFhLFVJ0qHGQ2J2lamPNggtwlqxhwsULbXk+Ni5DAqcU2OWyCadA7ra0rRfs=" # encrypted value of your token
-
+    token: ${SONAR_TOKEN}
 script:
   # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=GermanUCLM_SIGET-Equipo3
