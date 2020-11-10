@@ -1,0 +1,26 @@
+
+Fes.uclm.esi.model.Reunion#getAsistente(I)Les/uclm/esi/model/Asistente;W
+MC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Reunion.java^ ^("1*Ò
+1W
+MC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Reunion.java_	 _(¶
+³
+W
+MC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Reunion.java_	 _(#
+%0es.uclm.esi.model.Asistente[]"__id*-*+
+es.uclm.esi.model.Reunion"
+
+asistentesº
+·
+W
+MC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Reunion.java_	 _(!
+%1es.uclm.esi.model.Asistente"
+__arrayGet*%
+#
+%0es.uclm.esi.model.Asistente[]*
+"""~
+W
+MC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Reunion.java_ _(#
+!
+%1es.uclm.esi.model.Asistente:
+""B
+es.uclm.esi.model.Reunion
