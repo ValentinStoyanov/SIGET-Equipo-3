@@ -37,12 +37,11 @@ public class ServicioCalendarioPersonal {
 		JSONObject calendario = new JSONObject();
 		List<Reunion> reuniones = new ArrayList<Reunion>();
 		reuniones = rcp.findAll();
-		/*
 		Iterator<Reunion> it = reuniones.iterator();
 		 
 		while (it.hasNext()) {
-			System.out.println(it.next()); //Así debería funcionar, supongo, no?
-		}*/
+			System.out.println(it.next().getTitulo()); //Así debería funcionar, supongo, no?
+		}
 		return calendario;
 	}
 
