@@ -1,11 +1,17 @@
 package es.uclm.esi.service;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Optional;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 
 import es.uclm.esi.model.Reunion;
 import es.uclm.esi.repository.RepositoryCalendarioPersonal;
@@ -28,23 +34,15 @@ public class ServicioCalendarioPersonal {
 	 * @return JSONObject con todos los numeros de dia que haya reunion ese mes
 	 */
 	public JSONObject getCalendarioPersonalMes(String token, int mes, int ano) {
-		System.out.println("Llegué hasta getCalendarioPersonalMes");
-		List<Reunion> reuniones = rcp.findAll(); 
 		JSONObject calendario = new JSONObject();
-		ArrayList<Integer> dias = new ArrayList<Integer>();
-		for(int i=0; i<reuniones.size(); i++) {
-			boolean asiste=false;
-			for(int a=0; a<reuniones.get(i).getAsistentes().length; a++) {
-				if(jwt.getUserNameFromJwtToken(token).equals(reuniones.get(i).getAsistente(a))) {
-						asiste=true;
-				}
-			}
-			if(reuniones.get(i).getAno()==ano && reuniones.get(i).getMes()==mes && asiste) {
-				dias.add(reuniones.get(i).getDia());
-			}
-		}
-		calendario.put("dias", dias);
-		System.out.println("Llegué hasta aquí loco "+dias);
+		List<Reunion> reuniones = new ArrayList<Reunion>();
+		reuniones = rcp.findAll();
+		/*
+		Iterator<Reunion> it = reuniones.iterator();
+		 
+		while (it.hasNext()) {
+			System.out.println(it.next()); //Así debería funcionar, supongo, no?
+		}*/
 		return calendario;
 	}
 
@@ -75,5 +73,4 @@ public class ServicioCalendarioPersonal {
 		reunionesDia.put("reuniones", objetosReunion);
 		return reunionesDia;
 	}
-
 }

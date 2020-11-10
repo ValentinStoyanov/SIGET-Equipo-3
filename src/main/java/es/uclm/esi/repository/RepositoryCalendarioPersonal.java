@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 
 import es.uclm.esi.model.Reunion;
 
-public interface RepositoryCalendarioPersonal extends MongoRepository<Reunion, String> {
+public interface RepositoryCalendarioPersonal extends MongoRepository<Reunion,String> {
 	
 	List<Reunion> findAll();
 

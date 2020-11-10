@@ -35,7 +35,6 @@ function clickInfoReuniones(ID){ //Comprobar si realmente hay reunion ese día p
 	} else {
 		document.getElementById("formularioPreview").insertAdjacentHTML('beforeend',"<div><label>NO HAY REUNIONES</label></div>");
 	}
-
 }
 
 function formEnBlanco(){
