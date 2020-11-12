@@ -133,8 +133,17 @@ public class ModificarReunionStepDefinitions extends SpringIntegrationTest {
 
 	@Then("los nuevos asistentes seran {string}")
 	public void los_nuevos_asistentes_seran(String string) {
-		// Write code here that turns the phrase above into concrete actions
-		throw new io.cucumber.java.PendingException();
+		if (!string.equals("")) {
+			String[] arrayNombresAsistentes = string.split(",");
+
+			arrayAsistentes = new Asistente[arrayNombresAsistentes.length];
+			for (int i = 0; i < arrayNombresAsistentes.length; i++) {
+				String[] asistente = arrayNombresAsistentes[i].split(":");
+				assertEquals(reu.getAsistentes()[i].getUsuario(),asistente[0]);
+				assertEquals(reu.getAsistentes()[i].getEstado(),asistente[2]);
+			}
+			
+		}
 	}
 
 }
