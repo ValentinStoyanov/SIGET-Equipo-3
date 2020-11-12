@@ -45,7 +45,11 @@ public class ModificarReunionStepDefinitions extends SpringIntegrationTest {
     }
     @When("cambio la fecha a {string}")
     public void cambio_la_fecha_a(String string) {
+    	
         try {
+        	reu.setDia(Integer.parseInt(string.substring(0, 2)));
+        	reu.setMes(Integer.parseInt(string.substring(3, 6)));
+        	reu.setAno(Integer.parseInt(string.substring(7, 11)));
         	
         }catch(Exception e) {}
     }
