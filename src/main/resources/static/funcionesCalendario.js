@@ -1,7 +1,7 @@
 var hoy = new Date();
 
-var infoMes;
-var detallesReuniones;
+var infoMes = 0;
+var detallesReuniones = 0;
 
 function clickInfoReuniones(ID){ //Comprobar si realmente hay reunion ese día porque son datos fijos
 
@@ -87,6 +87,7 @@ function setDetallesReuniones(data){
 }
 
 function getReunionesMes(){
+	console.log("He pasado por aquí y he devuelto "+infoMes);
     return infoMes;
 }
 

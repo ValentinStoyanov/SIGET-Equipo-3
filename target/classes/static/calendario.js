@@ -66,6 +66,8 @@ function primeralinea() {
 //Rellenar celdas con los días
 function escribirdias() {
 
+	console.log("Mescal es: "+mescal);
+
 	if(mescal == hoy.getMonth()){
 		jsonreuniones = getReunionesMes();
 	} else {
@@ -73,6 +75,8 @@ function escribirdias() {
 		//reunionesMes(hoy.getMonth()+1,hoy.getFullYear()); //Tiene que tener funcionalidad
         //jsonreuniones = getReunionesMesC();
 	}
+
+	console.log("jsonreuniones es: "+jsonreuniones);
 
     //Buscar dia de la semana del dia 1 del mes:
     primeromes = new Date(annocal,mescal,"1") //buscar primer día del mes
