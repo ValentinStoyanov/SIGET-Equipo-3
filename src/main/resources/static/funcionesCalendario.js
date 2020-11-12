@@ -205,6 +205,7 @@ function reunionesDia(diaConcreto, mesConcreto, anoConcreto){ //Pedirá las reun
     };
     $.ajax({
         url : '/getDetallesReunion',
+        async : false,
         data : JSON.stringify(info),
         type : "post",
         dataType: 'json',
