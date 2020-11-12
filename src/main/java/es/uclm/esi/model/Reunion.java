@@ -18,15 +18,17 @@ public class Reunion {
 	private int mes;
 	private int ano;
 	private String hora;
+	private String descripcion;
 	private String[] asistentes;
 	
-	public Reunion(int id, String titulo, int dia, int mes, int ano, String hora, String[] asistentes) {
+	public Reunion(int id, String titulo, int dia, int mes, int ano, String hora,String descripcion, String[] asistentes) {
 		this.id=id;
 		this.titulo=titulo;
 		this.dia=dia;
 		this.mes=mes;
 		this.ano=ano;
 		this.hora=hora;
+		this.descripcion=descripcion;
 		this.asistentes=asistentes;
 	}
 
@@ -76,6 +78,14 @@ public class Reunion {
 
 	public void setHora(String hora) {
 		this.hora = hora;
+	}
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
 	}
 
 	public String[] getAsistentes() {

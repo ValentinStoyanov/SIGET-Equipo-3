@@ -49,7 +49,7 @@ public class ControllerCalendarioPersonal {
 		jsoret.put("dias", diasjson);
 		jsoret.put("mes", mespeticion);
 		jsoret.put("ano", anopeticion);
-
+		
 		return jsoret.toString();
 	}
 
@@ -57,20 +57,33 @@ public class ControllerCalendarioPersonal {
 	public String getDetallesReunion(@RequestBody Map<String, Object> entrada) {
 		JSONObject jso = new JSONObject(entrada);
 		System.out.println("Pues mira me ha llegao esto: " + jso);
-
-		String[] asistentes = { "vacío" };
+		
+		JSONObject jsoret = new JSONObject();
+		JSONArray jsa = new JSONArray();
+		JSONObject jsoreunion = new JSONObject();
+		
 		try {
 			int wid = 1;
 			while (wid>0) {
-				if (calendarioRepository.findById(wid).getDia() == 23
-						&& calendarioRepository.findById(wid).getMes() == 11) {
-					asistentes = calendarioRepository.findById(wid).getAsistentes();
-				}
+				if (calendarioRepository.findById(wid).getDia() == jso.getInt("dia")
+						&& calendarioRepository.findById(wid).getMes() == jso.getInt("mes")) {
+					jsoreunion.put("titulo", calendarioRepository.findById(wid).getTitulo());
+					jsoreunion.put("id", calendarioRepository.findById(wid).getId());
+					jsoreunion.put("hora", calendarioRepository.findById(wid).getHora());
+					jsoreunion.put("asistentes", calendarioRepository.findById(wid).getAsistentes());
+					jsoreunion.put("descripcion", calendarioRepository.findById(wid).getDescripcion());
+					jsa.put(jsoreunion);
+				} 
 				wid++;
 			}
-		} catch (Exception e) {
-		}
-		return calendarioRepository.findById(1).getTitulo();
+		} catch (Exception e) {}
+		
+		jsoret.put("dia", jso.getInt("dia"));
+		jsoret.put("mes", jso.getInt("mes"));
+		jsoret.put("ano", jso.getInt("ano"));
+		jsoret.put("reuniones", jsa);
+		
+		return jsoret.toString();
 	}
 
 }
