@@ -65,16 +65,18 @@ public class ControllerCalendarioPersonal {
 		JSONObject jsoreunion = new JSONObject();
 		
 		try {
+			int contadorReuniones = 1;
 			int wid = 1;
 			while (wid>0) {
 				if (calendarioRepository.findById(wid).getDia() == jso.getInt("dia")
 						&& calendarioRepository.findById(wid).getMes() == jso.getInt("mes")) {
 					jsoreunion.put("titulo", calendarioRepository.findById(wid).getTitulo());
-					jsoreunion.put("id", calendarioRepository.findById(wid).getId());
+					jsoreunion.put("id", contadorReuniones);
 					jsoreunion.put("hora", calendarioRepository.findById(wid).getHora());
 					jsoreunion.put("asistentes", calendarioRepository.findById(wid).getAsistentes());
 					jsoreunion.put("descripcion", calendarioRepository.findById(wid).getDescripcion());
 					jsa.put(jsoreunion);
+					contadorReuniones++;
 				} 
 				wid++;
 			}

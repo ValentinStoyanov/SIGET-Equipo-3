@@ -35,11 +35,6 @@ function clickInfoReuniones(ID){ //Comprobar si realmente hay reunion ese día p
 	if(hayreu){
     	if(jsonDia == 0){
     		document.getElementById("formularioPreview").insertAdjacentHTML('beforeend',"<div><label>Actualizando...</label></div>");
-    		var sum = 0;
-    		while(sum<100){
-    			sum++;
-    		}
-    		document.getElementById("formularioPreview").insertAdjacentHTML('beforeend',"<div><label>Vuelva a seleccionar, por favor</label></div>");
     	} else {
     	   	var celda = document.getElementById(ID);
             celda.style.border = "2px double coral";
@@ -80,6 +75,11 @@ function detallesEnBlanco(){
 
 function mostrarInfoReunion(idReunion,diaReunion){
     var jsonMostrar = getDetallesReunionDiaC();
+    
+    console.log(jsonMostrar);
+    console.log("idreunion: "+idReunion);
+    console.log("diaReunion: "+diaReunion);
+    console.log("jsonMostrar.titulo: "+jsonMostrar.reuniones[0].titulo);
 
     var titulo = document.getElementById("titureunion");
     titulo.setAttribute("value",jsonMostrar.reuniones[idReunion-1].titulo);
