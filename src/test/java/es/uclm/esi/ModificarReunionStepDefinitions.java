@@ -5,25 +5,42 @@ import static org.junit.Assert.assertNotEquals;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.HttpClientErrorException;
 
+import es.uclm.esi.model.Reunion;
+import es.uclm.esi.repository.RepositoryCalendarioPersonal;
+import es.uclm.esi.repository.RoleRepository;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class ModificarReunionStepDefinitions extends SpringIntegrationTest {
-	 
+	
+	@Autowired
+	RepositoryCalendarioPersonal rcp;
     ResponseEntity<String> response ;
     String url = DEFAULT_URL + "reunion/modificar/";
     Map<String, String> params = new HashMap<String, String>();
     Integer codigo;
-    
+   
     
     @When("Modifico la reunion {int} con el token de usuario {string}")
     public void modifico_la_reunion_con_el_token_de_usuario(Integer int1, String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    	Optional<Reunion> r = rcp.findById(int1.toString());
+    	Reunion reu;
+    	if(r.isPresent()) reu = r.get();
+    	else reu = new Reunion();
+    		
+    	params.put("username", string);
+    	try {
+        	response = restTemplate.postForEntity(url, params, String.class);
+        	codigo = response.getStatusCode().value();
+        	}catch(HttpClientErrorException e) {
+        		codigo = e.getRawStatusCode();
+        	}
     }
 
     @When("cambio el titulo a {string}")
