@@ -1,5 +1,6 @@
 package es.uclm.esi.controller;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Map;
 
@@ -30,7 +31,25 @@ public class ControllerCalendarioPersonal {
     public String getCalendarioPersonalMes(@RequestBody Map<String, Object> entrada){
 		JSONObject jso=new JSONObject(entrada);
 		System.out.println("Pues mira me ha llegao esto: "+ jso);
-		System.out.println(calendarioRepository.findById(1).getTitulo());
+		int mespeticion = jso.getInt("mes");
+		int anopeticion = jso.getInt("ano");
+
+		ArrayList<Integer> dias = new ArrayList<Integer>();
+		try {
+			int wid = 1;
+			while (calendarioRepository.findById(wid).getMes() == mespeticion) {
+				dias.add(calendarioRepository.findById(wid).getDia());
+				wid++;
+			}
+		} catch (Exception e) {
+			System.out.println("Pos he pasado por aquí " + e.getMessage());
+			for (int i = 0; i < dias.size(); i++) {
+				System.out.println("Tiene estos días: "+dias.get(i));
+			}
+		}
+
+		JSONObject jsoret = new JSONObject();
+		jsoret.put("mes", calendarioRepository.findById(1).getMes());
 		
         return calendarioRepository.findById(1).getTitulo();
     }
@@ -39,6 +58,8 @@ public class ControllerCalendarioPersonal {
     public String getDetallesReunion(@RequestBody Map<String, Object> entrada){
 		JSONObject jso=new JSONObject(entrada);
 		System.out.println("Pues mira me ha llegao esto: "+ jso);
+		JSONObject jsoret = new JSONObject();
+		jsoret.put("titulo", calendarioRepository.findById(1));
 
 		
         return calendarioRepository.findById(1).getTitulo();
