@@ -39,6 +39,10 @@ public class Reunion {
 		this.asistentes = asistentes;
 	}
 
+	public Reunion() {
+		
+	}
+
 	public int getId() {
 		return id;
 	}
