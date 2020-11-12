@@ -8,6 +8,7 @@ import java.util.Map;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.HttpClientErrorException;
 
@@ -25,33 +26,28 @@ public class ModificarReunionStepDefinitions extends SpringIntegrationTest {
     String url = DEFAULT_URL + "reunion/modificar/";
     Map<String, String> params = new HashMap<String, String>();
     Integer codigo;
-   
+    HttpHeaders headers = new HttpHeaders();
+    Reunion reu;
     
     @When("Modifico la reunion {int} con el token de usuario {string}")
     public void modifico_la_reunion_con_el_token_de_usuario(Integer int1, String string) {
     	Optional<Reunion> r = rcp.findById(int1.toString());
-    	Reunion reu;
+    	
     	if(r.isPresent()) reu = r.get();
     	else reu = new Reunion();
-    		
-    	params.put("username", string);
-    	try {
-        	response = restTemplate.postForEntity(url, params, String.class);
-        	codigo = response.getStatusCode().value();
-        	}catch(HttpClientErrorException e) {
-        		codigo = e.getRawStatusCode();
-        	}
+    	headers.set ("Autorization", "Bearer " + string);	
+    	
     }
 
     @When("cambio el titulo a {string}")
     public void cambio_el_titulo_a(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        reu.setTitulo(string);
     }
     @When("cambio la fecha a {string}")
     public void cambio_la_fecha_a(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        try {
+        	
+        }catch(Exception e) {}
     }
     @When("cambio la hora a {string}")
     public void cambio_la_hora_a(String string) {
