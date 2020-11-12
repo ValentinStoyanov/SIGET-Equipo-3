@@ -12,6 +12,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.HttpClientErrorException;
 
+import es.uclm.esi.model.Asistente;
 import es.uclm.esi.model.Reunion;
 import es.uclm.esi.repository.RepositoryCalendarioPersonal;
 import es.uclm.esi.repository.RoleRepository;
@@ -28,6 +29,7 @@ public class ModificarReunionStepDefinitions extends SpringIntegrationTest {
     Integer codigo;
     HttpHeaders headers = new HttpHeaders();
     Reunion reu;
+    Asistente[] arrayAsistentes;
     
     @When("Modifico la reunion {int} con el token de usuario {string}")
     public void modifico_la_reunion_con_el_token_de_usuario(Integer int1, String string) {
@@ -41,28 +43,42 @@ public class ModificarReunionStepDefinitions extends SpringIntegrationTest {
 
     @When("cambio el titulo a {string}")
     public void cambio_el_titulo_a(String string) {
-        reu.setTitulo(string);
+    	if(!string.equals("")) {
+    		reu.setTitulo(string);
+    	}
+        
     }
     @When("cambio la fecha a {string}")
     public void cambio_la_fecha_a(String string) {
-    	
+    	if(!string.equals("")) {
         try {
         	reu.setDia(Integer.parseInt(string.substring(0, 2)));
         	reu.setMes(Integer.parseInt(string.substring(3, 5)));
         	reu.setAno(Integer.parseInt(string.substring(6, 10)));
         	
         }catch(Exception e) {}
+    	}
     }
     @When("cambio la hora a {string}")
     public void cambio_la_hora_a(String string) {
+    	if(!string.equals("")) {
     	try {
         	reu.setHora(string);
         }catch(Exception e) {}
+    	}
     }
     @When("cambio los asistentes a {string}")
     public void cambio_los_asistentes_a(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    	if(!string.equals("")) {
+    		String[] arrayNombresAsistentes = string.split(",");
+    		
+    		arrayAsistentes = new Asistente[arrayNombresAsistentes.length];
+    		for (int i = 0; i < arrayAsistentes.length; i++) {
+    			String[] asistente =arrayNombresAsistentes[i].split(":");
+    			arrayAsistentes[i].setUsuario(asistente[0]);
+    			arrayAsistentes[i].setEstado(asistente[1]);
+			}
+    	}
     }
     @Then("la repuesta sera {int}")
     public void la_repuesta_sera(Integer int1) {
