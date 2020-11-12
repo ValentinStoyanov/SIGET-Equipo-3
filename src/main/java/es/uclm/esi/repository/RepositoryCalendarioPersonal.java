@@ -7,6 +7,6 @@ import es.uclm.esi.model.Reunion;
 
 public interface RepositoryCalendarioPersonal extends MongoRepository<Reunion,String> {
 	
-	List<Reunion> findAll(int _id);
+	Reunion findById(int _id);
 
 }

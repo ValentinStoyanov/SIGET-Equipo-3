@@ -8,7 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
  * @author Víctor
  * Clase de dominio que usaremos para instanciar reuniones
  */
-@Document(collection= "reunion")
+@Document(collection= "reuniones")
 public class Reunion {
 	
 	@Id

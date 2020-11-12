@@ -12,7 +12,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RestController;
 
-import es.uclm.esi.service.ServicioCalendarioPersonal;
+import es.uclm.esi.repository.RepositoryCalendarioPersonal;
+import es.uclm.esi.repository.UserRepository;
 
 /**
  * 
@@ -21,39 +22,12 @@ import es.uclm.esi.service.ServicioCalendarioPersonal;
  */
 @RestController
 public class ControllerCalendarioPersonal {
-	//@Autowired
-	private ServicioCalendarioPersonal servcp = new ServicioCalendarioPersonal();
 	
-	/**
-	 * 
-	 * @param fecha
-	 * @return JSONObject con todos los numeros de dias que haya reunion ese mes
-	 */
-	/*
-	 * @GetMapping("/getCalendarioPersonalMes") public JSONObject
-	 * getCalendarioPersonalMes(@RequestHeader("Authorization") String
-	 * auth, @RequestBody String body) {
-	 * System.out.println("Llegué hasta getCalendarioPersonalMes()"); JSONObject jso
-	 * = new JSONObject(body); int mes = jso.getInt("mes"); int ano =
-	 * jso.getInt("ano"); return servcp.getCalendarioPersonalMes(auth.substring(7,
-	 * auth.length()),mes, ano); }
-	 */
-	
-	/**
-	 * 
-	 * @param fecha
-	 * @return JSONObject con informacion detallada de todas las reuniones de ese dia
-	 */
-	/*
-	 * @GetMapping("/getDetallesReunion") public JSONObject
-	 * getDetallesReunion(@RequestBody JSONObject jso) { //JSONObject jso = new
-	 * JSONObject(fecha); int dia = jso.getInt("dia"); return
-	 * servcp.getDetallesReunion(dia); }
-	 */
-	
+	@Autowired
+	RepositoryCalendarioPersonal calendarioRepository;
+
 	@PostMapping("/getCalendarioPersonalMes")
     public String getCalendarioPersonalMes(@RequestBody Map<String, Object> entrada){
-		servcp.getCalendarioPersonalMes("jajxd", 11, 2020);
 		JSONObject jso=new JSONObject(entrada);
 		//System.out.println("Pues mira me ha llegao esto: "+ jso);
 		JSONObject jsoret = new JSONObject();
@@ -62,7 +36,7 @@ public class ControllerCalendarioPersonal {
 		int[] dias = {05,12,17,21,26};
 		jsoret.put("reuniones", dias);
 		
-		//System.out.println(jsoret);
+		System.out.println(calendarioRepository.findById(1).getTitulo());
 		
         return jsoret.toString();
     }
