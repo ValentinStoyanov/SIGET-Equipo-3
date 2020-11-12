@@ -8,6 +8,7 @@ import java.util.Map;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.HttpClientErrorException;
@@ -82,8 +83,14 @@ public class ModificarReunionStepDefinitions extends SpringIntegrationTest {
     }
     @Then("la repuesta sera {int}")
     public void la_repuesta_sera(Integer int1) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    	HttpEntity <Reunion> request = new HttpEntity <>(reu, headers);
+    	try {
+    		response = restTemplate.postForEntity(url, request, String.class);
+        	codigo = response.getStatusCode().value();
+        	}catch(HttpClientErrorException e) {
+        		codigo = e.getRawStatusCode();
+        	}
+    	assertEquals(int1, codigo);
     }
     @Then("el nuevo titulo sera {string}")
     public void el_nuevo_titulo_sera(String string) {
