@@ -85,8 +85,8 @@ public class ModificarReunionStepDefinitions extends SpringIntegrationTest {
 			arrayAsistentes = new Asistente[arrayNombresAsistentes.length];
 			for (int i = 0; i < arrayAsistentes.length; i++) {
 				String[] asistente = arrayNombresAsistentes[i].split(":");
-				arrayAsistentes[i].setUsuario(asistente[0]);
-				arrayAsistentes[i].setEstado(asistente[1]);
+				
+				arrayAsistentes[i] = new Asistente(asistente[0],asistente[1]);
 			}
 		}
 	}
@@ -136,11 +136,11 @@ public class ModificarReunionStepDefinitions extends SpringIntegrationTest {
 		if (!string.equals("")) {
 			String[] arrayNombresAsistentes = string.split(",");
 
-			arrayAsistentes = new Asistente[arrayNombresAsistentes.length];
+			//arrayAsistentes = new Asistente[arrayNombresAsistentes.length];
 			for (int i = 0; i < arrayNombresAsistentes.length; i++) {
 				String[] asistente = arrayNombresAsistentes[i].split(":");
 				assertEquals(reu.getAsistentes()[i].getUsuario(),asistente[0]);
-				assertEquals(reu.getAsistentes()[i].getEstado(),asistente[2]);
+				assertEquals(reu.getAsistentes()[i].getEstado(),asistente[1]);
 			}
 			
 		}
