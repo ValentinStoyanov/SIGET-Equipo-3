@@ -48,15 +48,16 @@ public class ModificarReunionStepDefinitions extends SpringIntegrationTest {
     	
         try {
         	reu.setDia(Integer.parseInt(string.substring(0, 2)));
-        	reu.setMes(Integer.parseInt(string.substring(3, 6)));
-        	reu.setAno(Integer.parseInt(string.substring(7, 11)));
+        	reu.setMes(Integer.parseInt(string.substring(3, 5)));
+        	reu.setAno(Integer.parseInt(string.substring(6, 10)));
         	
         }catch(Exception e) {}
     }
     @When("cambio la hora a {string}")
     public void cambio_la_hora_a(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    	try {
+        	reu.setHora(string);
+        }catch(Exception e) {}
     }
     @When("cambio los asistentes a {string}")
     public void cambio_los_asistentes_a(String string) {
