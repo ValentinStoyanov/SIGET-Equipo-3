@@ -26,7 +26,6 @@ public class ControllerCalendarioPersonal {
 	@PostMapping("/getCalendarioPersonalMes")
 	public String getCalendarioPersonalMes(@RequestBody Map<String, Object> entrada) {
 		JSONObject jso = new JSONObject(entrada);
-		System.out.println("Pues mira me ha llegao esto: " + jso);
 		int mespeticion = jso.getInt("mes");
 		int anopeticion = jso.getInt("ano");
 
@@ -50,16 +49,12 @@ public class ControllerCalendarioPersonal {
 		jsoret.put("mes", mespeticion);
 		jsoret.put("ano", anopeticion);
 		
-		System.out.println("Estoy enviando esto "+jsoret);
-		
 		return jsoret.toString();
 	}
 
 	@PostMapping("/getDetallesReunion")
 	public String getDetallesReunion(@RequestBody Map<String, Object> entrada) {
-		JSONObject jso = new JSONObject(entrada);
-		System.out.println("Pues mira me ha llegao esto: " + jso);
-		
+		JSONObject jso = new JSONObject(entrada);		
 		JSONObject jsoret = new JSONObject();
 		JSONArray jsa = new JSONArray();
 		JSONObject jsoreunion = new JSONObject();
@@ -86,8 +81,6 @@ public class ControllerCalendarioPersonal {
 		jsoret.put("mes", jso.getInt("mes"));
 		jsoret.put("ano", jso.getInt("ano"));
 		jsoret.put("reuniones", jsa);
-		
-		System.out.println("Estoy enviando "+jsoret);
 		
 		return jsoret.toString();
 	}

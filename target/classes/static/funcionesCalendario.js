@@ -75,11 +75,6 @@ function detallesEnBlanco(){
 
 function mostrarInfoReunion(idReunion,diaReunion){
     var jsonMostrar = getDetallesReunionDiaC();
-    
-    console.log(jsonMostrar);
-    console.log("idreunion: "+idReunion);
-    console.log("diaReunion: "+diaReunion);
-    console.log("jsonMostrar.titulo: "+jsonMostrar.reuniones[0].titulo);
 
     var titulo = document.getElementById("titureunion");
     titulo.setAttribute("value",jsonMostrar.reuniones[idReunion-1].titulo);
