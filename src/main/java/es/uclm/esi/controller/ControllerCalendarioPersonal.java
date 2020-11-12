@@ -46,9 +46,11 @@ public class ControllerCalendarioPersonal {
 			diasjson[i] = dias.get(i);
 		}
 
-		jsoret.put("dias", diasjson);
+		jsoret.put("reuniones", diasjson);
 		jsoret.put("mes", mespeticion);
 		jsoret.put("ano", anopeticion);
+		
+		System.out.println("Estoy enviando esto "+jsoret);
 		
 		return jsoret.toString();
 	}
@@ -82,6 +84,8 @@ public class ControllerCalendarioPersonal {
 		jsoret.put("mes", jso.getInt("mes"));
 		jsoret.put("ano", jso.getInt("ano"));
 		jsoret.put("reuniones", jsa);
+		
+		System.out.println("Estoy enviando "+jsoret);
 		
 		return jsoret.toString();
 	}
