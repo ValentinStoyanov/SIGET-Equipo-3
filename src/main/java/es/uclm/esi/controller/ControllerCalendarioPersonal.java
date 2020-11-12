@@ -41,17 +41,19 @@ public class ControllerCalendarioPersonal {
 				dias.add(calendarioRepository.findById(wid).getDia());
 				wid++;
 			}
-		} catch (Exception e) {
-			System.out.println("Pos he pasado por aquí " + e.getMessage());
-			for (int i = 0; i < dias.size(); i++) {
-				System.out.println("Tiene estos días: "+dias.get(i));
-			}
+		} catch (Exception e) {}
+		JSONObject jsoret = new JSONObject();
+		
+		int[] diasjson = new int[dias.size()];
+		for(int i = 0; i < dias.size(); i++) {
+			diasjson[i] = dias.get(i);
 		}
 
-		JSONObject jsoret = new JSONObject();
-		jsoret.put("mes", calendarioRepository.findById(1).getMes());
+		jsoret.put("dias", diasjson);
+		jsoret.put("mes", calendarioRepository.findById(jso.getInt("mes")==calendarioRepository.findById(1).getMes()? 1 : 2).getMes());
+		jsoret.put("ano", calendarioRepository.findById(1).getAno());
 		
-        return calendarioRepository.findById(1).getTitulo();
+        return jsoret.toString();
     }
 	
 	@PostMapping("/getDetallesReunion")
