@@ -33,23 +33,23 @@ function clickInfoReuniones(ID){ //Comprobar si realmente hay reunion ese día p
 	}
 
 	if(hayreu){
-	if(jsonDia == 0){
-		document.getElementById("formularioPreview").insertAdjacentHTML('beforeend',"<div><label>Actualizando...</label></div>");
-		var sum = 0;
-		while(sum<100){
-			sum++;
-		}
-		document.getElementById("formularioPreview").insertAdjacentHTML('beforeend',"<div><label>Vuelva a seleccionar, por favor</label></div>");
-	    }else{
-	    		var celda = document.getElementById(ID);
-        celda.style.border = "2px double coral";
-	    for(i = 0; i < jsonDia.reuniones.length; i++){
-	       	document.getElementById("formularioPreview").insertAdjacentHTML('beforeend',"<div id='reunionYhora'><label id='reunion' "+
-	       	"onclick='mostrarInfoReunion("+jsonDia.reuniones[i].id+","+jsonDia.dia+")'>"+
-	      	jsonDia.reuniones[i].titulo+"</label>"+
-	        "<label id='horasreunion'>"+jsonDia.reuniones[i].hora+"</label><br></div>");
-	    }
-	    }
+    	if(jsonDia == 0){
+    		document.getElementById("formularioPreview").insertAdjacentHTML('beforeend',"<div><label>Actualizando...</label></div>");
+    		var sum = 0;
+    		while(sum<100){
+    			sum++;
+    		}
+    		document.getElementById("formularioPreview").insertAdjacentHTML('beforeend',"<div><label>Vuelva a seleccionar, por favor</label></div>");
+    	} else {
+    	   	var celda = document.getElementById(ID);
+            celda.style.border = "2px double coral";
+    	    for(i = 0; i < jsonDia.reuniones.length; i++){
+    	       	document.getElementById("formularioPreview").insertAdjacentHTML('beforeend',"<div id='reunionYhora'><label id='reunion' "+
+    	       	"onclick='mostrarInfoReunion("+jsonDia.reuniones[i].id+","+jsonDia.dia+")'>"+
+    	      	jsonDia.reuniones[i].titulo+"</label>"+
+    	        "<label id='horasreunion'>"+jsonDia.reuniones[i].hora+"</label><br></div>");
+    	    }
+    	}
 	} else {
 		document.getElementById("formularioPreview").insertAdjacentHTML('beforeend',"<div><label>NO HAY REUNIONES</label></div>");
 	}
@@ -79,7 +79,7 @@ function detallesEnBlanco(){
 }
 
 function mostrarInfoReunion(idReunion,diaReunion){
-    var jsonMostrar = getDetallesReuniones(diaReunion);
+    var jsonMostrar = getDetallesReunionDiaC();
 
     var titulo = document.getElementById("titureunion");
     titulo.setAttribute("value",jsonMostrar.reuniones[idReunion-1].titulo);
