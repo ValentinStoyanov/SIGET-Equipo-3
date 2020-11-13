@@ -13,7 +13,6 @@
 	font-size: 16px;
 	cursor: pointer;
 	transition: .3s ease all;
-	cursor: pointer;
 }
 
 .btn-convocar:hover {
@@ -33,7 +32,6 @@
 	font-size: 16px;
 	cursor: pointer;
 	transition: .3s ease all;
-	cursor: pointer;
 }
 
 .btn-modificar:hover {
@@ -53,7 +51,6 @@
 	font-size: 16px;
 	cursor: pointer;
 	transition: .3s ease all;
-	cursor: pointer;
 }
 
 .btn-salir:hover {
