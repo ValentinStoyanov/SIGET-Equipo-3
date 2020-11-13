@@ -70,8 +70,10 @@ function escribirdias() {
 		jsonreuniones = getReunionesMes();
 	} else {
 		jsonreuniones = 0;
+		//jsonreuniones = reunionesMes(mescal,annocal);
 		//reunionesMes(hoy.getMonth()+1,hoy.getFullYear()); //Tiene que tener funcionalidad
         //jsonreuniones = getReunionesMesC();
+        
 	}
 
     //Buscar dia de la semana del dia 1 del mes:

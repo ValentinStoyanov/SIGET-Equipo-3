@@ -44,23 +44,22 @@ public class ControllerCalendarioPersonal {
 		int anopeticion = jso.getInt("ano");
 
 		List<Reunion> reuniones = calendarioRepository.findReunionesMes(mespeticion, anopeticion);
-		
 		ArrayList<Integer> dias = new ArrayList<Integer>();
-		try {
-			int wid = 1;
-			while (calendarioRepository.findById(wid).getMes() == mespeticion) {
-				dias.add(calendarioRepository.findById(wid).getDia());
-				wid++;
+		int dia;
+		for (Reunion reunion : reuniones) {
+			dia = reunion.getDia();
+			if(!dias.contains(dia)) {
+				dias.add(dia);
 			}
-		} catch (Exception e) {
 		}
+		System.out.println(dias);
 		JSONObject jsoret = new JSONObject();
 
 		int[] diasjson = new int[dias.size()];
 		for (int i = 0; i < dias.size(); i++) {
 			diasjson[i] = dias.get(i);
 		}
-
+		
 		jsoret.put("reuniones", diasjson);
 		jsoret.put("mes", mespeticion);
 		jsoret.put("ano", anopeticion);
