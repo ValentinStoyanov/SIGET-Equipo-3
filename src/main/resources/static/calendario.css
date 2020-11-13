@@ -38,7 +38,7 @@
 }
 
 #diasc th, #diasc td {
-	font: normal 14pt arial;
+	font: normal 14pt arial, sans-serif;
 	width: 55px;
 	height: 50px;
 	border: 2px double #fffafa;
@@ -59,13 +59,13 @@
 
 #diasc tr td.dia:hover {
 		    cursor: pointer;
-			font: bold 16pt arial;
+			font: bold 16pt arial, sans-serif;
 			border: 2px double coral;
 }
 
 /*línea de la fecha actual*/
 #fechaactual {
-	font: bold 12pt arial;
+	font: bold 12pt arial, sans-serif;
 	padding: 0.4em
 }
 
@@ -88,7 +88,7 @@
 #buscafecha select, #buscafecha input {
 	background-color: #fdfefe;
 	color: #000;
-	font: bold 10pt arial;
+	font: bold 10pt arial, sans-serif;
 	
 }
 
@@ -104,7 +104,7 @@
 #anterior {
 	float: left;
 	width: 100px;
-	font: bold 12pt arial;
+	font: bold 12pt arial, sans-serif;
 	padding: 0.5em 0.1em;
 	cursor: pointer;
 }
@@ -112,7 +112,7 @@
 #posterior {
 	float: right;
 	width: 100px;
-	font: bold 12pt arial;
+	font: bold 12pt arial, sans-serif;
 	padding: 0.5em 0.1em;
 	cursor: pointer;
 }
@@ -128,7 +128,7 @@
 }
 
 #titulos {
-	font: bold 15pt "arial black";
+	font: bold 15pt "arial black", sans-serif;
 	padding: 0.2em;
 }
 
@@ -147,19 +147,19 @@
 }
 
 #titulosreunion{
-	font: 11pt arial;
+	font: 11pt arial, sans-serif;
 	padding: 5px 5px 5px 5px;
 	text-align: left;
 }
 
 #horasreunion{
-	font: bold 11pt arial;
+	font: bold 11pt arial, sans-serif;
 	padding: 5px 5px 5px 5px;
 	text-align: center;
 }
 
 #reunionYhora{
-	font: 11pt arial;
+	font: 11pt arial, sans-serif;
 	padding: 5px 5px 5px 5px;
 }
 
@@ -184,7 +184,7 @@
 
 #inputtitulo, #inputhora, #inputdescripcion, #inputasistentes {
 	margin: 15px;
-	font: bold 11pt arial; 
+	font: bold 11pt arial, sans-serif; 
 }
 
 #horareunion{
@@ -193,7 +193,7 @@
 
 #descripcion, #asistentes {
 	resize: none;
-	font: normal 11pt arial;
+	font: normal 11pt arial, sans-serif;
 }
 
 #inputbotones{
@@ -242,7 +242,7 @@
 body{
 	background-color: #87CEEB;
 	padding: 15px;
-	font-family: Arial;
+	font-family: Arial, sans-serif;
 }
 		
 #menu{
