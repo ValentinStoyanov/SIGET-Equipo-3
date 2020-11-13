@@ -1,16 +1,9 @@
 
-7es.uclm.esi.model.Reunion#getTitulo()Ljava/lang/String;W
-MC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Reunion.java) )("1*ù
+#es.uclm.esi.model.Reunion#getDia()IW
+MC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Reunion.java3 3("1*¿
 1W
-MC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Reunion.java*	 *(¥
-¢
+MC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Reunion.java4	 4("a
 W
-MC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Reunion.java*	 *(
-%0java.lang.String"__id*)*'
-es.uclm.esi.model.Reunion"
-titulo"s
-W
-MC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Reunion.java* *(
-
-%0java.lang.StringB
+MC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Reunion.java4 4(
+""B
 es.uclm.esi.model.Reunion
