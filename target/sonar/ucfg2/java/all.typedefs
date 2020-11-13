@@ -482,9 +482,9 @@ U<init>(ILjava/lang/String;IIILjava/lang/String;Ljava/lang/String;[Ljava/lang/St
 "setDescripcion(Ljava/lang/String;)=es.uclm.esi.model.Reunion#setDescripcion(Ljava/lang/String;)V1
 	setMes(I)$es.uclm.esi.model.Reunion#setMes(I)V(
 java.io.Serializablejava.lang.Objectc
-9org.springframework.security.core.userdetails.UserDetailsjava.lang.Objectjava.io.Serializable–
--es.uclm.esi.security.services.UserDetailsImpl9org.springframework.security.core.userdetails.UserDetailsjava.lang.Objectg
-equals(Ljava/lang/Object;)Ies.uclm.esi.security.services.UserDetailsImpl#equals(Ljava/lang/Object;)Zü
+9org.springframework.security.core.userdetails.UserDetailsjava.lang.Objectjava.io.SerializableÁ
+
+-es.uclm.esi.security.services.UserDetailsImpl9org.springframework.security.core.userdetails.UserDetailsjava.lang.Objectü
 build(Les/uclm/esi/model/User;)|es.uclm.esi.security.services.UserDetailsImpl#build(Les/uclm/esi/model/User;)Les/uclm/esi/security/services/UserDetailsImpl;Ä
 f<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)ïes.uclm.esi.security.services.UserDetailsImpl#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)VR
 getId()Ges.uclm.esi.security.services.UserDetailsImpl#getId()Ljava/lang/String;^
@@ -604,26 +604,7 @@ LcollectingAndThen(Ljava/util/stream/Collector;Ljava/util/function/Function;)Ñ
 3groupingByConcurrent(Ljava/util/function/Function;)kjava.util.stream.Collectors#groupingByConcurrent(Ljava/util/function/Function;)Ljava/util/stream/Collector;v
 maxBy(Ljava/util/Comparator;)Ujava.util.stream.Collectors#maxBy(Ljava/util/Comparator;)Ljava/util/stream/Collector;€
 OgroupingByConcurrent(Ljava/util/function/Function;Ljava/util/stream/Collector;)ájava.util.stream.Collectors#groupingByConcurrent(Ljava/util/function/Function;Ljava/util/stream/Collector;)Ljava/util/stream/Collector;˝
-`teeing0(Ljava/util/stream/Collector;Ljava/util/stream/Collector;Ljava/util/function/BiFunction;)òjava.util.stream.Collectors#teeing0(Ljava/util/stream/Collector;Ljava/util/stream/Collector;Ljava/util/function/BiFunction;)Ljava/util/stream/Collector;¥
-java.util.Objectsjava.lang.Objectê
-4requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Xjava.util.Objects#requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;ò
-8requireNonNullElse(Ljava/lang/Object;Ljava/lang/Object;)\java.util.Objects#requireNonNullElse(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;E
-checkFromIndexSize(III)*java.util.Objects#checkFromIndexSize(III)I`
-toString(Ljava/lang/Object;)@java.util.Objects#toString(Ljava/lang/Object;)Ljava/lang/String;M
-nonNull(Ljava/lang/Object;).java.util.Objects#nonNull(Ljava/lang/Object;)ZÑ
-.toString(Ljava/lang/Object;Ljava/lang/String;)Rjava.util.Objects#toString(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/String;I
-hash([Ljava/lang/Object;),java.util.Objects#hash([Ljava/lang/Object;)IK
-isNull(Ljava/lang/Object;)-java.util.Objects#isNull(Ljava/lang/Object;)Z¥
-FrequireNonNullElseGet(Ljava/lang/Object;Ljava/util/function/Supplier;)jjava.util.Objects#requireNonNullElseGet(Ljava/lang/Object;Ljava/util/function/Supplier;)Ljava/lang/Object;o
-,equals(Ljava/lang/Object;Ljava/lang/Object;)?java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)ZA
-checkFromToIndex(III)(java.util.Objects#checkFromToIndex(III)I¶
-?requireNonNull(Ljava/lang/Object;Ljava/util/function/Supplier;)cjava.util.Objects#requireNonNull(Ljava/lang/Object;Ljava/util/function/Supplier;)Ljava/lang/Object;O
-hashCode(Ljava/lang/Object;)/java.util.Objects#hashCode(Ljava/lang/Object;)I'
-<init>()java.util.Objects#<init>()Vù
-Ccompare(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;)Vjava.util.Objects#compare(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;)Iw
-0deepEquals(Ljava/lang/Object;Ljava/lang/Object;)Cjava.util.Objects#deepEquals(Ljava/lang/Object;Ljava/lang/Object;)Zl
-"requireNonNull(Ljava/lang/Object;)Fjava.util.Objects#requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;3
-checkIndex(II)!java.util.Objects#checkIndex(II)I∂
+`teeing0(Ljava/util/stream/Collector;Ljava/util/stream/Collector;Ljava/util/function/BiFunction;)òjava.util.stream.Collectors#teeing0(Ljava/util/stream/Collector;Ljava/util/stream/Collector;Ljava/util/function/BiFunction;)Ljava/util/stream/Collector;∂
 javax.servlet.Filterjava.lang.Object,
 	destroy()javax.servlet.Filter#destroy()V^
 "init(Ljavax/servlet/FilterConfig;)8javax.servlet.Filter#init(Ljavax/servlet/FilterConfig;)Vl
