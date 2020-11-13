@@ -5,7 +5,7 @@ Feature: Convocar
     
   Scenario Outline: convocar
   Given el organizador quiere convocar una reunion
-  When convoco la reunion <id>
+  When convoco la reunion <id> con token <token>
   And organizador es <organizador>
   And titulo es <titulo>
   And estado es <estado>
@@ -17,7 +17,7 @@ Feature: Convocar
   Then la respuesta sera <codigo>
   
   Examples:
-  |	id	|	organizador	|	titulo	|	estado	|	dia	|	mes	|	ano	|	hora	|	asistentes	|	codigo	|
-  |	4	|	"admin"	|	"Reunion 1"	|	"progrmada"	|	20	|	11	|	2020	|	"22:00"	|	"admin","Fatima","Victor"	|	200	|
-  |	5	|	"admin"	|	"Reunion 2"	|	"programada"	|	21	|	11	|	2020	|	"16:00"	|	""	|	400	|
+  |	id	|	organizador	|	titulo	|	estado	|	dia	|	mes	|	ano	|	hora	|	asistentes	|	codigo	| token
+  |	4	|	"admin"	|	"Reunion 1"	|	"progrmada"	|	20	|	11	|	2020	|	"22:00"	|	"admin","Fatima","Victor"	|	200	| "Admin123" |
+  |	5	|	"admin"	|	"Reunion 2"	|	"programada"	|	21	|	11	|	2020	|	"16:00"	|	""	|	400	| "Admin123" |
   
