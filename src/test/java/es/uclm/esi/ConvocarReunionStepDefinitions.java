@@ -12,7 +12,7 @@ public void el_organizador_quiere_convocar_una_reunion() {
     throw new io.cucumber.java.PendingException();
 }
 
-@When("convoco la reunion {int}")
+@When("convoco la reunion {int} con token {String}")
 public void convoco_la_reunion(Integer int1) {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
