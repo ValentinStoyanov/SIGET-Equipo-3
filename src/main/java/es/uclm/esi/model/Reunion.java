@@ -13,30 +13,23 @@ public class Reunion {
 	
 	@Id
 	private int id;
-	private String organizador;
 	private String titulo;
-	private String estado;
 	private int dia;
 	private int mes;
 	private int ano;
 	private String hora;
-	//private String[] aceptados;
-	private Asistente[] asistentes;
+	private String descripcion;
+	private String[] asistentes;
 	
-	
-
-	public Reunion(int id, String organizador, String titulo, String estado, int dia, int mes, int ano, String hora,
-			Asistente[] asistentes) {
-		super();
-		this.id = id;
-		this.organizador = organizador;
-		this.titulo = titulo;
-		this.estado = estado;
-		this.dia = dia;
-		this.mes = mes;
-		this.ano = ano;
-		this.hora = hora;
-		this.asistentes = asistentes;
+	public Reunion(int id, String titulo, int dia, int mes, int ano, String hora,String descripcion, String[] asistentes) {
+		this.id=id;
+		this.titulo=titulo;
+		this.dia=dia;
+		this.mes=mes;
+		this.ano=ano;
+		this.hora=hora;
+		this.descripcion=descripcion;
+		this.asistentes=asistentes;
 	}
 
 	public int getId() {
@@ -87,34 +80,24 @@ public class Reunion {
 		this.hora = hora;
 	}
 
-	public Asistente[] getAsistentes() {
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+	public String[] getAsistentes() {
 		return asistentes;
 	}
 	
-	public Asistente getAsistente(int index) {
+	public String getAsistente(int index) {
 		return asistentes[index];
 	}
 
-	public void setAsistentes(Asistente[] asistentes) {
+	public void setAsistentes(String[] asistentes) {
 		this.asistentes = asistentes;
 	}
-
-	public String getOrganizador() {
-		return organizador;
-	}
-
-	public void setOrganizador(String organizador) {
-		this.organizador = organizador;
-	}
-
-	public String getEstado() {
-		return estado;
-	}
-
-	public void setEstado(String estado) {
-		this.estado = estado;
-	}
-
-	
 
 }

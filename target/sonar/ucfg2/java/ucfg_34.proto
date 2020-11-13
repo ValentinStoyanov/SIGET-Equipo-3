@@ -1,16 +1,16 @@
 
-7es.uclm.esi.model.Reunion#getEstado()Ljava/lang/String;W
-MC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Reunion.javan n("1*ù
-1W
-MC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Reunion.javao	 o(¥
-¢
-W
-MC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Reunion.javao	 o(
-%0java.lang.String"__id*)*'
-es.uclm.esi.model.Reunion"
-estado"s
-W
-MC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Reunion.javao o(
-
-%0java.lang.StringB
-es.uclm.esi.model.Reunion
+Tes.uclm.esi.security.services.UserDetailsImpl#getAuthorities()Ljava/util/Collection;k
+aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.java6/ 6(="1*×
+1k
+aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.java7	 7(Ö
+Ó
+k
+aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.java7	 7(
+%0java.util.Collection"__id*B*@/
+-es.uclm.esi.security.services.UserDetailsImpl"
+authorities"‹
+k
+aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.java7 7(
+
+%0java.util.CollectionB1/
+-es.uclm.esi.security.services.UserDetailsImpl

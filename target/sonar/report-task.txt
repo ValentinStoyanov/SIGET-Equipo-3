@@ -2,7 +2,7 @@ organization=germanuclm
 projectKey=GermanUCLM_SIGET-Equipo3
 serverUrl=https://sonarcloud.io
 serverVersion=8.0.0.14008
-branch=develop
-dashboardUrl=https://sonarcloud.io/dashboard?id=GermanUCLM_SIGET-Equipo3&branch=develop&resolved=false
-ceTaskId=AXWzgo6-oI_e1FQSmdd5
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXWzgo6-oI_e1FQSmdd5
+branch=sonar
+dashboardUrl=https://sonarcloud.io/dashboard?id=GermanUCLM_SIGET-Equipo3&branch=sonar&resolved=false
+ceTaskId=AXWsjKVJz0Y5WjrOZG58
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXWsjKVJz0Y5WjrOZG58

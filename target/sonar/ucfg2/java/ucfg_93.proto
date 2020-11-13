@@ -1,17 +1,19 @@
 
-Ies.uclm.esi.payload.request.SignupRequest#getPassword()Ljava/lang/String;g
-]C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/payload/request/SignupRequest.java' '("1*¼
-1g
-]C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/payload/request/SignupRequest.java( ((Ç
-Ä
-g
-]C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/payload/request/SignupRequest.java( ((
-%0java.lang.String"__id*;*9+
-)es.uclm.esi.payload.request.SignupRequest"
-
-password"ƒ
-g
-]C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/payload/request/SignupRequest.java( ((
-
-%0java.lang.StringB-+
-)es.uclm.esi.payload.request.SignupRequest
+oes.uclm.esi.security.WebSecurityConfig#authenticationJwtTokenFilter()Les/uclm/esi/security/jwt/AuthTokenFilter;d
+ZC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/WebSecurityConfig.java% %(4"1*¢
+1d
+ZC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/WebSecurityConfig.java&	 &(ÃÀ
+d
+ZC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/WebSecurityConfig.java& &(.
+%0(es.uclm.esi.security.jwt.AuthTokenFilter"(es.uclm.esi.security.jwt.AuthTokenFilterÕ
+Ò
+d
+ZC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/WebSecurityConfig.java&	 &(
+%1"2es.uclm.esi.security.jwt.AuthTokenFilter#<init>()V*0
+.
+%0(es.uclm.esi.security.jwt.AuthTokenFilter"˜
+d
+ZC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/WebSecurityConfig.java& &(0
+.
+%0(es.uclm.esi.security.jwt.AuthTokenFilterB*(
+&es.uclm.esi.security.WebSecurityConfig

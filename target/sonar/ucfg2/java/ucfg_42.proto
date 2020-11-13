@@ -1,17 +1,9 @@
 
-Mes.uclm.esi.security.services.UserDetailsImpl#getUsername()Ljava/lang/String;k
-aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.javaH H("1*Ì
+:es.uclm.esi.security.services.UserDetailsImpl#isEnabled()Zk
+aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.java\ \("1*ç
 1k
-aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.javaI	 I(Ï
-Ì
+aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.java]	 ]("u
 k
-aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.javaI	 I(
-%0java.lang.String"__id*?*=/
--es.uclm.esi.security.services.UserDetailsImpl"
-
-username"‡
-k
-aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.javaI I(
-
-%0java.lang.StringB1/
+aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.java] ](
+""B1/
 -es.uclm.esi.security.services.UserDetailsImpl
