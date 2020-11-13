@@ -70,7 +70,7 @@ function escribirdias() {
 		jsonreuniones = getReunionesMes();
 	} else {
 		jsonreuniones = 0;
-		//jsonreuniones = reunionesMes(mescal,annocal);
+		//jsonreuniones = reunionesMes(mescal,annocal); 
 		//reunionesMes(hoy.getMonth()+1,hoy.getFullYear()); //Tiene que tener funcionalidad
         //jsonreuniones = getReunionesMesC();
         
