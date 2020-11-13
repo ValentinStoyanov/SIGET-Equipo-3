@@ -1,15 +1,21 @@
 package es.uclm.esi.controller;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.json.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import es.uclm.esi.model.Reunion;
 import es.uclm.esi.repository.RepositoryCalendarioPersonal;
 
 /**
@@ -23,12 +29,22 @@ public class ControllerCalendarioPersonal {
 	@Autowired
 	RepositoryCalendarioPersonal calendarioRepository;
 
+	
+//	@GetMapping("/pruebaConsulta")
+//	public String getPrueba() {
+//		
+//		List<Reunion> reuniones = calendarioRepository.findReunionesMes(12, 2020);
+//
+//		return reuniones.toString();
+//	}
 	@PostMapping("/getCalendarioPersonalMes")
 	public String getCalendarioPersonalMes(@RequestBody Map<String, Object> entrada) {
 		JSONObject jso = new JSONObject(entrada);
 		int mespeticion = jso.getInt("mes");
 		int anopeticion = jso.getInt("ano");
 
+		List<Reunion> reuniones = calendarioRepository.findReunionesMes(mespeticion, anopeticion);
+		
 		ArrayList<Integer> dias = new ArrayList<Integer>();
 		try {
 			int wid = 1;
@@ -57,6 +73,7 @@ public class ControllerCalendarioPersonal {
 		JSONObject jso = new JSONObject(entrada);		
 		JSONObject jsoret = new JSONObject();
 		JSONArray jsa = new JSONArray();
+		JSONArray jsaAsistentes = new JSONArray();
 		JSONObject jsoreunion = new JSONObject();
 		
 		try {
@@ -68,10 +85,14 @@ public class ControllerCalendarioPersonal {
 					jsoreunion.put("titulo", calendarioRepository.findById(wid).getTitulo());
 					jsoreunion.put("id", contadorReuniones);
 					jsoreunion.put("hora", calendarioRepository.findById(wid).getHora());
-					jsoreunion.put("asistentes", calendarioRepository.findById(wid).getAsistentes());
+					for (int i = 0; i < calendarioRepository.findById(wid).getAsistentes().length; i++) {
+						jsaAsistentes.put(calendarioRepository.findById(wid).getAsistentes()[i]);
+					}
+					jsoreunion.put("asistentes", jsaAsistentes);
 					jsoreunion.put("descripcion", calendarioRepository.findById(wid).getDescripcion());
 					jsa.put(jsoreunion);
 					contadorReuniones++;
+					
 				} 
 				wid++;
 			}

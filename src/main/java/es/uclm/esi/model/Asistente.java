@@ -21,5 +21,10 @@ public class Asistente {
 		this.usuario = usuario;
 		this.estado = estado;
 	}
+	@Override
+	public String toString() {
+		return "{\"usuario\": \""+usuario+"\", \"estado\": \""+estado+"\"}";
+	}
+	
 	
 }
