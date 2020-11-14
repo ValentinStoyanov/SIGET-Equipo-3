@@ -113,7 +113,8 @@ function reunionesMesHoy(){ //Recibirá un array de días en los que hay reunion
     var info = {
         type : "PeticionReunionesMes",
         mes : mesActual,
-        ano : anoActual
+        ano : anoActual,
+        usuario : localStorage.getItem("jwt")
     };
     $.ajax({
         url : '/getCalendarioPersonalMes',
@@ -166,7 +167,8 @@ function reunionesMes(mesConcreto, anoConcreto){ //Recibirá las reuniones de un
     var info = {
         type : "PeticionReunionesMes",
         mes : mesConcreto,
-        ano : anoConcreto
+        ano : anoConcreto,
+        usuario : localStorage.getItem("jwt")
     };
     $.ajax({
         url : '/getCalendarioPersonalMes',

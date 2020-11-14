@@ -42,6 +42,7 @@ public class ControllerCalendarioPersonal {
 		JSONObject jso = new JSONObject(entrada);
 		int mespeticion = jso.getInt("mes");
 		int anopeticion = jso.getInt("ano");
+		String usuario = jso.getString("usuario");
 
 		List<Reunion> reuniones = calendarioRepository.findReunionesMes(mespeticion, anopeticion);
 		ArrayList<Integer> dias = new ArrayList<Integer>();
@@ -52,7 +53,6 @@ public class ControllerCalendarioPersonal {
 				dias.add(dia);
 			}
 		}
-		System.out.println(dias);
 		JSONObject jsoret = new JSONObject();
 
 		int[] diasjson = new int[dias.size()];

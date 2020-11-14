@@ -1,17 +1,17 @@
 
-6es.uclm.esi.model.User#getPassword()Ljava/lang/String;T
-JC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/User.javaD D("1*ï
-1T
-JC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/User.javaE E(¡
-ž
-T
-JC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/User.javaE E(
-%0java.lang.String"__id*(*&
-es.uclm.esi.model.User"
+Hes.uclm.esi.payload.response.JwtResponse#getUsername()Ljava/lang/String;f
+\C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/payload/response/JwtResponse.java5 5("1*¸
+1f
+\C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/payload/response/JwtResponse.java6	 6(Å
+Â
+f
+\C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/payload/response/JwtResponse.java6	 6(
+%0java.lang.String"__id*:*8*
+(es.uclm.esi.payload.response.JwtResponse"
 
-password"p
-T
-JC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/User.javaE E(
+username"‚
+f
+\C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/payload/response/JwtResponse.java6 6(
 
-%0java.lang.StringB
-es.uclm.esi.model.User
+%0java.lang.StringB,*
+(es.uclm.esi.payload.response.JwtResponse
