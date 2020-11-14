@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import es.uclm.esi.model.Asistente;
 import es.uclm.esi.model.Reunion;
 import es.uclm.esi.repository.RepositoryCalendarioPersonal;
 
@@ -47,10 +48,17 @@ public class ControllerCalendarioPersonal {
 		List<Reunion> reuniones = calendarioRepository.findReunionesMes(mespeticion, anopeticion);
 		ArrayList<Integer> dias = new ArrayList<Integer>();
 		int dia;
+		Asistente[] asistentes;
+		//Hay que controlar que no exista usuario porque no se haya pasado el token o cualquier tipo de error
 		for (Reunion reunion : reuniones) {
-			dia = reunion.getDia();
-			if(!dias.contains(dia)) {
-				dias.add(dia);
+			asistentes = reunion.getAsistentes();
+			for (Asistente asistente : asistentes) {
+				if(asistente.getUsuario().equalsIgnoreCase(usuario)) { //No es la mejor forma comparar por nombre de usuario, mejor DNI
+					dia = reunion.getDia();
+					if(!dias.contains(dia)) {
+						dias.add(dia);
+					}
+				}
 			}
 		}
 		JSONObject jsoret = new JSONObject();
