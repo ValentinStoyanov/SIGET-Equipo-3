@@ -9,7 +9,7 @@ public class ConsultarInfoReunionStepDefinitions {
 	@Given("el usuario quiere ver la información de la reunion seleccionada")
 	public void el_usuario_quiere_ver_la_información_de_la_reunion_seleccionada() {
 	    // Write code here that turns the phrase above into concrete actions
-	    //throw new io.cucumber.java.PendingException();
+	    // throw new io.cucumber.java.PendingException();
 	}
 
 	@When("el titulo de la reunion es {string}")

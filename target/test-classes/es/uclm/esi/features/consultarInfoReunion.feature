@@ -12,5 +12,8 @@ Feature: consultar info reunion
   
   Examples:
  	| 	titulo |	hora	|	asistentes	|	codigo	|
- 	| 	"esto es una reunion buena" 	|	"16:00"		|	"Jesus","German"	|	200	|
+ 	| 	"esto es una reunion buena" 	|	"16:00"		|	"Jesus:aceptado, German:pendiente"	|	200	|
  	| 	"esto es una reunion mala" 	|	""		|	""	|	400	|
+ 	
+ 	
+ 

@@ -89,6 +89,7 @@ function mostrarInfoReunion(idReunion,diaReunion){
         var asistentes = document.getElementById("asistentes");
         asistentes.setAttribute("placeholder",jsonMostrar.reuniones[idReunion-1].asistentes);   
     }
+    console.log(jsonMostrar.reuniones[idReunion-1].asistentes);
 }
 
 function getDetallesReuniones(){
