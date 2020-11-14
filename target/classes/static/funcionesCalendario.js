@@ -154,7 +154,7 @@ function reunionesDiaHoy(){ //Pedirá las reuniones del día de hoy, por defecto
     });
 }
 
-function getReunioncesMesC(){
+function getReunionesMesC(){
     return infoMes;
 }
 
@@ -170,12 +170,13 @@ function reunionesMes(mesConcreto, anoConcreto){ //Recibirá las reuniones de un
     };
     $.ajax({
         url : '/getCalendarioPersonalMes',
+        async : false,
         data : JSON.stringify(info),
         type : "post",
         dataType: 'json',
         contentType: 'application/json',
         success : function(response) {
-            setReunioncesMesC(response);
+            setReunionesMesC(response);
         },
         error : function(response) {
             console.log('Se produjo un problema en reunionesMes()');
