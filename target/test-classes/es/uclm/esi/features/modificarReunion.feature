@@ -15,5 +15,5 @@ Feature: Modificar Reunion
     
     Examples:
   | titulo                   | nuevotitulo       				| fecha        |  nuevafecha  | hora    | nuevahora | asistentes                                      | asistentesnuevos                                | codigo | id   | token   |
-	| "test"                   | "test"                   | "11-11-2020" | "11-11-2020" | "23:32" |  "23:32"  | "juan:pendiente,luis:pendiente"                 | "juan:pendiente,luis:pendiente"                 | 200    | 1    | "awed"  |
+	| "test"                   | "test"                   | "11-11-2020" | "11-11-2020" | "23:32" |  "23:32"  | "juan:pendiente,luis:pendiente"                 | "juan:pendiente,luis:pendiente"                 | 404    | 1    | "awed"  |
  

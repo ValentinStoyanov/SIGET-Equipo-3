@@ -8,3 +8,9 @@ script:
   # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
   #- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=GermanUCLM_SIGET-Equipo3
   - mvn test
+  - mvn verify sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=germanuclm -Dsonar.login=ec35c2c09a06d2cad7575651319832934c88e13c -Dsonar.sources=src/main/java,src/main/resources -Dsonar.branch.name= escenarios_modificar+controller_calendario_bien
+#deploy:
+#  provider: heroku
+#  api_key: $HEROKU
+#  on:
+#    branch: master
