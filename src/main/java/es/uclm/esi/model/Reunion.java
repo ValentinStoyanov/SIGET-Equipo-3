@@ -3,11 +3,6 @@ package es.uclm.esi.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-/**
- * 
- * @author Víctor
- * Clase de dominio que usaremos para instanciar reuniones
- */
 @Document(collection= "reuniones")
 public class Reunion {
 	
@@ -19,9 +14,13 @@ public class Reunion {
 	private int ano;
 	private String hora;
 	private String descripcion;
-	private String[] asistentes;
+	String organizador;
+	String estado;
+	private Asistente[] asistentes;
 	
-	public Reunion(int id, String titulo, int dia, int mes, int ano, String hora,String descripcion, String[] asistentes) {
+	public Reunion(int id, String titulo, int dia, int mes, int ano, String hora, String descripcion, String organizador, 
+			String estado, Asistente[] asistentes) {
+		super();
 		this.id=id;
 		this.titulo=titulo;
 		this.dia=dia;
@@ -29,6 +28,8 @@ public class Reunion {
 		this.ano=ano;
 		this.hora=hora;
 		this.descripcion=descripcion;
+		this.organizador=organizador;
+		this.estado=estado;
 		this.asistentes=asistentes;
 	}
 
@@ -88,15 +89,27 @@ public class Reunion {
 		this.descripcion = descripcion;
 	}
 
-	public String[] getAsistentes() {
-		return asistentes;
-	}
-	
-	public String getAsistente(int index) {
-		return asistentes[index];
+	public String getOrganizador() {
+		return organizador;
 	}
 
-	public void setAsistentes(String[] asistentes) {
+	public void setOrganizador(String organizador) {
+		this.organizador = organizador;
+	}
+
+	public String getEstado() {
+		return estado;
+	}
+
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+
+	public Asistente[] getAsistentes() {
+		return asistentes;
+	}
+
+	public void setAsistentes(Asistente[] asistentes) {
 		this.asistentes = asistentes;
 	}
 
