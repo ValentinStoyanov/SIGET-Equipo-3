@@ -192,7 +192,7 @@ function setDetallesReunionDiaC(data){
 }
 
 function reunionesDia(diaConcreto, mesConcreto, anoConcreto){ //Pedirá las reuniones de un día concreto
-    console.log("He pasado por la línea 196 y me han mandado el dia "+diaConcreto+" y el mes "+mesConcreto);
+    console.log("He pasado por la línea 196 y me han mandado el dia "+diaConcreto+" y el mes "+mesConcreto); 
     var info = {
         type : "PeticionDatosReunion",
         dia : diaConcreto,
