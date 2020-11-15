@@ -131,6 +131,7 @@ function reunionesMesHoy(){ //Recibirá un array de días en los que hay reunion
 
 function reunionesDiaHoy(){ //Pedirá las reuniones del día de hoy, por defecto
     mesActual = hoy.getMonth() + 1;
+    console.log("El mesActual es "+mesActual);
     var info = {
         "type" : "PeticionDatosReunion",
         "dia" : hoy.getDate(),
@@ -194,6 +195,7 @@ function setDetallesReunionDiaC(data){
 }
 
 function reunionesDia(diaConcreto, mesConcreto, anoConcreto){ //Pedirá las reuniones de un día concreto
+    console.log("Estoy pidiendo las reuniones de "+diaConcreto+mesConcreto+anoConcreto);
     var info = {
         type : "PeticionDatosReunion",
         dia : diaConcreto,

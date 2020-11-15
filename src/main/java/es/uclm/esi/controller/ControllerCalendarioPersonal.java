@@ -100,28 +100,6 @@ public class ControllerCalendarioPersonal {
 				}
 			}
 		}
-
-//		try {
-//			int contadorReuniones = 1;
-//			int wid = 1;
-//			while (wid>0) {
-//				if (calendarioRepository.findById(wid).getDia() == jso.getInt("dia")
-//						&& calendarioRepository.findById(wid).getMes() == jso.getInt("mes")) {
-//					jsoreunion.put("titulo", calendarioRepository.findById(wid).getTitulo());
-//					jsoreunion.put("id", contadorReuniones);
-//					jsoreunion.put("hora", calendarioRepository.findById(wid).getHora());
-//					for (int i = 0; i < calendarioRepository.findById(wid).getAsistentes().length; i++) {
-//						jsaAsistentes.put(calendarioRepository.findById(wid).getAsistentes()[i]);
-//					}
-//					jsoreunion.put("asistentes", jsaAsistentes);
-//					jsoreunion.put("descripcion", calendarioRepository.findById(wid).getDescripcion());
-//					jsa.put(jsoreunion);
-//					contadorReuniones++;
-//					
-//				} 
-//				wid++;
-//			}
-//		} catch (Exception e) {}
 		
 		jsoret.put("dia", jso.getInt("dia"));
 		jsoret.put("mes", jso.getInt("mes"));
