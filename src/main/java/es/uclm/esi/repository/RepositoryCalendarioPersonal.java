@@ -11,6 +11,7 @@ public interface RepositoryCalendarioPersonal extends MongoRepository<Reunion,St
 	
 	Reunion findById(int _id);
 
+	List<Reunion> findByDia(int dia);
 	
 	@Query(value = "{'mes': ?0, 'ano' : ?1 }")
 	List<Reunion> findReunionesMes(int mes, int anio);

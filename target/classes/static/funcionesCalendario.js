@@ -4,7 +4,7 @@ var infoMes;
 var detallesReuniones;
 var detallesDia = 0;
 
-function clickInfoReuniones(ID){ //Comprobar si realmente hay reunion ese día porque son datos fijos
+function clickInfoReuniones(ID){
 
     var jsonReunionesDia = getDetallesReuniones();
     var jsonDia;
@@ -145,6 +145,7 @@ function reunionesDiaHoy(){ //Pedirá las reuniones del día de hoy, por defecto
         contentType: 'application/json',
         success : function(response) {
             setDetallesReuniones(response);
+            clickInfoReuniones(hoy.getDate());
         },
         error : function(response) {
             console.log('Se produjo un problema en reunionesDiaHoy()');
@@ -192,7 +193,6 @@ function setDetallesReunionDiaC(data){
 }
 
 function reunionesDia(diaConcreto, mesConcreto, anoConcreto){ //Pedirá las reuniones de un día concreto
-    console.log("He pasado por la línea 196 y me han mandado el dia "+diaConcreto+" y el mes "+mesConcreto); 
     var info = {
         type : "PeticionDatosReunion",
         dia : diaConcreto,

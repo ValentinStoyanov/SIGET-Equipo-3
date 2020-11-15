@@ -80,6 +80,10 @@ public class ControllerCalendarioPersonal {
 		JSONArray jsaAsistentes = new JSONArray();
 		JSONObject jsoreunion = new JSONObject();
 		
+		List<Reunion> reuniones = calendarioRepository.findByDia(jso.getInt("dia"));
+		
+		System.out.println(reuniones.get(0).getTitulo());
+		
 		try {
 			int contadorReuniones = 1;
 			int wid = 1;
