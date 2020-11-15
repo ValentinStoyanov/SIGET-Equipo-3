@@ -80,31 +80,48 @@ public class ControllerCalendarioPersonal {
 		JSONArray jsaAsistentes = new JSONArray();
 		JSONObject jsoreunion = new JSONObject();
 		
-		List<Reunion> reuniones = calendarioRepository.findByDia(jso.getInt("dia"));
-		
-		System.out.println(reuniones.get(0).getTitulo());
-		
-		try {
-			int contadorReuniones = 1;
-			int wid = 1;
-			while (wid>0) {
-				if (calendarioRepository.findById(wid).getDia() == jso.getInt("dia")
-						&& calendarioRepository.findById(wid).getMes() == jso.getInt("mes")) {
-					jsoreunion.put("titulo", calendarioRepository.findById(wid).getTitulo());
+		List<Reunion> reuniones = calendarioRepository.findByDia(jso.getInt("dia"),jso.getInt("mes"),jso.getInt("ano"));
+		Asistente[] asistentes;
+		int contadorReuniones = 1;
+		for (Reunion reunion : reuniones) {
+			asistentes = reunion.getAsistentes();
+			for (Asistente asistente : asistentes) {
+				if (asistente.getUsuario().equalsIgnoreCase(jso.getString("usuario"))) {
+					jsoreunion.put("titulo", reunion.getTitulo());
 					jsoreunion.put("id", contadorReuniones);
-					jsoreunion.put("hora", calendarioRepository.findById(wid).getHora());
-					for (int i = 0; i < calendarioRepository.findById(wid).getAsistentes().length; i++) {
-						jsaAsistentes.put(calendarioRepository.findById(wid).getAsistentes()[i]);
+					jsoreunion.put("hora", reunion.getHora());
+					for (int i = 0; i < reunion.getAsistentes().length; i++) {
+						jsaAsistentes.put(asistentes);
 					}
 					jsoreunion.put("asistentes", jsaAsistentes);
-					jsoreunion.put("descripcion", calendarioRepository.findById(wid).getDescripcion());
+					jsoreunion.put("descripcion", reunion.getDescripcion());
 					jsa.put(jsoreunion);
 					contadorReuniones++;
-					
-				} 
-				wid++;
+				}
 			}
-		} catch (Exception e) {}
+		}
+
+//		try {
+//			int contadorReuniones = 1;
+//			int wid = 1;
+//			while (wid>0) {
+//				if (calendarioRepository.findById(wid).getDia() == jso.getInt("dia")
+//						&& calendarioRepository.findById(wid).getMes() == jso.getInt("mes")) {
+//					jsoreunion.put("titulo", calendarioRepository.findById(wid).getTitulo());
+//					jsoreunion.put("id", contadorReuniones);
+//					jsoreunion.put("hora", calendarioRepository.findById(wid).getHora());
+//					for (int i = 0; i < calendarioRepository.findById(wid).getAsistentes().length; i++) {
+//						jsaAsistentes.put(calendarioRepository.findById(wid).getAsistentes()[i]);
+//					}
+//					jsoreunion.put("asistentes", jsaAsistentes);
+//					jsoreunion.put("descripcion", calendarioRepository.findById(wid).getDescripcion());
+//					jsa.put(jsoreunion);
+//					contadorReuniones++;
+//					
+//				} 
+//				wid++;
+//			}
+//		} catch (Exception e) {}
 		
 		jsoret.put("dia", jso.getInt("dia"));
 		jsoret.put("mes", jso.getInt("mes"));

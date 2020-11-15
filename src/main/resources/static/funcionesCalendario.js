@@ -12,7 +12,7 @@ function clickInfoReuniones(ID){
     for(j = 0; j < 31; j++){
         document.getElementById(j).style.border = "2px double #fffafa";
 	}
-
+	
     formEnBlanco();
     detallesEnBlanco();
 
@@ -135,7 +135,8 @@ function reunionesDiaHoy(){ //Pedirá las reuniones del día de hoy, por defecto
         "type" : "PeticionDatosReunion",
         "dia" : hoy.getDate(),
         "mes" : mesActual,
-        "ano" : hoy.getFullYear()
+        "ano" : hoy.getFullYear(),
+        usuario : localStorage.getItem("jwt")
     };
     $.ajax({
         url : '/getDetallesReunion',
@@ -197,7 +198,8 @@ function reunionesDia(diaConcreto, mesConcreto, anoConcreto){ //Pedirá las reun
         type : "PeticionDatosReunion",
         dia : diaConcreto,
         mes : mesConcreto,
-        ano : anoConcreto
+        ano : anoConcreto,
+		usuario : localStorage.getItem("jwt")
     };
     $.ajax({
         url : '/getDetallesReunion',
