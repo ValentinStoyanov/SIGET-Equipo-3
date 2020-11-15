@@ -6,11 +6,7 @@ import java.util.Map;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
-import org.json.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.mongodb.core.query.Criteria;
-import org.springframework.data.mongodb.core.query.Query;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -44,7 +40,6 @@ public class ControllerCalendarioPersonal {
 		int mespeticion = jso.getInt("mes");
 		int anopeticion = jso.getInt("ano");
 		String usuario = jso.getString("usuario");
-
 		List<Reunion> reuniones = calendarioRepository.findReunionesMes(mespeticion, anopeticion);
 		ArrayList<Integer> dias = new ArrayList<Integer>();
 		int dia;
@@ -71,6 +66,8 @@ public class ControllerCalendarioPersonal {
 		jsoret.put("reuniones", diasjson);
 		jsoret.put("mes", mespeticion);
 		jsoret.put("ano", anopeticion);
+		
+		System.out.println("Estoy enviando "+jsoret);
 		
 		return jsoret.toString();
 	}
@@ -109,7 +106,8 @@ public class ControllerCalendarioPersonal {
 		jsoret.put("mes", jso.getInt("mes"));
 		jsoret.put("ano", jso.getInt("ano"));
 		jsoret.put("reuniones", jsa);
-		
+		System.out.println("Me ha llegado esto "+jso);
+		System.out.println("Estoy enviando "+jsoret);
 		return jsoret.toString();
 	}
 

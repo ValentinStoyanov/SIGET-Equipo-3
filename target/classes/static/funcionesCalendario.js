@@ -9,7 +9,6 @@ function clickInfoReuniones(ID){ //Comprobar si realmente hay reunion ese día p
     var jsonReunionesDia = getDetallesReuniones();
     var jsonDia;
 
-
     for(j = 0; j < 31; j++){
         document.getElementById(j).style.border = "2px double #fffafa";
 	}
@@ -24,13 +23,11 @@ function clickInfoReuniones(ID){ //Comprobar si realmente hay reunion ese día p
 		if (ID == infoMes.reuniones[k]) {
             reunionesDia(ID,jsonReunionesDia.mes,jsonReunionesDia.ano);
             jsonDia = getDetallesReunionDiaC();
-            while(contador < 5){
-                jsonDia = getDetallesReunionDiaC();
-                contador++;
-            }
 			hayreu = true;
 		}
 	}
+
+	console.log("Sí, estoy aquí y el mes de la reunion es el  "+jsonReunionesDia.mes);
 
 	if(hayreu){
     	if(jsonDia == 0){
@@ -136,7 +133,7 @@ function reunionesDiaHoy(){ //Pedirá las reuniones del día de hoy, por defecto
     mesActual = hoy.getMonth() + 1;
     var info = {
         "type" : "PeticionDatosReunion",
-        "dia" : hoy.getDay(),
+        "dia" : hoy.getDate(),
         "mes" : mesActual,
         "ano" : hoy.getFullYear()
     };
@@ -195,6 +192,7 @@ function setDetallesReunionDiaC(data){
 }
 
 function reunionesDia(diaConcreto, mesConcreto, anoConcreto){ //Pedirá las reuniones de un día concreto
+    console.log("He pasado por la línea 196 y me han mandado el dia "+diaConcreto+" y el mes "+mesConcreto);
     var info = {
         type : "PeticionDatosReunion",
         dia : diaConcreto,

@@ -1,0 +1,1 @@
+{"_id":1,"username":"admin","email":"admin@admin.com","password":"$2a$10$rRHgDoG1CM4RbyBe3r9WseO2vmMAvp6wVy1hDCAk0mV3CJNtgC3vS","roles":[{"$ref":"roles","$id":{"$oid":"5f8da720ba8cdf0fb252cbe4"}},{"$ref":"roles","$id":1}],"_class":"es.uclm.esi.model.User"}
