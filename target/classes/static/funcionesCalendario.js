@@ -10,7 +10,9 @@ function clickInfoReuniones(ID){
     var jsonDia;
 
     for(j = 0; j < 31; j++){
-        document.getElementById(j).style.border = "2px double #fffafa";
+    	if(document.getElementById(j).style != null)
+        	document.getElementById(j).style.border = "2px double #fffafa";
+		}
 	}
 	
     formEnBlanco();
@@ -195,7 +197,7 @@ function setDetallesReunionDiaC(data){
 }
 
 function reunionesDia(diaConcreto, mesConcreto, anoConcreto){ //Pedirá las reuniones de un día concreto
-    console.log("Estoy pidiendo las reuniones de "+diaConcreto+mesConcreto+anoConcreto);
+    console.log("Estoy pidiendo las reuniones de "+diaConcreto+" "+mesConcreto+" "+anoConcreto);
     var info = {
         type : "PeticionDatosReunion",
         dia : diaConcreto,
