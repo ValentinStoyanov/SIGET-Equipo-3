@@ -6,11 +6,10 @@ var detallesDia = 0;
 
 function clickInfoReuniones(ID){
 
-    var jsonReunionesDia = getDetallesReuniones();
     var jsonDia;
 
     for(j = 0; j < 31; j++){
-    	if(document.getElementById(j).style != null)
+    	if(document.getElementById(j) != null){
         	document.getElementById(j).style.border = "2px double #fffafa";
 		}
 	}
@@ -23,13 +22,11 @@ function clickInfoReuniones(ID){
 
     for(var k = 0; k < infoMes.reuniones.length; k++){
 		if (ID == infoMes.reuniones[k]) {
-            reunionesDia(ID,jsonReunionesDia.mes,jsonReunionesDia.ano);
+            reunionesDia(ID,infoMes.mes,infoMes.ano);
             jsonDia = getDetallesReunionDiaC();
 			hayreu = true;
 		}
 	}
-
-	console.log("Sí, estoy aquí y el mes de la reunion es el  "+jsonReunionesDia.mes);
 
 	if(hayreu){
     	if(jsonDia == 0){
@@ -118,12 +115,12 @@ function reunionesMesHoy(){ //Recibirá un array de días en los que hay reunion
     $.ajax({
         url : '/getCalendarioPersonalMes',
         data : JSON.stringify(info),
+        async : false,
         type : "post",
         dataType: 'json',
         contentType: 'application/json',
         success : function(response) {
             setReunionesMes(response);
-            escribirdias();
         },
         error : function(response) {
             console.log('Se produjo un problema en reunioesMesHoy()');
@@ -133,7 +130,6 @@ function reunionesMesHoy(){ //Recibirá un array de días en los que hay reunion
 
 function reunionesDiaHoy(){ //Pedirá las reuniones del día de hoy, por defecto
     mesActual = hoy.getMonth() + 1;
-    console.log("El mesActual es "+mesActual);
     var info = {
         "type" : "PeticionDatosReunion",
         "dia" : hoy.getDate(),
@@ -144,11 +140,13 @@ function reunionesDiaHoy(){ //Pedirá las reuniones del día de hoy, por defecto
     $.ajax({
         url : '/getDetallesReunion',
         data : JSON.stringify(info),
+        async : false,
         type : "post",
         dataType: 'json',
         contentType: 'application/json',
         success : function(response) {
             setDetallesReuniones(response);
+            setDetallesReunionDiaC(response);
             clickInfoReuniones(hoy.getDate());
         },
         error : function(response) {
