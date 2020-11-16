@@ -10,7 +10,7 @@ Feature: Convocar Reunion
   	And dia es <dia>
   	And mes es <mes>
   	And ano es <ano>
-  	And hora es <String>
+  	And hora es <hora>
   	And asistentes son <asistentes>
   	Then la respuesta sera <codigo>
   
