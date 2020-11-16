@@ -23,6 +23,10 @@ public class Reunion {
 	String estado;
 	private Asistente[] asistentes;
 	
+	public Reunion() {
+		
+	}
+	
 	public Reunion(int id, String titulo, int dia, int mes, int ano, String hora, String descripcion, String organizador, 
 			String estado, Asistente[] asistentes) {
 		super();
