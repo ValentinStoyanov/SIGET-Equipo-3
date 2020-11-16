@@ -33,7 +33,7 @@ public class ConvocarReunionStepDefinitions extends SpringIntegrationTest{
 	
 @Given("el organizador quiere convocar una reunion")
 public void el_organizador_quiere_convocar_una_reunion() {
-    throw new io.cucumber.java.PendingException();
+
 }
 
 @When("convoco la reunion {int} con token {string}")
@@ -44,49 +44,48 @@ public void convoco_la_reunion(Integer int1, String token) {
 	
 	headers.set("Autorization", "Bearer " + token);
 	
-    throw new io.cucumber.java.PendingException();
 }
 
 @When("organizador es {string}")
 public void organizador_es(String organizador) {
     reu.setOrganizador(organizador);
-    throw new io.cucumber.java.PendingException();
+
 }
 
 @When("titulo es {string}")
 public void titulo_es(String titulo) {
     reu.setTitulo(titulo);
-    throw new io.cucumber.java.PendingException();
+
 }
 
 @When("estado es {string}")
 public void estado_es(String estado) {
 	reu.setEstado(estado);
-    throw new io.cucumber.java.PendingException();
+
 }
 
 @When("dia es {int}")
 public void dia_es(Integer dia) {
 	reu.setDia(dia);
-    throw new io.cucumber.java.PendingException();
+
 }
 
 @When("mes es {int}")
 public void mes_es(Integer mes) {
 	reu.setMes(mes);
-    throw new io.cucumber.java.PendingException();
+
 }
 
 @When("ano es {int}")
 public void ano_es(Integer ano) {
 	reu.setAno(ano);
-    throw new io.cucumber.java.PendingException();
+
 }
 
 @When("hora es {string}")
 public void hora_es(String hora) {
 	reu.setHora(hora);
-    throw new io.cucumber.java.PendingException();
+
 }
 
 @When("asistentes son {string}")
@@ -101,7 +100,7 @@ public void asistentes_son(String cadena) {
 			arrayAsistentes[i] = new Asistente(asistente[0],asistente[1]);
 		}
 	}
-    throw new io.cucumber.java.PendingException();
+
 }
 
 @Then("la respuesta sera {int}")
@@ -114,7 +113,7 @@ public void la_respuesta_sera(Integer res) {
 		codigo = e.getRawStatusCode();
 	}
 	assertEquals(res, codigo);
-    throw new io.cucumber.java.PendingException();
+
 }
 
 }
