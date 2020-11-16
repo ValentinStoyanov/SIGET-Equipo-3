@@ -83,7 +83,7 @@ public void ano_es(Integer ano) {
     throw new io.cucumber.java.PendingException();
 }
 
-@When("hora es {String}")
+@When("hora es {string}")
 public void hora_es(String hora) {
 	reu.setHora(hora);
     throw new io.cucumber.java.PendingException();
