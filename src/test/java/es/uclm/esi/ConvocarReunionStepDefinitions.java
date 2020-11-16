@@ -13,44 +13,19 @@ import org.springframework.web.client.HttpClientErrorException;
 
 import es.uclm.esi.model.Asistente;
 import es.uclm.esi.model.Reunion;
-import es.uclm.esi.repository.RepositoryReuniones;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class ConvocarReunionStepDefinitions extends SpringIntegrationTest{
 
 	@Autowired
-	RepositoryReuniones rReuniones;
 	ResponseEntity<String> response;
 	String url = DEFAULT_URL + "reunion/convocar/";
 	Map<String, String> params = new HashMap<String, String>();
 	Integer codigo;
 	HttpHeaders headers = new HttpHeaders();
-	Reunion reu;
+	Reunion reu = new Reunion();
 	Asistente[] arrayAsistentes;
-	int numReunion;
-	
-@Given("el organizador quiere convocar una reunion")
-public void el_organizador_quiere_convocar_una_reunion() {
-
-}
-
-@When("convoco la reunion {int} con token {string}")
-public void convoco_la_reunion(Integer int1, String token) {
-	numReunion = int1;
-	
-	rReuniones.save(reu);
-	
-	headers.set("Autorization", "Bearer " + token);
-	
-}
-
-@When("organizador es {string}")
-public void organizador_es(String organizador) {
-    reu.setOrganizador(organizador);
-
-}
 
 @When("titulo es {string}")
 public void titulo_es(String titulo) {
@@ -88,6 +63,12 @@ public void hora_es(String hora) {
 
 }
 
+@When("descripcion es {string}")
+public void descripcion_es(String descripcion) {
+	reu.setDescripcion(descripcion);
+
+}
+
 @When("asistentes son {string}")
 public void asistentes_son(String cadena) {
 	if (!cadena.equals("")) {
@@ -100,11 +81,16 @@ public void asistentes_son(String cadena) {
 			arrayAsistentes[i] = new Asistente(asistente[0],asistente[1]);
 		}
 	}
+	
+	reu.setAsistentes(arrayAsistentes);
 
 }
 
-@Then("la respuesta sera {int}")
-public void la_respuesta_sera(Integer res) {
+@Then("convoco la reunion con token {string}")
+public void convoco_la_reunion(String token) {
+	
+	headers.set("Autorization", "Bearer " + token);
+	
 	HttpEntity<Reunion> request = new HttpEntity<>(reu, headers);
 	try {
 		response = restTemplate.postForEntity(url, request, String.class);
@@ -112,6 +98,11 @@ public void la_respuesta_sera(Integer res) {
 	} catch (HttpClientErrorException e) {
 		codigo = e.getRawStatusCode();
 	}
+
+}
+
+@Then("la respuesta sera {int}")
+public void la_respuesta_sera(Integer res) {
 	assertEquals(res, codigo);
 
 }
