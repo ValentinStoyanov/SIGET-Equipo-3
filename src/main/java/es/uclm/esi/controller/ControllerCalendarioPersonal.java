@@ -77,7 +77,6 @@ public class ControllerCalendarioPersonal {
 		JSONObject jso = new JSONObject(entrada);		
 		JSONObject jsoret = new JSONObject();
 		JSONArray jsa = new JSONArray();
-		JSONArray jsaAsistentes = new JSONArray();
 		JSONObject jsoreunion = new JSONObject();
 		
 		List<Reunion> reuniones = calendarioRepository.findByDia(jso.getInt("dia"),jso.getInt("mes"),jso.getInt("ano"));
@@ -90,10 +89,7 @@ public class ControllerCalendarioPersonal {
 					jsoreunion.put("titulo", reunion.getTitulo());
 					jsoreunion.put("id", contadorReuniones);
 					jsoreunion.put("hora", reunion.getHora());
-					for (int i = 0; i < reunion.getAsistentes().length; i++) {
-						jsaAsistentes.put(asistentes);
-					}
-					jsoreunion.put("asistentes", jsaAsistentes);
+					jsoreunion.put("asistentes", asistentes);
 					jsoreunion.put("descripcion", reunion.getDescripcion());
 					jsa.put(jsoreunion);
 					contadorReuniones++;

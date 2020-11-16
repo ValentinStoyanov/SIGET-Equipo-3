@@ -83,7 +83,7 @@ function mostrarInfoReunion(idReunion,diaReunion){
 
     for(i = 0; i < jsonMostrar.reuniones[idReunion-1].asistentes.length; i++){
         var asistentes = document.getElementById("asistentes");
-        asistentes.setAttribute("placeholder",jsonMostrar.reuniones[idReunion-1].asistentes);   
+        asistentes.setAttribute("placeholder",jsonMostrar.reuniones[idReunion-1].asistentes[i].usuario);
     }
 }
 
@@ -195,8 +195,7 @@ function setDetallesReunionDiaC(data){
 }
 
 function reunionesDia(diaConcreto, mesConcreto, anoConcreto){ //Pedirá las reuniones de un día concreto
-    console.log("Estoy pidiendo las reuniones de "+diaConcreto+" "+mesConcreto+" "+anoConcreto);
-    var info = {
+   	var info = {
         type : "PeticionDatosReunion",
         dia : diaConcreto,
         mes : mesConcreto,
