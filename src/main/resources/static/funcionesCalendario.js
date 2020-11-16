@@ -81,10 +81,14 @@ function mostrarInfoReunion(idReunion,diaReunion){
     var descripcion = document.getElementById("descripcion");
     descripcion.setAttribute("placeholder",jsonMostrar.reuniones[idReunion-1].descripcion);
 
+	var strasistentes = "";
     for(i = 0; i < jsonMostrar.reuniones[idReunion-1].asistentes.length; i++){
-        var asistentes = document.getElementById("asistentes");
-        asistentes.setAttribute("placeholder",jsonMostrar.reuniones[idReunion-1].asistentes[i].usuario);
+    	console.log("Los asistentes son"+jsonMostrar.reuniones[idReunion-1].asistentes[i].usuario);
+		strasistentes+=jsonMostrar.reuniones[idReunion-1].asistentes[i].usuario+"\n";
     }
+    
+    var asistentes = document.getElementById("asistentes");
+    asistentes.setAttribute("placeholder",strasistentes);
 }
 
 function getDetallesReuniones(){
