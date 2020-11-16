@@ -1,4 +1,4 @@
-Feature: Convocar Reunion
+Feature: Convocar
 
     
   Scenario Outline: convocar
