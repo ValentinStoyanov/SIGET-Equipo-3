@@ -2,12 +2,12 @@ Feature: Convocar
 
   Scenario Outline: cancelar
   
-  When organizador es <organizador>
+  When seleciono la reunion con id <id>
   Then cancelo la reunion con token <token>
   Then la respuesta sera <codigo>
   
   
   Examples:
-  | organizador | codigo  | token |
-  | "admin"  | 200 | "Admin123" |
-  | "admin" | 400 | "Admin123" |
+  |id| codigo | token |
+  |7 | 200 | "Admin123" |
+  |8 | 400 | "Admin123" |

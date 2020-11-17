@@ -17,29 +17,24 @@ import io.cucumber.java.en.When;
 public class CancelarReunionStepDefinitions extends SpringIntegrationTest {
 	
 	@Autowired
-	//RepositoryReuniones rReuniones;
 	ResponseEntity<String> response;
 	String url = DEFAULT_URL + "reunion/cancelar/";
 	Map<String, String> params = new HashMap<String, String>();
 	Integer codigo;
 	HttpHeaders headers = new HttpHeaders();
-	Reunion reu;
+	Integer idReunion;
 	
 	
-	
-	
-	@When("organizador es {string}")
-	public void organizador_es(String organizador) {
-		String org = reu.getOrganizador();
-		organizador.equals(org);
+	@When("seleciono la reunion con id {int}")
+	public void seleciono_la_reunion_con_id(Integer int1) {
+	   idReunion = int1;
 	}
-	
+
 	@Then("cancelo la reunion con token {string}")
-	public void convoco_la_reunion(String token) {
-		
+	public void cancelo_la_reunion(String token) {
+		//controller /reunion/cancelar 
 		headers.set("Autorization", "Bearer " + token);
-		
-		HttpEntity<Reunion> request = new HttpEntity<>(reu, headers);
+		HttpEntity<Integer> request = new HttpEntity<>(idReunion, headers);
 		try {
 			response = restTemplate.postForEntity(url, request, String.class);
 			codigo = response.getStatusCode().value();
