@@ -24,7 +24,7 @@ import io.cucumber.java.en.When;
 public class ConvocarReunionStepDefinitions extends SpringIntegrationTest{
 
 	ResponseEntity<String> response;
-	String url = DEFAULT_URL + "/convocar";
+	String url = DEFAULT_URL + "reunion/convocar/";
 	Map<String, String> params = new HashMap<String, String>();
 	Integer codigo;
 	HttpHeaders headers = new HttpHeaders();

@@ -2,7 +2,7 @@ Feature: Cancelar
 
   Scenario Outline: cancelar
   
-  When id cancelar es <id>
+  When selecciono la reunion con id <id>
   Then cancelo la reunion con token <token>
   Then la respuesta sera <codigo>
   

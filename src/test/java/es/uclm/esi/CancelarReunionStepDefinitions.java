@@ -3,7 +3,7 @@ package es.uclm.esi;
 import static org.junit.Assert.assertEquals;
 import java.util.HashMap;
 import java.util.Map;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
@@ -14,7 +14,6 @@ import io.cucumber.java.en.When;
 
 public class CancelarReunionStepDefinitions extends SpringIntegrationTest {
 	
-	@Autowired
 	ResponseEntity<String> response;
 	String url = DEFAULT_URL + "reunion/cancelar/";
 	Map<String, String> params = new HashMap<String, String>();
@@ -23,8 +22,8 @@ public class CancelarReunionStepDefinitions extends SpringIntegrationTest {
 	Integer idReunion;
 	
 	
-	@When("id cancelar es {int}")
-	public void id_cancelar_es(Integer int1) {
+	@When("selecciono la reunion con id {int}")
+	public void selecciono_la_reunion_con_id(Integer int1) {
 	   idReunion = int1;
 	}
 
