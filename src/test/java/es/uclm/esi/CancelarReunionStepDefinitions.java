@@ -8,8 +8,6 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.HttpClientErrorException;
-import es.uclm.esi.model.Reunion;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
@@ -25,8 +23,8 @@ public class CancelarReunionStepDefinitions extends SpringIntegrationTest {
 	Integer idReunion;
 	
 	
-	@When("seleciono la reunion con id {int}")
-	public void seleciono_la_reunion_con_id(Integer int1) {
+	@When("id cancelar es {int}")
+	public void id_cancelar_es(Integer int1) {
 	   idReunion = int1;
 	}
 

@@ -1,10 +1,28 @@
 -------------------------------------------------------------------------------
 Test set: es.uclm.esi.RunCucumberTest
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 25.499 s <<< FAILURE! - in es.uclm.esi.RunCucumberTest
-convocar #1  Time elapsed: 14.064 s  <<< FAILURE!
+Tests run: 10, Failures: 2, Errors: 2, Skipped: 0, Time elapsed: 16.039 s <<< FAILURE! - in es.uclm.esi.RunCucumberTest
+cancelar #1  Time elapsed: 0.753 s  <<< ERROR!
+io.cucumber.core.exception.CucumberException: 
+Could not invoke step [id cancelar es {int}] defined at 'es.uclm.esi.CancelarReunionStepDefinitions.id_cancelar_es(java.lang.Integer)'.
+It appears there was a problem with the step definition.
+The converted arguments types were (java.lang.Integer)
+Caused by: io.cucumber.core.backend.CucumberBackendException: Error creating bean with name 'es.uclm.esi.CancelarReunionStepDefinitions': Unsatisfied dependency expressed through field 'response'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.http.ResponseEntity<java.lang.String>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'es.uclm.esi.CancelarReunionStepDefinitions': Unsatisfied dependency expressed through field 'response'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.http.ResponseEntity<java.lang.String>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.http.ResponseEntity<java.lang.String>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+
+cancelar #2  Time elapsed: 0.274 s  <<< ERROR!
+io.cucumber.core.exception.CucumberException: 
+Could not invoke step [id cancelar es {int}] defined at 'es.uclm.esi.CancelarReunionStepDefinitions.id_cancelar_es(java.lang.Integer)'.
+It appears there was a problem with the step definition.
+The converted arguments types were (java.lang.Integer)
+Caused by: io.cucumber.core.backend.CucumberBackendException: Error creating bean with name 'es.uclm.esi.CancelarReunionStepDefinitions': Unsatisfied dependency expressed through field 'response'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.http.ResponseEntity<java.lang.String>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'es.uclm.esi.CancelarReunionStepDefinitions': Unsatisfied dependency expressed through field 'response'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.http.ResponseEntity<java.lang.String>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.http.ResponseEntity<java.lang.String>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+
+convocar #1  Time elapsed: 2.71 s  <<< FAILURE!
 java.lang.AssertionError: expected:<200> but was:<404>
 
-convocar #2  Time elapsed: 0.211 s  <<< FAILURE!
+convocar #2  Time elapsed: 0.662 s  <<< FAILURE!
 java.lang.AssertionError: expected:<400> but was:<404>
 
