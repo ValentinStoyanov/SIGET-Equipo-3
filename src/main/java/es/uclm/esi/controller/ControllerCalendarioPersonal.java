@@ -7,13 +7,18 @@ import java.util.Map;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RestController;
 
 import es.uclm.esi.model.Asistente;
 import es.uclm.esi.model.Reunion;
 import es.uclm.esi.repository.RepositoryCalendarioPersonal;
+import es.uclm.esi.security.jwt.JwtUtils;
+import io.jsonwebtoken.Jwts;
 
 /**
  * 
@@ -25,7 +30,9 @@ public class ControllerCalendarioPersonal {
 
 	@Autowired
 	RepositoryCalendarioPersonal calendarioRepository;
-
+	
+	@Value("${siget.app.jwtSecret}")
+	private String jwtSecret;
 	
 //	@GetMapping("/pruebaConsulta")
 //	public String getPrueba() {
@@ -35,15 +42,17 @@ public class ControllerCalendarioPersonal {
 //		return reuniones.toString();
 //	}
 	@PostMapping("/getCalendarioPersonalMes")
-	public String getCalendarioPersonalMes(@RequestBody Map<String, Object> entrada) {
+	@PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
+	public String getCalendarioPersonalMes(@RequestBody Map<String, Object> entrada,@RequestHeader("Authorization") String token) {
 		JSONObject jso = new JSONObject(entrada);
 		int mespeticion = jso.getInt("mes");
 		int anopeticion = jso.getInt("ano");
-		String usuario = jso.getString("usuario");
+		String usuario = Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(token.substring(7, token.length())).getBody().getSubject();
 		List<Reunion> reuniones = calendarioRepository.findReunionesMes(mespeticion, anopeticion);
 		ArrayList<Integer> dias = new ArrayList<Integer>();
 		int dia;
 		Asistente[] asistentes;
+		System.out.println(usuario);
 		//Hay que controlar que no exista usuario porque no se haya pasado el token o cualquier tipo de error
 		for (Reunion reunion : reuniones) {
 			asistentes = reunion.getAsistentes();
@@ -73,19 +82,20 @@ public class ControllerCalendarioPersonal {
 	}
 
 	@PostMapping("/getDetallesReunion")
-	public String getDetallesReunion(@RequestBody Map<String, Object> entrada) {
+	@PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
+	public String getDetallesReunion(@RequestBody Map<String, Object> entrada,@RequestHeader("Authorization") String token) {
 		JSONObject jso = new JSONObject(entrada);		
 		JSONObject jsoret = new JSONObject();
 		JSONArray jsa = new JSONArray();
 		JSONObject jsoreunion = new JSONObject();
-		
+		String usuario = Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(token.substring(7, token.length())).getBody().getSubject();
 		List<Reunion> reuniones = calendarioRepository.findByDia(jso.getInt("dia"),jso.getInt("mes"),jso.getInt("ano"));
 		Asistente[] asistentes;
 		int contadorReuniones = 1;
 		for (Reunion reunion : reuniones) {
 			asistentes = reunion.getAsistentes();
 			for (Asistente asistente : asistentes) {
-				if (asistente.getUsuario().equalsIgnoreCase(jso.getString("usuario"))) {
+				if (asistente.getUsuario().equalsIgnoreCase(usuario)) {
 					jsoreunion.put("titulo", reunion.getTitulo());
 					jsoreunion.put("id", contadorReuniones);
 					jsoreunion.put("hora", reunion.getHora());
