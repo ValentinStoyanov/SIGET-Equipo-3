@@ -4,7 +4,7 @@ Feature: Convocar
   
   When seleciono la reunion con id <id>
   Then cancelo la reunion con token <token>
-  Then la respuesta sera <codigo>
+  Then la respuesta debe ser <codigo>
   
   
   Examples:
