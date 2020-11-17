@@ -1,10 +1,62 @@
 -------------------------------------------------------------------------------
 Test set: es.uclm.esi.RunCucumberTest
 -------------------------------------------------------------------------------
-Tests run: 7, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 42.318 s <<< FAILURE! - in es.uclm.esi.RunCucumberTest
-convocar #1  Time elapsed: 22.967 s  <<< FAILURE!
-java.lang.AssertionError: expected:<200> but was:<null>
+Tests run: 9, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 28.026 s <<< FAILURE! - in es.uclm.esi.RunCucumberTest
+aceptar #1  Time elapsed: 6.824 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step "id es 1" is undefined. You can implement it using the snippet(s) below:
 
-convocar #2  Time elapsed: 0.822 s  <<< FAILURE!
-java.lang.AssertionError: expected:<400> but was:<null>
+@When("id es {int}")
+public void id_es(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Some other steps were also undefined:
+
+@Then("acepto la reunion con token {string}")
+public void acepto_la_reunion_con_token(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+aceptar #2  Time elapsed: 0.038 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step "id es 8" is undefined. You can implement it using the snippet(s) below:
+
+@When("id es {int}")
+public void id_es(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Some other steps were also undefined:
+
+@Then("acepto la reunion con token {string}")
+public void acepto_la_reunion_con_token(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+convocar #1  Time elapsed: 0.291 s  <<< ERROR!
+io.cucumber.core.exception.CucumberException: 
+Could not invoke step [titulo es {string}] defined at 'es.uclm.esi.ConvocarReunionStepDefinitions.titulo_es(java.lang.String)'.
+It appears there was a problem with the step definition.
+The converted arguments types were (java.lang.String)
+Caused by: io.cucumber.core.backend.CucumberBackendException: Error creating bean with name 'es.uclm.esi.ConvocarReunionStepDefinitions': Unsatisfied dependency expressed through field 'response'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.http.ResponseEntity<java.lang.String>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'es.uclm.esi.ConvocarReunionStepDefinitions': Unsatisfied dependency expressed through field 'response'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.http.ResponseEntity<java.lang.String>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.http.ResponseEntity<java.lang.String>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+
+convocar #2  Time elapsed: 0.084 s  <<< ERROR!
+io.cucumber.core.exception.CucumberException: 
+Could not invoke step [titulo es {string}] defined at 'es.uclm.esi.ConvocarReunionStepDefinitions.titulo_es(java.lang.String)'.
+It appears there was a problem with the step definition.
+The converted arguments types were (java.lang.String)
+Caused by: io.cucumber.core.backend.CucumberBackendException: Error creating bean with name 'es.uclm.esi.ConvocarReunionStepDefinitions': Unsatisfied dependency expressed through field 'response'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.http.ResponseEntity<java.lang.String>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'es.uclm.esi.ConvocarReunionStepDefinitions': Unsatisfied dependency expressed through field 'response'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.http.ResponseEntity<java.lang.String>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.http.ResponseEntity<java.lang.String>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
 
