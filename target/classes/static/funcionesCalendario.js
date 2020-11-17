@@ -125,6 +125,7 @@ function reunionesMesHoy(){
         contentType: 'application/json',
         success : function(response) {
             setReunionesMes(response);
+            localStorage.setItem("rol", response.usuario);
         },
         error : function(response) {
             console.log('Se produjo un problema en reunioesMesHoy()');
