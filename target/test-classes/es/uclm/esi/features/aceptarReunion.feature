@@ -8,4 +8,3 @@ Feature: Aceptar
 		Examples:
 		|	id |	token	|	codigo |
 		|	1	|	"token"	|	200	|
-		| 8	| "token"	|	400	|
