@@ -142,6 +142,8 @@ function LogIn() {
             //ninguna por ahora
         	//console.log(response.accessToken);
         localStorage.setItem('jwt',$("#loginUsername").val());//guardo el token que luego habra que enviar en el header de las peticiones
+        localStorage.setItem('jwt','Bearer '+response.accessToken);//guardo el token que luego habra que enviar en el header de las peticiones
+
         localStorage.setItem('accessToken','acesoAlToken');
         window.location.href="calendario.html";
         },

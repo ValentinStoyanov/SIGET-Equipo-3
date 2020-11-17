@@ -125,6 +125,7 @@ function reunionesMesHoy(){
         contentType: 'application/json',
         success : function(response) {
             setReunionesMes(response);
+            localStorage.setItem("rol", response.usuario);
         },
         error : function(response) {
             console.log('Se produjo un problema en reunioesMesHoy()');
@@ -222,4 +223,11 @@ function reunionesDia(diaConcreto, mesConcreto, anoConcreto){ //Pedirá las reun
             console.log('Se produjo un problema en reunionesMes()');
         }
     });
+}
+
+function setRol(){
+	usuario = localStorage.getItem("rol");
+	var text = 'Usuario: ';
+	text+= usuario;
+	document.getElementById("ROL").innerHTML= text;
 }

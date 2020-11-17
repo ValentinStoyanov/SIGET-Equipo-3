@@ -16,7 +16,7 @@ import io.cucumber.java.en.When;
 
 public class CancelarReunionStepDefinitions extends SpringIntegrationTest {
 	
-	@Autowired
+	
 	ResponseEntity<String> response;
 	String url = DEFAULT_URL + "reunion/cancelar/";
 	Map<String, String> params = new HashMap<String, String>();

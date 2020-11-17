@@ -263,6 +263,11 @@ body{
 	background-color: #4169E1
 }
 
+#ROL {
+	color: #ffffff;
+	font: bold 15pt arial;
+	margin: 20px;
+}
 
 #menu ul{
 	list-style: none;

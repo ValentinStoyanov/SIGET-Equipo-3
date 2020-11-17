@@ -57,7 +57,7 @@ public class ControllerCalendarioPersonal {
 		for (Reunion reunion : reuniones) {
 			asistentes = reunion.getAsistentes();
 			for (Asistente asistente : asistentes) {
-				if(asistente.getUsuario().equalsIgnoreCase(usuario)) { //No es la mejor forma comparar por nombre de usuario, mejor DNI
+				if(asistente.getUsuario().equalsIgnoreCase(usuario)) { 
 					dia = reunion.getDia();
 					if(!dias.contains(dia)) {
 						dias.add(dia);
@@ -75,6 +75,7 @@ public class ControllerCalendarioPersonal {
 		jsoret.put("reuniones", diasjson);
 		jsoret.put("mes", mespeticion);
 		jsoret.put("ano", anopeticion);
+		jsoret.put("usuario", usuario);
 		
 		System.out.println("Estoy enviando "+jsoret);
 		

@@ -113,8 +113,7 @@ function reunionesMesHoy(){
     var info = {
         type : "PeticionReunionesMes",
         mes : mesActual,
-        ano : anoActual,
-        usuario : localStorage.getItem("jwt")
+        ano : anoActual
     };
     $.ajax({
         url : '/getCalendarioPersonalMes',
@@ -122,9 +121,11 @@ function reunionesMesHoy(){
         async : false,
         type : "post",
         dataType: 'json',
+        headers: { 'Authorization': localStorage.getItem("jwt") },
         contentType: 'application/json',
         success : function(response) {
             setReunionesMes(response);
+            localStorage.setItem("rol", response.usuario);
         },
         error : function(response) {
             console.log('Se produjo un problema en reunioesMesHoy()');
@@ -138,8 +139,7 @@ function reunionesDiaHoy(){ //Pedirá las reuniones del día de hoy, por defecto
         "type" : "PeticionDatosReunion",
         "dia" : hoy.getDate(),
         "mes" : mesActual,
-        "ano" : hoy.getFullYear(),
-        usuario : localStorage.getItem("jwt")
+        "ano" : hoy.getFullYear()
     };
     $.ajax({
         url : '/getDetallesReunion',
@@ -147,6 +147,7 @@ function reunionesDiaHoy(){ //Pedirá las reuniones del día de hoy, por defecto
         async : false,
         type : "post",
         dataType: 'json',
+        headers: { 'Authorization': localStorage.getItem("jwt") },
         contentType: 'application/json',
         success : function(response) {
             setDetallesReuniones(response);
@@ -168,11 +169,11 @@ function setReunionesMesC(data){
 }
 
 function reunionesMes(mesConcreto, anoConcreto){ //Recibirá las reuniones de un mes concreto
+	
     var info = {
         type : "PeticionReunionesMes",
         mes : mesConcreto,
-        ano : anoConcreto,
-        usuario : localStorage.getItem("jwt")
+        ano : anoConcreto
     };
     $.ajax({
         url : '/getCalendarioPersonalMes',
@@ -180,6 +181,7 @@ function reunionesMes(mesConcreto, anoConcreto){ //Recibirá las reuniones de un
         data : JSON.stringify(info),
         type : "post",
         dataType: 'json',
+        headers: { 'Authorization': localStorage.getItem("jwt") },
         contentType: 'application/json',
         success : function(response) {
             setReunionesMesC(response);
@@ -199,12 +201,12 @@ function setDetallesReunionDiaC(data){
 }
 
 function reunionesDia(diaConcreto, mesConcreto, anoConcreto){ //Pedirá las reuniones de un día concreto
+	
    	var info = {
         type : "PeticionDatosReunion",
         dia : diaConcreto,
         mes : mesConcreto,
-        ano : anoConcreto,
-		usuario : localStorage.getItem("jwt")
+        ano : anoConcreto
     };
     $.ajax({
         url : '/getDetallesReunion',
@@ -212,6 +214,7 @@ function reunionesDia(diaConcreto, mesConcreto, anoConcreto){ //Pedirá las reun
         data : JSON.stringify(info),
         type : "post",
         dataType: 'json',
+        headers: { 'Authorization': localStorage.getItem("jwt") },
         contentType: 'application/json',
         success : function(response) {
             setDetallesReunionDiaC(response);
@@ -220,4 +223,11 @@ function reunionesDia(diaConcreto, mesConcreto, anoConcreto){ //Pedirá las reun
             console.log('Se produjo un problema en reunionesMes()');
         }
     });
+}
+
+function setRol(){
+	usuario = localStorage.getItem("rol");
+	var text = 'Usuario: ';
+	text+= usuario;
+	document.getElementById("ROL").innerHTML= text;
 }
