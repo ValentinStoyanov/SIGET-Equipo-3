@@ -15,6 +15,6 @@ Feature: Convocar
   
   Examples:
   |	titulo	|	estado	|	dia	|	mes	|	ano	|	hora	| descripcion |	asistentes	|	codigo	| token |
-  |	"Reunion 1"	|	"pendiente"	|	20	|	11	|	2020	|	"22:00"	| "Prueba" |	"Fatima:pendiente,Victor:pendiente"	|	200	| "Admin123" |
-  |	""	|	"pendiente"	|	21	|	11	|	2020	|	"16:00"	|	"Prueba" |	"Fatima:pendiente,Victor:pendiente"	|	400	| "Admin123" |
+  |	"Reunion 1"	|	"pendiente"	|	20	|	11	|	2020	|	"22:00"	| "Prueba" |	"Fatima:pendiente,Victor:pendiente"	|	200	| "token" |
+  |	"Reunion 2"	|	"pendiente"	|	51	|	11	|	2020	|	"16:00"	|	"Prueba" |	"Fatima:pendiente,Victor:pendiente"	|	400	| "token" |
   
