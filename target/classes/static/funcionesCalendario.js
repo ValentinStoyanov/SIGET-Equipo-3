@@ -107,7 +107,7 @@ function setReunionesMes(data){
     infoMes = data;
 }
 
-function reunionesMesHoy(){ //Recibirá un array de días en los que hay reunion
+function reunionesMesHoy(){
     mesActual = hoy.getMonth() + 1;
     anoActual = hoy.getFullYear();
     var info = {
