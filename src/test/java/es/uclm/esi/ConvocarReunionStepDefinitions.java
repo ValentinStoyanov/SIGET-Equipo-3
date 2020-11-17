@@ -103,7 +103,7 @@ public void convoco_la_reunion() {
 	SecurityContextHolder.getContext().setAuthentication(authentication);
 	String jwt = jwtUtils.generateJwtToken(authentication);
 	
-	headers.set("Autorization", "Bearer " + jwt);
+	headers.set("Authorization", "Bearer " + jwt);
 	
 	HttpEntity<Reunion> request = new HttpEntity<>(reu, headers);
 
@@ -111,9 +111,7 @@ public void convoco_la_reunion() {
 		response = restTemplate.postForEntity(url, request, String.class);
 		codigo = response.getStatusCode().value();
 	} catch (HttpClientErrorException e) {
-		System.out.println("HTTPCLIENTERROREXCEPTION");
 		codigo = e.getRawStatusCode();
-		System.out.println(e.getMessage());
 	}
 
 }
