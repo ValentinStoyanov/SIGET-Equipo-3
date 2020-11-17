@@ -3,11 +3,6 @@ package es.uclm.esi.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-/**
- * 
- * @author Víctor
- * Clase de dominio que usaremos para instanciar reuniones
- */
 @Document(collection= "reuniones")
 public class Reunion {
 	
