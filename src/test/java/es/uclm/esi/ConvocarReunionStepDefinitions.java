@@ -105,8 +105,8 @@ public void convoco_la_reunion() {
 	
 	headers.set("Authorization", "Bearer " + jwt);
 	
-	HttpEntity<Reunion> request = new HttpEntity<>(reu, headers);
-
+	HttpEntity<Reunion> request = new HttpEntity<Reunion>(reu, headers);
+	
 	try {
 		response = restTemplate.postForEntity(url, request, String.class);
 		codigo = response.getStatusCode().value();
