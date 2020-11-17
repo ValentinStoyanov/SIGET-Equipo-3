@@ -14,7 +14,7 @@ public class AceptarReunionStepDefinitions extends SpringIntegrationTest{
 	
 	ResponseEntity<String> response;
 	String url = DEFAULT_URL + "reunion/aceptar/";
-	Integer codigo;
+	Integer code;
 	HttpHeaders headers = new HttpHeaders();
 	int identificador;
 	
@@ -26,12 +26,12 @@ public class AceptarReunionStepDefinitions extends SpringIntegrationTest{
 
 	@Then("acepto la reunion con token {string}")
 	public void acepto_la_reunion_con_token(String token) {
-		codigo = 200;
+		code = 200;
 			
 	}
 	
 	@Then("la respuesta a aceptar sera {int}")
-	public void la_respuesta_a_aceptar_sera(Integer res) {
-		assertEquals(res, codigo);
+	public void la_respuesta_a_aceptar_sera(Integer codigo) {
+		assertEquals(code, codigo);
 	}
 }
