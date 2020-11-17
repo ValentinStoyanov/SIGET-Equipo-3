@@ -1,8 +1,8 @@
-Feature: Convocar
+Feature: cancelar
 
   Scenario Outline: cancelar
   
-  When seleciono la reunion con id <id>
+  When selecciono la reunion con id <id>
   Then cancelo la reunion con token <token>
   Then la respuesta sera <codigo>
   

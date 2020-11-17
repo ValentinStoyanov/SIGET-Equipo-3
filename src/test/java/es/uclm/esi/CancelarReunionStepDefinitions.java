@@ -16,7 +16,6 @@ import io.cucumber.java.en.When;
 
 public class CancelarReunionStepDefinitions extends SpringIntegrationTest {
 	
-	@Autowired
 	ResponseEntity<String> response;
 	String url = DEFAULT_URL + "reunion/cancelar/";
 	Map<String, String> params = new HashMap<String, String>();
@@ -25,14 +24,14 @@ public class CancelarReunionStepDefinitions extends SpringIntegrationTest {
 	Integer idReunion;
 	
 	
-	@When("seleciono la reunion con id {int}")
-	public void seleciono_la_reunion_con_id(Integer int1) {
+
+	@When("selecciono la reunion con id {int}")
+	public void selecciono_la_reunion_con_id(Integer int1) {
 	   idReunion = int1;
 	}
 
 	@Then("cancelo la reunion con token {string}")
 	public void cancelo_la_reunion(String token) {
-		//controller /reunion/cancelar 
 		headers.set("Autorization", "Bearer " + token);
 		HttpEntity<Integer> request = new HttpEntity<>(idReunion, headers);
 		try {
