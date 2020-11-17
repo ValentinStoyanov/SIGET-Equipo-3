@@ -21,7 +21,7 @@ import es.uclm.esi.repository.RepositoryCalendarioPersonal;
  *         el calendario personal
  */
 @RestController
-public class ControllerCalendarioPersonal {
+public class ControllerCalendarioPersonal { 
 
 	@Autowired
 	RepositoryCalendarioPersonal calendarioRepository;
