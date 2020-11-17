@@ -3,38 +3,44 @@ package es.uclm.esi.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+/**
+ * 
+ * @author Víctor
+ * Clase de dominio que usaremos para instanciar reuniones
+ */
 @Document(collection= "reuniones")
 public class Reunion {
 	
 	@Id
 	private int id;
+	private String organizador;
 	private String titulo;
+	private String estado;
 	private int dia;
 	private int mes;
 	private int ano;
 	private String hora;
 	private String descripcion;
-	String organizador;
-	String estado;
 	private Asistente[] asistentes;
 	
+	
+
+	public Reunion(int id, String organizador, String titulo, String estado, int dia, int mes, int ano, String hora,
+			Asistente[] asistentes) {
+		super();
+		this.id = id;
+		this.organizador = organizador;
+		this.titulo = titulo;
+		this.estado = estado;
+		this.dia = dia;
+		this.mes = mes;
+		this.ano = ano;
+		this.hora = hora;
+		this.asistentes = asistentes;
+	}
+
 	public Reunion() {
 		
-	}
-	
-	public Reunion(int id, String titulo, int dia, int mes, int ano, String hora, String descripcion, String organizador, 
-			String estado, Asistente[] asistentes) {
-		super();
-		this.id=id;
-		this.titulo=titulo;
-		this.dia=dia;
-		this.mes=mes;
-		this.ano=ano;
-		this.hora=hora;
-		this.descripcion=descripcion;
-		this.organizador=organizador;
-		this.estado=estado;
-		this.asistentes=asistentes;
 	}
 
 	public int getId() {
@@ -43,6 +49,14 @@ public class Reunion {
 
 	public void setId(int id) {
 		this.id = id;
+	}
+	
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
 	}
 
 	public String getTitulo() {
@@ -85,12 +99,16 @@ public class Reunion {
 		this.hora = hora;
 	}
 
-	public String getDescripcion() {
-		return descripcion;
+	public Asistente[] getAsistentes() {
+		return asistentes;
+	}
+	
+	public Asistente getAsistente(int index) {
+		return asistentes[index];
 	}
 
-	public void setDescripcion(String descripcion) {
-		this.descripcion = descripcion;
+	public void setAsistentes(Asistente[] asistentes) {
+		this.asistentes = asistentes;
 	}
 
 	public String getOrganizador() {
@@ -109,12 +127,6 @@ public class Reunion {
 		this.estado = estado;
 	}
 
-	public Asistente[] getAsistentes() {
-		return asistentes;
-	}
-
-	public void setAsistentes(Asistente[] asistentes) {
-		this.asistentes = asistentes;
-	}
+	
 
 }

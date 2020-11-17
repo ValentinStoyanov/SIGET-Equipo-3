@@ -141,12 +141,12 @@ function LogIn() {
         success : function(response) {
             //ninguna por ahora
         	//console.log(response.accessToken);
-        localStorage.setItem('jwt','usuarioAdmin');//guardo el token que luego habra que enviar en el header de las peticiones
+        localStorage.setItem('jwt',$("#loginUsername").val());//guardo el token que luego habra que enviar en el header de las peticiones
         localStorage.setItem('accessToken','acesoAlToken');
         window.location.href="calendario.html";
         },
         error : function(response) {
-            alert("Error en la autenticaci�n del usuario");
+            alert("Error en la autenticacion del usuario");
         }
     };
     $.ajax(data);

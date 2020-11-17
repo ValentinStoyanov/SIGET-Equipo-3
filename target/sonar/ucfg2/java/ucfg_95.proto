@@ -1,9 +1,17 @@
 
-Nes.uclm.esi.controller.TestRolesController#moderatorAccess()Ljava/lang/String;h
-^C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/TestRolesController.java ("1*ð
-1h
-^C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/TestRolesController.java	 ("€
-h
-^C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/TestRolesController.java (
-Moderator Board.B.,
-*es.uclm.esi.controller.TestRolesController
+Ies.uclm.esi.payload.request.SignupRequest#getPassword()Ljava/lang/String;g
+]C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/payload/request/SignupRequest.java' '("1*¼
+1g
+]C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/payload/request/SignupRequest.java( ((Ç
+Ä
+g
+]C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/payload/request/SignupRequest.java( ((
+%0java.lang.String"__id*;*9+
+)es.uclm.esi.payload.request.SignupRequest"
+
+password"ƒ
+g
+]C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/payload/request/SignupRequest.java( ((
+
+%0java.lang.StringB-+
+)es.uclm.esi.payload.request.SignupRequest

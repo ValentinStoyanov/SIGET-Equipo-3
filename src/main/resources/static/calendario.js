@@ -39,6 +39,7 @@ window.onload = function() {
 	//Iniciar calendario:
 	cabecera(); 
 	primeralinea();
+	escribirdias(); 
 }
 
 //FUNCIONES de creación del calendario:
@@ -66,13 +67,8 @@ function primeralinea() {
 //Rellenar celdas con los días
 function escribirdias() {
 
-	if(mescal == hoy.getMonth()){
-		jsonreuniones = getReunionesMes();
-	} else {
-		jsonreuniones = 0;
-		//reunionesMes(hoy.getMonth()+1,hoy.getFullYear()); //Tiene que tener funcionalidad
-        //jsonreuniones = getReunionesMesC();
-	}
+	reunionesMes(mescal+1,annocal);
+	jsonreuniones = getReunionesMesC();
 
     //Buscar dia de la semana del dia 1 del mes:
     primeromes = new Date(annocal,mescal,"1") //buscar primer día del mes
@@ -160,7 +156,7 @@ function mesdespues() {
     tiempounix = primeromes.getTime() //tiempo de primero mes visible
     tiempounix = tiempounix+(45*24*60*60*1000) //le añadimos 45 días 
     nuevomes.setTime(tiempounix) //fecha con mes posterior.
-    mescal = nuevomes.getMonth() //cambiamos variables 
+    mescal = nuevomes.getMonth() //cambiamos variables
     annocal = nuevomes.getFullYear()
     cabecera() //escribir la cabecera 
     escribirdias() //escribir la tabla

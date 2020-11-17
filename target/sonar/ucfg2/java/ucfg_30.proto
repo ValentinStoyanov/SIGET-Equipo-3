@@ -1,26 +1,17 @@
 
-;es.uclm.esi.model.Reunion#getAsistente(I)Ljava/lang/String;W
-MC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Reunion.java_ _("1*¦
+Ges.uclm.esi.model.Reunion#getAsistentes()[Les/uclm/esi/model/Asistente;W
+MC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Reunion.javaf f(!"1*˜
 1W
-MC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Reunion.java`	 `(«
-¨
+MC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Reunion.javag	 g(¶
+³
 W
-MC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Reunion.java`	 `(
-%0java.lang.String[]"__id*-*+
+MC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Reunion.javag	 g(#
+%0es.uclm.esi.model.Asistente[]"__id*-*+
 es.uclm.esi.model.Reunion"
 
-asistentes¤
-¡
+asistentes"€
 W
-MC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Reunion.java`	 `(
-%1java.lang.String"
-__arrayGet*
-
-%0java.lang.String[]*
-"""s
-W
-MC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Reunion.java` `(
-
-%1java.lang.String:
-""B
+MC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Reunion.javag g(%
+#
+%0es.uclm.esi.model.Asistente[]B
 es.uclm.esi.model.Reunion

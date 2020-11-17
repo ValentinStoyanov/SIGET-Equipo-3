@@ -1,112 +1,85 @@
 
-xes.uclm.esi.security.jwt.JwtUtils#generateJwtToken(Lorg/springframework/security/core/Authentication;)Ljava/lang/String;_
-UC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/jwt/JwtUtils.java ("1*æ!
-1_
-UC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/jwt/JwtUtils.java4 (B•¢
-_
-UC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/jwt/JwtUtils.java4 (Q
-%0java.lang.Object"Qorg.springframework.security.core.Authentication#getPrincipal()Ljava/lang/Object;*D
-B
-authentication0org.springframework.security.core.Authentication2getPrincipal()ƒ
-¡
-_
-UC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/jwt/JwtUtils.java (R>
-userPrincipal-es.uclm.esi.security.services.UserDetailsImpl"__id*
-
-%0java.lang.Object‹
-Ÿ
-_
-UC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/jwt/JwtUtils.java	 ( 
-%1io.jsonwebtoken.JwtBuilder":io.jsonwebtoken.Jwts#builder()Lio/jsonwebtoken/JwtBuilder;*"
-io.jsonwebtoken.Jwtsúô
-_
-UC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/jwt/JwtUtils.java (,
-%2java.lang.String"Mes.uclm.esi.security.services.UserDetailsImpl#getUsername()Ljava/lang/String;*@
->
-userPrincipal-es.uclm.esi.security.services.UserDetailsImpl2getUsername()ª∏
-_
-UC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/jwt/JwtUtils.java	 (. 
-%3io.jsonwebtoken.JwtBuilder"Uio.jsonwebtoken.JwtBuilder#setSubject(Ljava/lang/String;)Lio/jsonwebtoken/JwtBuilder;*"
- 
-%1io.jsonwebtoken.JwtBuilder*
-
-%2java.lang.String2setSubject(Ljava/lang/String;)äá
-_
-UC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/jwt/JwtUtils.java (
-%4java.util.Date"java.util.Dateú
-ô
-_
-UC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/jwt/JwtUtils.java (
-%5"java.util.Date#<init>()V*
-
-%4java.util.Date∑¥
-_
-UC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/jwt/JwtUtils.java	 ( 
-%6io.jsonwebtoken.JwtBuilder"Tio.jsonwebtoken.JwtBuilder#setIssuedAt(Ljava/util/Date;)Lio/jsonwebtoken/JwtBuilder;*"
- 
-%3io.jsonwebtoken.JwtBuilder*
-
-%4java.util.Date2setIssuedAt(Ljava/util/Date;)äá
-_
-UC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/jwt/JwtUtils.java! (%
-%7java.util.Date"java.util.Dateú
-ô
-_
-UC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/jwt/JwtUtils.java ('
-%8"java.util.Date#<init>()V*
-
-%7java.util.DateÆ´
-_
-UC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/jwt/JwtUtils.java (2
-
-%9long"java.util.Date#getTime()J*
-
-%7java.util.Date2	getTime()ãà
-_
-UC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/jwt/JwtUtils.java (
-%10java.util.Date"java.util.Dateß
-§
-_
-UC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/jwt/JwtUtils.java (E
-%11"java.util.Date#<init>(J)V*
+Ies.uclm.esi.security.services.UserDetailsImpl#equals(Ljava/lang/Object;)Zk
+aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.javaa a("startingBlock*Á
+2k
+aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.javae
+ e("u
+k
+aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.javae e(
+""*Ã
+3k
+aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.javad d(ÙÒ
+k
+aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.javad d(
+%0java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*1/
+-es.uclm.esi.security.services.UserDetailsImpl2
+getClass()⁄◊
+k
+aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.javad! d(-
+%1java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*
 
-%10java.util.Date*
-""Ω∫
-_
-UC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/jwt/JwtUtils.java	 (F!
-%12io.jsonwebtoken.JwtBuilder"Vio.jsonwebtoken.JwtBuilder#setExpiration(Ljava/util/Date;)Lio/jsonwebtoken/JwtBuilder;*"
- 
-%6io.jsonwebtoken.JwtBuilder*
+ojava.lang.Object2
+getClass()*
+2
+1*›
+startingBlockk
+aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.javaa a( ≥
+∞
+k
+aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.java` `(
+
+%5"
+__annotate*
+java.lang.Override*
 
-%10java.util.Date2setExpiration(Ljava/util/Date;)ù
+ojava.lang.Objectù
 ö
-_
-UC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/jwt/JwtUtils.java   (&)
-%13"io.jsonwebtoken.SignatureAlgorithm"__id*
-""π
-∂
-_
-UC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/jwt/JwtUtils.java (  (1
-%14java.lang.String"__id*4*2#
-!es.uclm.esi.security.jwt.JwtUtils"
-	jwtSecretØ¨
-_
-UC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/jwt/JwtUtils.java	  (2!
-%15io.jsonwebtoken.JwtBuilder"wio.jsonwebtoken.JwtBuilder#signWith(Lio/jsonwebtoken/SignatureAlgorithm;Ljava/lang/String;)Lio/jsonwebtoken/JwtBuilder;*#
-!
-%12io.jsonwebtoken.JwtBuilder*+
-)
-%13"io.jsonwebtoken.SignatureAlgorithm*
-
-%14java.lang.String2@signWith(Lio/jsonwebtoken/SignatureAlgorithm;Ljava/lang/String;)Â‚
-_
-UC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/jwt/JwtUtils.java	 !(
-%16java.lang.String"6io.jsonwebtoken.JwtBuilder#compact()Ljava/lang/String;*#
-!
-%15io.jsonwebtoken.JwtBuilder2	compact()"|
-_
-UC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/jwt/JwtUtils.java !(
-
-%16java.lang.String:B
-authentication0org.springframework.security.core.AuthenticationB%#
-!es.uclm.esi.security.jwt.JwtUtils
+k
+aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.javaa a(
+ojava.lang.Object"__annotation*
+
+%5*	
+2
+3
+5*Á
+5k
+aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.javac
+ c("u
+k
+aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.javac c(
+""*‹
+1k
+aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.javaf+ f(,∆
+√
+k
+aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.javaf f(-5
+user-es.uclm.esi.security.services.UserDetailsImpl"__id*
+
+ojava.lang.Object…
+∆
+k
+aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.javag g(
+%2java.lang.String"__id*9*7/
+-es.uclm.esi.security.services.UserDetailsImpl"
+idœ
+Ã
+k
+aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.javag g(#
+%3java.lang.String"__id*?*=
+5
+user-es.uclm.esi.security.services.UserDetailsImpl"
+idã
+à
+k
+aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.javag	 g($
+%4boolean"?java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z*"
+java.util.Objects*
+
+%2java.lang.String*
+
+%3java.lang.String"u
+k
+aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.javag g(%
+"":
+ojava.lang.ObjectB1/
+-es.uclm.esi.security.services.UserDetailsImpl

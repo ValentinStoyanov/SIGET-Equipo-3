@@ -461,22 +461,27 @@ println(C)java.io.PrintStream#println(C)VK
 setUsername(Ljava/lang/String;)Ies.uclm.esi.payload.request.LoginRequest#setUsername(Ljava/lang/String;)VŸ
 ,es.uclm.esi.controller.EjemploRestControllerjava.lang.ObjectB
 <init>()6es.uclm.esi.controller.EjemploRestController#<init>()VS
-saludo()Ges.uclm.esi.controller.EjemploRestController#saludo()Ljava/lang/String;Ä
+saludo()Ges.uclm.esi.controller.EjemploRestController#saludo()Ljava/lang/String;Ú
 es.uclm.esi.model.Reunionjava.lang.Object/
 getAno()#es.uclm.esi.model.Reunion#getAno()IU
-setHora(Ljava/lang/String;)6es.uclm.esi.model.Reunion#setHora(Ljava/lang/String;)V/
-setId(I)#es.uclm.esi.model.Reunion#setId(I)V1
+setHora(Ljava/lang/String;)6es.uclm.esi.model.Reunion#setHora(Ljava/lang/String;)VY
+setEstado(Ljava/lang/String;)8es.uclm.esi.model.Reunion#setEstado(Ljava/lang/String;)VF
+getEstado()7es.uclm.esi.model.Reunion#getEstado()Ljava/lang/String;Ñ
+r<init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;IIILjava/lang/String;[Les/uclm/esi/model/Asistente;)çes.uclm.esi.model.Reunion#<init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;IIILjava/lang/String;[Les/uclm/esi/model/Asistente;)V/
+setId(I)#es.uclm.esi.model.Reunion#setId(I)VP
+getOrganizador()<es.uclm.esi.model.Reunion#getOrganizador()Ljava/lang/String;1
 	setDia(I)$es.uclm.esi.model.Reunion#setDia(I)V/
 getMes()#es.uclm.esi.model.Reunion#getMes()IB
 	getHora()5es.uclm.esi.model.Reunion#getHora()Ljava/lang/String;Y
-setTitulo(Ljava/lang/String;)8es.uclm.esi.model.Reunion#setTitulo(Ljava/lang/String;)Vc
-"setAsistentes([Ljava/lang/String;)=es.uclm.esi.model.Reunion#setAsistentes([Ljava/lang/String;)V-
-getId()"es.uclm.esi.model.Reunion#getId()IN
-getAsistente(I);es.uclm.esi.model.Reunion#getAsistente(I)Ljava/lang/String;…
-U<init>(ILjava/lang/String;IIILjava/lang/String;Ljava/lang/String;[Ljava/lang/String;)pes.uclm.esi.model.Reunion#<init>(ILjava/lang/String;IIILjava/lang/String;Ljava/lang/String;[Ljava/lang/String;)VF
-getTitulo()7es.uclm.esi.model.Reunion#getTitulo()Ljava/lang/String;/
-getDia()#es.uclm.esi.model.Reunion#getDia()IO
-getAsistentes()<es.uclm.esi.model.Reunion#getAsistentes()[Ljava/lang/String;P
+setTitulo(Ljava/lang/String;)8es.uclm.esi.model.Reunion#setTitulo(Ljava/lang/String;)V-
+getId()"es.uclm.esi.model.Reunion#getId()Iy
+-setAsistentes([Les/uclm/esi/model/Asistente;)Hes.uclm.esi.model.Reunion#setAsistentes([Les/uclm/esi/model/Asistente;)VY
+getAsistente(I)Fes.uclm.esi.model.Reunion#getAsistente(I)Les/uclm/esi/model/Asistente;/
+<init>()#es.uclm.esi.model.Reunion#<init>()VF
+getTitulo()7es.uclm.esi.model.Reunion#getTitulo()Ljava/lang/String;c
+"setOrganizador(Ljava/lang/String;)=es.uclm.esi.model.Reunion#setOrganizador(Ljava/lang/String;)V/
+getDia()#es.uclm.esi.model.Reunion#getDia()IZ
+getAsistentes()Ges.uclm.esi.model.Reunion#getAsistentes()[Les/uclm/esi/model/Asistente;P
 getDescripcion()<es.uclm.esi.model.Reunion#getDescripcion()Ljava/lang/String;1
 	setAno(I)$es.uclm.esi.model.Reunion#setAno(I)Vc
 "setDescripcion(Ljava/lang/String;)=es.uclm.esi.model.Reunion#setDescripcion(Ljava/lang/String;)V1
@@ -931,7 +936,13 @@ valueOf(J)-java.lang.String#valueOf(J)Ljava/lang/String;2
 3es.uclm.esi.controller.ControllerCalendarioPersonaljava.lang.ObjectI
 <init>()=es.uclm.esi.controller.ControllerCalendarioPersonal#<init>()Vú
 )getCalendarioPersonalMes(Ljava/util/Map;)oes.uclm.esi.controller.ControllerCalendarioPersonal#getCalendarioPersonalMes(Ljava/util/Map;)Ljava/lang/String;ê
-#getDetallesReunion(Ljava/util/Map;)ies.uclm.esi.controller.ControllerCalendarioPersonal#getDetallesReunion(Ljava/util/Map;)Ljava/lang/String;Æ
+#getDetallesReunion(Ljava/util/Map;)ies.uclm.esi.controller.ControllerCalendarioPersonal#getDetallesReunion(Ljava/util/Map;)Ljava/lang/String;B
+.org.springframework.data.repository.Repositoryjava.lang.Objectv
+2org.springframework.data.repository.CrudRepository.org.springframework.data.repository.Repositoryjava.lang.ObjectÜ
+>org.springframework.data.repository.PagingAndSortingRepositoryjava.lang.Object2org.springframework.data.repository.CrudRepositoryT
+@org.springframework.data.repository.query.QueryByExampleExecutorjava.lang.Object—
+;org.springframework.data.mongodb.repository.MongoRepository@org.springframework.data.repository.query.QueryByExampleExecutor>org.springframework.data.repository.PagingAndSortingRepositoryjava.lang.ObjectÑ
+3es.uclm.esi.repository.RepositoryCalendarioPersonaljava.lang.Object;org.springframework.data.mongodb.repository.MongoRepositoryÆ
 java.util.Listjava.util.Collectionjava.lang.ObjectÕ
 îof(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)≥java.util.List#of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/List;Q
 of([Ljava/lang/Object;)6java.util.List#of([Ljava/lang/Object;)Ljava/util/List;O
@@ -1053,13 +1064,7 @@ iterator()2java.util.ArrayList#iterator()Ljava/util/Iterator;I
 spliterator()8java.util.ArrayList#spliterator()Ljava/util/Spliterator;1
 isClear([JI)!java.util.ArrayList#isClear([JI)Zk
 )writeObject(Ljava/io/ObjectOutputStream;)>java.util.ArrayList#writeObject(Ljava/io/ObjectOutputStream;)V%
-size()java.util.ArrayList#size()IB
-.org.springframework.data.repository.Repositoryjava.lang.Objectv
-2org.springframework.data.repository.CrudRepository.org.springframework.data.repository.Repositoryjava.lang.ObjectÜ
->org.springframework.data.repository.PagingAndSortingRepositoryjava.lang.Object2org.springframework.data.repository.CrudRepositoryT
-@org.springframework.data.repository.query.QueryByExampleExecutorjava.lang.Object—
-;org.springframework.data.mongodb.repository.MongoRepository@org.springframework.data.repository.query.QueryByExampleExecutor>org.springframework.data.repository.PagingAndSortingRepositoryjava.lang.ObjectÑ
-3es.uclm.esi.repository.RepositoryCalendarioPersonaljava.lang.Object;org.springframework.data.mongodb.repository.MongoRepositoryÓ+
+size()java.util.ArrayList#size()IÓ+
 org.json.JSONArrayjava.lang.Objectjava.lang.IterableA
 optString(I)1org.json.JSONArray#optString(I)Ljava/lang/String;[
 query(Ljava/lang/String;)>org.json.JSONArray#query(Ljava/lang/String;)Ljava/lang/Object;9
@@ -1435,9 +1440,11 @@ hashCode()java.util.Optional#hashCode()IL
 empty().java.util.Optional#empty()Ljava/util/Optional;w
 &filter(Ljava/util/function/Predicate;)Mjava.util.Optional#filter(Ljava/util/function/Predicate;)Ljava/util/Optional;.
 isPresent()java.util.Optional#isPresent()Z@
-stream()4java.util.Optional#stream()Ljava/util/stream/Stream;¸
+stream()4java.util.Optional#stream()Ljava/util/stream/Stream;ƒ
 es.uclm.esi.model.Asistentejava.lang.Object]
-setUsuario(Ljava/lang/String;);es.uclm.esi.model.Asistente#setUsuario(Ljava/lang/String;)V[
+setUsuario(Ljava/lang/String;);es.uclm.esi.model.Asistente#setUsuario(Ljava/lang/String;)VF
+
+toString()8es.uclm.esi.model.Asistente#toString()Ljava/lang/String;[
 setEstado(Ljava/lang/String;):es.uclm.esi.model.Asistente#setEstado(Ljava/lang/String;)VH
 getEstado()9es.uclm.esi.model.Asistente#getEstado()Ljava/lang/String;y
 ,<init>(Ljava/lang/String;Ljava/lang/String;)Ies.uclm.esi.model.Asistente#<init>(Ljava/lang/String;Ljava/lang/String;)VJ

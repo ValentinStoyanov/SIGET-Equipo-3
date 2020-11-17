@@ -4,16 +4,16 @@ var infoMes;
 var detallesReuniones;
 var detallesDia = 0;
 
-function clickInfoReuniones(ID){ //Comprobar si realmente hay reunion ese día porque son datos fijos
+function clickInfoReuniones(ID){
 
-    var jsonReunionesDia = getDetallesReuniones();
     var jsonDia;
 
-
     for(j = 0; j < 31; j++){
-        document.getElementById(j).style.border = "2px double #fffafa";
+    	if(document.getElementById(j) != null){
+        	document.getElementById(j).style.border = "2px double #fffafa";
+		}
 	}
-
+	
     formEnBlanco();
     detallesEnBlanco();
 
@@ -22,12 +22,8 @@ function clickInfoReuniones(ID){ //Comprobar si realmente hay reunion ese día p
 
     for(var k = 0; k < infoMes.reuniones.length; k++){
 		if (ID == infoMes.reuniones[k]) {
-            reunionesDia(ID,jsonReunionesDia.mes,jsonReunionesDia.ano);
+            reunionesDia(ID,infoMes.mes,infoMes.ano);
             jsonDia = getDetallesReunionDiaC();
-            while(contador < 5){
-                jsonDia = getDetallesReunionDiaC();
-                contador++;
-            }
 			hayreu = true;
 		}
 	}
@@ -85,10 +81,14 @@ function mostrarInfoReunion(idReunion,diaReunion){
     var descripcion = document.getElementById("descripcion");
     descripcion.setAttribute("placeholder",jsonMostrar.reuniones[idReunion-1].descripcion);
 
+	var strasistentes = "";
     for(i = 0; i < jsonMostrar.reuniones[idReunion-1].asistentes.length; i++){
-        var asistentes = document.getElementById("asistentes");
-        asistentes.setAttribute("placeholder",jsonMostrar.reuniones[idReunion-1].asistentes);   
+    	console.log("Los asistentes son"+jsonMostrar.reuniones[idReunion-1].asistentes[i].usuario);
+		strasistentes+=jsonMostrar.reuniones[idReunion-1].asistentes[i].usuario+"\n";
     }
+    
+    var asistentes = document.getElementById("asistentes");
+    asistentes.setAttribute("placeholder",strasistentes);
 }
 
 function getDetallesReuniones(){
@@ -107,23 +107,24 @@ function setReunionesMes(data){
     infoMes = data;
 }
 
-function reunionesMesHoy(){ //Recibirá un array de días en los que hay reunion
+function reunionesMesHoy(){
     mesActual = hoy.getMonth() + 1;
     anoActual = hoy.getFullYear();
     var info = {
         type : "PeticionReunionesMes",
         mes : mesActual,
-        ano : anoActual
+        ano : anoActual,
+        usuario : localStorage.getItem("jwt")
     };
     $.ajax({
         url : '/getCalendarioPersonalMes',
         data : JSON.stringify(info),
+        async : false,
         type : "post",
         dataType: 'json',
         contentType: 'application/json',
         success : function(response) {
             setReunionesMes(response);
-            escribirdias();
         },
         error : function(response) {
             console.log('Se produjo un problema en reunioesMesHoy()');
@@ -135,18 +136,22 @@ function reunionesDiaHoy(){ //Pedirá las reuniones del día de hoy, por defecto
     mesActual = hoy.getMonth() + 1;
     var info = {
         "type" : "PeticionDatosReunion",
-        "dia" : hoy.getDay(),
+        "dia" : hoy.getDate(),
         "mes" : mesActual,
-        "ano" : hoy.getFullYear()
+        "ano" : hoy.getFullYear(),
+        usuario : localStorage.getItem("jwt")
     };
     $.ajax({
         url : '/getDetallesReunion',
         data : JSON.stringify(info),
+        async : false,
         type : "post",
         dataType: 'json',
         contentType: 'application/json',
         success : function(response) {
             setDetallesReuniones(response);
+            setDetallesReunionDiaC(response);
+            clickInfoReuniones(hoy.getDate());
         },
         error : function(response) {
             console.log('Se produjo un problema en reunionesDiaHoy()');
@@ -154,7 +159,7 @@ function reunionesDiaHoy(){ //Pedirá las reuniones del día de hoy, por defecto
     });
 }
 
-function getReunioncesMesC(){
+function getReunionesMesC(){
     return infoMes;
 }
 
@@ -166,16 +171,18 @@ function reunionesMes(mesConcreto, anoConcreto){ //Recibirá las reuniones de un
     var info = {
         type : "PeticionReunionesMes",
         mes : mesConcreto,
-        ano : anoConcreto
+        ano : anoConcreto,
+        usuario : localStorage.getItem("jwt")
     };
     $.ajax({
         url : '/getCalendarioPersonalMes',
+        async : false,
         data : JSON.stringify(info),
         type : "post",
         dataType: 'json',
         contentType: 'application/json',
         success : function(response) {
-            setReunioncesMesC(response);
+            setReunionesMesC(response);
         },
         error : function(response) {
             console.log('Se produjo un problema en reunionesMes()');
@@ -192,11 +199,12 @@ function setDetallesReunionDiaC(data){
 }
 
 function reunionesDia(diaConcreto, mesConcreto, anoConcreto){ //Pedirá las reuniones de un día concreto
-    var info = {
+   	var info = {
         type : "PeticionDatosReunion",
         dia : diaConcreto,
         mes : mesConcreto,
-        ano : anoConcreto
+        ano : anoConcreto,
+		usuario : localStorage.getItem("jwt")
     };
     $.ajax({
         url : '/getDetallesReunion',
