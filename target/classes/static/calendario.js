@@ -9,6 +9,7 @@ window.onload = function() {
     //Llamadas iniciales para la petición de información de reuniones
     reunionesMesHoy();
     reunionesDiaHoy();
+    setRol();
 
 	//Fecha actual
 	hoy = new Date(); //objeto fecha actual

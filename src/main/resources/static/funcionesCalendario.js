@@ -221,3 +221,12 @@ function reunionesDia(diaConcreto, mesConcreto, anoConcreto){ //Pedirá las reun
         }
     });
 }
+
+function setRol(){
+	usuario = localStorage.getItem("rol");
+	if(usuario == "admin"){
+		document.getElementById("ROL").innerHTML= 'ROL: ADMIN';
+	} else {
+		document.getElementById("ROL").innerHTML= 'ROL: USUARIO';
+	}
+}
