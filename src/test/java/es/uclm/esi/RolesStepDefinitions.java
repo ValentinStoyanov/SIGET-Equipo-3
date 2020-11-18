@@ -20,7 +20,13 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class RolesStepDefinitions {
+	
+	ResponseEntity<String> response;
 
+	Map<String, String> params = new HashMap<String, String>();
+	Integer codigo;
+	HttpHeaders headers = new HttpHeaders();
+	
 	@Given("mostrar el rol que tiene el usuario dentro de la aplicacion")
 	public void mostrar_el_rol_que_tiene_el_usuario_dentro_de_la_aplicacion() {
 	    
@@ -28,7 +34,7 @@ public class RolesStepDefinitions {
 
 	@When("accedo al calendario personal con el token de usuario {string}")
 	public void accedo_al_calendario_personal_con_el_token_de_usuario(String string) {
-	    
+		headers.set("Authorization", "Bearer " + string);
 	}
 
 	@When("muestro el tipo de {string} que posee dicho usuario")
@@ -38,7 +44,7 @@ public class RolesStepDefinitions {
 
 	@Then("muestro el codigo {int}")
 	public void muestro_el_codigo(Integer int1) {
-	    
+		assertEquals(int1, codigo);
 	}
 	
 	
