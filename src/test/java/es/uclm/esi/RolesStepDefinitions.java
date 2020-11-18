@@ -40,6 +40,14 @@ public class RolesStepDefinitions {
 	@When("muestro el tipo de {string} que posee dicho usuario")
 	public void muestro_el_tipo_de_que_posee_dicho_usuario(String string) {
 	    
+		
+		
+		try {
+			
+			codigo = response.getStatusCode().value();
+		} catch (HttpClientErrorException e) {
+			codigo = e.getRawStatusCode();
+		}
 	}
 
 	@Then("muestro el codigo {int}")
