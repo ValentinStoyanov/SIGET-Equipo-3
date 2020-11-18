@@ -240,7 +240,7 @@
 }
 
 body{
-	background-color: #87CEEB;
+	background-color: #86D5E0;
 	padding: 15px;
 	font-family: Arial;
 }
@@ -257,6 +257,10 @@ body{
 
 #btn-convocar{
 	background-color: #4169E1
+}
+
+#btn-cancelar{
+	background-color: #ff8080
 }
 
 #btn-salir{
