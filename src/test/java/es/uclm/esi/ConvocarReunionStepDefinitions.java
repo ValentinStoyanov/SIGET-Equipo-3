@@ -9,10 +9,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.client.HttpClientErrorException;
 
 import es.uclm.esi.model.Asistente;
 import es.uclm.esi.model.Reunion;
+import es.uclm.esi.security.jwt.JwtUtils;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
@@ -25,6 +30,10 @@ public class ConvocarReunionStepDefinitions extends SpringIntegrationTest{
 	HttpHeaders headers = new HttpHeaders();
 	Reunion reu = new Reunion();
 	Asistente[] arrayAsistentes;
+	@Autowired
+	AuthenticationManager authenticationManager;
+	@Autowired
+	JwtUtils jwtUtils;
 
 @When("titulo es {string}")
 public void titulo_es(String titulo) {
@@ -32,11 +41,6 @@ public void titulo_es(String titulo) {
 
 }
 
-@When("estado es {string}")
-public void estado_es(String estado) {
-	reu.setEstado(estado);
-
-}
 
 @When("dia es {int}")
 public void dia_es(Integer dia) {
@@ -85,12 +89,19 @@ public void asistentes_son(String cadena) {
 
 }
 
-@Then("convoco la reunion con token {string}")
-public void convoco_la_reunion(String token) {
+@Then("convoco la reunion")
+public void convoco_la_reunion() {
 	
-	headers.set("Autorization", "Bearer " + token);
+	Authentication authentication = authenticationManager.authenticate(
+			new UsernamePasswordAuthenticationToken("admin","Admin123"));
+
+	SecurityContextHolder.getContext().setAuthentication(authentication);
+	String jwt = jwtUtils.generateJwtToken(authentication);
 	
-	HttpEntity<Reunion> request = new HttpEntity<>(reu, headers);
+	headers.set("Authorization", "Bearer " + jwt);
+	
+	HttpEntity<Reunion> request = new HttpEntity<Reunion>(reu, headers);
+	
 	try {
 		response = restTemplate.postForEntity(url, request, String.class);
 		codigo = response.getStatusCode().value();
@@ -100,8 +111,8 @@ public void convoco_la_reunion(String token) {
 
 }
 
-@Then("la respuesta sera {int}")
-public void la_respuesta_sera(Integer res) {
+@Then("la respuesta a convocar sera {int}")
+public void la_respuesta_a_convocar_sera(Integer res) {
 	assertEquals(res, codigo);
 
 }
