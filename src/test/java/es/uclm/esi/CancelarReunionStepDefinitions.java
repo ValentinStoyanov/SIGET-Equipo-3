@@ -17,7 +17,6 @@ import org.springframework.web.client.HttpClientErrorException;
 import es.uclm.esi.security.jwt.JwtUtils;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import es.uclm.esi.security.jwt.JwtUtils;
 
 public class CancelarReunionStepDefinitions extends SpringIntegrationTest {
 	
@@ -38,11 +37,11 @@ public class CancelarReunionStepDefinitions extends SpringIntegrationTest {
 	}
 
 	@Then("cancelo la reunion")
-	public void cancelo_la_reunion(String token) {
+	public void cancelo_la_reunion() {
 		Authentication authentication = authenticationManager.authenticate(
 				new UsernamePasswordAuthenticationToken("admin","Admin123"));
 		SecurityContextHolder.getContext().setAuthentication(authentication);
-		String jwt = jwtUtils.generateJwtToken(authentication);
+		String token = jwtUtils.generateJwtToken(authentication);
 		headers.set("Authorization", "Bearer " + token);
 		HttpEntity<Integer> request = new HttpEntity<>(idReunion, headers);
 		try {
