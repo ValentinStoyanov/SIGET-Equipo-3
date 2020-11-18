@@ -1,5 +1,7 @@
 package es.uclm.esi.controller;
 
+
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
@@ -49,6 +51,33 @@ public class ControllerConvocarReunion {
 		Reunion reun;
 		reun=rReuniones.findFirstByOrderByIdDesc();
 		return reun.getId()+1;
+	}
+	
+	//FILTROS
+	public boolean filtro_restricciones(Reunion reunion) {
+		boolean ok=true;
+		if(reunion.getTitulo().equals("")) {
+			ok=false;
+		}
+		if(reunion.getMes() <1 || reunion.getMes()>12) {
+			ok=false;
+		}
+		if(reunion.getAno() < 2020) { 
+			ok=false;
+		}
+		if(reunion.getHora().equals("")) { 
+			ok=false;
+		}
+		if(reunion.getDescripcion().equals("")) { 
+			ok=false;
+		}
+		if(reunion.getEstado().equals("")) { 
+			ok=false;
+		}
+		if(reunion.getAsistentes() == null) { 
+			ok=false;
+		}
+		return ok;
 	}
 
 }
