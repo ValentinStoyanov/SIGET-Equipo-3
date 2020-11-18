@@ -10,6 +10,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.HttpClientErrorException;
 
@@ -19,31 +20,33 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class RolesStepDefinitions {
+public class RolesStepDefinitions extends SpringIntegrationTest{
 	
 	ResponseEntity<String> response;
-
+	String url;
 	Map<String, String> params = new HashMap<String, String>();
 	Integer codigo;
 	HttpHeaders headers = new HttpHeaders();
-	
-	@Given("mostrar el rol que tiene el usuario dentro de la aplicacion")
-	public void mostrar_el_rol_que_tiene_el_usuario_dentro_de_la_aplicacion() {
-	    
-	}
 
-	@When("accedo al calendario personal con el token de usuario {string}")
-	public void accedo_al_calendario_personal_con_el_token_de_usuario(String string) {
+	@When("accedo con el token de usuario {string}")
+	public void accedo_con_el_token_de_usuario(String string) {
 		headers.set("Authorization", "Bearer " + string);
 	}
 
-	@When("muestro el tipo de {string} que posee dicho usuario")
-	public void muestro_el_tipo_de_que_posee_dicho_usuario(String string) {
+	@When("a recursos del rol {string}")
+	public void a_recursos_del_rol(String string) {
 	    
-		
+		if(string.toUpperCase().equals("ADMIN")) {
+			url = DEFAULT_URL + "/admin";
+		}else if(string.toUpperCase().equals("USER")){
+			url = DEFAULT_URL + "/user";
+		}else{
+			url = DEFAULT_URL + "/all";
+		}
 		
 		try {
-			
+			HttpEntity request = new HttpEntity(headers);
+			response = restTemplate.exchange(url, HttpMethod.GET, request, String.class);
 			codigo = response.getStatusCode().value();
 		} catch (HttpClientErrorException e) {
 			codigo = e.getRawStatusCode();
