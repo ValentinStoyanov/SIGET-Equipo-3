@@ -38,11 +38,17 @@ public class ControllerConvocarReunion {
 		System.out.println("USER: " + nombre_organizador);
 		
 		reunion.setOrganizador(nombre_organizador);
-		//reunion.setId();
+		reunion.setId(last());
 		
 		rReuniones.save(reunion);
 
 		return ResponseEntity.ok("ok");
+	}
+	
+	public int last() {
+		Reunion reun;
+		reun=rReuniones.findFirstByOrderByIdDesc();
+		return reun.getId()+1;
 	}
 
 }
