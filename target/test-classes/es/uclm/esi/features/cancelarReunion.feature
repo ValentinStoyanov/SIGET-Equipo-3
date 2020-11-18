@@ -3,11 +3,10 @@ Feature: Cancelar
   Scenario Outline: cancelar
   
   When selecciono la reunion con id <id>
-  Then cancelo la reunion con token <token>
+  Then cancelo la reunion 
   Then la respuesta debe ser <codigo>
   
   
   Examples:
-  |	id	| codigo | token |
-  |	7	| 200 | "Admin123" |
-  |	8	| 400 | "Admin123" |
+  |	id	| codigo | 
+  |	9	| 200 | 
