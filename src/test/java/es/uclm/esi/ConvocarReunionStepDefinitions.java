@@ -41,11 +41,6 @@ public void titulo_es(String titulo) {
 
 }
 
-@When("estado es {string}")
-public void estado_es(String estado) {
-	reu.setEstado(estado);
-
-}
 
 @When("dia es {int}")
 public void dia_es(Integer dia) {

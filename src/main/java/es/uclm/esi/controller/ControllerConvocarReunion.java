@@ -4,6 +4,7 @@ package es.uclm.esi.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -33,18 +34,21 @@ public class ControllerConvocarReunion {
 	private String jwtSecret;
 	
 	@PostMapping(value="/convocar")
-	public ResponseEntity<String> convocarReunion(@RequestBody Reunion reunion, @RequestHeader("Authorization") String token) {
-		System.out.println(token);
+	public ResponseEntity<?> convocarReunion(@RequestBody Reunion reunion, @RequestHeader("Authorization") String token) {
 		
+		System.out.println(token);
 		String nombre_organizador = Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(token.substring(7, token.length())).getBody().getSubject();
 		System.out.println("USER: " + nombre_organizador);
 		
 		reunion.setOrganizador(nombre_organizador);
 		reunion.setId(last());
-		
+		reunion.setEstado("pendiente");
+		if(filtro_restricciones(reunion)) {
 		rReuniones.save(reunion);
-
-		return ResponseEntity.ok("ok");
+			return new ResponseEntity<>(HttpStatus.OK);
+		}else {
+			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+		}
 	}
 	
 	public int last() {
@@ -59,6 +63,9 @@ public class ControllerConvocarReunion {
 		if(reunion.getTitulo().equals("")) {
 			ok=false;
 		}
+		if(reunion.getDia() >31 || reunion.getDia() <1) {
+			ok=false;
+		}
 		if(reunion.getMes() <1 || reunion.getMes()>12) {
 			ok=false;
 		}
@@ -69,9 +76,6 @@ public class ControllerConvocarReunion {
 			ok=false;
 		}
 		if(reunion.getDescripcion().equals("")) { 
-			ok=false;
-		}
-		if(reunion.getEstado().equals("")) { 
 			ok=false;
 		}
 		if(reunion.getAsistentes() == null) { 
