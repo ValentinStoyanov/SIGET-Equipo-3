@@ -2,6 +2,8 @@ package es.uclm.esi.controller;
 
 
 
+import java.util.GregorianCalendar;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -32,19 +34,17 @@ public class ControllerConvocarReunion {
 	
 	@Value("${siget.app.jwtSecret}")
 	private String jwtSecret;
-	
-	@PostMapping(value="/convocar")
-	public ResponseEntity<?> convocarReunion(@RequestBody Reunion reunion, @RequestHeader("Authorization") String token) {
-		
-		System.out.println(token);
-		String nombre_organizador = Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(token.substring(7, token.length())).getBody().getSubject();
-		System.out.println("USER: " + nombre_organizador);
-		
-		reunion.setOrganizador(nombre_organizador);
+
+	@PostMapping(value = "/convocar")
+	public ResponseEntity<?> convocarReunion(@RequestBody Reunion reunion,
+			@RequestHeader("Authorization") String token) {
+		String nombreOrganizador = Jwts.parser().setSigningKey(jwtSecret)
+				.parseClaimsJws(token.substring(7, token.length())).getBody().getSubject();
+		reunion.setOrganizador(nombreOrganizador);
 		reunion.setId(last());
 		reunion.setEstado("pendiente");
-		if(filtro_restricciones(reunion)) {
-		rReuniones.save(reunion);
+		if (filtroRestricciones(reunion)) {
+			rReuniones.save(reunion);
 			return new ResponseEntity<>(HttpStatus.OK);
 		}else {
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
@@ -58,12 +58,12 @@ public class ControllerConvocarReunion {
 	}
 	
 	//FILTROS
-	public boolean filtro_restricciones(Reunion reunion) {
+	public boolean filtroRestricciones(Reunion reunion) {
 		boolean ok=true;
 		if(reunion.getTitulo().equals("")) {
 			ok=false;
 		}
-		if(reunion.getDia() >31 || reunion.getDia() <1) {
+		if(reunion.getDia() <1 || reunion.getDia() > numeroDias(reunion)) {
 			ok=false;
 		}
 		if(reunion.getMes() <1 || reunion.getMes()>12) {
@@ -82,6 +82,51 @@ public class ControllerConvocarReunion {
 			ok=false;
 		}
 		return ok;
+	}
+	
+	public int numeroDias(Reunion reunion) {
+		int numeroDias = 0;
+		int anioActual;
+		switch (reunion.getMes()) {
+			case 1:
+			case 3:
+			case 5:
+			case 7:
+			case 8:
+			case 10:
+			case 12:
+				numeroDias = 31;
+				break;
+			case 4:
+			case 6:
+			case 9:
+			case 11:
+				numeroDias = 30;
+				break;
+			case 2:
+				anioActual = reunion.getAno();
+				if (esBisiesto(1900 + anioActual)) {
+					numeroDias = 29;
+				} else {
+					numeroDias = 28;
+				}
+				break;
+			default:
+				break;
+			}
+
+		return numeroDias;
+	}
+
+	public static boolean esBisiesto(int anio) {
+
+		GregorianCalendar calendar = new GregorianCalendar();
+		boolean esBisiesto = false;
+		if (calendar.isLeapYear(anio)) {
+			esBisiesto = true;
+		}
+		return esBisiesto;
+
 	}
 
 }
