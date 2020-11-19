@@ -6,4 +6,5 @@ public interface RepositoryReuniones extends MongoRepository<Reunion,String> {
 	//Reunion save(Reunion reunion);
 	//void delete(Reunion reunion);
 	Reunion findFirstByOrderByIdDesc();
+	Reunion findById(int _id);
 }
