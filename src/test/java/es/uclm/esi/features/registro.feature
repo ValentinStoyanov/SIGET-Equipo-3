@@ -1,16 +1,18 @@
-Feature: Modificar Reunion
+Feature: Registro usuario
 
-  Scenario Outline: modificar
-    When Modifico la reunion <id> con el token de usuario <token> 
-    And cambio el titulo a <titulo>
-    And cambio la fecha a <fecha>
-    And cambio la hora a <hora>
-    And el nuevo titulo sera <nuevotitulo>
-    And la nueva fecha sera <nuevafecha>
-    And la nueva hora sera <nuevahora>
+  Scenario Outline: registro
+    When registro un usuario con usuario <usuario>, pass <pass> y email <mail> 
+    And <opcion> es nuevo para borrarlo
+    Then el mensaje sera <mensaje>
     
     
     Examples:
-  | titulo                   | nuevotitulo       				| fecha        |  nuevafecha  | hora    | nuevahora | asistentes                                      | asistentesnuevos                                | codigo | id   | token   |
-	| "test"                   | "test"                   | "11-11-2020" | "11-11-2020" | "23:32" |  "23:32"  | "juan:pendiente,luis:pendiente"                 | "juan:pendiente,luis:pendiente"                 | 404    | 1    | "awed"  |
- 
+  | usuario          |  pass               |  mail                    | opcion | mensaje |
+  | "admin"          | "usuario_existente" | "e@mail.com"             | "no"   | "Error: Username is already taken!" |
+  | "trabajador1"    | "usuario-existente" | "e@mail.com"             | "no"   | "Error: Username is already taken!" |
+  | "mail_existente" | "patata"            | "admin@admin.com"        | "no"   | "Error: Email is already in use!" |
+  | "mail-existente" | "asasds"            | "trabajador1@admin.com"  | "no"   | "Error: Email is already in use!" |
+  | "mail.existente" | "patata"            | "trabajador2@admin.com"  | "no"   | "Error: Email is already in use!" |
+  | "ejemplo1"       | "pass11"            | "ej1@admin.com"          | "si"   | "User registered successfully!" |
+  | "2ejemplo"       | "2pass2"            | "trabajador2@ej2.com"    | "si"   | "User registered successfully!" |
+  
