@@ -7,7 +7,9 @@ Feature: Roles patrón RBAC
 
     Examples: 
       |	rol	|	codigo	|	token	|
-      | "USER" | 200 | "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTYwNTYzNTQ1MSwiZXhwIjoxNjA1NzIxODUxfQ.o10ETSsrHmdxDOpvTgbwjS8SuTW6NOK04e9KPah5pLxsFhZ75l6VOrgg7pDAJdv3qDzo8a2YkAsyDG1oQSVtOQ" |
-      | "ADMIN" | 200 | "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTYwNTY5NzMzNiwiZXhwIjoxNjA1NzgzNzM2fQ.pZVcn6TOzZXsGF5ooGnjy6p7bPlEGYeEdRVzX81J2rORJfZMChtW1fDIp_udthFdmpoj2hCDDhBZh_ZH68pZqA" |
-			| "ADMIN" | 403 | "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0cmFiYWphZG9yMSIsImlhdCI6MTYwNTcwMTEyMCwiZXhwIjoxNjA1Nzg3NTIwfQ.mezskTWmEmR9LguIVC0iaQZzrQyvTE4r5S_VEJDdjjpWyBnVWXoSrrK-oVCti1Vck8UI5n8W-6xj74321LEleQ" |
+      | "USER" | 200 | "admin" |
+      | "USER" | 200 | "user" |
+      | "ADMIN" | 200 | "admin" |
+			| "ADMIN" | 403 | "user" |
 			| "USER" | 401 | "?" |
+			| "ADMIN" | 401 | "?" |

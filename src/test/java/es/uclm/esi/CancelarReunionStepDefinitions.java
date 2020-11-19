@@ -52,11 +52,11 @@ public class CancelarReunionStepDefinitions extends SpringIntegrationTest {
 		}
 
 	}
-	
-	@Then("la respuesta sera {int}")
-	public void la_respuesta_sera(Integer res) {
+	@Then("la respuesta debe ser {int}")
+	public void la_respuesta_debe_ser(Integer res) {
 		assertEquals(res, codigo);
-
 	}
+
+	
 
 }
