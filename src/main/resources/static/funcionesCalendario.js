@@ -208,7 +208,7 @@ function cancelar() {
         headers: { 'Authorization': localStorage.getItem("jwt") },
         contentType: 'application/json',
         success : function(response) {
-            console.log('Peticion cancelar correcta');
+        	
         },
         error : function(response) {
             console.log('Se produjo un problema cancelando reunion');
