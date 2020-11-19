@@ -3,6 +3,7 @@ var hoy = new Date();
 var infoMes;
 var detallesReuniones;
 var detallesDia = 0;
+var identificador = 0;
 
 function clickInfoReuniones(ID){
 
@@ -150,6 +151,7 @@ function reunionesDiaHoy(){ //Pedirá las reuniones del día de hoy, por defecto
         headers: { 'Authorization': localStorage.getItem("jwt") },
         contentType: 'application/json',
         success : function(response) {
+        	identificador = response.identificador;
             setDetallesReuniones(response);
             setDetallesReunionDiaC(response);
             clickInfoReuniones(hoy.getDate());
@@ -188,6 +190,23 @@ function reunionesMes(mesConcreto, anoConcreto){ //Recibirá las reuniones de un
         },
         error : function(response) {
             console.log('Se produjo un problema en reunionesMes()');
+        }
+    });
+}
+
+function cancelar() {
+
+	$.ajax({
+        url : '/reunion/cancelar',
+        async : false,
+        data : identificador,
+        type : "post",
+        headers: { 'Authorization': localStorage.getItem("jwt") },
+        success : function(response) {
+            
+        },
+        error : function(response) {
+            console.log('Se produjo un problema cancelando reunion');
         }
     });
 }
