@@ -15,92 +15,33 @@ import org.springframework.web.client.HttpClientErrorException;
 
 import es.uclm.esi.payload.request.CalendarioDiaRequest;
 import es.uclm.esi.payload.request.CalendarioMesRequest;
+import es.uclm.esi.payload.request.SignupRequest;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class RegistroStepDefinitions extends SpringIntegrationTest {
 
 	ResponseEntity<String> response;
+	SignupRequest request;
+	boolean borrar = false;
 
-	Map<String, String> params = new HashMap<String, String>();
-	Integer codigo;
-	HttpHeaders headers = new HttpHeaders();
-
-	@When("consulto con el usuario {string}")
-	public void consulto_con_el_usuario(String string) {
-		headers.set("Authorization", "Bearer " + string);
+	@When("registro un usuario con usuario {string}, pass {string} y email {string}")
+	public void registro_un_usuario_con_usuario_pass_y_email(String string, String string2, String string3) {
+	    request = new SignupRequest();
+	    request.setUsername(string);
+	    request.setPassword(string2);
+	    request.setEmail(string3);
 	}
 
-	@When("el calendario mes con mes {int} y anio {int}")
-	public void el_calendario_mes_con_mes_y_anio(Integer int1, Integer int2) {
-		CalendarioMesRequest fecha = new CalendarioMesRequest(int1, int2);
-		HttpEntity<CalendarioMesRequest> request = new HttpEntity<>(fecha, headers);
-		String url = DEFAULT_URL + "getCalendarioPersonalMes/";
-		try {
-			response = restTemplate.postForEntity(url, request, String.class);
-			codigo = response.getStatusCode().value();
-		} catch (HttpClientErrorException e) {
-			codigo = e.getRawStatusCode();
-		}
-
+	@When("{string} es nuevo para borrarlo")
+	public void es_nuevo_para_borrarlo(String string) {
+	    if(string.toLowerCase().equals("si"))
+	    	borrar = true;
 	}
-
-	@When("el calendario dia con dia {int} y mes {int} y anio {int}")
-	public void el_calendario_dia_con_dia_y_mes_y_anio(Integer int1, Integer int2, Integer int3) {
-		CalendarioDiaRequest fecha = new CalendarioDiaRequest(int1, int2, int3);
-		HttpEntity<CalendarioDiaRequest> request = new HttpEntity<>(fecha, headers);
-		String url = DEFAULT_URL + "getDetallesReunion/";
-		try {
-			response = restTemplate.postForEntity(url, request, String.class);
-			codigo = response.getStatusCode().value();
-		} catch (HttpClientErrorException e) {
-			codigo = e.getRawStatusCode();
-		}
-
-	}
-
-	@Then("obtengo el codigo {int}")
-	public void obtengo_el_codigo(Integer int1) {
-		assertEquals(int1, codigo);
-	}
-
-	@Then("obtengo los dias {string}")
-	public void obtengo_los_dias(String string) {
-		if (codigo == 200) {
-			String[] arrayDias = string.split(",");
-
-			try {
-				JSONObject jso = new JSONObject(response.getBody());
-				JSONArray jsa = jso.getJSONArray("reuniones");
-
-				for (int i = 0; i < jsa.length(); i++) {
-
-					assertEquals(arrayDias[i], jsa.get(i).toString());
-				}
-			} catch (JSONException e) {
-
-			}
-
-		}
-	}
-
-	@Then("obtengo las reuniones {string}")
-	public void obtengo_las_reuniones(String string) {
-		if (codigo == 200) {
-			String[] arrayReuniones = string.split(",");
-
-			try {
-				JSONObject jso = new JSONObject(response.getBody());
-				JSONArray jsa = jso.getJSONArray("reuniones");
-
-				for (int i = 0; i < jsa.length(); i++) {
-
-					assertEquals(arrayReuniones[i], new JSONObject(jsa.get(i).toString()).get("titulo"));
-				}
-			} catch (JSONException e) {
-
-			}
-		}
+	@Then("el mensaje sera {string}")
+	public void el_mensaje_sera(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
 	}
 
 }
