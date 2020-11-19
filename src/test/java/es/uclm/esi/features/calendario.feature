@@ -9,7 +9,7 @@ Feature: Calendario
   
   Examples:
   |	mes	|	anio  |	dias	  |	codigo	| token   |
-  |	11	|	2020	|	"6,23"	|	200     | "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTYwNTYzNTQ1MSwiZXhwIjoxNjA1NzIxODUxfQ.o10ETSsrHmdxDOpvTgbwjS8SuTW6NOK04e9KPah5pLxsFhZ75l6VOrgg7pDAJdv3qDzo8a2YkAsyDG1oQSVtOQ" |
+  |	11	|	2020	|	"6,23"	|	200     | "admin" |
   
   Scenario Outline: Calendario dia
   	When consulto con el usuario <token>
@@ -19,7 +19,7 @@ Feature: Calendario
   	
   	Examples:
  |	dia | mes	|	anio  |	reuniones	        			|	codigo	| token   |
- |	6		|	11  |	2020	|	"Frontend"	    				|	200     | "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTYwNTYzNTQ1MSwiZXhwIjoxNjA1NzIxODUxfQ.o10ETSsrHmdxDOpvTgbwjS8SuTW6NOK04e9KPah5pLxsFhZ75l6VOrgg7pDAJdv3qDzo8a2YkAsyDG1oQSVtOQ" |
+ |	6		|	11  |	2020	|	"Frontend"	    				|	200     | "admin" |
 
  
   
