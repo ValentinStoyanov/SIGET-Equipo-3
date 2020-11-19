@@ -1,13 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: es.uclm.esi.RunCucumberTest
 -------------------------------------------------------------------------------
-Tests run: 10, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 24.394 s <<< FAILURE! - in es.uclm.esi.RunCucumberTest
-cancelar #1  Time elapsed: 2.222 s  <<< FAILURE!
-java.lang.AssertionError: expected:<200> but was:<404>
-
-cancelar #2  Time elapsed: 0.39 s  <<< FAILURE!
-java.lang.AssertionError: expected:<400> but was:<404>
-
-convocar #2  Time elapsed: 1.097 s  <<< FAILURE!
-java.lang.AssertionError: expected:<400> but was:<200>
-
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.127 s - in es.uclm.esi.RunCucumberTest
