@@ -22,7 +22,7 @@ public class CancelarReunionStepDefinitions extends SpringIntegrationTest {
 	
 	ResponseEntity<String> response;
 	String url = DEFAULT_URL + "reunion/cancelar/";
-	Map<String, String> params = new HashMap<String, String>();
+	Map<String, Integer> params = new HashMap<String, Integer>();
 	Integer codigo;
 	HttpHeaders headers = new HttpHeaders();
 	Integer idReunion;
@@ -43,7 +43,9 @@ public class CancelarReunionStepDefinitions extends SpringIntegrationTest {
 		SecurityContextHolder.getContext().setAuthentication(authentication);
 		String token = jwtUtils.generateJwtToken(authentication);
 		headers.set("Authorization", "Bearer " + token);
-		HttpEntity<Integer> request = new HttpEntity<>(idReunion, headers);
+		
+		params.put("identificador", idReunion);
+		HttpEntity<Map<String, Integer>> request = new HttpEntity<>(params, headers);
 		try {
 			response = restTemplate.postForEntity(url, request, String.class);
 			codigo = response.getStatusCode().value();
