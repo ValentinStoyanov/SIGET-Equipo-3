@@ -9,4 +9,4 @@ Feature: Cancelar
   
   Examples:
   |	id	| codigo | 
-  |	9	| 200 | 
+  |	9	| 400 | 

@@ -3,7 +3,7 @@ var hoy = new Date();
 var infoMes;
 var detallesReuniones;
 var detallesDia = 0;
-var identificador = 0;
+var identificador;
 
 function clickInfoReuniones(ID){
 
@@ -72,6 +72,8 @@ function detallesEnBlanco(){
 
 function mostrarInfoReunion(idReunion,diaReunion){
     var jsonMostrar = getDetallesReunionDiaC();
+    
+    identificador = jsonMostrar.reuniones[idReunion-1].identificador;
 
     var titulo = document.getElementById("titureunion");
     titulo.setAttribute("value",jsonMostrar.reuniones[idReunion-1].titulo);
@@ -151,7 +153,6 @@ function reunionesDiaHoy(){ //Pedirá las reuniones del día de hoy, por defecto
         headers: { 'Authorization': localStorage.getItem("jwt") },
         contentType: 'application/json',
         success : function(response) {
-        	identificador = response.identificador;
             setDetallesReuniones(response);
             setDetallesReunionDiaC(response);
             clickInfoReuniones(hoy.getDate());
@@ -195,15 +196,19 @@ function reunionesMes(mesConcreto, anoConcreto){ //Recibirá las reuniones de un
 }
 
 function cancelar() {
-
+	var info = {
+		id : identificador
+	};
 	$.ajax({
-        url : '/reunion/cancelar',
+		url : '/reunion/cancelar',
         async : false,
-        data : identificador,
+        data : JSON.stringify(info),
         type : "post",
+        dataType: 'json',
         headers: { 'Authorization': localStorage.getItem("jwt") },
+        contentType: 'application/json',
         success : function(response) {
-            
+        	recarga();
         },
         error : function(response) {
             console.log('Se produjo un problema cancelando reunion');

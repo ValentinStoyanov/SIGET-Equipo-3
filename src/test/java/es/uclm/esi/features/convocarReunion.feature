@@ -14,6 +14,6 @@ Feature: Convocar
   
   Examples:
   |	titulo	|		dia	|	mes	|	ano	|	hora	| descripcion |	asistentes	|	codigo	|
-  |	"Reunion 1"	|	52	|	12	|	2020	|	"22:00"	| "Prueba" |	"Fatima:pendiente,Victor:pendiente"	|	400	|
-  |	"Reunion 2"	|	51	|	12	|	2020	|	"16:00"	|	"Prueba" |	"Fatima:pendiente,Victor:pendiente"	|	400	|
+  |	"Reunion 1"	|	52	|	12	|	2020	|	"22:00"	| "Prueba" |	"Fatima:pendiente,Victor:pendiente,admin:pendiente"	|	400	|
+  |	"Reunion 2"	|	51	|	12	|	2020	|	"16:00"	|	"Prueba" |	"Fatima:pendiente,Victor:pendiente,admin:pendiente"	|	400	|
   

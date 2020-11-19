@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
 import es.uclm.esi.model.Asistente;
 import es.uclm.esi.model.Reunion;
 import es.uclm.esi.repository.RepositoryCalendarioPersonal;
-import es.uclm.esi.security.jwt.JwtUtils;
 import io.jsonwebtoken.Jwts;
 
 /**
@@ -97,6 +96,7 @@ public class ControllerCalendarioPersonal {
 			asistentes = reunion.getAsistentes();
 			for (Asistente asistente : asistentes) {
 				if (asistente.getUsuario().equalsIgnoreCase(usuario)) {
+					jsoreunion.put("identificador", reunion.getId());
 					jsoreunion.put("titulo", reunion.getTitulo());
 					jsoreunion.put("id", contadorReuniones);
 					jsoreunion.put("hora", reunion.getHora());
@@ -113,7 +113,7 @@ public class ControllerCalendarioPersonal {
 		jsoret.put("ano", jso.getInt("ano"));
 		jsoret.put("reuniones", jsa);
 		System.out.println("Me ha llegado esto "+jso);
-		System.out.println("Estoy enviando "+jsoret);
+		System.out.println("Estoy respondiendo a /getDetallesReunion "+jsoret.toString());
 		return jsoret.toString();
 	}
 
