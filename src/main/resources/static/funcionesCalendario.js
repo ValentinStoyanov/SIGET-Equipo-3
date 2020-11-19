@@ -3,7 +3,7 @@ var hoy = new Date();
 var infoMes;
 var detallesReuniones;
 var detallesDia = 0;
-var identificador = 0;
+var identificador;
 
 function clickInfoReuniones(ID){
 
@@ -72,6 +72,8 @@ function detallesEnBlanco(){
 
 function mostrarInfoReunion(idReunion,diaReunion){
     var jsonMostrar = getDetallesReunionDiaC();
+    
+    identificador = jsonMostrar.reuniones[idReunion-1].identificador;
 
     var titulo = document.getElementById("titureunion");
     titulo.setAttribute("value",jsonMostrar.reuniones[idReunion-1].titulo);
@@ -151,7 +153,6 @@ function reunionesDiaHoy(){ //Pedirá las reuniones del día de hoy, por defecto
         headers: { 'Authorization': localStorage.getItem("jwt") },
         contentType: 'application/json',
         success : function(response) {
-        	identificador = response.identificador;
             setDetallesReuniones(response);
             setDetallesReunionDiaC(response);
             clickInfoReuniones(hoy.getDate());
@@ -196,11 +197,10 @@ function reunionesMes(mesConcreto, anoConcreto){ //Recibirá las reuniones de un
 
 function cancelar() {
 	var info = {
-	        type : "Cancelar",
-	        id : identificador
+		id : identificador
 	};
 	$.ajax({
-		url : '/getCalendarioPersonalMes',
+		url : '/reunion/cancelar',
         async : false,
         data : JSON.stringify(info),
         type : "post",

@@ -40,7 +40,7 @@ public class ControllerCancelarReunion {
 		reunion = rReuniones.findById(request.getInt("id"));
 		String nombreOrganizador = reunion.getOrganizador();
 		String nombreOrganizadorCabecera = Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(token.substring(7, token.length())).getBody().getSubject();
-		
+
 		if(nombreOrganizador.equals(nombreOrganizadorCabecera)) {
 			rReuniones.delete(reunion);
 			return new ResponseEntity<>(HttpStatus.OK);
