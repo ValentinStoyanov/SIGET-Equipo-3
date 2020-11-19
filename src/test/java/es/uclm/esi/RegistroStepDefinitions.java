@@ -22,6 +22,7 @@ import io.cucumber.java.en.When;
 public class RegistroStepDefinitions extends SpringIntegrationTest {
 
 	ResponseEntity<String> response;
+	String url = DEFAULT_URL + "api/auth/signup/";
 	SignupRequest request;
 	boolean borrar = false;
 
@@ -40,8 +41,15 @@ public class RegistroStepDefinitions extends SpringIntegrationTest {
 	}
 	@Then("el mensaje sera {string}")
 	public void el_mensaje_sera(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		HttpEntity hrequest = new HttpEntity(request);
+		
+		try {
+			response = restTemplate.postForEntity(url, hrequest, String.class);
+			
+			assertEquals(string, response.getBody());
+		} catch (HttpClientErrorException e) {
+			assertEquals(string, e.getMessage());
+		}
 	}
 
 }
