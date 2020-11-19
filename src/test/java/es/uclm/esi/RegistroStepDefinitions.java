@@ -1,30 +1,29 @@
 package es.uclm.esi;
 
 import static org.junit.Assert.assertEquals;
+import static org.springframework.data.mongodb.core.query.Criteria.where;
+import static org.springframework.data.mongodb.core.query.Query.query;
 
-import java.util.HashMap;
-import java.util.Map;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.HttpClientErrorException;
 
-import es.uclm.esi.payload.request.CalendarioDiaRequest;
-import es.uclm.esi.payload.request.CalendarioMesRequest;
+import es.uclm.esi.model.User;
 import es.uclm.esi.payload.request.SignupRequest;
 import es.uclm.esi.repository.UserRepository;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+
 public class RegistroStepDefinitions extends SpringIntegrationTest {
 	
 	@Autowired
 	UserRepository userR;
+	@Autowired 
+	private MongoOperations mongoOps;
 	
 	ResponseEntity<String> response;
 	String url = DEFAULT_URL + "api/auth/signup/";
@@ -54,7 +53,7 @@ public class RegistroStepDefinitions extends SpringIntegrationTest {
 			response = restTemplate.postForEntity(url, hrequest, String.class);
 			
 			assertEquals(string, response.getBody().substring(12, response.getBody().length()-2));
-			userR.deleteByUsername(nuevo);
+			
 		} catch (HttpClientErrorException e) {
 			
 			assertEquals(string, e.getMessage().substring(19, e.getMessage().length()-3));
@@ -63,8 +62,8 @@ public class RegistroStepDefinitions extends SpringIntegrationTest {
 		}
 		//borro para que no falle despues
 		if(borrar) {
-			
-			userR.deleteByUsername(nuevo);
+			User nuevou = mongoOps.findOne(query(where("username").is(nuevo)), User.class);
+			userR.delete(nuevou);
 		}
 			
 	}
