@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
 import es.uclm.esi.model.Asistente;
 import es.uclm.esi.model.Reunion;
 import es.uclm.esi.repository.RepositoryCalendarioPersonal;
-import es.uclm.esi.security.jwt.JwtUtils;
 import io.jsonwebtoken.Jwts;
 
 /**

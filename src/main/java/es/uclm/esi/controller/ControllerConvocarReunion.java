@@ -3,7 +3,9 @@ package es.uclm.esi.controller;
 
 
 import java.util.GregorianCalendar;
+import java.util.Map;
 
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -15,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import es.uclm.esi.model.Asistente;
 import es.uclm.esi.model.Reunion;
 import es.uclm.esi.repository.RepositoryReuniones;
 import es.uclm.esi.security.jwt.JwtUtils;
@@ -36,13 +39,23 @@ public class ControllerConvocarReunion {
 	private String jwtSecret;
 
 	@PostMapping(value = "/convocar")
-	public ResponseEntity<?> convocarReunion(@RequestBody Reunion reunion,
+	public ResponseEntity<HttpStatus> convocarReunion(@RequestBody Map<String, Object> entrada,
 			@RequestHeader("Authorization") String token) {
+		JSONObject reu = new JSONObject(entrada);
 		String nombreOrganizador = Jwts.parser().setSigningKey(jwtSecret)
 				.parseClaimsJws(token.substring(7, token.length())).getBody().getSubject();
+		Reunion reunion = new Reunion();
 		reunion.setOrganizador(nombreOrganizador);
 		reunion.setId(last());
 		reunion.setEstado("pendiente");
+		reunion.setTitulo(reu.getString("titulo"));
+		System.out.println(reu.get("asistentes")); //VAMOS A VER QUE LLEGA PARA VER CÓMO TARTARLO
+		reunion.setDia(reu.getInt("dia"));
+		reunion.setMes(reu.getInt("mes"));
+		reunion.setAno(reu.getInt("ano"));
+		reunion.setHora(reu.getString("hora"));
+		reunion.setDescripcion(reu.getString("descripcion"));
+		
 		if (filtroRestricciones(reunion)) {
 			rReuniones.save(reunion);
 			return new ResponseEntity<>(HttpStatus.OK);

@@ -25,7 +25,7 @@ public class ConvocarReunionStepDefinitions extends SpringIntegrationTest{
 
 	ResponseEntity<String> response;
 	String url = DEFAULT_URL + "reunion/convocar/";
-	Map<String, String> params = new HashMap<String, String>();
+	Map<String, Object> params = new HashMap<String, Object>();
 	Integer codigo;
 	HttpHeaders headers = new HttpHeaders();
 	Reunion reu = new Reunion();
@@ -99,8 +99,16 @@ public void convoco_la_reunion() {
 	String jwt = jwtUtils.generateJwtToken(authentication);
 	
 	headers.set("Authorization", "Bearer " + jwt);
-	
-	HttpEntity<Reunion> request = new HttpEntity<Reunion>(reu, headers);
+	params.put("titulo", reu.getTitulo());
+	params.put("estado", reu.getEstado());
+	params.put("dia", reu.getDia());
+	params.put("mes", reu.getMes());
+	params.put("hora", reu.getHora());
+	params.put("descripcion", reu.getDescripcion());
+	params.put("organizador", reu.getOrganizador());
+	params.put("id", reu.getId());
+	params.put("asistentes",reu.getAsistentes());
+	HttpEntity<Map<String, Object>> request = new HttpEntity<Map<String, Object>>(params, headers);
 	
 	try {
 		response = restTemplate.postForEntity(url, request, String.class);
