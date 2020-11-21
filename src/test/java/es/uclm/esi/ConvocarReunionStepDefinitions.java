@@ -2,6 +2,7 @@ package es.uclm.esi;
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -29,7 +30,7 @@ public class ConvocarReunionStepDefinitions extends SpringIntegrationTest{
 	Integer codigo;
 	HttpHeaders headers = new HttpHeaders();
 	Reunion reu = new Reunion();
-	Asistente[] arrayAsistentes;
+	ArrayList<Asistente> arrayAsistentes;
 	@Autowired
 	AuthenticationManager authenticationManager;
 	@Autowired
@@ -77,11 +78,10 @@ public void asistentes_son(String cadena) {
 	if (!cadena.equals("")) {
 		String[] arrayNombresAsistentes = cadena.split(",");
 
-		arrayAsistentes = new Asistente[arrayNombresAsistentes.length];
-		for (int i = 0; i < arrayAsistentes.length; i++) {
+		arrayAsistentes = new ArrayList<Asistente>();
+		for (int i = 0; i < arrayAsistentes.size(); i++) {
 			String[] asistente = arrayNombresAsistentes[i].split(":");
-			
-			arrayAsistentes[i] = new Asistente(asistente[0],asistente[1]);
+			arrayAsistentes.set(i, new Asistente(asistente[0],asistente[1]));
 		}
 	}
 	
