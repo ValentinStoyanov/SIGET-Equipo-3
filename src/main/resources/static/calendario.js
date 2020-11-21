@@ -196,5 +196,5 @@ function mifecha() {
 }
 
 function recarga() {
-	window.location.reload();
+    window.location.reload();
 }

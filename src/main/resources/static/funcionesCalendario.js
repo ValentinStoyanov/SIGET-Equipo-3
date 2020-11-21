@@ -227,10 +227,7 @@ function aceptarReunion() {
         dataType: 'json',
         headers: { 'Authorization': localStorage.getItem("jwt") },
         contentType: 'application/json',
-        success : recarga(),
-        error : function(response) {
-            console.log('Error al aceptar la reunión ');
-        }
+        success : recarga()
     });
 }
 

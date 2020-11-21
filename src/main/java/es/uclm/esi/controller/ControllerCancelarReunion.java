@@ -50,7 +50,31 @@ public class ControllerCancelarReunion {
 	}
 	
 	@PostMapping(value = "/aceptar")
-	public ResponseEntity<?> aceptarReunion(@RequestBody Map<String, Integer> req, @RequestHeader("Authorization") String token) {
+	public ResponseEntity<HttpStatus> aceptarReunion(@RequestBody Map<String, Integer> req, @RequestHeader("Authorization") String token) {
+		boolean encontrado = false;
+		JSONObject request = new JSONObject(req);
+		Reunion reunion;
+		reunion = rReuniones.findById(request.getInt("id"));
+		String asistente = Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(token.substring(7, token.length())).getBody().getSubject();
+
+		for (int i = 0; i < reunion.getAsistentes().length; i++) {
+			if (reunion.getAsistente(i).getUsuario().equals(asistente)){
+				reunion.getAsistente(i).setEstado("Aceptado");
+				encontrado = true;
+				rReuniones.save(reunion);
+			}
+		}
+		
+		if(encontrado) {
+			return new ResponseEntity<>(HttpStatus.OK);
+		} else {
+			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+		}
+	}
+	
+	/*
+	@PostMapping(value = "/rechazar")
+	public ResponseEntity<HttpStatus> rechazarReunion(@RequestBody Map<String, Integer> req, @RequestHeader("Authorization") String token) {
 		boolean encontrado = false;
 		JSONObject request = new JSONObject(req);
 		Reunion reunion;
@@ -71,6 +95,8 @@ public class ControllerCancelarReunion {
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 		}
 	}
+	*/
+	
 	
 
 
