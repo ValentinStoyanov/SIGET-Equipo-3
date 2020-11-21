@@ -2,6 +2,7 @@ package es.uclm.esi.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import java.util.ArrayList;
 
 /**
  * 
@@ -21,7 +22,7 @@ public class Reunion {
 	private int ano;
 	private String hora;
 	private String descripcion;
-	private Asistente[] asistentes;
+	private ArrayList<Asistente> asistentes;
 	
 	
 
@@ -36,7 +37,7 @@ public class Reunion {
 		this.mes = mes;
 		this.ano = ano;
 		this.hora = hora;
-		this.asistentes = asistentes;
+		this.asistentes = new ArrayList<Asistente>();
 	}
 
 	public Reunion() {
@@ -99,15 +100,15 @@ public class Reunion {
 		this.hora = hora;
 	}
 
-	public Asistente[] getAsistentes() {
+	public ArrayList<Asistente> getAsistentes() {
 		return asistentes;
 	}
 	
 	public Asistente getAsistente(int index) {
-		return asistentes[index];
+		return asistentes.get(index);
 	}
 
-	public void setAsistentes(Asistente[] asistentes) {
+	public void setAsistentes(ArrayList<Asistente> asistentes) {
 		this.asistentes = asistentes;
 	}
 

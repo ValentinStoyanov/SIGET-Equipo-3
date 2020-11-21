@@ -50,7 +50,7 @@ public class ControllerCalendarioPersonal {
 		List<Reunion> reuniones = calendarioRepository.findReunionesMes(mespeticion, anopeticion);
 		ArrayList<Integer> dias = new ArrayList<Integer>();
 		int dia;
-		Asistente[] asistentes;
+		ArrayList<Asistente> asistentes;
 		System.out.println(usuario);
 		//Hay que controlar que no exista usuario porque no se haya pasado el token o cualquier tipo de error
 		for (Reunion reunion : reuniones) {
@@ -90,7 +90,7 @@ public class ControllerCalendarioPersonal {
 		JSONObject jsoreunion = new JSONObject();
 		String usuario = Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(token.substring(7, token.length())).getBody().getSubject();
 		List<Reunion> reuniones = calendarioRepository.findByDia(jso.getInt("dia"),jso.getInt("mes"),jso.getInt("ano"));
-		Asistente[] asistentes;
+		ArrayList<Asistente> asistentes;
 		int contadorReuniones = 1;
 		for (Reunion reunion : reuniones) {
 			asistentes = reunion.getAsistentes();

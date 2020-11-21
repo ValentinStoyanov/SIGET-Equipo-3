@@ -57,7 +57,7 @@ public class ControllerCancelarReunion {
 		reunion = rReuniones.findById(request.getInt("id"));
 		String asistente = Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(token.substring(7, token.length())).getBody().getSubject();
 
-		for (int i = 0; i < reunion.getAsistentes().length; i++) {
+		for (int i = 0; i < reunion.getAsistentes().size(); i++) {
 			if (reunion.getAsistente(i).getUsuario().equals(asistente)){
 				reunion.getAsistente(i).setEstado("Aceptado");
 				encontrado = true;
@@ -72,7 +72,7 @@ public class ControllerCancelarReunion {
 		}
 	}
 	
-	/*
+	
 	@PostMapping(value = "/rechazar")
 	public ResponseEntity<HttpStatus> rechazarReunion(@RequestBody Map<String, Integer> req, @RequestHeader("Authorization") String token) {
 		boolean encontrado = false;
@@ -81,9 +81,9 @@ public class ControllerCancelarReunion {
 		reunion = rReuniones.findById(request.getInt("id"));
 		String asistente = Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(token.substring(7, token.length())).getBody().getSubject();
 
-		for (int i = 0; i < reunion.getAsistentes().length; i++) {
-			if (reunion.getAsistente(i).getUsuario().equals(asistente)) {
-				reunion.getAsistente(i).setEstado("Aceptado");
+		for (int i = 0; i < reunion.getAsistentes().size(); i++) {
+			if (reunion.getAsistente(i).getUsuario().equals(asistente)){
+				reunion.getAsistente(i).setEstado("Rechazado");
 				encontrado = true;
 				rReuniones.save(reunion);
 			}
@@ -95,7 +95,7 @@ public class ControllerCancelarReunion {
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 		}
 	}
-	*/
+	
 	
 	
 

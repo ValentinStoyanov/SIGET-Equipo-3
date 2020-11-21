@@ -231,6 +231,22 @@ function aceptarReunion() {
     });
 }
 
+function rechazarReunion() {
+    var info = {
+        id: identificador
+    }
+    $.ajax({
+		url : '/reunion/rechazar',
+        async : false,
+        data : JSON.stringify(info),
+        type : "post",
+        dataType: 'json',
+        headers: { 'Authorization': localStorage.getItem("jwt") },
+        contentType: 'application/json',
+        success : recarga()
+    });
+}
+
 function getDetallesReunionDiaC(){
     return detallesDia;
 }
