@@ -47,7 +47,6 @@ public class ControllerConvocarReunion {
 	public String convocarReunion(@RequestBody Map<String, Object> entrada,
 			@RequestHeader("Authorization") String token) {
 		JSONObject reu = new JSONObject(entrada);
-		System.out.println(reu);
 		String nombreOrganizador = Jwts.parser().setSigningKey(jwtSecret)
 				.parseClaimsJws(token.substring(7, token.length())).getBody().getSubject();
 		Reunion reunion = new Reunion();
@@ -63,8 +62,7 @@ public class ControllerConvocarReunion {
 			String estado = "pendiente";
 			asistentesR[i] = new Asistente(nombre,estado);
 		}
-
-		System.out.println(asistentesR[1].getUsuario());
+		reunion.setAsistentes(asistentesR);
 		
 		int dia, mes, ano;
 		String[] parts = reu.getString("fecha").split("-");
@@ -112,24 +110,31 @@ public class ControllerConvocarReunion {
 	public boolean filtroRestricciones(Reunion reunion) {
 		boolean ok=true;
 		if(reunion.getTitulo().equals("")) {
+			System.out.println("0");
 			ok=false;
 		}
 		if(reunion.getDia() <1 || reunion.getDia() > numeroDias(reunion)) {
+			System.out.println("1");
 			ok=false;
 		}
 		if(reunion.getMes() <1 || reunion.getMes()>12) {
+			System.out.println("2");
 			ok=false;
 		}
 		if(reunion.getAno() < 2020) { 
+			System.out.println("3");
 			ok=false;
 		}
 		if(reunion.getHora().equals("")) { 
+			System.out.println("4");
 			ok=false;
 		}
 		if(reunion.getDescripcion().equals("")) { 
+			System.out.println("5");
 			ok=false;
 		}
 		if(reunion.getAsistentes() == null) { 
+			System.out.println("6");
 			ok=false;
 		}
 		return ok;
