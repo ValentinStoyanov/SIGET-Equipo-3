@@ -250,3 +250,12 @@ function setRol(){
 	text+= usuario;
 	document.getElementById("ROL").innerHTML= text;
 }
+
+function guardarReunion(){
+	var titulo = document.getElementById("tituloConvocar");
+	var descripcion = document.getElementById("descripcionConvocar");
+	var fecha = document.getElementById("fechaConvocar");
+	var hora = document.getElementById("horaConvocar");
+	var organizador;
+	var asistentes = document.getElementById("asistentesConvocar");
+}

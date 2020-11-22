@@ -107,12 +107,13 @@
 					<h3>CONVOCAR REUNIÓN</h3>
 					<form action="">
 						<div class="contenedor-inputs">
-							<input type="text" placeholder="Titulo">
-							<input type="text" placeholder="Descripción">
+							<input type="text" id = "tituloConvocar" placeholder="Titulo">
+							<input type="text" id = "descripcionConvocar" placeholder="Descripción">
 							<input type="date" id="fechaconvocar" name="trip-start" value="2020-07-22" min="2018-01-01">
 							<input type="time" id="horaconvocar" name="appt" min="08:00" max="21:00" required>
+							
 						</div>
-						<input type="submit" class="btn-submit" value="GUARDAR">
+						<input type="submit" class="btn-submit" onclick = "guardarReunion()" value="GUARDAR">
 					</form>
 				</div>
 			</div>
