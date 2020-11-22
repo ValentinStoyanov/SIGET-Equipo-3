@@ -296,10 +296,10 @@ function guardarReunion(){
 	}
 	var info = {
         "type" : "ConvocarReunion",
-        "titulo" : titulo,
-        "descripcion" : descripcion,
-        "hora" : hora,
-        "fecha" : fecha,
+        "titulo" : titulo.value,
+        "descripcion" : descripcion.value,
+        "hora" : hora.value,
+        "fecha" : fecha.value,
         "asistentes" : asistentes
     };
     $.ajax({
@@ -311,10 +311,10 @@ function guardarReunion(){
         headers: { 'Authorization': localStorage.getItem("jwt") },
         contentType: 'application/json',
         success : function(response) {
-			console.log(response);
+			localStorage.setItem("response",response.respuesta);
         },
         error : function(response) {
-            console.log('Se produjo un problema en reunionesDiaHoy()');
+			localStorage.setItem("response",response.respuesta);
         }
     });
 	

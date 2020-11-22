@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import es.uclm.esi.model.Asistente;
 import es.uclm.esi.model.Reunion;
 import es.uclm.esi.model.User;
 import es.uclm.esi.repository.RepositoryReuniones;
@@ -53,10 +55,26 @@ public class ControllerConvocarReunion {
 		reunion.setId(last());
 		reunion.setEstado("pendiente");
 		reunion.setTitulo(reu.getString("titulo"));
-		System.out.println(reu.get("asistentes")); //VAMOS A VER QUE LLEGA PARA VER CÓMO TARTARLO
-		reunion.setDia(reu.getInt("dia"));
-		reunion.setMes(reu.getInt("mes"));
-		reunion.setAno(reu.getInt("ano"));
+		
+		JSONArray asistentes = (JSONArray) reu.get("asistentes");
+		Asistente[] asistentesR = new Asistente[asistentes.length()];
+		for (int i = 0; i < asistentes.length(); i++) {
+			String nombre = (String) asistentes.get(i);
+			String estado = "pendiente";
+			asistentesR[i] = new Asistente(nombre,estado);
+		}
+
+		System.out.println(asistentesR[1].getUsuario());
+		
+		int dia, mes, ano;
+		String[] parts = reu.getString("fecha").split("-");
+		ano = Integer.parseInt(parts[0]);
+		mes = Integer.parseInt(parts[1]);
+		dia = Integer.parseInt(parts[2]);
+		reunion.setDia(dia);
+		reunion.setMes(mes);
+		reunion.setAno(ano);
+		
 		reunion.setHora(reu.getString("hora"));
 		reunion.setDescripcion(reu.getString("descripcion"));
 		JSONObject jsoresp = new JSONObject();
