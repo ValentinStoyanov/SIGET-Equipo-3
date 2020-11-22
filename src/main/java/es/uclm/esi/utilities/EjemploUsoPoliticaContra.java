@@ -5,7 +5,7 @@ package es.uclm.esi.utilities;
  */
 public class EjemploUsoPoliticaContra {
 
-	public static void main(String[] args) {
+	public static void ej(String[] args) {
 		String contrasenaejemplo = "ContrasenaSIGET2";
 		if(!PoliticaContraSegura.caracteres(contrasenaejemplo)) {
 			System.out.println("La contraseña debe contener, al menos, 8 caracteres");

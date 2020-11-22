@@ -3,23 +3,23 @@ package es.uclm.esi.controller;
 
 
 import java.util.GregorianCalendar;
+import java.util.List;
 import java.util.Map;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import es.uclm.esi.model.Asistente;
 import es.uclm.esi.model.Reunion;
+import es.uclm.esi.model.User;
 import es.uclm.esi.repository.RepositoryReuniones;
+import es.uclm.esi.repository.UserRepository;
 import es.uclm.esi.security.jwt.JwtUtils;
 
 import io.jsonwebtoken.Jwts;
@@ -33,13 +33,16 @@ public class ControllerConvocarReunion {
 	RepositoryReuniones rReuniones;
 	
 	@Autowired
+	UserRepository usuarios;
+	
+	@Autowired
 	JwtUtils jwt;
 	
 	@Value("${siget.app.jwtSecret}")
 	private String jwtSecret;
 
 	@PostMapping(value = "/convocar")
-	public ResponseEntity<HttpStatus> convocarReunion(@RequestBody Map<String, Object> entrada,
+	public String convocarReunion(@RequestBody Map<String, Object> entrada,
 			@RequestHeader("Authorization") String token) {
 		JSONObject reu = new JSONObject(entrada);
 		String nombreOrganizador = Jwts.parser().setSigningKey(jwtSecret)
@@ -55,13 +58,31 @@ public class ControllerConvocarReunion {
 		reunion.setAno(reu.getInt("ano"));
 		reunion.setHora(reu.getString("hora"));
 		reunion.setDescripcion(reu.getString("descripcion"));
-		
+		JSONObject jsoresp = new JSONObject();
 		if (filtroRestricciones(reunion)) {
 			rReuniones.save(reunion);
-			return new ResponseEntity<>(HttpStatus.OK);
+			jsoresp.put("respuesta", "ok");
+			return jsoresp.toString();
 		}else {
-			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+			jsoresp.put("respuesta", "error");
+			return jsoresp.toString();
 		}
+	}
+	
+	@PostMapping("/getAsistentes")
+	public String getAsistentes(@RequestBody Map<String, Object> entrada,
+			@RequestHeader("Authorization") String token) {
+		JSONObject jso = new JSONObject(entrada);
+		JSONObject jsoresp = new JSONObject();
+		JSONArray jsa = new JSONArray();
+		List<User> listaUsuarios = usuarios.findAll();
+		String[] nombresusu = new String[listaUsuarios.size()];
+		for (int i = 0; i < listaUsuarios.size(); i++) {
+			nombresusu[i] = listaUsuarios.get(i).getUsername();
+		}
+		jsa.put(nombresusu);
+		jsoresp.put("usuarios", jsa);
+		return jsoresp.toString();
 	}
 	
 	public int last() {

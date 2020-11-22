@@ -1,6 +1,7 @@
 package es.uclm.esi.repository;
 
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
@@ -17,5 +18,8 @@ public interface UserRepository extends MongoRepository<User, String> {
 	  Boolean existsByEmail(String email);
 	  
 	  Optional<User> findById(int id);
+	  
+	  @Override
+	  List<User> findAll(); 
     
 }
