@@ -76,11 +76,9 @@ public class ControllerConvocarReunion {
 		JSONObject jsoresp = new JSONObject();
 		JSONArray jsa = new JSONArray();
 		List<User> listaUsuarios = usuarios.findAll();
-		String[] nombresusu = new String[listaUsuarios.size()];
-		for (int i = 0; i < listaUsuarios.size(); i++) {
-			nombresusu[i] = listaUsuarios.get(i).getUsername();
+		for (User user : listaUsuarios) {
+			jsa.put(user.getUsername());
 		}
-		jsa.put(nombresusu);
 		jsoresp.put("usuarios", jsa);
 		return jsoresp.toString();
 	}

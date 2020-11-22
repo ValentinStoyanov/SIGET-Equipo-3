@@ -295,11 +295,9 @@ function cargar() {
     llamadaAsistentes();
     var asistentesConvocar = getAsistentes();
     var select = document.getElementById("arrayAsistentes");
-    console.log(asistentesConvocar.usuarios[1]);
     for(var i = 0; i < asistentesConvocar.usuarios.length; i++){ 
         var option = document.createElement("option");
         option.innerHTML = asistentesConvocar.usuarios[i];
-        console.log(asistentesConvocar.usuarios[i]);
         select.appendChild(option);
     }
 }
