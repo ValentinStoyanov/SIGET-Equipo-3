@@ -10,8 +10,6 @@ window.onload = function() {
     reunionesMesHoy();
     reunionesDiaHoy();
     setRol();
-    
-    llamadaAsistentes();
 
 	//Fecha actual
 	hoy = new Date(); //objeto fecha actual

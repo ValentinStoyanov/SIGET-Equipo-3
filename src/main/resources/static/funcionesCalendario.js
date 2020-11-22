@@ -4,29 +4,35 @@ var infoMes;
 var detallesReuniones;
 var detallesDia = 0;
 var identificador = 0;
+var asistentes;
 
 function llamadaAsistentes(){
-	mesActual = hoy.getMonth() + 1;
-    anoActual = hoy.getFullYear();
     var info = {
-        type : "PeticionReunionesMes",
-        mes : mesActual,
-        ano : anoActual
+        type : "getAsistentes",
     };
     $.ajax({
         url : '/reunion/getAsistentes',
         data : JSON.stringify(info),
+        async : false,
         type : "post",
         dataType: 'json',
         contentType: 'application/json',
         headers: { 'Authorization': localStorage.getItem("jwt") },
         success : function(response) {
-			console.log(response);
+			setAsistentes(response);
         },
         error : function(response) {
             console.log('Se produjo un problema en getAsistentes()');
         }
     });
+}
+
+function setAsistentes(data){
+	asistentes = data;
+}
+
+function getAsistentes(){
+	return asistentes;
 }
 
 function clickInfoReuniones(ID){
@@ -285,15 +291,15 @@ function guardarReunion(){
 }
 
 
-function cargar() {
-
-
-    var provincias = ["Cantabria", "Asturias", "Galicia", "Andalucia", "Extremadura"]; 
-    
-    var select = document.getElementById("arrayAsistentes"); //Seleccionamos el select
-    for(var i=0; i < asistentes.length; i++){ 
-        var option = document.createElement("option"); 		//Creamos la opcion
-        option.innerHTML = asistentes[i];				 	//Metemos el texto en la opción
-        select.appendChild(option); 						//Metemos la opción en el select
+function cargar() { 
+    llamadaAsistentes();
+    var asistentesConvocar = getAsistentes();
+    var select = document.getElementById("arrayAsistentes");
+    console.log(asistentesConvocar.usuarios[1]);
+    for(var i = 0; i < asistentesConvocar.usuarios.length; i++){ 
+        var option = document.createElement("option");
+        option.innerHTML = asistentesConvocar.usuarios[i];
+        console.log(asistentesConvocar.usuarios[i]);
+        select.appendChild(option);
     }
 }
