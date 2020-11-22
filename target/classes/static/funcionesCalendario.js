@@ -282,16 +282,26 @@ function setRol(){
 }
 
 function guardarReunion(){
+	var asistentes = [];
 	var titulo = document.getElementById("tituloConvocar");
 	var descripcion = document.getElementById("descripcionConvocar");
-	var fecha = document.getElementById("fechaConvocar");
-	var hora = document.getElementById("horaConvocar");
+	var fecha = document.getElementById("fechaconvocar");
+	var hora = document.getElementById("horaconvocar");
+	var descripcion = document.getElementById("descripcionConvocar");
 	var organizador;
-	var asistentes = document.getElementById("arrayAsistentes");
+	var select = document.getElementById("arrayAsistentes");
 	localStorage.clear();
-	localStorage.setItem("ey","estoesposterior");
-	localStorage.setItem("titulo",titulo.value);
-	localStorage.setItem("asistentesElegidos",asistentes.value[1]);
+	localStorage.setItem("Descripcion", descripcion.value)
+	localStorage.setItem("ey","ME HACES TRABAJAR COMO NEGRO");
+	localStorage.setItem("Titulo",titulo.value);
+	localStorage.setItem("Fecha", fecha.value);
+	localStorage.setItem("Hora", hora.value);
+	for ( var i = 0; i < select.selectedOptions.length; i++) {
+		asistentes[i] = select.selectedOptions[i].value;
+     	console.log(select.selectedOptions[i].value);
+	}
+	localStorage.setItem("asistentesElegidos", asistentes);
+	
 }
 
 
@@ -301,6 +311,7 @@ function cargar() {
     var select = document.getElementById("arrayAsistentes");
     for(var i = 0; i < asistentesConvocar.usuarios.length; i++){ 
         var option = document.createElement("option");
+        option.setAttribute("id","asistente");
         option.innerHTML = asistentesConvocar.usuarios[i];
         select.appendChild(option);
     }
