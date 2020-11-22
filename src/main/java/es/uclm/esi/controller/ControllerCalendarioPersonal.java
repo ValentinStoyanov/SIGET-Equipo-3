@@ -51,7 +51,6 @@ public class ControllerCalendarioPersonal {
 		ArrayList<Integer> dias = new ArrayList<Integer>();
 		int dia;
 		Asistente[] asistentes;
-		System.out.println(usuario);
 		//Hay que controlar que no exista usuario porque no se haya pasado el token o cualquier tipo de error
 		for (Reunion reunion : reuniones) {
 			asistentes = reunion.getAsistentes();
@@ -75,8 +74,6 @@ public class ControllerCalendarioPersonal {
 		jsoret.put("mes", mespeticion);
 		jsoret.put("ano", anopeticion);
 		jsoret.put("usuario", usuario);
-		
-		System.out.println("Estoy enviando "+jsoret);
 		
 		return jsoret.toString();
 	}
@@ -111,8 +108,6 @@ public class ControllerCalendarioPersonal {
 		jsoret.put("mes", jso.getInt("mes"));
 		jsoret.put("ano", jso.getInt("ano"));
 		jsoret.put("reuniones", jsa);
-		System.out.println("Me ha llegado esto "+jso);
-		System.out.println("Estoy enviando "+jsoret);
 		return jsoret.toString();
 	}
 
