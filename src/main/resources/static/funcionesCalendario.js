@@ -311,10 +311,10 @@ function guardarReunion(){
         headers: { 'Authorization': localStorage.getItem("jwt") },
         contentType: 'application/json',
         success : function(response) {
-			localStorage.setItem("response",response.respuesta);
+			console.log(response.respuesta);
         },
         error : function(response) {
-			localStorage.setItem("response",response.respuesta);
+            console.log('Se produjo un problema en guardarReunion()');
         }
     });
 	

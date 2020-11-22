@@ -56,12 +56,13 @@ public class ControllerConvocarReunion {
 		reunion.setTitulo(reu.getString("titulo"));
 		
 		JSONArray asistentes = (JSONArray) reu.get("asistentes");
-		Asistente[] asistentesR = new Asistente[asistentes.length()];
+		Asistente[] asistentesR = new Asistente[asistentes.length()+1];
 		for (int i = 0; i < asistentes.length(); i++) {
 			String nombre = (String) asistentes.get(i);
 			String estado = "pendiente";
 			asistentesR[i] = new Asistente(nombre,estado);
 		}
+		asistentesR[asistentes.length()] = new Asistente(nombreOrganizador,"aceptada");
 		reunion.setAsistentes(asistentesR);
 		
 		int dia, mes, ano;
@@ -110,31 +111,24 @@ public class ControllerConvocarReunion {
 	public boolean filtroRestricciones(Reunion reunion) {
 		boolean ok=true;
 		if(reunion.getTitulo().equals("")) {
-			System.out.println("0");
 			ok=false;
 		}
 		if(reunion.getDia() <1 || reunion.getDia() > numeroDias(reunion)) {
-			System.out.println("1");
 			ok=false;
 		}
 		if(reunion.getMes() <1 || reunion.getMes()>12) {
-			System.out.println("2");
 			ok=false;
 		}
-		if(reunion.getAno() < 2020) { 
-			System.out.println("3");
+		if(reunion.getAno() < 2020) {
 			ok=false;
 		}
-		if(reunion.getHora().equals("")) { 
-			System.out.println("4");
+		if(reunion.getHora().equals("")) {
 			ok=false;
 		}
-		if(reunion.getDescripcion().equals("")) { 
-			System.out.println("5");
+		if(reunion.getDescripcion().equals("")) {
 			ok=false;
 		}
-		if(reunion.getAsistentes() == null) { 
-			System.out.println("6");
+		if(reunion.getAsistentes() == null) {
 			ok=false;
 		}
 		return ok;
