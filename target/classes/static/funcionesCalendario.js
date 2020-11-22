@@ -259,3 +259,17 @@ function guardarReunion(){
 	var organizador;
 	var asistentes = document.getElementById("asistentesConvocar");
 }
+
+
+function cargar() {
+
+
+    var provincias = ["Cantabria", "Asturias", "Galicia", "Andalucia", "Extremadura"]; 
+    
+    var select = document.getElementById("arrayAsistentes"); //Seleccionamos el select
+    for(var i=0; i < asistentes.length; i++){ 
+        var option = document.createElement("option"); 		//Creamos la opcion
+        option.innerHTML = asistentes[i];				 	//Metemos el texto en la opción
+        select.appendChild(option); 						//Metemos la opción en el select
+    }
+}
