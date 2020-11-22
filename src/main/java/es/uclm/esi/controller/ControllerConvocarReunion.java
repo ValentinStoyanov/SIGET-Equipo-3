@@ -45,6 +45,7 @@ public class ControllerConvocarReunion {
 	public String convocarReunion(@RequestBody Map<String, Object> entrada,
 			@RequestHeader("Authorization") String token) {
 		JSONObject reu = new JSONObject(entrada);
+		System.out.println(reu);
 		String nombreOrganizador = Jwts.parser().setSigningKey(jwtSecret)
 				.parseClaimsJws(token.substring(7, token.length())).getBody().getSubject();
 		Reunion reunion = new Reunion();

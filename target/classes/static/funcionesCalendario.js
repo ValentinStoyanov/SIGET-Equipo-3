@@ -290,17 +290,33 @@ function guardarReunion(){
 	var descripcion = document.getElementById("descripcionConvocar");
 	var organizador;
 	var select = document.getElementById("arrayAsistentes");
-	localStorage.clear();
-	localStorage.setItem("Descripcion", descripcion.value)
-	localStorage.setItem("ey","ME HACES TRABAJAR COMO NEGRO");
-	localStorage.setItem("Titulo",titulo.value);
-	localStorage.setItem("Fecha", fecha.value);
-	localStorage.setItem("Hora", hora.value);
 	for ( var i = 0; i < select.selectedOptions.length; i++) {
 		asistentes[i] = select.selectedOptions[i].value;
      	console.log(select.selectedOptions[i].value);
 	}
-	localStorage.setItem("asistentesElegidos", asistentes);
+	var info = {
+        "type" : "ConvocarReunion",
+        "titulo" : titulo,
+        "descripcion" : descripcion,
+        "hora" : hora,
+        "fecha" : fecha,
+        "asistentes" : asistentes
+    };
+    $.ajax({
+        url : '/reunion/convocar',
+        data : JSON.stringify(info),
+        async : false,
+        type : "post",
+        dataType: 'json',
+        headers: { 'Authorization': localStorage.getItem("jwt") },
+        contentType: 'application/json',
+        success : function(response) {
+			console.log(response);
+        },
+        error : function(response) {
+            console.log('Se produjo un problema en reunionesDiaHoy()');
+        }
+    });
 	
 }
 
