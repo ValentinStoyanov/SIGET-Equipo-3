@@ -287,7 +287,11 @@ function guardarReunion(){
 	var fecha = document.getElementById("fechaConvocar");
 	var hora = document.getElementById("horaConvocar");
 	var organizador;
-	var asistentes = document.getElementById("asistentesConvocar");
+	var asistentes = document.getElementById("arrayAsistentes");
+	localStorage.clear();
+	localStorage.setItem("ey","estoesposterior");
+	localStorage.setItem("titulo",titulo.value);
+	localStorage.setItem("asistentesElegidos",asistentes.value[1]);
 }
 
 
