@@ -43,10 +43,8 @@ public class ControllerCancelarReunion {
 
 		if(nombreOrganizador.equals(nombreOrganizadorCabecera)) {
 			rReuniones.delete(reunion);
-			System.out.println("He pasado por ok");
 			return new ResponseEntity<>(HttpStatus.OK);
 		}else {
-			System.out.println("He pasado por bad request");
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 		}	
 	}

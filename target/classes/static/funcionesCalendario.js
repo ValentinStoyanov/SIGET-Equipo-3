@@ -232,7 +232,6 @@ function cancelar() {
         async : false,
         data : JSON.stringify(info),
         type : "post",
-        dataType: 'json',
         headers: { 'Authorization': localStorage.getItem("jwt") },
         contentType: 'application/json',
         success : function(response) {
