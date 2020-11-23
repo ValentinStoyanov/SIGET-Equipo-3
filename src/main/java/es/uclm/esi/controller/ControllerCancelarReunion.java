@@ -37,7 +37,11 @@ public class ControllerCancelarReunion {
 	public ResponseEntity<HttpStatus> cancelarReunion(@RequestBody Map<String, Integer> req, @RequestHeader("Authorization") String token) {
 		JSONObject request = new JSONObject(req);
 		Reunion reunion;
-		reunion = rReuniones.findById(request.getInt("id"));
+		try {
+			reunion = rReuniones.findById(request.getInt("id"));
+		}catch(Exception e){
+			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+		}
 		String nombreOrganizador = reunion.getOrganizador();
 		String nombreOrganizadorCabecera = Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(token.substring(7, token.length())).getBody().getSubject();
 
