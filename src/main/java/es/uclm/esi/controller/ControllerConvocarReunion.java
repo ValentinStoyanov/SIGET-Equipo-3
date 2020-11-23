@@ -97,7 +97,6 @@ public class ControllerConvocarReunion {
 	@PostMapping("/getAsistentes")
 	public String getAsistentes(@RequestBody Map<String, Object> entrada,
 			@RequestHeader("Authorization") String token) {
-		JSONObject jso = new JSONObject(entrada);
 		JSONObject jsoresp = new JSONObject();
 		JSONArray jsa = new JSONArray();
 		List<User> listaUsuarios = usuarios.findAll();
