@@ -34,7 +34,7 @@ public class ControllerCancelarReunion {
 	private String jwtSecret;
 
 	@PostMapping(value = "/cancelar")
-	public ResponseEntity<?> cancelarReunion(@RequestBody Map<String, Integer> req, @RequestHeader("Authorization") String token) {
+	public ResponseEntity<HttpStatus> cancelarReunion(@RequestBody Map<String, Integer> req, @RequestHeader("Authorization") String token) {
 		JSONObject request = new JSONObject(req);
 		Reunion reunion;
 		reunion = rReuniones.findById(request.getInt("id"));
@@ -43,8 +43,10 @@ public class ControllerCancelarReunion {
 
 		if(nombreOrganizador.equals(nombreOrganizadorCabecera)) {
 			rReuniones.delete(reunion);
+			System.out.println("He pasado por ok");
 			return new ResponseEntity<>(HttpStatus.OK);
 		}else {
+			System.out.println("He pasado por bad request");
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 		}	
 	}

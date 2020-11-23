@@ -2,6 +2,7 @@ package es.uclm.esi.controller;
 
 
 
+import java.util.ArrayList;
 import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Map;
@@ -56,13 +57,19 @@ public class ControllerConvocarReunion {
 		reunion.setTitulo(reu.getString("titulo"));
 		
 		JSONArray asistentes = (JSONArray) reu.get("asistentes");
-		Asistente[] asistentesR = new Asistente[asistentes.length()+1];
+		ArrayList<Asistente> asistentesR = new ArrayList<Asistente>();
+		boolean existe = false;
 		for (int i = 0; i < asistentes.length(); i++) {
 			String nombre = (String) asistentes.get(i);
 			String estado = "pendiente";
-			asistentesR[i] = new Asistente(nombre,estado);
+			if(nombre.equals(nombreOrganizador)) {
+				existe = true;
+			}
+			asistentesR.add(new Asistente(nombre,estado));
 		}
-		asistentesR[asistentes.length()] = new Asistente(nombreOrganizador,"aceptada");
+		if(!existe) {
+			asistentesR.add(new Asistente(nombreOrganizador,"aceptada"));
+		}
 		reunion.setAsistentes(asistentesR);
 		
 		int dia, mes, ano;
@@ -103,8 +110,12 @@ public class ControllerConvocarReunion {
 	
 	public int last() {
 		Reunion reun;
-		reun=rReuniones.findFirstByOrderByIdDesc();
-		return reun.getId()+1;
+		try {
+			reun = rReuniones.findFirstByOrderByIdDesc();
+			return reun.getId()+1;
+		} catch(Exception e) {
+			return 1;
+		}
 	}
 	
 	//FILTROS

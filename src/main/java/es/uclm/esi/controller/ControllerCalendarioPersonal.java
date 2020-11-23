@@ -43,7 +43,6 @@ public class ControllerCalendarioPersonal {
 		List<Reunion> reuniones = calendarioRepository.findReunionesMes(mespeticion, anopeticion);
 		ArrayList<Integer> dias = new ArrayList<Integer>();
 		int dia;
-		Asistente[] asistentes;
 		ArrayList<Asistente> asistentes;
 		//Hay que controlar que no exista usuario porque no se haya pasado el token o cualquier tipo de error
 		for (Reunion reunion : reuniones) {
