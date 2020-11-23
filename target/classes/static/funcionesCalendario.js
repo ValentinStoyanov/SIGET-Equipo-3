@@ -113,10 +113,9 @@ function mostrarInfoReunion(idReunion,diaReunion){
     var descripcion = document.getElementById("descripcion");
     descripcion.setAttribute("placeholder",jsonMostrar.reuniones[idReunion-1].descripcion);
 
-	var strasistentes = "";
+    var strasistentes = "";
     for(var i = 0; i < jsonMostrar.reuniones[idReunion-1].asistentes.length; i++){
-    	console.log("Los asistentes son"+jsonMostrar.reuniones[idReunion-1].asistentes[i].usuario);
-		strasistentes+=jsonMostrar.reuniones[idReunion-1].asistentes[i].usuario+"\n";
+        strasistentes+=jsonMostrar.reuniones[idReunion-1].asistentes[i].usuario+"\n";
     }
     
     var asistentes = document.getElementById("asistentes");
