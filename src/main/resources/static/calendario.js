@@ -194,3 +194,7 @@ function mifecha() {
         escribirdias() //escribir tabla
     }
 }
+
+function recarga() {
+    window.location.reload();
+}

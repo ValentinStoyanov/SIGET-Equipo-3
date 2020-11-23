@@ -50,7 +50,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome
     <br>
         
 <div class="jumbotron text-center" style="background-color:#FFFFFF;"> 
-    <!--<div class="row" id="divMenu">
+    <div class="row" id="divMenu">
         <div class="col-sm-3"></div>
          <div class="col-sm-3" id="mostrarLogin">
             <H2><a>Log In</a></H2> 
@@ -71,7 +71,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome
                     <input type="password" id="loginUserPassword" placeholder="password"><br>
                     <button onclick="LogIn()" id="btnLogin">LogIn</button><br>
                 </div> 
-                <!--
                 <div id="divRegistro" style="display:none">
                     <em class="fa fa-user fa-lg fa-fw" aria-hidden="true"></em>
                     <input type="text" placeholder="user full name" id="SignUpName"><br>
@@ -84,7 +83,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome
                     <em class="fa fa-key icon"></em>
                     <input type="password" placeholder="repeat the password" id="pwd2"><br>
                     <button onclick="SignUp()" id="registroBtn">SignUp</button><br>
-                </div>-->
+                </div>
             </div>
         </div>
 </div>
@@ -152,6 +151,7 @@ function LogIn() {
         }
     };
     $.ajax(data);
+    console.log(data);
 }
 
 

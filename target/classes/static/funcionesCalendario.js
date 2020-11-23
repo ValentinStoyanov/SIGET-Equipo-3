@@ -39,7 +39,7 @@ function clickInfoReuniones(ID){
 
     var jsonDia;
 
-    for(j = 0; j < 31; j++){
+    for(var j = 0; j < 31; j++){
     	if(document.getElementById(j) != null){
         	document.getElementById(j).style.border = "2px double #fffafa";
 		}
@@ -49,7 +49,6 @@ function clickInfoReuniones(ID){
     detallesEnBlanco();
 
     var hayreu = null;
-    var contador = 0;
 
     for(var k = 0; k < infoMes.reuniones.length; k++){
 		if (ID == infoMes.reuniones[k]) {
@@ -65,7 +64,7 @@ function clickInfoReuniones(ID){
     	} else {
     	   	var celda = document.getElementById(ID);
             celda.style.border = "2px double coral";
-    	    for(i = 0; i < jsonDia.reuniones.length; i++){
+    	    for(var i = 0; i < jsonDia.reuniones.length; i++){
     	       	document.getElementById("formularioPreview").insertAdjacentHTML('beforeend',"<div id='reunionYhora'><label id='reunion' "+
     	       	"onclick='mostrarInfoReunion("+jsonDia.reuniones[i].id+","+jsonDia.dia+")'>"+
     	      	jsonDia.reuniones[i].titulo+"</label>"+
@@ -102,6 +101,8 @@ function detallesEnBlanco(){
 
 function mostrarInfoReunion(idReunion,diaReunion){
     var jsonMostrar = getDetallesReunionDiaC();
+    
+    identificador = jsonMostrar.reuniones[idReunion-1].identificador;
 
     var titulo = document.getElementById("titureunion");
     titulo.setAttribute("value",jsonMostrar.reuniones[idReunion-1].titulo);
@@ -113,7 +114,7 @@ function mostrarInfoReunion(idReunion,diaReunion){
     descripcion.setAttribute("placeholder",jsonMostrar.reuniones[idReunion-1].descripcion);
 
 	var strasistentes = "";
-    for(i = 0; i < jsonMostrar.reuniones[idReunion-1].asistentes.length; i++){
+    for(var i = 0; i < jsonMostrar.reuniones[idReunion-1].asistentes.length; i++){
     	console.log("Los asistentes son"+jsonMostrar.reuniones[idReunion-1].asistentes[i].usuario);
 		strasistentes+=jsonMostrar.reuniones[idReunion-1].asistentes[i].usuario+"\n";
     }
@@ -139,8 +140,8 @@ function setReunionesMes(data){
 }
 
 function reunionesMesHoy(){
-    mesActual = hoy.getMonth() + 1;
-    anoActual = hoy.getFullYear();
+    var mesActual = hoy.getMonth() + 1;
+    var anoActual = hoy.getFullYear();
     var info = {
         type : "PeticionReunionesMes",
         mes : mesActual,
@@ -165,7 +166,7 @@ function reunionesMesHoy(){
 }
 
 function reunionesDiaHoy(){ //Pedirá las reuniones del día de hoy, por defecto
-    mesActual = hoy.getMonth() + 1;
+    var mesActual = hoy.getMonth() + 1;
     var info = {
         "type" : "PeticionDatosReunion",
         "dia" : hoy.getDate(),
@@ -181,7 +182,6 @@ function reunionesDiaHoy(){ //Pedirá las reuniones del día de hoy, por defecto
         headers: { 'Authorization': localStorage.getItem("jwt") },
         contentType: 'application/json',
         success : function(response) {
-        	identificador = response.identificador;
             setDetallesReuniones(response);
             setDetallesReunionDiaC(response);
             clickInfoReuniones(hoy.getDate());
@@ -225,19 +225,55 @@ function reunionesMes(mesConcreto, anoConcreto){ //Recibirá las reuniones de un
 }
 
 function cancelar() {
-
+	var info = {
+		id : identificador
+	};
 	$.ajax({
-        url : '/reunion/cancelar',
+		url : '/reunion/cancelar',
         async : false,
-        data : identificador,
+        data : JSON.stringify(info),
         type : "post",
+        dataType: 'json',
         headers: { 'Authorization': localStorage.getItem("jwt") },
+        contentType: 'application/json',
         success : function(response) {
-            
+        	recarga();
         },
         error : function(response) {
             console.log('Se produjo un problema cancelando reunion');
         }
+    });
+}
+
+function aceptarReunion() {
+    var info = {
+        id: identificador
+    }
+    $.ajax({
+		url : '/reunion/aceptar',
+        async : false,
+        data : JSON.stringify(info),
+        type : "post",
+        dataType: 'json',
+        headers: { 'Authorization': localStorage.getItem("jwt") },
+        contentType: 'application/json',
+        success : recarga()
+    });
+}
+
+function rechazarReunion() {
+    var info = {
+        id: identificador
+    }
+    $.ajax({
+		url : '/reunion/rechazar',
+        async : false,
+        data : JSON.stringify(info),
+        type : "post",
+        dataType: 'json',
+        headers: { 'Authorization': localStorage.getItem("jwt") },
+        contentType: 'application/json',
+        success : recarga()
     });
 }
 
@@ -275,7 +311,7 @@ function reunionesDia(diaConcreto, mesConcreto, anoConcreto){ //Pedirá las reun
 }
 
 function setRol(){
-	usuario = localStorage.getItem("rol");
+	var usuario = localStorage.getItem("rol");
 	var text = 'Usuario: ';
 	text+= usuario;
 	document.getElementById("ROL").innerHTML= text;

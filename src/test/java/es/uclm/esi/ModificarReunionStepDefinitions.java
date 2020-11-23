@@ -139,8 +139,8 @@ public class ModificarReunionStepDefinitions extends SpringIntegrationTest {
 			//arrayAsistentes = new Asistente[arrayNombresAsistentes.length];
 			for (int i = 0; i < arrayNombresAsistentes.length; i++) {
 				String[] asistente = arrayNombresAsistentes[i].split(":");
-				assertEquals(reu.getAsistentes()[i].getUsuario(),asistente[0]);
-				assertEquals(reu.getAsistentes()[i].getEstado(),asistente[1]);
+				assertEquals(reu.getAsistentes().get(i).getUsuario(),asistente[0]);
+				assertEquals(reu.getAsistentes().get(i).getEstado(),asistente[1]);
 			}
 			
 		}
