@@ -1,7 +1,5 @@
 package es.uclm.esi.controller;
 
-
-
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
 import java.util.List;
@@ -11,6 +9,9 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -45,7 +46,8 @@ public class ControllerConvocarReunion {
 	private String jwtSecret;
 
 	@PostMapping(value = "/convocar")
-	public String convocarReunion(@RequestBody Map<String, Object> entrada,
+	@PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
+	public ResponseEntity<HttpStatus> convocarReunion(@RequestBody Map<String, Object> entrada,
 			@RequestHeader("Authorization") String token) {
 		JSONObject reu = new JSONObject(entrada);
 		String nombreOrganizador = Jwts.parser().setSigningKey(jwtSecret)
@@ -54,7 +56,7 @@ public class ControllerConvocarReunion {
 		reunion.setOrganizador(nombreOrganizador);
 		reunion.setId(last());
 		reunion.setEstado("pendiente");
-		reunion.setTitulo(reu.getString("titulo"));
+		reunion.setTitulo(reu.getString("titulo"));	
 		
 		JSONArray asistentes = (JSONArray) reu.get("asistentes");
 		ArrayList<Asistente> asistentesR = new ArrayList<Asistente>();
@@ -83,18 +85,17 @@ public class ControllerConvocarReunion {
 		
 		reunion.setHora(reu.getString("hora"));
 		reunion.setDescripcion(reu.getString("descripcion"));
-		JSONObject jsoresp = new JSONObject();
+		
 		if (filtroRestricciones(reunion)) {
 			rReuniones.save(reunion);
-			jsoresp.put("respuesta", "ok");
-			return jsoresp.toString();
+			return new ResponseEntity<>(HttpStatus.OK);
 		}else {
-			jsoresp.put("respuesta", "error");
-			return jsoresp.toString();
+			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 		}
 	}
 	
 	@PostMapping("/getAsistentes")
+	@PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
 	public String getAsistentes(@RequestBody Map<String, Object> entrada,
 			@RequestHeader("Authorization") String token) {
 		JSONObject jsoresp = new JSONObject();

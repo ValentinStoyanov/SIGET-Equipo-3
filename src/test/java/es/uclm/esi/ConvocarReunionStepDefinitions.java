@@ -102,15 +102,15 @@ public void convoco_la_reunion() {
 	params.put("titulo", reu.getTitulo());
 	params.put("estado", reu.getEstado());
 	params.put("fecha", reu.getAno()+"-"+reu.getMes()+"-"+reu.getDia());
+	params.put("hora", reu.getHora());
 	params.put("descripcion", reu.getDescripcion());
 	params.put("organizador", reu.getOrganizador());
-	params.put("id", reu.getId());
 	params.put("asistentes",reu.getAsistentes());
 	HttpEntity<Map<String, Object>> request = new HttpEntity<Map<String, Object>>(params, headers);
 	
 	try {
 		response = restTemplate.postForEntity(url, request, String.class);
-		codigo = response.getStatusCode().value();
+		codigo = response.getStatusCodeValue();
 	} catch (HttpClientErrorException e) {
 		codigo = e.getRawStatusCode();
 	}
