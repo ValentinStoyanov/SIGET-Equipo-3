@@ -67,7 +67,6 @@ public class ControllerCalendarioPersonal {
 		jsoret.put("mes", mespeticion);
 		jsoret.put("ano", anopeticion);
 		jsoret.put("usuario", usuario);
-		
 		return jsoret.toString();
 	}
 
@@ -77,7 +76,6 @@ public class ControllerCalendarioPersonal {
 		JSONObject jso = new JSONObject(entrada);		
 		JSONObject jsoret = new JSONObject();
 		JSONArray jsa = new JSONArray();
-		JSONObject jsoreunion = new JSONObject();
 		String usuario = Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(token.substring(7, token.length())).getBody().getSubject();
 		List<Reunion> reuniones = calendarioRepository.findByDia(jso.getInt("dia"),jso.getInt("mes"),jso.getInt("ano"));
 		ArrayList<Asistente> asistentes;
@@ -86,6 +84,7 @@ public class ControllerCalendarioPersonal {
 			asistentes = reunion.getAsistentes();
 			for (Asistente asistente : asistentes) {
 				if (asistente.getUsuario().equalsIgnoreCase(usuario)) {
+					JSONObject jsoreunion = new JSONObject();
 					jsoreunion.put("identificador", reunion.getId());
 					jsoreunion.put("titulo", reunion.getTitulo());
 					jsoreunion.put("id", contadorReuniones);

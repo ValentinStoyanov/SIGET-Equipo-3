@@ -326,7 +326,6 @@ function guardarReunion(){
 	var select = document.getElementById("arrayAsistentes");
 	for ( var i = 0; i < select.selectedOptions.length; i++) {
 		asistentes[i] = select.selectedOptions[i].value;
-     	console.log(select.selectedOptions[i].value);
 	}
 	var info = {
         "type" : "ConvocarReunion",
@@ -345,7 +344,6 @@ function guardarReunion(){
         headers: { 'Authorization': localStorage.getItem("jwt") },
         contentType: 'application/json',
         success : function(response) {
-			console.log(response.respuesta);
         },
         error : function(response) {
             console.log('Se produjo un problema en guardarReunion()');
