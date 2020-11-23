@@ -22,7 +22,7 @@ import io.jsonwebtoken.Jwts;
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping(value="/reunion")
-public class ControllerCancelarReunion {
+public class ControllerAceptarReunion {
 	
 	@Autowired
 	RepositoryReuniones rReuniones;
@@ -33,19 +33,26 @@ public class ControllerCancelarReunion {
 	@Value("${siget.app.jwtSecret}")
 	private String jwtSecret;
 
-	@PostMapping(value = "/cancelar")
-	public ResponseEntity<HttpStatus> cancelarReunion(@RequestBody Map<String, Integer> req, @RequestHeader("Authorization") String token) {
+	@PostMapping(value = "/aceptar")
+	public ResponseEntity<HttpStatus> aceptarReunion(@RequestBody Map<String, Integer> req, @RequestHeader("Authorization") String token) {
+		boolean encontrado = false;
 		JSONObject request = new JSONObject(req);
 		Reunion reunion;
 		reunion = rReuniones.findById(request.getInt("id"));
-		String nombreOrganizador = reunion.getOrganizador();
-		String nombreOrganizadorCabecera = Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(token.substring(7, token.length())).getBody().getSubject();
+		String asistente = Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(token.substring(7, token.length())).getBody().getSubject();
 
-		if(nombreOrganizador.equals(nombreOrganizadorCabecera)) {
-			rReuniones.delete(reunion);
+		for (int i = 0; i < reunion.getAsistentes().size(); i++) {
+			if (reunion.getAsistente(i).getUsuario().equals(asistente)){
+				reunion.getAsistente(i).setEstado("Aceptado");
+				encontrado = true;
+				rReuniones.save(reunion);
+			}
+		}
+		
+		if(encontrado) {
 			return new ResponseEntity<>(HttpStatus.OK);
-		}else {
+		} else {
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-		}	
+		}
 	}
 }
