@@ -101,9 +101,7 @@ public void convoco_la_reunion() {
 	headers.set("Authorization", "Bearer " + jwt);
 	params.put("titulo", reu.getTitulo());
 	params.put("estado", reu.getEstado());
-	params.put("dia", reu.getDia());
-	params.put("mes", reu.getMes());
-	params.put("hora", reu.getHora());
+	params.put("fecha", reu.getAno()+"-"+reu.getMes()+"-"+reu.getDia());
 	params.put("descripcion", reu.getDescripcion());
 	params.put("organizador", reu.getOrganizador());
 	params.put("id", reu.getId());
