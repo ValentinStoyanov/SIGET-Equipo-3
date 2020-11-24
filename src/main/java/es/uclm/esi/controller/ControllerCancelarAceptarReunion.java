@@ -22,7 +22,7 @@ import io.jsonwebtoken.Jwts;
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping(value="/reunion")
-public class ControllerCancelarReunion {
+public class ControllerCancelarAceptarReunion {
 	
 	@Autowired
 	RepositoryReuniones rReuniones;
