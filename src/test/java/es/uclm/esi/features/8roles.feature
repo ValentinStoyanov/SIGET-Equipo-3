@@ -9,7 +9,6 @@ Feature: Roles patrón RBAC
       |	rol	|	codigo	|	token	|
       | "USER" | 200 | "admin" |
       | "USER" | 200 | "user" |
-      | "ADMIN" | 200 | "admin" |
 			| "ADMIN" | 403 | "user" |
 			| "USER" | 401 | "?" |
 			| "ADMIN" | 401 | "?" |
