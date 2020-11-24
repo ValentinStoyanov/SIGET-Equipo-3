@@ -5,13 +5,14 @@ C:\Users\victo\git\SIGET-Equipo3\src\main\java\es\uclm\esi\SigetApplication.java
 C:\Users\victo\git\SIGET-Equipo3\src\main\java\es\uclm\esi\controller\PruebaController.java
 C:\Users\victo\git\SIGET-Equipo3\src\main\java\es\uclm\esi\payload\request\CalendarioDiaRequest.java
 C:\Users\victo\git\SIGET-Equipo3\src\main\java\es\uclm\esi\security\services\UserDetailsImpl.java
-C:\Users\victo\git\SIGET-Equipo3\src\main\java\es\uclm\esi\controller\EjemploRestController.java
+C:\Users\victo\git\SIGET-Equipo3\src\main\java\es\uclm\esi\utilities\PoliticaContraSegura.java
 C:\Users\victo\git\SIGET-Equipo3\src\main\java\es\uclm\esi\security\jwt\JwtUtils.java
 C:\Users\victo\git\SIGET-Equipo3\src\main\java\es\uclm\esi\config\TomcatConfig.java
 C:\Users\victo\git\SIGET-Equipo3\src\main\java\es\uclm\esi\repository\RoleRepository.java
 C:\Users\victo\git\SIGET-Equipo3\src\main\java\es\uclm\esi\controller\AuthController.java
 C:\Users\victo\git\SIGET-Equipo3\src\main\java\es\uclm\esi\security\jwt\AuthTokenFilter.java
 C:\Users\victo\git\SIGET-Equipo3\src\main\java\es\uclm\esi\payload\request\SignupRequest.java
+C:\Users\victo\git\SIGET-Equipo3\src\main\java\es\uclm\esi\utilities\EjemploUsoPoliticaContra.java
 C:\Users\victo\git\SIGET-Equipo3\src\main\java\es\uclm\esi\payload\request\CalendarioMesRequest.java
 C:\Users\victo\git\SIGET-Equipo3\src\main\java\es\uclm\esi\model\User.java
 C:\Users\victo\git\SIGET-Equipo3\src\main\java\es\uclm\esi\repository\RepositoryCalendarioPersonal.java

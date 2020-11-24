@@ -37,16 +37,20 @@ public class ControllerCancelarReunion {
 	public ResponseEntity<HttpStatus> cancelarReunion(@RequestBody Map<String, Integer> req, @RequestHeader("Authorization") String token) {
 		JSONObject request = new JSONObject(req);
 		Reunion reunion;
+		
 		reunion = rReuniones.findById(request.getInt("id"));
-		String nombreOrganizador = reunion.getOrganizador();
-		String nombreOrganizadorCabecera = Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(token.substring(7, token.length())).getBody().getSubject();
 
+		String nombreOrganizadorCabecera = Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(token.substring(7, token.length()))
+				.getBody().getSubject();
+
+		String nombreOrganizador = reunion.getOrganizador();
 		if(nombreOrganizador.equals(nombreOrganizadorCabecera)) {
 			rReuniones.delete(reunion);
 			return new ResponseEntity<>(HttpStatus.OK);
 		}else {
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-		}	
+		}
+		
 	}
 	
 	@PostMapping(value = "/aceptar")

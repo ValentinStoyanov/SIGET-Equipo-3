@@ -44,7 +44,7 @@ public class CancelarReunionStepDefinitions extends SpringIntegrationTest {
 		String token = jwtUtils.generateJwtToken(authentication);
 		headers.set("Authorization", "Bearer " + token);
 		
-		params.put("identificador", idReunion);
+		params.put("id", idReunion);
 		HttpEntity<Map<String, Integer>> request = new HttpEntity<>(params, headers);
 		try {
 			response = restTemplate.postForEntity(url, request, String.class);
