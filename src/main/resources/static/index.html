@@ -74,14 +74,10 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome
                 <div id="divRegistro" style="display:none">
                     <em class="fa fa-user fa-lg fa-fw" aria-hidden="true"></em>
                     <input type="text" placeholder="user full name" id="SignUpName"><br>
-                    <em class="fa fa-id-card-o"></em>
-                    <input type="text" placeholder="nif" id="SignUpNif"><br>
                     <em class="fa fa-envelope icon"></em>
                     <input type="email" placeholder="email" id="SignUpEmail"><br>
                     <em class="fa fa-key icon"></em>
                     <input type="password" placeholder="password" id="pwd1"><br>
-                    <em class="fa fa-key icon"></em>
-                    <input type="password" placeholder="repeat the password" id="pwd2"><br>
                     <button onclick="SignUp()" id="registroBtn">SignUp</button><br>
                 </div>
             </div>
@@ -104,15 +100,13 @@ $(document).ready(function() {
 function SignUp() {
     var info = {
         type : "Register",
-        userName : $("#SignUpName").val(),
-        nif : $("#SignUpNif").val(),
+        username : $("#SignUpName").val(),
         email : $("#SignUpEmail").val(),
-        pwd1 : $("#pwd1").val(),
-        pwd2 : $("#pwd2").val()
+        password : $("#pwd1").val()
     };
     var data = {
             data : JSON.stringify(info),
-            url : "register",
+            url : "api/auth/signup",
             type : "post",
             contentType: 'application/json',
             success : function() {
