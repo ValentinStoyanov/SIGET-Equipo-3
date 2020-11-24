@@ -321,8 +321,6 @@ function guardarReunion(){
 	var descripcion = document.getElementById("descripcionConvocar");
 	var fecha = document.getElementById("fechaconvocar");
 	var hora = document.getElementById("horaconvocar");
-	var descripcion = document.getElementById("descripcionConvocar");
-	var organizador;
 	var select = document.getElementById("arrayAsistentes");
 	for ( var i = 0; i < select.selectedOptions.length; i++) {
 		asistentes[i] = select.selectedOptions[i].value;
