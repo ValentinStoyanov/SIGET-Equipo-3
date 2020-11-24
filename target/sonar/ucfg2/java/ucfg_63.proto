@@ -1,16 +1,16 @@
 
-9es.uclm.esi.model.Asistente#getEstado()Ljava/lang/String;Y
-OC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Asistente.java ("1*Å
-1Y
-OC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Asistente.java	 (©
-¶
-Y
-OC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Asistente.java	 (
-%0java.lang.String"__id*+*)
-es.uclm.esi.model.Asistente"
-estado"u
-Y
-OC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Asistente.java (
+3es.uclm.esi.model.User#getEmail()Ljava/lang/String;T
+JC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/User.java< <("1*Ï
+1T
+JC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/User.java= =(û
+õ
+T
+JC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/User.java= =(
+%0java.lang.String"__id*%*#
+es.uclm.esi.model.User"
+email"p
+T
+JC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/User.java= =(
 
-%0java.lang.StringB
-es.uclm.esi.model.Asistente
+%0java.lang.StringB
+es.uclm.esi.model.User

@@ -1,10 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: es.uclm.esi.RunCucumberTest
 -------------------------------------------------------------------------------
-Tests run: 24, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 30.357 s <<< FAILURE! - in es.uclm.esi.RunCucumberTest
-Roles de los usuarios de la aplicacion #3  Time elapsed: 0.859 s  <<< FAILURE!
-java.lang.AssertionError: expected:<200> but was:<403>
-
-cancelar  Time elapsed: 0.551 s  <<< ERROR!
-org.springframework.web.client.HttpServerErrorException$InternalServerError: 500 : [{"timestamp":"2020-11-24T00:49:34.436+00:00","status":500,"error":"Internal Server Error","message":"","path":"/reunion/cancelar/"}]
-
+Tests run: 24, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.329 s - in es.uclm.esi.RunCucumberTest

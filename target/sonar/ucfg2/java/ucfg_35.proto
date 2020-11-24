@@ -1,16 +1,18 @@
 
-7es.uclm.esi.model.Reunion#getEstado()Ljava/lang/String;W
-MC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Reunion.javaz z("1*ù
-1W
-MC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Reunion.java{	 {(¥
-¢
-W
-MC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Reunion.java{	 {(
-%0java.lang.String"__id*)*'
-es.uclm.esi.model.Reunion"
-estado"s
-W
-MC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Reunion.java{ {(
+Kes.uclm.esi.payload.response.MessageResponse#getMessage()Ljava/lang/String;j
+`C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/payload/response/MessageResponse.java
+ 
+("1*Ç
+1j
+`C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/payload/response/MessageResponse.java	 (Ì
+É
+j
+`C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/payload/response/MessageResponse.java	 (
+%0java.lang.String"__id*=*;.
+,es.uclm.esi.payload.response.MessageResponse"	
+message"†
+j
+`C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/payload/response/MessageResponse.java (
 
-%0java.lang.StringB
-es.uclm.esi.model.Reunion
+%0java.lang.StringB0.
+,es.uclm.esi.payload.response.MessageResponse

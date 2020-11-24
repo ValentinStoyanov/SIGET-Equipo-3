@@ -1,440 +1,16 @@
 
-ies.uclm.esi.controller.ControllerCalendarioPersonal#getDetallesReunion(Ljava/util/Map;)Ljava/lang/String;q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaG G(!"startingBlock*’
-24q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaT T(ã
-à
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaT T(2:
-%183es.uclm.esi.repository.RepositoryCalendarioPersonal"__id*Q*O5
-3es.uclm.esi.controller.ControllerCalendarioPersonal"
-calendarioRepository«ƒ
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaT T(@ 
-%19es.uclm.esi.model.Reunion"Zes.uclm.esi.repository.RepositoryCalendarioPersonal#findById(I)Les/uclm/esi/model/Reunion;*<
-:
-%183es.uclm.esi.repository.RepositoryCalendarioPersonal*
-""2findById(I)*
-23*˝
-26q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaS8 S(;ˆÛ
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaS8 S(I
-
-%17int"/org.json.JSONObject#getInt(Ljava/lang/String;)I*
-
-jsoorg.json.JSONObject*
-mes2getInt(Ljava/lang/String;)*
-24
-32
-1*’
-27q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaS	 S(4’“
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaS	 S(4
-
-%16int"#es.uclm.esi.model.Reunion#getMes()I*"
- 
-%15es.uclm.esi.model.Reunion2getMes()*
-26*’
-28q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaS	 S(ã
-à
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaS	 S(:
-%143es.uclm.esi.repository.RepositoryCalendarioPersonal"__id*Q*O5
-3es.uclm.esi.controller.ControllerCalendarioPersonal"
-calendarioRepository«ƒ
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaS	 S(+ 
-%15es.uclm.esi.model.Reunion"Zes.uclm.esi.repository.RepositoryCalendarioPersonal#findById(I)Les/uclm/esi/model/Reunion;*<
-:
-%143es.uclm.esi.repository.RepositoryCalendarioPersonal*
-""2findById(I)*
-27*˝
-30q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaR7 R(:ˆÛ
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaR7 R(H
-
-%13int"/org.json.JSONObject#getInt(Ljava/lang/String;)I*
-
-jsoorg.json.JSONObject*
-dia2getInt(Ljava/lang/String;)*
-28
-32
-1*’
-31q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaR R(3’“
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaR R(3
-
-%12int"#es.uclm.esi.model.Reunion#getDia()I*"
- 
-%11es.uclm.esi.model.Reunion2getDia()*
-30*’
-32q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaR R(ã
-à
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaR R(:
-%103es.uclm.esi.repository.RepositoryCalendarioPersonal"__id*Q*O5
-3es.uclm.esi.controller.ControllerCalendarioPersonal"
-calendarioRepository«ƒ
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaR R(* 
-%11es.uclm.esi.model.Reunion"Zes.uclm.esi.repository.RepositoryCalendarioPersonal#findById(I)Les/uclm/esi/model/Reunion;*<
-:
-%103es.uclm.esi.repository.RepositoryCalendarioPersonal*
-""2findById(I)*
-31*ê
-11q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaXK X(L÷
-”
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaX X(M"
-%33es.uclm.esi.model.Asistente"
-__arrayGet*&
-$
-%32es.uclm.esi.model.Asistente[]*
-""∑¥
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaX X(N
-%34org.json.JSONArray">org.json.JSONArray#put(Ljava/lang/Object;)Lorg/json/JSONArray;*%
-#
-jsaAsistentesorg.json.JSONArray*$
-"
-%33es.uclm.esi.model.Asistente2put(Ljava/lang/Object;)*
-16*ö
-12q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaX X(Jöó
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaX X(J$
-%32es.uclm.esi.model.Asistente[]"Ges.uclm.esi.model.Reunion#getAsistentes()[Les/uclm/esi/model/Asistente;*"
- 
-%31es.uclm.esi.model.Reunion2getAsistentes()*
-11*ø
-35q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaH" H()¶£
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaH H(!
-%0org.json.JSONObject"org.json.JSONObject„
-‡
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaH H(*
-%1",org.json.JSONObject#<init>(Ljava/util/Map;)V*
-
-%0org.json.JSONObject*
-
-entradajava.util.Mapµ
-≤
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaH H(+
-jsoorg.json.JSONObject"__id*
-
-%0org.json.JSONObject¶£
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaI I($
-%2org.json.JSONObject"org.json.JSONObject∏
-µ
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaI I(&
-%3"org.json.JSONObject#<init>()V*
-
-%2org.json.JSONObject∏
-µ
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaI I('
-jsoretorg.json.JSONObject"__id*
-
-%2org.json.JSONObject§°
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaJ J(
-%4org.json.JSONArray"org.json.JSONArray∂
-≥
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaJ J(!
-%5"org.json.JSONArray#<init>()V*
-
-%4org.json.JSONArray≥
-∞
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaJ J("
-jsaorg.json.JSONArray"__id*
-
-%4org.json.JSONArray§°
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaK  K()
-%6org.json.JSONArray"org.json.JSONArray∂
-≥
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaK K(+
-%7"org.json.JSONArray#<init>()V*
-
-%6org.json.JSONArrayΩ
-∫
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaK K(,#
-jsaAsistentesorg.json.JSONArray"__id*
-
-%6org.json.JSONArray¶£
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaL L((
-%8org.json.JSONObject"org.json.JSONObject∏
-µ
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaL L(*
-%9"org.json.JSONObject#<init>()V*
-
-%8org.json.JSONObjectº
-π
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaL L(+!
-
-jsoreunionorg.json.JSONObject"__id*
-
-%8org.json.JSONObject*
-32
-1*’
-13q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaX X(ã
-à
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaX X(,:
-%303es.uclm.esi.repository.RepositoryCalendarioPersonal"__id*Q*O5
-3es.uclm.esi.controller.ControllerCalendarioPersonal"
-calendarioRepository«ƒ
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaX X(: 
-%31es.uclm.esi.model.Reunion"Zes.uclm.esi.repository.RepositoryCalendarioPersonal#findById(I)Les/uclm/esi/model/Reunion;*<
-:
-%303es.uclm.esi.repository.RepositoryCalendarioPersonal*
-""2findById(I)*
-12*ù
-15q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaW W(Köó
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaW W(K$
-%29es.uclm.esi.model.Asistente[]"Ges.uclm.esi.model.Reunion#getAsistentes()[Les/uclm/esi/model/Asistente;*"
- 
-%28es.uclm.esi.model.Reunion2getAsistentes()*
-13
-9*’
-16q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaW W(ã
-à
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaW W(-:
-%273es.uclm.esi.repository.RepositoryCalendarioPersonal"__id*Q*O5
-3es.uclm.esi.controller.ControllerCalendarioPersonal"
-calendarioRepository«ƒ
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaW W(; 
-%28es.uclm.esi.model.Reunion"Zes.uclm.esi.repository.RepositoryCalendarioPersonal#findById(I)Les/uclm/esi/model/Reunion;*<
-:
-%273es.uclm.esi.repository.RepositoryCalendarioPersonal*
-""2findById(I)*
-15*€
-18q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaV V(I€ÿ
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaV V(I
-%26org.json.JSONObject"Rorg.json.JSONObject#put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;*#
-!
-
-jsoreunionorg.json.JSONObject*
-hora*
-
-%25java.lang.String2)put(Ljava/lang/String;Ljava/lang/Object;)*
-16*ı
-19q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaV V(HıÚ
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaV V(H
-%25java.lang.String"5es.uclm.esi.model.Reunion#getHora()Ljava/lang/String;*"
- 
-%24es.uclm.esi.model.Reunion2	getHora()*
-18*¬
-1q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javad d(ˆÛ
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javad d(%
-
-%41int"/org.json.JSONObject#getInt(Ljava/lang/String;)I*
-
-jsoorg.json.JSONObject*
-dia2getInt(Ljava/lang/String;)ß§
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javad d(&
-%42org.json.JSONObject"Aorg.json.JSONObject#put(Ljava/lang/String;I)Lorg/json/JSONObject;*
-
-jsoretorg.json.JSONObject*
-dia*
-
-
-%41int2put(Ljava/lang/String;I)ˆÛ
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javae e(%
-
-%43int"/org.json.JSONObject#getInt(Ljava/lang/String;)I*
-
-jsoorg.json.JSONObject*
-mes2getInt(Ljava/lang/String;)ß§
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javae e(&
-%44org.json.JSONObject"Aorg.json.JSONObject#put(Ljava/lang/String;I)Lorg/json/JSONObject;*
-
-jsoretorg.json.JSONObject*
-mes*
-
-
-%43int2put(Ljava/lang/String;I)ˆÛ
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaf f(%
-
-%45int"/org.json.JSONObject#getInt(Ljava/lang/String;)I*
-
-jsoorg.json.JSONObject*
-ano2getInt(Ljava/lang/String;)ß§
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaf f(&
-%46org.json.JSONObject"Aorg.json.JSONObject#put(Ljava/lang/String;I)Lorg/json/JSONObject;*
-
-jsoretorg.json.JSONObject*
-ano*
-
-
-%45int2put(Ljava/lang/String;I)ﬁ€
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javag g(
-%47org.json.JSONObject"Rorg.json.JSONObject#put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;*
-
-jsoretorg.json.JSONObject*
-	reuniones*
-
-jsaorg.json.JSONArray2)put(Ljava/lang/String;Ljava/lang/Object;)ÓÎ
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javai	 i(
-%48java.lang.String"0org.json.JSONObject#toString()Ljava/lang/String;*
-
-jsoretorg.json.JSONObject2
-toString()"é
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javai i(
-
-%48java.lang.String*Æ
-startingBlockq
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaG! G(K£†
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaG" G(J
-entradajava.util.Map"java.util.HashMap*
-35*Æ
-5q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.java\ \(¨©
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.java\ \(
-%40org.json.JSONArray">org.json.JSONArray#put(Ljava/lang/Object;)Lorg/json/JSONArray;*
-
-jsaorg.json.JSONArray*#
-!
-
-jsoreunionorg.json.JSONObject2put(Ljava/lang/Object;)*
-32
-1*‡
-6q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.java[ [(W‚ﬂ
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.java[ [(W
-%39org.json.JSONObject"Rorg.json.JSONObject#put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;*#
-!
-
-jsoreunionorg.json.JSONObject*
-descripcion*
-
-%38java.lang.String2)put(Ljava/lang/String;Ljava/lang/Object;)*
-5*Å
-7q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.java[# [(VÉÄ
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.java[# [(V
-%38java.lang.String"<es.uclm.esi.model.Reunion#getDescripcion()Ljava/lang/String;*"
- 
-%37es.uclm.esi.model.Reunion2getDescripcion()*
-6*”
-8q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.java[ [(ã
-à
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.java[# [(7:
-%363es.uclm.esi.repository.RepositoryCalendarioPersonal"__id*Q*O5
-3es.uclm.esi.controller.ControllerCalendarioPersonal"
-calendarioRepository«ƒ
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.java[# [(E 
-%37es.uclm.esi.model.Reunion"Zes.uclm.esi.repository.RepositoryCalendarioPersonal#findById(I)Les/uclm/esi/model/Reunion;*<
-:
-%363es.uclm.esi.repository.RepositoryCalendarioPersonal*
-""2findById(I)*
-7*Î
-9q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaZ Z(ÌÍ
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaZ Z(0
-%35org.json.JSONObject"Rorg.json.JSONObject#put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;*#
-!
-
-jsoreunionorg.json.JSONObject*
-
-asistentes*%
-#
-jsaAsistentesorg.json.JSONArray2)put(Ljava/lang/String;Ljava/lang/Object;)*
-8*’
-20q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaV V(ã
-à
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaV V(0:
-%233es.uclm.esi.repository.RepositoryCalendarioPersonal"__id*Q*O5
-3es.uclm.esi.controller.ControllerCalendarioPersonal"
-calendarioRepository«ƒ
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaV V(> 
-%24es.uclm.esi.model.Reunion"Zes.uclm.esi.repository.RepositoryCalendarioPersonal#findById(I)Les/uclm/esi/model/Reunion;*<
-:
-%233es.uclm.esi.repository.RepositoryCalendarioPersonal*
-""2findById(I)*
-19*§
-21q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaU U(§°
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaU U(,
-%22org.json.JSONObject"Aorg.json.JSONObject#put(Ljava/lang/String;I)Lorg/json/JSONObject;*#
-!
-
-jsoreunionorg.json.JSONObject*
-id*
-""2put(Ljava/lang/String;I)*
-20*›
-22q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaT T(M›⁄
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaT T(M
-%21org.json.JSONObject"Rorg.json.JSONObject#put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;*#
-!
-
-jsoreunionorg.json.JSONObject*
-
-titulo*
-
-%20java.lang.String2)put(Ljava/lang/String;Ljava/lang/Object;)*
-21*˘
-23q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaT T(L˘ˆ
-q
-gC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCalendarioPersonal.javaT T(L
-%20java.lang.String"7es.uclm.esi.model.Reunion#getTitulo()Ljava/lang/String;*"
- 
-%19es.uclm.esi.model.Reunion2getTitulo()*
-22:
-entradajava.util.MapB75
-3es.uclm.esi.controller.ControllerCalendarioPersonal
+Ees.uclm.esi.payload.response.JwtResponse#getEmail()Ljava/lang/String;f
+\C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/payload/response/JwtResponse.java- -("1*µ
+1f
+\C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/payload/response/JwtResponse.java.	 .(¬
+ø
+f
+\C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/payload/response/JwtResponse.java.	 .(
+%0java.lang.String"__id*7*5*
+(es.uclm.esi.payload.response.JwtResponse"
+email"Ç
+f
+\C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/payload/response/JwtResponse.java. .(
+
+%0java.lang.StringB,*
+(es.uclm.esi.payload.response.JwtResponse

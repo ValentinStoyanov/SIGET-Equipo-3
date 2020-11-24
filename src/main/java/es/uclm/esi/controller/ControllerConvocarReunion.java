@@ -61,7 +61,7 @@ public class ControllerConvocarReunion {
 		reunion.setTitulo(reu.getString("titulo"));	
 		
 		JSONArray asistentes = (JSONArray) reu.get("asistentes");
-		ArrayList<Asistente> asistentesR = new ArrayList<Asistente>();
+		ArrayList<Asistente> asistentesR = new ArrayList<>();
 		boolean existe = false;
 		for (int i = 0; i < asistentes.length(); i++) {
 			String nombre = (String) asistentes.get(i);
@@ -76,7 +76,9 @@ public class ControllerConvocarReunion {
 		}
 		reunion.setAsistentes(asistentesR);
 		
-		int dia, mes, ano;
+		int dia;
+		int mes;
+		int ano;
 		String[] parts = reu.getString("fecha").split("-");
 		ano = Integer.parseInt(parts[0]);
 		mes = Integer.parseInt(parts[1]);
