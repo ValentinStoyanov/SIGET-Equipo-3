@@ -3,7 +3,7 @@ Feature: Rechazar
   Scenario Outline: rechazar
   
   When rechazo la reunion 
-  Then la respuesta debe ser <codigo>
+  Then el codigo de rechazar debera ser <codigo>
  
   
   Examples:

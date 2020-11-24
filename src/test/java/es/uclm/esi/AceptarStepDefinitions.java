@@ -20,10 +20,10 @@ import es.uclm.esi.security.jwt.JwtUtils;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class CancelarReunionStepDefinitions extends SpringIntegrationTest {
+public class AceptarStepDefinitions extends SpringIntegrationTest {
 	
 	ResponseEntity<String> response;
-	String url = DEFAULT_URL + "reunion/cancelar/";
+	String url = DEFAULT_URL + "reunion/aceptar/";
 	Map<String, Integer> params = new HashMap<String, Integer>();
 	Integer codigo;
 	HttpHeaders headers = new HttpHeaders();
@@ -35,7 +35,7 @@ public class CancelarReunionStepDefinitions extends SpringIntegrationTest {
 	@Autowired
 	RepositoryReuniones rReuniones;
 
-	@When("cancelo la reunion")
+	@When("acepto la reunion")
 	public void cancelo_la_reunion() {
 		Authentication authentication = authenticationManager.authenticate(
 				new UsernamePasswordAuthenticationToken("admin","Admin123"));
@@ -57,7 +57,7 @@ public class CancelarReunionStepDefinitions extends SpringIntegrationTest {
 
 	}
 
-	@Then("el codigo de rechazar debera ser {int}")
+	@Then("el codigo de aceptar debera ser {int}")
 	public void la_respuesta_debe_ser(Integer res) {
 		assertEquals(res, codigo);
 	}

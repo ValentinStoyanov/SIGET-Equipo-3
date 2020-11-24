@@ -3,7 +3,7 @@ Feature: Aceptar
   Scenario Outline: aceptar
   
   When acepto la reunion 
-  Then la respuesta debe ser <codigo>
+  Then el codigo de aceptar debera ser <codigo>
  
   
   Examples:

@@ -1,4 +1,10 @@
 -------------------------------------------------------------------------------
 Test set: es.uclm.esi.RunCucumberTest
 -------------------------------------------------------------------------------
-Tests run: 24, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.329 s - in es.uclm.esi.RunCucumberTest
+Tests run: 25, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 14.003 s <<< FAILURE! - in es.uclm.esi.RunCucumberTest
+rechazar  Time elapsed: 0.578 s  <<< FAILURE!
+java.lang.AssertionError: expected:<200> but was:<null>
+
+cancelar  Time elapsed: 0.565 s  <<< FAILURE!
+java.lang.AssertionError: expected:<200> but was:<null>
+
