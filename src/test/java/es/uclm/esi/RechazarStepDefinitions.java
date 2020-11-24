@@ -36,7 +36,7 @@ public class RechazarStepDefinitions extends SpringIntegrationTest {
 	RepositoryReuniones rReuniones;
 
 	@When("rechazo la reunion")
-	public void cancelo_la_reunion() {
+	public void rechazo_la_reunion() {
 		Authentication authentication = authenticationManager.authenticate(
 				new UsernamePasswordAuthenticationToken("admin","Admin123"));
 		SecurityContextHolder.getContext().setAuthentication(authentication);
@@ -58,7 +58,7 @@ public class RechazarStepDefinitions extends SpringIntegrationTest {
 	}
 
 	@Then("la respuesta debe ser {int}")
-	public void la_respuesta_debe_ser(Integer res) {
+	public void rechazar_debera_ser(Integer res) {
 		assertEquals(res, codigo);
 	}
 

@@ -36,7 +36,7 @@ public class AceptarStepDefinitions extends SpringIntegrationTest {
 	RepositoryReuniones rReuniones;
 
 	@When("acepto la reunion")
-	public void cancelo_la_reunion() {
+	public void acepto_la_reunion() {
 		Authentication authentication = authenticationManager.authenticate(
 				new UsernamePasswordAuthenticationToken("admin","Admin123"));
 		SecurityContextHolder.getContext().setAuthentication(authentication);
@@ -58,7 +58,7 @@ public class AceptarStepDefinitions extends SpringIntegrationTest {
 	}
 
 	@Then("el codigo de aceptar debera ser {int}")
-	public void la_respuesta_debe_ser(Integer res) {
+	public void aceptar_debera_ser(Integer res) {
 		assertEquals(res, codigo);
 	}
 
