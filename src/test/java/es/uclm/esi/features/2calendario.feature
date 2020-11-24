@@ -9,7 +9,9 @@ Feature: Calendario
   
   Examples:
   |	mes	|	anio  |	dias	  |	codigo	| token   |
-  |	11	|	2020	|	"6,23"	|	200     | "admin" |
+  |	11	|	2020	|	"29,24"	|	200     | "ejemplo1c" |
+  |	11	|	2020	|	"29"	  |	200     | "ejemplo2c" |
+  |	12	|	2020	|	""	    |	200     | "ejemplo2c" |
   
   Scenario Outline: Calendario dia
   	When consulto con el usuario <token>
@@ -19,7 +21,10 @@ Feature: Calendario
   	
   	Examples:
  |	dia | mes	|	anio  |	reuniones	        			|	codigo	| token   |
- |	6		|	11  |	2020	|	"Frontend"	    				|	200     | "admin" |
+ |	24	|	11  |	2020	|	"r ejemplo12"	    			|	200     | "ejemplo1c" |
+ |	29	|	11  |	2020	|	"r ejemplo1"	    			|	200     | "ejemplo1c" |
+ |	29	|	11  |	2020	|	"r ejemplo1,r ejemplo2"	|	200     | "ejemplo2c" |
+ |	24	|	11  |	2020	|	""	                    |	200     | "ejemplo2c" |
 
  
   
