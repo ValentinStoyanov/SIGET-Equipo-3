@@ -3,31 +3,32 @@ package es.uclm.esi.payload.request;
 
 
 public class CalendarioDiaRequest {
-	private int dia;
-	private int mes;
-	private int ano;
+	private int diaR;
+	private int mesR;
+	private int anoR;
+	
 	public int getDia() {
-		return dia;
+		return diaR;
 	}
 	public void setDia(int dia) {
-		this.dia = dia;
+		this.diaR = dia;
 	}
 	public int getMes() {
-		return mes;
+		return mesR;
 	}
 	public void setMes(int mes) {
-		this.mes = mes;
+		this.mesR = mes;
 	}
 	public int getAno() {
-		return ano;
+		return anoR;
 	}
 	public void setAno(int ano) {
-		this.ano = ano;
+		this.anoR = ano;
 	}
 	public CalendarioDiaRequest(int dia, int mes, int ano) {
 		super();
-		this.dia = dia;
-		this.mes = mes;
-		this.ano = ano;
+		this.diaR = dia;
+		this.mesR = mes;
+		this.anoR = ano;
 	}
 }
