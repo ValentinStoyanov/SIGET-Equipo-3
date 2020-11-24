@@ -14,6 +14,8 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.client.HttpClientErrorException;
 
+import es.uclm.esi.model.Reunion;
+import es.uclm.esi.repository.RepositoryReuniones;
 import es.uclm.esi.security.jwt.JwtUtils;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -30,13 +32,10 @@ public class CancelarReunionStepDefinitions extends SpringIntegrationTest {
 	JwtUtils jwtUtils;
 	@Autowired
 	AuthenticationManager authenticationManager;
-	
-	@When("selecciono la reunion con id {int}")
-	public void selecciono_la_reunion_con_id(Integer int1) {
-	   idReunion = int1;
-	}
+	@Autowired
+	RepositoryReuniones rReuniones;
 
-	@Then("cancelo la reunion")
+	@When("cancelo la reunion")
 	public void cancelo_la_reunion() {
 		Authentication authentication = authenticationManager.authenticate(
 				new UsernamePasswordAuthenticationToken("admin","Admin123"));
@@ -44,7 +43,10 @@ public class CancelarReunionStepDefinitions extends SpringIntegrationTest {
 		String token = jwtUtils.generateJwtToken(authentication);
 		headers.set("Authorization", "Bearer " + token);
 		
-		params.put("identificador", idReunion);
+		Reunion reun;
+		reun = rReuniones.findFirstByOrderByIdDesc();
+		idReunion = reun.getId();
+		params.put("id", idReunion);
 		HttpEntity<Map<String, Integer>> request = new HttpEntity<>(params, headers);
 		try {
 			response = restTemplate.postForEntity(url, request, String.class);
