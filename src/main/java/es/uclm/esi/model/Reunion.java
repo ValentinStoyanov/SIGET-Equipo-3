@@ -26,7 +26,7 @@ public class Reunion {
 	
 	
 
-	public Reunion(int id, String organizador, String titulo, String estado, int dia, int mes, int ano, String hora) {
+	public Reunion(int id, String organizador, String titulo, String estado, int dia, int mes, int ano, String hora,String descripcion) {
 		super();
 		this.id = id;
 		this.organizador = organizador;
@@ -36,6 +36,7 @@ public class Reunion {
 		this.mes = mes;
 		this.ano = ano;
 		this.hora = hora;
+		this.descripcion = descripcion;
 		this.asistentes = new ArrayList<>();
 	}
 
