@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import es.uclm.esi.model.Asistente;
@@ -45,6 +46,33 @@ public class ControllerConvocarReunion {
 	@Value("${siget.app.jwtSecret}")
 	private String jwtSecret;
 
+	
+	@PostMapping("delete")
+    public String delete(@RequestParam(name = "dia") int  dia,
+    		@RequestParam(name = "mes") int mes,
+    		@RequestParam(name = "ano") int ano,
+    		@RequestParam(name = "hora") String hora){
+		
+		Reunion r = null;
+		
+		String resultado = "Operacion de eliminacion sin exito";
+		
+		if(this.rReuniones.findByDiaAndMesAndAnoAndHora(dia, mes, ano, hora)!=null) {
+			
+			r = this.rReuniones.findByDiaAndMesAndAnoAndHora(dia, mes, ano, hora);
+			
+			this.rReuniones.deleteById(r.getId());
+			
+			resultado = "Eliminacion exitosa";
+			
+		}
+		
+		
+		
+		return resultado;
+	}
+	
+	
 	@PostMapping(value = "/convocar")
 	@PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
 	public ResponseEntity<HttpStatus> convocarReunion(@RequestBody Map<String, Object> entrada,
