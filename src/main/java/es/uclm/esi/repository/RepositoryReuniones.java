@@ -11,4 +11,8 @@ public interface RepositoryReuniones extends MongoRepository<Reunion,String> {
 	
 	List<Reunion> findByAsistentesIn(String asistentes);
 	
+	Reunion deleteById(int _id);
+	
+	Reunion findByDiaAndMesAndAnoAndHora (int dia, int mes, int ano, String hora);
+	
 }
