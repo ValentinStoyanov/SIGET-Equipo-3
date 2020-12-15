@@ -1,73 +1,84 @@
 
 ˆes.uclm.esi.controller.AuthController#registerUser(Les/uclm/esi/payload/request/SignupRequest;)Lorg/springframework/http/ResponseEntity;t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaL L(&"startingBlock*®
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaL( L(4"startingBlock*®
 2t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaT
- T(Í
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaV
+ V(Í
 Ê
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaT
- U(:
-%103org.springframework.http.ResponseEntity$BodyBuilder"iorg.springframework.http.ResponseEntity#badRequest()Lorg/springframework/http/ResponseEntity$BodyBuilder;*+")
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaV
+ W(:
+%143org.springframework.http.ResponseEntity$BodyBuilder"iorg.springframework.http.ResponseEntity#badRequest()Lorg/springframework/http/ResponseEntity$BodyBuilder;*+")
 'org.springframework.http.ResponseEntityÜÙ
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaV V(3
-%11,es.uclm.esi.payload.response.MessageResponse",es.uclm.esi.payload.response.MessageResponse¦
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaX X(3
+%15,es.uclm.esi.payload.response.MessageResponse",es.uclm.esi.payload.response.MessageResponse¦
 £
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaV V(A
-%12"Hes.uclm.esi.payload.response.MessageResponse#<init>(Ljava/lang/String;)V*5
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaX X(A
+%16"Hes.uclm.esi.payload.response.MessageResponse#<init>(Ljava/lang/String;)V*5
 3
-%11,es.uclm.esi.payload.response.MessageResponse*#!
+%15,es.uclm.esi.payload.response.MessageResponse*#!
 Error: Email is already in use!¯¬
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaT
- V(B.
-%13'org.springframework.http.ResponseEntity"uorg.springframework.http.ResponseEntity$BodyBuilder#body(Ljava/lang/Object;)Lorg/springframework/http/ResponseEntity;*<
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaV
+ X(B.
+%17'org.springframework.http.ResponseEntity"uorg.springframework.http.ResponseEntity$BodyBuilder#body(Ljava/lang/Object;)Lorg/springframework/http/ResponseEntity;*<
 :
-%103org.springframework.http.ResponseEntity$BodyBuilder*5
+%143org.springframework.http.ResponseEntity$BodyBuilder*5
 3
-%11,es.uclm.esi.payload.response.MessageResponse2body(Ljava/lang/Object;)"¨
+%15,es.uclm.esi.payload.response.MessageResponse2body(Ljava/lang/Object;)"¨
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaT V(C0
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaV X(C0
 .
-%13'org.springframework.http.ResponseEntity*ò
+%17'org.springframework.http.ResponseEntity*”
 3t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaS S(ë
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaT T(ë
 è
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaS S(+
-%7%es.uclm.esi.repository.UserRepository"__id*=*;'
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaT T(+
+%9%es.uclm.esi.repository.UserRepository"__id*=*;'
 %es.uclm.esi.controller.AuthController"
-userRepository£ 
+userRepository¤¡
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaS# S(;
-%8java.lang.String"Fes.uclm.esi.payload.request.SignupRequest#getEmail()Ljava/lang/String;*<
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaT# T(;
+%10java.lang.String"Fes.uclm.esi.payload.request.SignupRequest#getEmail()Ljava/lang/String;*<
 :
 signUpRequest)es.uclm.esi.payload.request.SignupRequest2
-getEmail()Ú×
+getEmail()ÜÙ
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaS S(<
-%9java.lang.Boolean"Zes.uclm.esi.repository.UserRepository#existsByEmail(Ljava/lang/String;)Ljava/lang/Boolean;*-
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaT T(<
+%11java.lang.Boolean"Zes.uclm.esi.repository.UserRepository#existsByEmail(Ljava/lang/String;)Ljava/lang/Boolean;*-
 +
-%7%es.uclm.esi.repository.UserRepository*
-
-%8java.lang.String2!existsByEmail(Ljava/lang/String;)*
+%9%es.uclm.esi.repository.UserRepository*
+
+%10java.lang.String2!existsByEmail(Ljava/lang/String;)¡
+ž
+t
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaU U(
+%12java.lang.Boolean"__id*
+""øõ
+t
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaU U(
+%13boolean"-java.lang.Boolean#equals(Ljava/lang/Object;)Z*
+
+%12java.lang.Boolean*
+""2equals(Ljava/lang/Object;)*
 2
 1*†
 startingBlockt
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaL& L(Wr
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaL4 L(er
 p
 
 __unknown_file (
-%34"__id*G*E
+%38"__id*G*E
 :
 signUpRequest)es.uclm.esi.payload.request.SignupRequest"
 emailu
 s
 
 __unknown_file (
-%35"__id*J*H
+%39"__id*J*H
 :
 signUpRequest)es.uclm.esi.payload.request.SignupRequest"
 
@@ -75,324 +86,335 @@ s
 p
 
 __unknown_file (
-%36"__id*G*E
+%40"__id*G*E
 :
 signUpRequest)es.uclm.esi.payload.request.SignupRequest"
 rolesu
 s
 
 __unknown_file (
-%37"__id*J*H
+%41"__id*J*H
 :
 signUpRequest)es.uclm.esi.payload.request.SignupRequest"
 
 username±
 ®
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaL' L(-
-%38"
-__annotate*
-javax.validation.Valid*
-
-%35Î
-Ë
-t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaL. L(:
-%39"
-__annotate*75
-3org.springframework.web.bind.annotation.RequestBody*
-
-%35ã
-à
-t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaLI L(VH
-:
-signUpRequest)es.uclm.esi.payload.request.SignupRequest"
-
-password"__annotation*
-
-%38*
-
-%39±
-®
-t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaL' L(-
-%40"
-__annotate*
-javax.validation.Valid*
-
-%36Î
-Ë
-t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaL. L(:
-%41"
-__annotate*75
-3org.springframework.web.bind.annotation.RequestBody*
-
-%36à
-Ý
-t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaLI L(VE
-:
-signUpRequest)es.uclm.esi.payload.request.SignupRequest"
-roles"__annotation*
-
-%40*
-
-%41±
-®
-t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaL' L(-
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaL5 L(;
 %42"
 __annotate*
 javax.validation.Valid*
 
-%34Î
+%39Î
 Ë
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaL. L(:
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaL< L(H
 %43"
 __annotate*75
 3org.springframework.web.bind.annotation.RequestBody*
 
-%34à
-Ý
+%39ã
+à
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaLI L(VE
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaLW L(dH
 :
-signUpRequest)es.uclm.esi.payload.request.SignupRequest"
-email"__annotation*
+signUpRequest)es.uclm.esi.payload.request.SignupRequest"
+
+password"__annotation*
 
 %42*
 
 %43±
 ®
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaL' L(-
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaL5 L(;
 %44"
 __annotate*
 javax.validation.Valid*
 
-%37Î
+%40Î
 Ë
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaL. L(:
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaL< L(H
 %45"
 __annotate*75
 3org.springframework.web.bind.annotation.RequestBody*
 
-%37ã
+%40à
+Ý
+t
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaLW L(dE
+:
+signUpRequest)es.uclm.esi.payload.request.SignupRequest"
+roles"__annotation*
+
+%44*
+
+%45±
+®
+t
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaL5 L(;
+%46"
+__annotate*
+javax.validation.Valid*
+
+%38Î
+Ë
+t
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaL< L(H
+%47"
+__annotate*75
+3org.springframework.web.bind.annotation.RequestBody*
+
+%38à
+Ý
+t
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaLW L(dE
+:
+signUpRequest)es.uclm.esi.payload.request.SignupRequest"
+email"__annotation*
+
+%46*
+
+%47±
+®
+t
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaL5 L(;
+%48"
+__annotate*
+javax.validation.Valid*
+
+%41Î
+Ë
+t
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaL< L(H
+%49"
+__annotate*75
+3org.springframework.web.bind.annotation.RequestBody*
+
+%41ã
 à
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaLI L(VH
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaLW L(dH
 :
 signUpRequest)es.uclm.esi.payload.request.SignupRequest"
 
 username"__annotation*
 
-%44*
+%48*
 
-%45*
+%49*
 5*¨
 4t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaN
- N(Ì
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaO
+ O(Ì
 É
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaN
- O(9
-%33org.springframework.http.ResponseEntity$BodyBuilder"iorg.springframework.http.ResponseEntity#badRequest()Lorg/springframework/http/ResponseEntity$BodyBuilder;*+")
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaO
+ P(9
+%53org.springframework.http.ResponseEntity$BodyBuilder"iorg.springframework.http.ResponseEntity#badRequest()Lorg/springframework/http/ResponseEntity$BodyBuilder;*+")
 'org.springframework.http.ResponseEntityÛØ
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaP P(2
-%4,es.uclm.esi.payload.response.MessageResponse",es.uclm.esi.payload.response.MessageResponse¦
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaQ Q(2
+%6,es.uclm.esi.payload.response.MessageResponse",es.uclm.esi.payload.response.MessageResponse¦
 £
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaP P(C
-%5"Hes.uclm.esi.payload.response.MessageResponse#<init>(Ljava/lang/String;)V*4
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaQ Q(C
+%7"Hes.uclm.esi.payload.response.MessageResponse#<init>(Ljava/lang/String;)V*4
 2
-%4,es.uclm.esi.payload.response.MessageResponse*%#
+%6,es.uclm.esi.payload.response.MessageResponse*%#
 !Error: Username is already taken!¬©
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaN
- P(D-
-%6'org.springframework.http.ResponseEntity"uorg.springframework.http.ResponseEntity$BodyBuilder#body(Ljava/lang/Object;)Lorg/springframework/http/ResponseEntity;*;
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaO
+ Q(D-
+%8'org.springframework.http.ResponseEntity"uorg.springframework.http.ResponseEntity$BodyBuilder#body(Ljava/lang/Object;)Lorg/springframework/http/ResponseEntity;*;
 9
-%33org.springframework.http.ResponseEntity$BodyBuilder*4
+%53org.springframework.http.ResponseEntity$BodyBuilder*4
 2
-%4,es.uclm.esi.payload.response.MessageResponse2body(Ljava/lang/Object;)"§
+%6,es.uclm.esi.payload.response.MessageResponse2body(Ljava/lang/Object;)"§
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaN P(E/
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaO Q(E/
 -
-%6'org.springframework.http.ResponseEntity*þ
+%8'org.springframework.http.ResponseEntity*š
 5t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaM M(ë
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaM M(ë
 è
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaM M(+
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaM M(+
 %0%es.uclm.esi.repository.UserRepository"__id*=*;'
 %es.uclm.esi.controller.AuthController"
 userRepository©¦
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaM& M(A
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaM. M(I
 %1java.lang.String"Ies.uclm.esi.payload.request.SignupRequest#getUsername()Ljava/lang/String;*<
 :
 signUpRequest)es.uclm.esi.payload.request.SignupRequest2getUsername()àÝ
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaM M(B
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaM M(J
 %2java.lang.Boolean"]es.uclm.esi.repository.UserRepository#existsByUsername(Ljava/lang/String;)Ljava/lang/Boolean;*-
 +
 %0%es.uclm.esi.repository.UserRepository*
 
-%1java.lang.String2$existsByUsername(Ljava/lang/String;)*
+%1java.lang.String2$existsByUsername(Ljava/lang/String;) 
+
+t
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaN N(
+%3java.lang.Boolean"__id*
+""öó
+t
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaN N(
+%4boolean"-java.lang.Boolean#equals(Ljava/lang/Object;)Z*
+
+%3java.lang.Boolean*
+""2equals(Ljava/lang/Object;)*
 3
 4*Ý1
 1t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaZ Z($ª§
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.java\ \($ª§
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaZ Z(2
-%14java.lang.String"Ies.uclm.esi.payload.request.SignupRequest#getUsername()Ljava/lang/String;*<
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.java\ \(2
+%18java.lang.String"Ies.uclm.esi.payload.request.SignupRequest#getUsername()Ljava/lang/String;*<
 :
 signUpRequest)es.uclm.esi.payload.request.SignupRequest2getUsername()¤¡
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.java[ [( 
-%15java.lang.String"Fes.uclm.esi.payload.request.SignupRequest#getEmail()Ljava/lang/String;*<
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.java] ]( 
+%19java.lang.String"Fes.uclm.esi.payload.request.SignupRequest#getEmail()Ljava/lang/String;*<
 :
 signUpRequest)es.uclm.esi.payload.request.SignupRequest2
 getEmail()ü
 ù
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.java\ \(C
-%16<org.springframework.security.crypto.password.PasswordEncoder"__id*6*4'
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.java^ ^(C
+%20<org.springframework.security.crypto.password.PasswordEncoder"__id*6*4'
 %es.uclm.esi.controller.AuthController"	
 encoderª§
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.java\ \(2
-%17java.lang.String"Ies.uclm.esi.payload.request.SignupRequest#getPassword()Ljava/lang/String;*<
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.java^ ^(2
+%21java.lang.String"Ies.uclm.esi.payload.request.SignupRequest#getPassword()Ljava/lang/String;*<
 :
 signUpRequest)es.uclm.esi.payload.request.SignupRequest2getPassword()‡„
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.java\ \(3
-%18java.lang.String"oorg.springframework.security.crypto.password.PasswordEncoder#encode(Ljava/lang/CharSequence;)Ljava/lang/String;*E
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.java^ ^(3
+%22java.lang.String"oorg.springframework.security.crypto.password.PasswordEncoder#encode(Ljava/lang/CharSequence;)Ljava/lang/String;*E
 C
-%16<org.springframework.security.crypto.password.PasswordEncoder*
+%20<org.springframework.security.crypto.password.PasswordEncoder*
 
-%17java.lang.String2 encode(Ljava/lang/CharSequence;)°­
+%21java.lang.String2 encode(Ljava/lang/CharSequence;)°­
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaZ Z(
-%19es.uclm.esi.model.User"es.uclm.esi.model.UserÊ
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.java\ \(
+%23es.uclm.esi.model.User"es.uclm.esi.model.UserÊ
 Ç
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaZ \(4
-%20"Ves.uclm.esi.model.User#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.java\ ^(4
+%24"Ves.uclm.esi.model.User#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*
 
-%19es.uclm.esi.model.User*
+%23es.uclm.esi.model.User*
 
-%14java.lang.String*
+%18java.lang.String*
 
-%15java.lang.String*
+%19java.lang.String*
 
-%18java.lang.StringÀ
+%22java.lang.StringÀ
 ½
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaZ \(5
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.java\ ^(5
 useres.uclm.esi.model.User"__id*
 
-%19es.uclm.esi.model.User¦£
+%23es.uclm.esi.model.User¦£
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.java_ _(!
-%21java.util.HashSet"java.util.HashSet¹
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaa a(!
+%25java.util.HashSet"java.util.HashSet¹
 ¶
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.java_ _(#
-%22"java.util.HashSet#<init>()V*
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaa a(#
+%26"java.util.HashSet#<init>()V*
 
-%21java.util.HashSet³
+%25java.util.HashSet³
 °
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.java_ _($
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaa a($
 rolesjava.util.Set"__id*
 
-%21java.util.HashSetì
+%25java.util.HashSetì
 é
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.java` `( ,
-%23%es.uclm.esi.repository.RoleRepository"__id*=*;'
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javab b( ,
+%27%es.uclm.esi.repository.RoleRepository"__id*=*;'
 %es.uclm.esi.controller.AuthController"
 roleRepository§
 ¤
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.java`, `(;
-%24es.uclm.esi.model.ERole"__id*
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javab, b(;
+%28es.uclm.esi.model.ERole"__id*
 ""îë
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.java` `(<
-%25java.util.Optional"_es.uclm.esi.repository.RoleRepository#findByName(Les/uclm/esi/model/ERole;)Ljava/util/Optional;*.
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javab b(<
+%29java.util.Optional"_es.uclm.esi.repository.RoleRepository#findByName(Les/uclm/esi/model/ERole;)Ljava/util/Optional;*.
 ,
-%23%es.uclm.esi.repository.RoleRepository* 
+%27%es.uclm.esi.repository.RoleRepository* 
 
-%24es.uclm.esi.model.ERole2%findByName(Les/uclm/esi/model/ERole;)º·
+%28es.uclm.esi.model.ERole2%findByName(Les/uclm/esi/model/ERole;)º·
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.java` a(J
-%26es.uclm.esi.model.Role"Ojava.util.Optional#orElseThrow(Ljava/util/function/Supplier;)Ljava/lang/Object;*
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javab c(J
+%30es.uclm.esi.model.Role"Ojava.util.Optional#orElseThrow(Ljava/util/function/Supplier;)Ljava/lang/Object;*
 
-%25java.util.Optional*
+%29java.util.Optional*
 ""2*orElseThrow(Ljava/util/function/Supplier;)Ä
 Á
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.java` a(K"
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javab c(K"
 userRolees.uclm.esi.model.Role"__id*
 
-%26es.uclm.esi.model.RoleÙ
+%30es.uclm.esi.model.RoleÙ
 Ö
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javab b(
-%27boolean"
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javad d(
+%31boolean"
 __arrayAdd*
 
 rolesjava.util.Set*: *$
 "
 userRolees.uclm.esi.model.Role
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javad d(
-%28void"1es.uclm.esi.model.User#setRoles(Ljava/util/Set;)V* 
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javaf f(
+%32void"1es.uclm.esi.model.User#setRoles(Ljava/util/Set;)V* 
 
 useres.uclm.esi.model.User*
 
 rolesjava.util.Set2setRoles(Ljava/util/Set;)ì
 é
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javae e(,
-%29%es.uclm.esi.repository.UserRepository"__id*=*;'
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javag g(,
+%33%es.uclm.esi.repository.UserRepository"__id*=*;'
 %es.uclm.esi.controller.AuthController"
 userRepositoryãà
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javae e(
-%30es.uclm.esi.model.User"]org.springframework.data.repository.CrudRepository#save(Ljava/lang/Object;)Ljava/lang/Object;*.
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javag g(
+%34es.uclm.esi.model.User"]org.springframework.data.repository.CrudRepository#save(Ljava/lang/Object;)Ljava/lang/Object;*.
 ,
-%29%es.uclm.esi.repository.UserRepository* 
+%33%es.uclm.esi.repository.UserRepository* 
 
 useres.uclm.esi.model.User2save(Ljava/lang/Object;)ÜÙ
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javag g(.3
-%31,es.uclm.esi.payload.response.MessageResponse",es.uclm.esi.payload.response.MessageResponse¤
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javai i(.3
+%35,es.uclm.esi.payload.response.MessageResponse",es.uclm.esi.payload.response.MessageResponse¤
 ¡
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javag g(O
-%32"Hes.uclm.esi.payload.response.MessageResponse#<init>(Ljava/lang/String;)V*5
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javai i(O
+%36"Hes.uclm.esi.payload.response.MessageResponse#<init>(Ljava/lang/String;)V*5
 3
-%31,es.uclm.esi.payload.response.MessageResponse*!
+%35,es.uclm.esi.payload.response.MessageResponse*!
 User registered successfully!ö
 ó
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javag	 g(P.
-%33'org.springframework.http.ResponseEntity"gorg.springframework.http.ResponseEntity#ok(Ljava/lang/Object;)Lorg/springframework/http/ResponseEntity;*+")
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javai	 i(P.
+%37'org.springframework.http.ResponseEntity"gorg.springframework.http.ResponseEntity#ok(Ljava/lang/Object;)Lorg/springframework/http/ResponseEntity;*+")
 'org.springframework.http.ResponseEntity*5
 3
-%31,es.uclm.esi.payload.response.MessageResponse"¨
+%35,es.uclm.esi.payload.response.MessageResponse"¨
 t
-jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javag g(Q0
+jC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/AuthController.javai i(Q0
 .
-%33'org.springframework.http.ResponseEntity::
+%37'org.springframework.http.ResponseEntity::
 signUpRequest)es.uclm.esi.payload.request.SignupRequestB)'
 %es.uclm.esi.controller.AuthController

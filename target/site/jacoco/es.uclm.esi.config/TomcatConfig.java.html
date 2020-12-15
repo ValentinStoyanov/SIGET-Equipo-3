@@ -3,32 +3,29 @@ import org.apache.catalina.connector.Connector;
 import org.springframework.boot.web.embedded.tomcat.TomcatConnectorCustomizer;
 import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
 import org.springframework.boot.web.servlet.server.ConfigurableServletWebServerFactory;
-import org.springframework.boot.web.servlet.server.ServletWebServerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
  
 @Configuration
-<span class="fc" id="L11">public class TomcatConfig {</span>
+<span class="fc" id="L10">public class TomcatConfig {</span>
  
 	@Bean
 	public ConfigurableServletWebServerFactory webServerFactory() {
-<span class="fc" id="L15">		TomcatServletWebServerFactory factory = new TomcatServletWebServerFactory();</span>
-<span class="fc" id="L16">		factory.addConnectorCustomizers(new TomcatConnectorCustomizer() {</span>
+<span class="fc" id="L14">		TomcatServletWebServerFactory factory = new TomcatServletWebServerFactory();</span>
+		
+<span class="fc" id="L16">		TomcatConnectorCustomizer t =new TomcatConnectorCustomizer() {</span>
  
 			@Override
 			public void customize(Connector connector) {
 <span class="nc" id="L20">				connector.setProperty(&quot;relaxedQueryChars&quot;, &quot;|{}[]&quot;);</span>
 <span class="nc" id="L21">			}</span>
-		});
-<span class="fc" id="L23">		return factory;</span>
+		} ;
+		
+<span class="fc" id="L24">		factory.addConnectorCustomizers(t);</span>
+<span class="fc" id="L25">		return factory;</span>
 	}
  
-	/*
-	 * @Bean public ServletWebServerFactory webServerFactory() {
-	 * TomcatServletWebServerFactory fa = new TomcatServletWebServerFactory();
-	 * fa.addConnectorCustomizers((TomcatConnectorCustomizer) connector -&gt;
-	 * connector.setProperty(&quot;relaxedQueryChars&quot;, &quot;[]{}&quot;)); return fa; }
-	 */
+
  
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

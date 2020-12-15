@@ -82,12 +82,12 @@
 				@RequestParam(name = &quot;ano&quot;) int ano,
 				@RequestParam(name = &quot;hora&quot;) String hora,
 				@RequestParam(name = &quot;descripcion&quot;) String descripcion){
-<span class="nc" id="L85">			Reunion r = null;</span>
+	
 <span class="nc bnc" id="L86" title="All 2 branches missed.">			if(this.rReuniones.findById(id) !=null) {</span>
-<span class="nc" id="L87">				r = this.rReuniones.findById(id);</span>
+			
 <span class="nc" id="L88">				this.rReuniones.deleteById(id);</span>
 <span class="nc" id="L89">	        	this.rReuniones.insert(new Reunion(id,organizador,titulo,</span>
-						estado,dia,mes,ano,hora,descripcion));
+<span class="nc" id="L90">						estado,dia,mes,ano,hora,descripcion));</span>
 <span class="nc" id="L91">	        	return &quot;Se ha modificado&quot;;</span>
 	        }
 <span class="nc" id="L93">	        return &quot;No hace nada&quot;;</span>
@@ -156,7 +156,7 @@
 <span class="nc" id="L156">			List&lt;User&gt; listaUsuarios = usuarios.findAll();</span>
 <span class="nc bnc" id="L157" title="All 2 branches missed.">			for (User user : listaUsuarios) {</span>
 <span class="nc" id="L158">				jsa.put(user.getUsername());</span>
-<span class="nc" id="L159">			}</span>
+			}
 <span class="nc" id="L160">			jsoresp.put(&quot;usuarios&quot;, jsa);</span>
 <span class="nc" id="L161">			return jsoresp.toString();</span>
 		}
@@ -221,7 +221,7 @@
 <span class="nc" id="L221">					anioActual = reunion.getAno();</span>
 <span class="nc bnc" id="L222" title="All 2 branches missed.">					if (esBisiesto(1900 + anioActual)) {</span>
 <span class="nc" id="L223">						numeroDias = 29;</span>
-					} else {
+<span class="nc" id="L224">					} else {</span>
 <span class="nc" id="L225">						numeroDias = 28;</span>
 					}
 <span class="nc" id="L227">					break;</span>

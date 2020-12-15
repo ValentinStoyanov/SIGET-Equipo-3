@@ -45,19 +45,19 @@ import io.jsonwebtoken.Jwts;
 
 <span class="nc" id="L46">		List&lt;Reunion&gt; lista = this.rReuniones.findAll();</span>
 		
-<span class="nc" id="L48">		List&lt;Reunion&gt; lista_aux = new ArrayList&lt;Reunion&gt;();</span>
+<span class="nc" id="L48">		List&lt;Reunion&gt; listaaux = new ArrayList&lt;&gt;();</span>
 		
 <span class="nc bnc" id="L50" title="All 2 branches missed.">		for(int i = 0; i &lt; lista.size(); i++) {</span>
 <span class="nc" id="L51">			List&lt;Asistente&gt; as = lista.get(i).getAsistentes();</span>
 <span class="nc bnc" id="L52" title="All 2 branches missed.">			for(Asistente asis: as) {</span>
 <span class="nc bnc" id="L53" title="All 2 branches missed.">				if(asis.getUsuario().equals(asistentes)) {</span>
-<span class="nc" id="L54">					lista_aux.add(lista.get(i));</span>
+<span class="nc" id="L54">					listaaux.add(lista.get(i));</span>
 				}
-<span class="nc" id="L56">			}</span>
+			}
 		}
 		
 		
-<span class="nc" id="L60">        return lista_aux;</span>
+<span class="nc" id="L60">        return listaaux;</span>
     }
 	
 

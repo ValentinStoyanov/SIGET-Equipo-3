@@ -1,0 +1,1125 @@
+# Created at 2020-12-15T16:55:30.593
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: null
+java.io.EOFException
+	at java.base/java.io.DataInputStream.readInt(DataInputStream.java:396)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+
+# Created at 2020-12-15T16:55:30.622
+Unexpected IOException with stream:   [31mWhen [0m[31mconsulto con el usuario [0m[31m[1m"ejemplo2c"[0m              [90m# es.uclm.esi.CalendarioStepDefinitions.consulto_con_el_usuario(java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:30.637
+Unexpected IOException with stream:       [31morg.springframework.security.authentication.BadCredentialsException: Bad credentials
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.additionalAuthenticationChecks(DaoAuthenticationProvider.java:93)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:166)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:199)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:219)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:524)
+	at es.uclm.esi.CalendarioStepDefinitions.consulto_con_el_usuario(CalendarioStepDefinitions.java:48)
+	at âœ½.consulto con el usuario "ejemplo2c"(file:///C:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/test/java/es/uclm/esi/features/2calendario.feature:17)
+[0m
+
+
+# Created at 2020-12-15T16:55:30.638
+Unexpected IOException with stream:   [36mAnd [0m[36mel calendario dia con dia [0m[36m[1m29[0m[36m y mes [0m[36m[1m11[0m[36m y anio [0m[36m[1m2020[0m [90m# es.uclm.esi.CalendarioStepDefinitions.el_calendario_dia_con_dia_y_mes_y_anio(java.lang.Integer,java.lang.Integer,java.lang.Integer)[0m
+
+
+# Created at 2020-12-15T16:55:30.638
+Unexpected IOException with stream:   [36mThen [0m[36mobtengo el codigo [0m[36m[1m200[0m                            [90m# es.uclm.esi.CalendarioStepDefinitions.obtengo_el_codigo(java.lang.Integer)[0m
+
+
+# Created at 2020-12-15T16:55:30.639
+Unexpected IOException with stream:   [36mAnd [0m[36mobtengo las reuniones [0m[36m[1m"r ejemplo1,r ejemplo2"[0m     [90m# es.uclm.esi.CalendarioStepDefinitions.obtengo_las_reuniones(java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:30.640
+Unexpected IOException: 7,1,es.uclm.esi.RunCucumberTest,Calendario dia #3,null,Bad credentials,null,Bad credentials,RunCucumberTest \00BB BadCredentials Bad credentials,org.springframework.security.authentication.BadCredentialsException: Bad credentials\000A
+
+
+# Created at 2020-12-15T16:55:30.640
+Unexpected IOException: 5,1,es.uclm.esi.RunCucumberTest,Calendario dia #4,null,null,null
+
+
+# Created at 2020-12-15T16:55:30.642
+Unexpected IOException with stream: 2020-12-15 16:55:30 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [es.uclm.esi.CucumberTestContextConfiguration], using SpringBootContextLoader
+
+
+# Created at 2020-12-15T16:55:30.643
+Unexpected IOException with stream: 2020-12-15 16:55:30 - Could not detect default resource locations for test class [es.uclm.esi.CucumberTestContextConfiguration]: no resource found for suffixes {-context.xml, Context.groovy}.
+
+
+# Created at 2020-12-15T16:55:30.643
+Unexpected IOException with stream: 2020-12-15 16:55:30 - Could not detect default configuration classes for test class [es.uclm.esi.CucumberTestContextConfiguration]: CucumberTestContextConfiguration does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+
+
+# Created at 2020-12-15T16:55:30.645
+Unexpected IOException with stream: 2020-12-15 16:55:30 - Found @SpringBootConfiguration es.uclm.esi.SigetApplication for test class es.uclm.esi.CucumberTestContextConfiguration
+
+
+# Created at 2020-12-15T16:55:30.647
+Unexpected IOException with stream: 2020-12-15 16:55:30 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+
+
+# Created at 2020-12-15T16:55:30.648
+Unexpected IOException with stream: 2020-12-15 16:55:30 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@482532be, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6481f18b, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7a8958be, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@75256651, org.springframework.test.context.support.DirtiesContextTestExecutionListener@14741a89, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7f92ac25, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4f6e47c1, org.springframework.test.context.event.EventPublishingTestExecutionListener@1127a793, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@25b3476c, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@4faa247b, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@72473200, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5ef008e4, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6147ac71, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7fd0d5de, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@34cc3f16, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@6aa5b643]
+
+
+# Created at 2020-12-15T16:55:30.652
+Unexpected IOException with stream: 
+
+
+# Created at 2020-12-15T16:55:30.652
+Unexpected IOException with stream: Scenario Outline: Calendario dia                        [90m# src/test/java/es/uclm/esi/features/2calendario.feature:27[0m
+
+
+# Created at 2020-12-15T16:55:30.812
+Unexpected IOException with stream:   [31mWhen [0m[31mconsulto con el usuario [0m[31m[1m"ejemplo2c"[0m              [90m# es.uclm.esi.CalendarioStepDefinitions.consulto_con_el_usuario(java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:30.813
+Unexpected IOException with stream:       [31morg.springframework.security.authentication.BadCredentialsException: Bad credentials
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.additionalAuthenticationChecks(DaoAuthenticationProvider.java:93)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:166)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:199)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:219)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:524)
+	at es.uclm.esi.CalendarioStepDefinitions.consulto_con_el_usuario(CalendarioStepDefinitions.java:48)
+	at âœ½.consulto con el usuario "ejemplo2c"(file:///C:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/test/java/es/uclm/esi/features/2calendario.feature:17)
+[0m
+
+
+# Created at 2020-12-15T16:55:30.814
+Unexpected IOException with stream:   [36mAnd [0m[36mel calendario dia con dia [0m[36m[1m24[0m[36m y mes [0m[36m[1m11[0m[36m y anio [0m[36m[1m2020[0m [90m# es.uclm.esi.CalendarioStepDefinitions.el_calendario_dia_con_dia_y_mes_y_anio(java.lang.Integer,java.lang.Integer,java.lang.Integer)[0m
+
+
+# Created at 2020-12-15T16:55:30.814
+Unexpected IOException with stream:   [36mThen [0m[36mobtengo el codigo [0m[36m[1m200[0m                            [90m# es.uclm.esi.CalendarioStepDefinitions.obtengo_el_codigo(java.lang.Integer)[0m
+
+
+# Created at 2020-12-15T16:55:30.815
+Unexpected IOException with stream:   [36mAnd [0m[36mobtengo las reuniones [0m[36m[1m""[0m                          [90m# es.uclm.esi.CalendarioStepDefinitions.obtengo_las_reuniones(java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:30.816
+Unexpected IOException: 7,1,es.uclm.esi.RunCucumberTest,Calendario dia #4,null,Bad credentials,null,Bad credentials,RunCucumberTest \00BB BadCredentials Bad credentials,org.springframework.security.authentication.BadCredentialsException: Bad credentials\000A
+
+
+# Created at 2020-12-15T16:55:30.816
+Unexpected IOException: 5,1,es.uclm.esi.RunCucumberTest,convocar #1,null,null,null
+
+
+# Created at 2020-12-15T16:55:30.817
+Unexpected IOException with stream: 2020-12-15 16:55:30 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [es.uclm.esi.CucumberTestContextConfiguration], using SpringBootContextLoader
+
+
+# Created at 2020-12-15T16:55:30.818
+Unexpected IOException with stream: 2020-12-15 16:55:30 - Could not detect default resource locations for test class [es.uclm.esi.CucumberTestContextConfiguration]: no resource found for suffixes {-context.xml, Context.groovy}.
+
+
+# Created at 2020-12-15T16:55:30.819
+Unexpected IOException with stream: 2020-12-15 16:55:30 - Could not detect default configuration classes for test class [es.uclm.esi.CucumberTestContextConfiguration]: CucumberTestContextConfiguration does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+
+
+# Created at 2020-12-15T16:55:30.821
+Unexpected IOException with stream: 2020-12-15 16:55:30 - Found @SpringBootConfiguration es.uclm.esi.SigetApplication for test class es.uclm.esi.CucumberTestContextConfiguration
+
+
+# Created at 2020-12-15T16:55:30.822
+Unexpected IOException with stream: 2020-12-15 16:55:30 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+
+
+# Created at 2020-12-15T16:55:30.823
+Unexpected IOException with stream: 2020-12-15 16:55:30 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1abb4410, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5debfeaa, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@63759fe, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1e46d6ac, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5e1d9ab0, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5c012177, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@60c57ba0, org.springframework.test.context.event.EventPublishingTestExecutionListener@489e32a2, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@7ae4f91b, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@2fbb65a9, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@64e80385, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5dda2698, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@ab2019, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@74c99b88, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@50195abf, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@5c7b48c2]
+
+
+# Created at 2020-12-15T16:55:30.827
+Unexpected IOException with stream: 
+
+
+# Created at 2020-12-15T16:55:30.828
+Unexpected IOException with stream: Scenario Outline: convocar                                               [90m# src/test/java/es/uclm/esi/features/3convocarReunion.feature:17[0m
+
+
+# Created at 2020-12-15T16:55:30.833
+Unexpected IOException with stream:   [32mWhen [0m[32mtitulo es [0m[32m[1m"Reunion 1"[0m                                             [90m# es.uclm.esi.ConvocarReunionStepDefinitions.titulo_es(java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:30.833
+Unexpected IOException with stream:   [32mAnd [0m[32mdia es [0m[32m[1m52[0m                                                          [90m# es.uclm.esi.ConvocarReunionStepDefinitions.dia_es(java.lang.Integer)[0m
+
+
+# Created at 2020-12-15T16:55:30.834
+Unexpected IOException with stream:   [32mAnd [0m[32mmes es [0m[32m[1m12[0m                                                          [90m# es.uclm.esi.ConvocarReunionStepDefinitions.mes_es(java.lang.Integer)[0m
+
+
+# Created at 2020-12-15T16:55:30.834
+Unexpected IOException with stream:   [32mAnd [0m[32mano es [0m[32m[1m2020[0m                                                        [90m# es.uclm.esi.ConvocarReunionStepDefinitions.ano_es(java.lang.Integer)[0m
+
+
+# Created at 2020-12-15T16:55:30.835
+Unexpected IOException with stream:   [32mAnd [0m[32mhora es [0m[32m[1m"22:00"[0m                                                    [90m# es.uclm.esi.ConvocarReunionStepDefinitions.hora_es(java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:30.835
+Unexpected IOException with stream:   [32mAnd [0m[32mdescripcion es [0m[32m[1m"Prueba"[0m                                            [90m# es.uclm.esi.ConvocarReunionStepDefinitions.descripcion_es(java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:30.836
+Unexpected IOException with stream:   [32mAnd [0m[32masistentes son [0m[32m[1m"Fatima:pendiente,Victor:pendiente,admin:pendiente"[0m [90m# es.uclm.esi.ConvocarReunionStepDefinitions.asistentes_son(java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:31.149
+Unexpected IOException with stream:   [32mThen [0m[32mconvoco la reunion[0m                                                [90m# es.uclm.esi.ConvocarReunionStepDefinitions.convoco_la_reunion()[0m
+
+
+# Created at 2020-12-15T16:55:31.150
+Unexpected IOException with stream:   [32mThen [0m[32mla respuesta a convocar sera [0m[32m[1m400[0m                                  [90m# es.uclm.esi.ConvocarReunionStepDefinitions.la_respuesta_a_convocar_sera(java.lang.Integer)[0m
+
+
+# Created at 2020-12-15T16:55:31.151
+Unexpected IOException: 6,1,es.uclm.esi.RunCucumberTest,convocar #1,null,null,null
+
+
+# Created at 2020-12-15T16:55:31.151
+Unexpected IOException: 5,1,es.uclm.esi.RunCucumberTest,convocar #2,null,null,null
+
+
+# Created at 2020-12-15T16:55:31.152
+Unexpected IOException with stream: 2020-12-15 16:55:31 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [es.uclm.esi.CucumberTestContextConfiguration], using SpringBootContextLoader
+
+
+# Created at 2020-12-15T16:55:31.153
+Unexpected IOException with stream: 2020-12-15 16:55:31 - Could not detect default resource locations for test class [es.uclm.esi.CucumberTestContextConfiguration]: no resource found for suffixes {-context.xml, Context.groovy}.
+
+
+# Created at 2020-12-15T16:55:31.154
+Unexpected IOException with stream: 2020-12-15 16:55:31 - Could not detect default configuration classes for test class [es.uclm.esi.CucumberTestContextConfiguration]: CucumberTestContextConfiguration does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+
+
+# Created at 2020-12-15T16:55:31.156
+Unexpected IOException with stream: 2020-12-15 16:55:31 - Found @SpringBootConfiguration es.uclm.esi.SigetApplication for test class es.uclm.esi.CucumberTestContextConfiguration
+
+
+# Created at 2020-12-15T16:55:31.157
+Unexpected IOException with stream: 2020-12-15 16:55:31 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+
+
+# Created at 2020-12-15T16:55:31.158
+Unexpected IOException with stream: 2020-12-15 16:55:31 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5948b9b4, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@119e6e27, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@679ff51b, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@25cd93ee, org.springframework.test.context.support.DirtiesContextTestExecutionListener@39540bfa, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5bd9b5a1, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4376a4ec, org.springframework.test.context.event.EventPublishingTestExecutionListener@a6d0d8f, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@13ffcce3, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@51d0780, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@733a820b, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@11d9e896, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7caca69a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@11e09f88, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@36ed7d65, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@68aeae76]
+
+
+# Created at 2020-12-15T16:55:31.162
+Unexpected IOException with stream: 
+
+
+# Created at 2020-12-15T16:55:31.163
+Unexpected IOException with stream: Scenario Outline: convocar                                               [90m# src/test/java/es/uclm/esi/features/3convocarReunion.feature:18[0m
+
+
+# Created at 2020-12-15T16:55:31.165
+Unexpected IOException with stream:   [32mWhen [0m[32mtitulo es [0m[32m[1m"Reunion 2"[0m                                             [90m# es.uclm.esi.ConvocarReunionStepDefinitions.titulo_es(java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:31.166
+Unexpected IOException with stream:   [32mAnd [0m[32mdia es [0m[32m[1m11[0m                                                          [90m# es.uclm.esi.ConvocarReunionStepDefinitions.dia_es(java.lang.Integer)[0m
+
+
+# Created at 2020-12-15T16:55:31.167
+Unexpected IOException with stream:   [32mAnd [0m[32mmes es [0m[32m[1m15[0m                                                          [90m# es.uclm.esi.ConvocarReunionStepDefinitions.mes_es(java.lang.Integer)[0m
+
+
+# Created at 2020-12-15T16:55:31.167
+Unexpected IOException with stream:   [32mAnd [0m[32mano es [0m[32m[1m2020[0m                                                        [90m# es.uclm.esi.ConvocarReunionStepDefinitions.ano_es(java.lang.Integer)[0m
+
+
+# Created at 2020-12-15T16:55:31.168
+Unexpected IOException with stream:   [32mAnd [0m[32mhora es [0m[32m[1m"16:00"[0m                                                    [90m# es.uclm.esi.ConvocarReunionStepDefinitions.hora_es(java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:31.168
+Unexpected IOException with stream:   [32mAnd [0m[32mdescripcion es [0m[32m[1m"Prueba"[0m                                            [90m# es.uclm.esi.ConvocarReunionStepDefinitions.descripcion_es(java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:31.169
+Unexpected IOException with stream:   [32mAnd [0m[32masistentes son [0m[32m[1m"Fatima:pendiente,Victor:pendiente,admin:pendiente"[0m [90m# es.uclm.esi.ConvocarReunionStepDefinitions.asistentes_son(java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:31.459
+Unexpected IOException with stream:   [32mThen [0m[32mconvoco la reunion[0m                                                [90m# es.uclm.esi.ConvocarReunionStepDefinitions.convoco_la_reunion()[0m
+
+
+# Created at 2020-12-15T16:55:31.459
+Unexpected IOException with stream:   [32mThen [0m[32mla respuesta a convocar sera [0m[32m[1m400[0m                                  [90m# es.uclm.esi.ConvocarReunionStepDefinitions.la_respuesta_a_convocar_sera(java.lang.Integer)[0m
+
+
+# Created at 2020-12-15T16:55:31.460
+Unexpected IOException: 6,1,es.uclm.esi.RunCucumberTest,convocar #2,null,null,null
+
+
+# Created at 2020-12-15T16:55:31.461
+Unexpected IOException: 5,1,es.uclm.esi.RunCucumberTest,convocar #3,null,null,null
+
+
+# Created at 2020-12-15T16:55:31.462
+Unexpected IOException with stream: 2020-12-15 16:55:31 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [es.uclm.esi.CucumberTestContextConfiguration], using SpringBootContextLoader
+
+
+# Created at 2020-12-15T16:55:31.463
+Unexpected IOException with stream: 2020-12-15 16:55:31 - Could not detect default resource locations for test class [es.uclm.esi.CucumberTestContextConfiguration]: no resource found for suffixes {-context.xml, Context.groovy}.
+
+
+# Created at 2020-12-15T16:55:31.464
+Unexpected IOException with stream: 2020-12-15 16:55:31 - Could not detect default configuration classes for test class [es.uclm.esi.CucumberTestContextConfiguration]: CucumberTestContextConfiguration does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+
+
+# Created at 2020-12-15T16:55:31.467
+Unexpected IOException with stream: 2020-12-15 16:55:31 - Found @SpringBootConfiguration es.uclm.esi.SigetApplication for test class es.uclm.esi.CucumberTestContextConfiguration
+
+
+# Created at 2020-12-15T16:55:31.469
+Unexpected IOException with stream: 2020-12-15 16:55:31 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+
+
+# Created at 2020-12-15T16:55:31.472
+Unexpected IOException with stream: 2020-12-15 16:55:31 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@29f43fd8, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@25f0d0be, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4788a537, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@65cbb962, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6dc940fc, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4e9f18db, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4c3cad22, org.springframework.test.context.event.EventPublishingTestExecutionListener@74040d6e, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@53ed6db2, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@6502fed4, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4cfe0aeb, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@18c51167, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@207d6f30, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@527bc1b5, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6e6e2043, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@5e104ac0]
+
+
+# Created at 2020-12-15T16:55:31.475
+Unexpected IOException with stream: 
+
+
+# Created at 2020-12-15T16:55:31.476
+Unexpected IOException with stream: Scenario Outline: convocar              [90m# src/test/java/es/uclm/esi/features/3convocarReunion.feature:19[0m
+
+
+# Created at 2020-12-15T16:55:31.479
+Unexpected IOException with stream:   [32mWhen [0m[32mtitulo es [0m[32m[1m"test"[0m                 [90m# es.uclm.esi.ConvocarReunionStepDefinitions.titulo_es(java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:31.479
+Unexpected IOException with stream:   [32mAnd [0m[32mdia es [0m[32m[1m31[0m                         [90m# es.uclm.esi.ConvocarReunionStepDefinitions.dia_es(java.lang.Integer)[0m
+
+
+# Created at 2020-12-15T16:55:31.480
+Unexpected IOException with stream:   [32mAnd [0m[32mmes es [0m[32m[1m12[0m                         [90m# es.uclm.esi.ConvocarReunionStepDefinitions.mes_es(java.lang.Integer)[0m
+
+
+# Created at 2020-12-15T16:55:31.481
+Unexpected IOException with stream:   [32mAnd [0m[32mano es [0m[32m[1m2020[0m                       [90m# es.uclm.esi.ConvocarReunionStepDefinitions.ano_es(java.lang.Integer)[0m
+
+
+# Created at 2020-12-15T16:55:31.481
+Unexpected IOException with stream:   [32mAnd [0m[32mhora es [0m[32m[1m"23:00"[0m                   [90m# es.uclm.esi.ConvocarReunionStepDefinitions.hora_es(java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:31.482
+Unexpected IOException with stream:   [32mAnd [0m[32mdescripcion es [0m[32m[1m"test"[0m             [90m# es.uclm.esi.ConvocarReunionStepDefinitions.descripcion_es(java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:31.482
+Unexpected IOException with stream:   [32mAnd [0m[32masistentes son [0m[32m[1m"admin:pendiente"[0m  [90m# es.uclm.esi.ConvocarReunionStepDefinitions.asistentes_son(java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:31.778
+Unexpected IOException with stream:   [32mThen [0m[32mconvoco la reunion[0m               [90m# es.uclm.esi.ConvocarReunionStepDefinitions.convoco_la_reunion()[0m
+
+
+# Created at 2020-12-15T16:55:31.779
+Unexpected IOException with stream:   [32mThen [0m[32mla respuesta a convocar sera [0m[32m[1m200[0m [90m# es.uclm.esi.ConvocarReunionStepDefinitions.la_respuesta_a_convocar_sera(java.lang.Integer)[0m
+
+
+# Created at 2020-12-15T16:55:31.780
+Unexpected IOException: 6,1,es.uclm.esi.RunCucumberTest,convocar #3,null,null,null
+
+
+# Created at 2020-12-15T16:55:31.781
+Unexpected IOException: 5,1,es.uclm.esi.RunCucumberTest,aceptar,null,null,null
+
+
+# Created at 2020-12-15T16:55:31.782
+Unexpected IOException with stream: 2020-12-15 16:55:31 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [es.uclm.esi.CucumberTestContextConfiguration], using SpringBootContextLoader
+
+
+# Created at 2020-12-15T16:55:31.783
+Unexpected IOException with stream: 2020-12-15 16:55:31 - Could not detect default resource locations for test class [es.uclm.esi.CucumberTestContextConfiguration]: no resource found for suffixes {-context.xml, Context.groovy}.
+
+
+# Created at 2020-12-15T16:55:31.784
+Unexpected IOException with stream: 2020-12-15 16:55:31 - Could not detect default configuration classes for test class [es.uclm.esi.CucumberTestContextConfiguration]: CucumberTestContextConfiguration does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+
+
+# Created at 2020-12-15T16:55:31.787
+Unexpected IOException with stream: 2020-12-15 16:55:31 - Found @SpringBootConfiguration es.uclm.esi.SigetApplication for test class es.uclm.esi.CucumberTestContextConfiguration
+
+
+# Created at 2020-12-15T16:55:31.788
+Unexpected IOException with stream: 2020-12-15 16:55:31 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+
+
+# Created at 2020-12-15T16:55:31.789
+Unexpected IOException with stream: 2020-12-15 16:55:31 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@47102971, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1043e95d, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7ac136a8, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6a17383d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2c0acfaf, org.springframework.test.context.transaction.TransactionalTestExecutionListener@230cc272, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@500bc4cd, org.springframework.test.context.event.EventPublishingTestExecutionListener@30ec821, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@79031858, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@3c594a58, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@327adcb2, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@47c0451c, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@26e05464, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@509dc16a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@34660887, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@71cb53b2]
+
+
+# Created at 2020-12-15T16:55:31.792
+Unexpected IOException with stream: 
+
+
+# Created at 2020-12-15T16:55:31.793
+Unexpected IOException with stream: Scenario Outline: aceptar                  [90m# src/test/java/es/uclm/esi/features/4aceptarReunion.feature:11[0m
+
+
+# Created at 2020-12-15T16:55:32.179
+Unexpected IOException with stream:   [32mWhen [0m[32macepto la reunion[0m                   [90m# es.uclm.esi.AceptarReunionStepDefinitions.acepto_la_reunion()[0m
+
+
+# Created at 2020-12-15T16:55:32.180
+Unexpected IOException with stream:   [32mThen [0m[32mla respuesta a aceptar debe ser [0m[32m[1m200[0m [90m# es.uclm.esi.AceptarReunionStepDefinitions.la_respuesta_a_aceptar_debe_ser(java.lang.Integer)[0m
+
+
+# Created at 2020-12-15T16:55:32.181
+Unexpected IOException: 6,1,es.uclm.esi.RunCucumberTest,aceptar,null,null,null
+
+
+# Created at 2020-12-15T16:55:32.181
+Unexpected IOException: 5,1,es.uclm.esi.RunCucumberTest,rechazar,null,null,null
+
+
+# Created at 2020-12-15T16:55:32.182
+Unexpected IOException with stream: 2020-12-15 16:55:32 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [es.uclm.esi.CucumberTestContextConfiguration], using SpringBootContextLoader
+
+
+# Created at 2020-12-15T16:55:32.183
+Unexpected IOException with stream: 2020-12-15 16:55:32 - Could not detect default resource locations for test class [es.uclm.esi.CucumberTestContextConfiguration]: no resource found for suffixes {-context.xml, Context.groovy}.
+
+
+# Created at 2020-12-15T16:55:32.183
+Unexpected IOException with stream: 2020-12-15 16:55:32 - Could not detect default configuration classes for test class [es.uclm.esi.CucumberTestContextConfiguration]: CucumberTestContextConfiguration does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+
+
+# Created at 2020-12-15T16:55:32.185
+Unexpected IOException with stream: 2020-12-15 16:55:32 - Found @SpringBootConfiguration es.uclm.esi.SigetApplication for test class es.uclm.esi.CucumberTestContextConfiguration
+
+
+# Created at 2020-12-15T16:55:32.186
+Unexpected IOException with stream: 2020-12-15 16:55:32 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+
+
+# Created at 2020-12-15T16:55:32.187
+Unexpected IOException with stream: 2020-12-15 16:55:32 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@486b61fe, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@22a9cdbc, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@6c35bcfd, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1bfd06f5, org.springframework.test.context.support.DirtiesContextTestExecutionListener@88ae0e5, org.springframework.test.context.transaction.TransactionalTestExecutionListener@64a21865, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@25b19258, org.springframework.test.context.event.EventPublishingTestExecutionListener@5608e2b5, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@95abd59, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@7d4fed27, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@54459384, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@45c9cef3, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@19a51366, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1b81e3a0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@63208ae7, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@68156e26]
+
+
+# Created at 2020-12-15T16:55:32.190
+Unexpected IOException with stream: 
+
+
+# Created at 2020-12-15T16:55:32.191
+Unexpected IOException with stream: Scenario Outline: rechazar                  [90m# src/test/java/es/uclm/esi/features/5rechazarReunion.feature:11[0m
+
+
+# Created at 2020-12-15T16:55:32.559
+Unexpected IOException with stream:   [32mWhen [0m[32mrechazo la reunion[0m                   [90m# es.uclm.esi.RechazarReunionStepDefinitions.rechazo_la_reunion()[0m
+
+
+# Created at 2020-12-15T16:55:32.559
+Unexpected IOException with stream:   [32mThen [0m[32mla respuesta a rechazar debe ser [0m[32m[1m200[0m [90m# es.uclm.esi.RechazarReunionStepDefinitions.la_respuesta_a_rechazar_debe_ser(java.lang.Integer)[0m
+
+
+# Created at 2020-12-15T16:55:32.560
+Unexpected IOException: 6,1,es.uclm.esi.RunCucumberTest,rechazar,null,null,null
+
+
+# Created at 2020-12-15T16:55:32.561
+Unexpected IOException: 5,1,es.uclm.esi.RunCucumberTest,cancelar,null,null,null
+
+
+# Created at 2020-12-15T16:55:32.562
+Unexpected IOException with stream: 2020-12-15 16:55:32 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [es.uclm.esi.CucumberTestContextConfiguration], using SpringBootContextLoader
+
+
+# Created at 2020-12-15T16:55:32.562
+Unexpected IOException with stream: 2020-12-15 16:55:32 - Could not detect default resource locations for test class [es.uclm.esi.CucumberTestContextConfiguration]: no resource found for suffixes {-context.xml, Context.groovy}.
+
+
+# Created at 2020-12-15T16:55:32.563
+Unexpected IOException with stream: 2020-12-15 16:55:32 - Could not detect default configuration classes for test class [es.uclm.esi.CucumberTestContextConfiguration]: CucumberTestContextConfiguration does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+
+
+# Created at 2020-12-15T16:55:32.565
+Unexpected IOException with stream: 2020-12-15 16:55:32 - Found @SpringBootConfiguration es.uclm.esi.SigetApplication for test class es.uclm.esi.CucumberTestContextConfiguration
+
+
+# Created at 2020-12-15T16:55:32.566
+Unexpected IOException with stream: 2020-12-15 16:55:32 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+
+
+# Created at 2020-12-15T16:55:32.567
+Unexpected IOException with stream: 2020-12-15 16:55:32 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2d0f34d, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@447d1150, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@10309321, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@67a273a6, org.springframework.test.context.support.DirtiesContextTestExecutionListener@626dae84, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4eb6d408, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5a8bff64, org.springframework.test.context.event.EventPublishingTestExecutionListener@2ec088d0, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@21561a02, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@59388cb4, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5c4d3828, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@76e1ad79, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@67763fad, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7a3652db, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4f0fb9cd, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@347e5f30]
+
+
+# Created at 2020-12-15T16:55:32.569
+Unexpected IOException with stream: 
+
+
+# Created at 2020-12-15T16:55:32.570
+Unexpected IOException with stream: Scenario Outline: cancelar       [90m# src/test/java/es/uclm/esi/features/6cancelarReunion.feature:11[0m
+
+
+# Created at 2020-12-15T16:55:32.937
+Unexpected IOException with stream:   [32mWhen [0m[32mcancelo la reunion[0m        [90m# es.uclm.esi.CancelarReunionStepDefinitions.cancelo_la_reunion()[0m
+
+
+# Created at 2020-12-15T16:55:32.938
+Unexpected IOException with stream:   [32mThen [0m[32mla respuesta debe ser [0m[32m[1m200[0m [90m# es.uclm.esi.CancelarReunionStepDefinitions.la_respuesta_debe_ser(java.lang.Integer)[0m
+
+
+# Created at 2020-12-15T16:55:32.939
+Unexpected IOException: 6,1,es.uclm.esi.RunCucumberTest,cancelar,null,null,null
+
+
+# Created at 2020-12-15T16:55:32.939
+Unexpected IOException: 5,1,es.uclm.esi.RunCucumberTest,Buen Login,null,null,null
+
+
+# Created at 2020-12-15T16:55:32.940
+Unexpected IOException with stream: 2020-12-15 16:55:32 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [es.uclm.esi.CucumberTestContextConfiguration], using SpringBootContextLoader
+
+
+# Created at 2020-12-15T16:55:32.941
+Unexpected IOException with stream: 2020-12-15 16:55:32 - Could not detect default resource locations for test class [es.uclm.esi.CucumberTestContextConfiguration]: no resource found for suffixes {-context.xml, Context.groovy}.
+
+
+# Created at 2020-12-15T16:55:32.942
+Unexpected IOException with stream: 2020-12-15 16:55:32 - Could not detect default configuration classes for test class [es.uclm.esi.CucumberTestContextConfiguration]: CucumberTestContextConfiguration does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+
+
+# Created at 2020-12-15T16:55:32.943
+Unexpected IOException with stream: 2020-12-15 16:55:32 - Found @SpringBootConfiguration es.uclm.esi.SigetApplication for test class es.uclm.esi.CucumberTestContextConfiguration
+
+
+# Created at 2020-12-15T16:55:32.945
+Unexpected IOException with stream: 2020-12-15 16:55:32 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+
+
+# Created at 2020-12-15T16:55:32.946
+Unexpected IOException with stream: 2020-12-15 16:55:32 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@208e42da, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5728b428, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@afd28d6, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1bfaaae1, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4930b3d6, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5b2bd72c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@38f3ff07, org.springframework.test.context.event.EventPublishingTestExecutionListener@7610f75a, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@3af2544d, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@3f657688, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@18c9bda4, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@699223c0, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@416a4283, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@55afbd10, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5e1e9c, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@782ab174]
+
+
+# Created at 2020-12-15T16:55:32.948
+Unexpected IOException with stream: 
+
+
+# Created at 2020-12-15T16:55:32.949
+Unexpected IOException with stream: Scenario: Buen Login                       [90m# src/test/java/es/uclm/esi/features/7login.feature:6[0m
+
+
+# Created at 2020-12-15T16:55:33.178
+Unexpected IOException with stream:   [32mWhen [0m[32mHago login con [0m[32m[1m"admin"[0m[32m y [0m[32m[1m"Admin123"[0m [90m# es.uclm.esi.LoginStepDefinitions.hago_login_con_y(java.lang.String,java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:33.179
+Unexpected IOException with stream:   [32mThen [0m[32mel codigo de respuesta debe ser [0m[32m[1m200[0m [90m# es.uclm.esi.LoginStepDefinitions.el_codigo_de_respuesta_debe_ser(java.lang.Integer)[0m
+
+
+# Created at 2020-12-15T16:55:33.180
+Unexpected IOException: 6,1,es.uclm.esi.RunCucumberTest,Buen Login,null,null,null
+
+
+# Created at 2020-12-15T16:55:33.180
+Unexpected IOException: 5,1,es.uclm.esi.RunCucumberTest,Mal Login,null,null,null
+
+
+# Created at 2020-12-15T16:55:33.181
+Unexpected IOException with stream: 2020-12-15 16:55:33 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [es.uclm.esi.CucumberTestContextConfiguration], using SpringBootContextLoader
+
+
+# Created at 2020-12-15T16:55:33.182
+Unexpected IOException with stream: 2020-12-15 16:55:33 - Could not detect default resource locations for test class [es.uclm.esi.CucumberTestContextConfiguration]: no resource found for suffixes {-context.xml, Context.groovy}.
+
+
+# Created at 2020-12-15T16:55:33.183
+Unexpected IOException with stream: 2020-12-15 16:55:33 - Could not detect default configuration classes for test class [es.uclm.esi.CucumberTestContextConfiguration]: CucumberTestContextConfiguration does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+
+
+# Created at 2020-12-15T16:55:33.185
+Unexpected IOException with stream: 2020-12-15 16:55:33 - Found @SpringBootConfiguration es.uclm.esi.SigetApplication for test class es.uclm.esi.CucumberTestContextConfiguration
+
+
+# Created at 2020-12-15T16:55:33.186
+Unexpected IOException with stream: 2020-12-15 16:55:33 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+
+
+# Created at 2020-12-15T16:55:33.187
+Unexpected IOException with stream: 2020-12-15 16:55:33 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6bc78aa8, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4328fdfd, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3372b1fa, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1e7e07f1, org.springframework.test.context.support.DirtiesContextTestExecutionListener@49bb4c5c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4df88783, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6ba312a7, org.springframework.test.context.event.EventPublishingTestExecutionListener@58cc1ad, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@1646a4ec, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@1f0bed38, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6ccef254, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@facc7c9, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2c6e6314, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6c4c398c, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@778b2a03, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@1e7039b4]
+
+
+# Created at 2020-12-15T16:55:33.190
+Unexpected IOException with stream: 
+
+
+# Created at 2020-12-15T16:55:33.191
+Unexpected IOException with stream: Scenario: Mal Login                         [90m# src/test/java/es/uclm/esi/features/7login.feature:11[0m
+
+
+# Created at 2020-12-15T16:55:33.405
+Unexpected IOException with stream:   [32mWhen [0m[32mHago login con [0m[32m[1m"admin"[0m[32m y [0m[32m[1m"Admin1233"[0m [90m# es.uclm.esi.LoginStepDefinitions.hago_login_con_y(java.lang.String,java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:33.405
+Unexpected IOException with stream:   [32mThen [0m[32mel codigo de respuesta debe ser [0m[32m[1m401[0m  [90m# es.uclm.esi.LoginStepDefinitions.el_codigo_de_respuesta_debe_ser(java.lang.Integer)[0m
+
+
+# Created at 2020-12-15T16:55:33.406
+Unexpected IOException: 6,1,es.uclm.esi.RunCucumberTest,Mal Login,null,null,null
+
+
+# Created at 2020-12-15T16:55:33.407
+Unexpected IOException: 5,1,es.uclm.esi.RunCucumberTest,Mal Login 2,null,null,null
+
+
+# Created at 2020-12-15T16:55:33.407
+Unexpected IOException with stream: 2020-12-15 16:55:33 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [es.uclm.esi.CucumberTestContextConfiguration], using SpringBootContextLoader
+
+
+# Created at 2020-12-15T16:55:33.408
+Unexpected IOException with stream: 2020-12-15 16:55:33 - Could not detect default resource locations for test class [es.uclm.esi.CucumberTestContextConfiguration]: no resource found for suffixes {-context.xml, Context.groovy}.
+
+
+# Created at 2020-12-15T16:55:33.409
+Unexpected IOException with stream: 2020-12-15 16:55:33 - Could not detect default configuration classes for test class [es.uclm.esi.CucumberTestContextConfiguration]: CucumberTestContextConfiguration does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+
+
+# Created at 2020-12-15T16:55:33.410
+Unexpected IOException with stream: 2020-12-15 16:55:33 - Found @SpringBootConfiguration es.uclm.esi.SigetApplication for test class es.uclm.esi.CucumberTestContextConfiguration
+
+
+# Created at 2020-12-15T16:55:33.412
+Unexpected IOException with stream: 2020-12-15 16:55:33 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+
+
+# Created at 2020-12-15T16:55:33.413
+Unexpected IOException with stream: 2020-12-15 16:55:33 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@100d3885, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@36d2d16d, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@399cfab0, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@14975c35, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6da79732, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4d5e7a52, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@13c95033, org.springframework.test.context.event.EventPublishingTestExecutionListener@3d91d08b, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@6cdece0c, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@526ca52f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@b7d2f99, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@38dbb3f5, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@22efa44c, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@159d38e3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@777edc2e, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@125f9d2f]
+
+
+# Created at 2020-12-15T16:55:33.415
+Unexpected IOException with stream: 
+
+
+# Created at 2020-12-15T16:55:33.416
+Unexpected IOException with stream: Scenario: Mal Login 2                      [90m# src/test/java/es/uclm/esi/features/7login.feature:15[0m
+
+
+# Created at 2020-12-15T16:55:33.719
+Unexpected IOException with stream:   [32mWhen [0m[32mHago login con [0m[32m[1m""[0m[32m y [0m[32m[1m"Admin1233"[0m     [90m# es.uclm.esi.LoginStepDefinitions.hago_login_con_y(java.lang.String,java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:33.720
+Unexpected IOException with stream:   [32mThen [0m[32mel codigo de respuesta debe ser [0m[32m[1m401[0m [90m# es.uclm.esi.LoginStepDefinitions.el_codigo_de_respuesta_debe_ser(java.lang.Integer)[0m
+
+
+# Created at 2020-12-15T16:55:33.720
+Unexpected IOException: 6,1,es.uclm.esi.RunCucumberTest,Mal Login 2,null,null,null
+
+
+# Created at 2020-12-15T16:55:33.721
+Unexpected IOException: 5,1,es.uclm.esi.RunCucumberTest,Mal Login 3,null,null,null
+
+
+# Created at 2020-12-15T16:55:33.722
+Unexpected IOException with stream: 2020-12-15 16:55:33 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [es.uclm.esi.CucumberTestContextConfiguration], using SpringBootContextLoader
+
+
+# Created at 2020-12-15T16:55:33.722
+Unexpected IOException with stream: 2020-12-15 16:55:33 - Could not detect default resource locations for test class [es.uclm.esi.CucumberTestContextConfiguration]: no resource found for suffixes {-context.xml, Context.groovy}.
+
+
+# Created at 2020-12-15T16:55:33.723
+Unexpected IOException with stream: 2020-12-15 16:55:33 - Could not detect default configuration classes for test class [es.uclm.esi.CucumberTestContextConfiguration]: CucumberTestContextConfiguration does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+
+
+# Created at 2020-12-15T16:55:33.724
+Unexpected IOException with stream: 2020-12-15 16:55:33 - Found @SpringBootConfiguration es.uclm.esi.SigetApplication for test class es.uclm.esi.CucumberTestContextConfiguration
+
+
+# Created at 2020-12-15T16:55:33.726
+Unexpected IOException with stream: 2020-12-15 16:55:33 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+
+
+# Created at 2020-12-15T16:55:33.727
+Unexpected IOException with stream: 2020-12-15 16:55:33 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@316be596, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@30f5d039, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5e2d85ed, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7f769222, org.springframework.test.context.support.DirtiesContextTestExecutionListener@115f9f0f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@fb5e105, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3d850ff3, org.springframework.test.context.event.EventPublishingTestExecutionListener@76296de3, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@1be323ce, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@3bfe547e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2e112e65, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@136a0831, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1195b4c1, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@58815f29, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@7fc4205a, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@3c2c9413]
+
+
+# Created at 2020-12-15T16:55:33.729
+Unexpected IOException with stream: 
+
+
+# Created at 2020-12-15T16:55:33.730
+Unexpected IOException with stream: Scenario: Mal Login 3                      [90m# src/test/java/es/uclm/esi/features/7login.feature:19[0m
+
+
+# Created at 2020-12-15T16:55:34.099
+Unexpected IOException with stream:   [32mWhen [0m[32mHago login con [0m[32m[1m"admin"[0m[32m y [0m[32m[1m""[0m         [90m# es.uclm.esi.LoginStepDefinitions.hago_login_con_y(java.lang.String,java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:34.099
+Unexpected IOException with stream:   [32mThen [0m[32mel codigo de respuesta debe ser [0m[32m[1m401[0m [90m# es.uclm.esi.LoginStepDefinitions.el_codigo_de_respuesta_debe_ser(java.lang.Integer)[0m
+
+
+# Created at 2020-12-15T16:55:34.100
+Unexpected IOException: 6,1,es.uclm.esi.RunCucumberTest,Mal Login 3,null,null,null
+
+
+# Created at 2020-12-15T16:55:34.100
+Unexpected IOException: 5,1,es.uclm.esi.RunCucumberTest,modificar,null,null,null
+
+
+# Created at 2020-12-15T16:55:34.101
+Unexpected IOException with stream: 2020-12-15 16:55:34 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [es.uclm.esi.CucumberTestContextConfiguration], using SpringBootContextLoader
+
+
+# Created at 2020-12-15T16:55:34.102
+Unexpected IOException with stream: 2020-12-15 16:55:34 - Could not detect default resource locations for test class [es.uclm.esi.CucumberTestContextConfiguration]: no resource found for suffixes {-context.xml, Context.groovy}.
+
+
+# Created at 2020-12-15T16:55:34.103
+Unexpected IOException with stream: 2020-12-15 16:55:34 - Could not detect default configuration classes for test class [es.uclm.esi.CucumberTestContextConfiguration]: CucumberTestContextConfiguration does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+
+
+# Created at 2020-12-15T16:55:34.104
+Unexpected IOException with stream: 2020-12-15 16:55:34 - Found @SpringBootConfiguration es.uclm.esi.SigetApplication for test class es.uclm.esi.CucumberTestContextConfiguration
+
+
+# Created at 2020-12-15T16:55:34.106
+Unexpected IOException with stream: 2020-12-15 16:55:34 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+
+
+# Created at 2020-12-15T16:55:34.107
+Unexpected IOException with stream: 2020-12-15 16:55:34 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@528973d1, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@c915f2a, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5445dea7, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4c995480, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5517b139, org.springframework.test.context.transaction.TransactionalTestExecutionListener@53f9ccbe, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@29339080, org.springframework.test.context.event.EventPublishingTestExecutionListener@2f88fc72, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@477e0ec3, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@5a7fb6ae, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6f7d9af1, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7fe8000, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@30c19e2a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@17ac945a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@14053e4c, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@6708524c]
+
+
+# Created at 2020-12-15T16:55:34.110
+Unexpected IOException with stream: 
+
+
+# Created at 2020-12-15T16:55:34.110
+Unexpected IOException with stream: Scenario Outline: modificar                                 [90m# src/test/java/es/uclm/esi/features/8modificarReunion.feature:15[0m
+
+
+# Created at 2020-12-15T16:55:34.158
+Unexpected IOException with stream:   [32mWhen [0m[32mModifico la reunion [0m[32m[1m1[0m[32m con el token de usuario [0m[32m[1m"awed"[0m [90m# es.uclm.esi.ModificarReunionStepDefinitions.modifico_la_reunion_con_el_token_de_usuario(java.lang.Integer,java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:34.159
+Unexpected IOException with stream:   [32mAnd [0m[32mcambio el titulo a [0m[32m[1m"test"[0m                             [90m# es.uclm.esi.ModificarReunionStepDefinitions.cambio_el_titulo_a(java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:34.160
+Unexpected IOException with stream:   [32mAnd [0m[32mcambio la fecha a [0m[32m[1m"11-11-2020"[0m                        [90m# es.uclm.esi.ModificarReunionStepDefinitions.cambio_la_fecha_a(java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:34.160
+Unexpected IOException with stream:   [32mAnd [0m[32mcambio la hora a [0m[32m[1m"23:32"[0m                              [90m# es.uclm.esi.ModificarReunionStepDefinitions.cambio_la_hora_a(java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:34.198
+Unexpected IOException with stream:   [32mAnd [0m[32mel nuevo titulo sera [0m[32m[1m"test"[0m                           [90m# es.uclm.esi.ModificarReunionStepDefinitions.el_nuevo_titulo_sera(java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:34.199
+Unexpected IOException with stream:   [32mAnd [0m[32mla nueva fecha sera [0m[32m[1m"11-11-2020"[0m                      [90m# es.uclm.esi.ModificarReunionStepDefinitions.la_nueva_fecha_sera(java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:34.199
+Unexpected IOException with stream:   [32mAnd [0m[32mla nueva hora sera [0m[32m[1m"23:32"[0m                            [90m# es.uclm.esi.ModificarReunionStepDefinitions.la_nueva_hora_sera(java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:34.200
+Unexpected IOException: 6,1,es.uclm.esi.RunCucumberTest,modificar,null,null,null
+
+
+# Created at 2020-12-15T16:55:34.201
+Unexpected IOException: 5,1,es.uclm.esi.RunCucumberTest,registro #1,null,null,null
+
+
+# Created at 2020-12-15T16:55:34.202
+Unexpected IOException with stream: 2020-12-15 16:55:34 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [es.uclm.esi.CucumberTestContextConfiguration], using SpringBootContextLoader
+
+
+# Created at 2020-12-15T16:55:34.202
+Unexpected IOException with stream: 2020-12-15 16:55:34 - Could not detect default resource locations for test class [es.uclm.esi.CucumberTestContextConfiguration]: no resource found for suffixes {-context.xml, Context.groovy}.
+
+
+# Created at 2020-12-15T16:55:34.203
+Unexpected IOException with stream: 2020-12-15 16:55:34 - Could not detect default configuration classes for test class [es.uclm.esi.CucumberTestContextConfiguration]: CucumberTestContextConfiguration does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+
+
+# Created at 2020-12-15T16:55:34.205
+Unexpected IOException with stream: 2020-12-15 16:55:34 - Found @SpringBootConfiguration es.uclm.esi.SigetApplication for test class es.uclm.esi.CucumberTestContextConfiguration
+
+
+# Created at 2020-12-15T16:55:34.206
+Unexpected IOException with stream: 2020-12-15 16:55:34 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+
+
+# Created at 2020-12-15T16:55:34.207
+Unexpected IOException with stream: 2020-12-15 16:55:34 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7b9b6915, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@155d7d9f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@6cf6c8be, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7886d483, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5875c947, org.springframework.test.context.transaction.TransactionalTestExecutionListener@26baf653, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7c537902, org.springframework.test.context.event.EventPublishingTestExecutionListener@323f98c7, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@44f65036, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@350f2e95, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5273da5f, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1c449976, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6a450d28, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2672fd73, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6a9f7ac0, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@5228d1cc]
+
+
+# Created at 2020-12-15T16:55:34.209
+Unexpected IOException with stream: 
+
+
+# Created at 2020-12-15T16:55:34.210
+Unexpected IOException with stream: Scenario Outline: registro                                                                    [90m# src/test/java/es/uclm/esi/features/9registro.feature:11[0m
+
+
+# Created at 2020-12-15T16:55:34.214
+Unexpected IOException with stream:   [32mWhen [0m[32mregistro un usuario con usuario [0m[32m[1m"admin"[0m[32m, pass [0m[32m[1m"usuario_existente"[0m[32m y email [0m[32m[1m"e@mail.com"[0m [90m# es.uclm.esi.RegistroStepDefinitions.registro_un_usuario_con_usuario_pass_y_email(java.lang.String,java.lang.String,java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:34.214
+Unexpected IOException with stream:   [32mAnd [0m[32m[0m[32m[1m"no"[0m[32m es nuevo para borrarlo[0m                                                             [90m# es.uclm.esi.RegistroStepDefinitions.es_nuevo_para_borrarlo(java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:34.398
+Unexpected IOException with stream:   [32mThen [0m[32mel mensaje sera [0m[32m[1m"Error: Username is already taken!"[0m                                    [90m# es.uclm.esi.RegistroStepDefinitions.el_mensaje_sera(java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:34.399
+Unexpected IOException: 6,1,es.uclm.esi.RunCucumberTest,registro #1,null,null,null
+
+
+# Created at 2020-12-15T16:55:34.400
+Unexpected IOException: 5,1,es.uclm.esi.RunCucumberTest,registro #2,null,null,null
+
+
+# Created at 2020-12-15T16:55:34.401
+Unexpected IOException with stream: 2020-12-15 16:55:34 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [es.uclm.esi.CucumberTestContextConfiguration], using SpringBootContextLoader
+
+
+# Created at 2020-12-15T16:55:34.401
+Unexpected IOException with stream: 2020-12-15 16:55:34 - Could not detect default resource locations for test class [es.uclm.esi.CucumberTestContextConfiguration]: no resource found for suffixes {-context.xml, Context.groovy}.
+
+
+# Created at 2020-12-15T16:55:34.402
+Unexpected IOException with stream: 2020-12-15 16:55:34 - Could not detect default configuration classes for test class [es.uclm.esi.CucumberTestContextConfiguration]: CucumberTestContextConfiguration does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+
+
+# Created at 2020-12-15T16:55:34.404
+Unexpected IOException with stream: 2020-12-15 16:55:34 - Found @SpringBootConfiguration es.uclm.esi.SigetApplication for test class es.uclm.esi.CucumberTestContextConfiguration
+
+
+# Created at 2020-12-15T16:55:34.405
+Unexpected IOException with stream: 2020-12-15 16:55:34 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+
+
+# Created at 2020-12-15T16:55:34.406
+Unexpected IOException with stream: 2020-12-15 16:55:34 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@20127db8, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@44310773, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1125dcb7, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@713800f1, org.springframework.test.context.support.DirtiesContextTestExecutionListener@42f44cd3, org.springframework.test.context.transaction.TransactionalTestExecutionListener@eb2d161, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@314d7464, org.springframework.test.context.event.EventPublishingTestExecutionListener@c3c534, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@60b1932b, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@78107f85, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@22a4dab7, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3cd041b2, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5014a5c8, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2b830418, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2f7602bd, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@11150b30]
+
+
+# Created at 2020-12-15T16:55:34.408
+Unexpected IOException with stream: 
+
+
+# Created at 2020-12-15T16:55:34.409
+Unexpected IOException with stream: Scenario Outline: registro                                                                          [90m# src/test/java/es/uclm/esi/features/9registro.feature:12[0m
+
+
+# Created at 2020-12-15T16:55:34.412
+Unexpected IOException with stream:   [32mWhen [0m[32mregistro un usuario con usuario [0m[32m[1m"trabajador1"[0m[32m, pass [0m[32m[1m"usuario-existente"[0m[32m y email [0m[32m[1m"e@mail.com"[0m [90m# es.uclm.esi.RegistroStepDefinitions.registro_un_usuario_con_usuario_pass_y_email(java.lang.String,java.lang.String,java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:34.412
+Unexpected IOException with stream:   [32mAnd [0m[32m[0m[32m[1m"no"[0m[32m es nuevo para borrarlo[0m                                                                   [90m# es.uclm.esi.RegistroStepDefinitions.es_nuevo_para_borrarlo(java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:34.498
+Unexpected IOException with stream:   [32mThen [0m[32mel mensaje sera [0m[32m[1m"Error: Username is already taken!"[0m                                          [90m# es.uclm.esi.RegistroStepDefinitions.el_mensaje_sera(java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:34.499
+Unexpected IOException: 6,1,es.uclm.esi.RunCucumberTest,registro #2,null,null,null
+
+
+# Created at 2020-12-15T16:55:34.499
+Unexpected IOException: 5,1,es.uclm.esi.RunCucumberTest,registro #3,null,null,null
+
+
+# Created at 2020-12-15T16:55:34.500
+Unexpected IOException with stream: 2020-12-15 16:55:34 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [es.uclm.esi.CucumberTestContextConfiguration], using SpringBootContextLoader
+
+
+# Created at 2020-12-15T16:55:34.501
+Unexpected IOException with stream: 2020-12-15 16:55:34 - Could not detect default resource locations for test class [es.uclm.esi.CucumberTestContextConfiguration]: no resource found for suffixes {-context.xml, Context.groovy}.
+
+
+# Created at 2020-12-15T16:55:34.501
+Unexpected IOException with stream: 2020-12-15 16:55:34 - Could not detect default configuration classes for test class [es.uclm.esi.CucumberTestContextConfiguration]: CucumberTestContextConfiguration does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+
+
+# Created at 2020-12-15T16:55:34.503
+Unexpected IOException with stream: 2020-12-15 16:55:34 - Found @SpringBootConfiguration es.uclm.esi.SigetApplication for test class es.uclm.esi.CucumberTestContextConfiguration
+
+
+# Created at 2020-12-15T16:55:34.504
+Unexpected IOException with stream: 2020-12-15 16:55:34 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+
+
+# Created at 2020-12-15T16:55:34.505
+Unexpected IOException with stream: 2020-12-15 16:55:34 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@645ac63f, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@574abd68, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@48b63ed6, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@71c3e07b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@439aab42, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4139efa4, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@380039db, org.springframework.test.context.event.EventPublishingTestExecutionListener@562ed698, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@40f8a7a4, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@4eb224d0, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@77c5023c, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@577f904a, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@523fc886, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@d74f2b5, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@527fd5c5, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@79a9e200]
+
+
+# Created at 2020-12-15T16:55:34.508
+Unexpected IOException with stream: 
+
+
+# Created at 2020-12-15T16:55:34.508
+Unexpected IOException with stream: Scenario Outline: registro                                                                       [90m# src/test/java/es/uclm/esi/features/9registro.feature:13[0m
+
+
+# Created at 2020-12-15T16:55:34.511
+Unexpected IOException with stream:   [32mWhen [0m[32mregistro un usuario con usuario [0m[32m[1m"mail_existente"[0m[32m, pass [0m[32m[1m"patata"[0m[32m y email [0m[32m[1m"admin@admin.com"[0m [90m# es.uclm.esi.RegistroStepDefinitions.registro_un_usuario_con_usuario_pass_y_email(java.lang.String,java.lang.String,java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:34.511
+Unexpected IOException with stream:   [32mAnd [0m[32m[0m[32m[1m"no"[0m[32m es nuevo para borrarlo[0m                                                                [90m# es.uclm.esi.RegistroStepDefinitions.es_nuevo_para_borrarlo(java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:34.627
+Unexpected IOException with stream:   [32mThen [0m[32mel mensaje sera [0m[32m[1m"Error: Email is already in use!"[0m                                         [90m# es.uclm.esi.RegistroStepDefinitions.el_mensaje_sera(java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:34.628
+Unexpected IOException: 6,1,es.uclm.esi.RunCucumberTest,registro #3,null,null,null
+
+
+# Created at 2020-12-15T16:55:34.629
+Unexpected IOException: 5,1,es.uclm.esi.RunCucumberTest,registro #4,null,null,null
+
+
+# Created at 2020-12-15T16:55:34.630
+Unexpected IOException with stream: 2020-12-15 16:55:34 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [es.uclm.esi.CucumberTestContextConfiguration], using SpringBootContextLoader
+
+
+# Created at 2020-12-15T16:55:34.630
+Unexpected IOException with stream: 2020-12-15 16:55:34 - Could not detect default resource locations for test class [es.uclm.esi.CucumberTestContextConfiguration]: no resource found for suffixes {-context.xml, Context.groovy}.
+
+
+# Created at 2020-12-15T16:55:34.631
+Unexpected IOException with stream: 2020-12-15 16:55:34 - Could not detect default configuration classes for test class [es.uclm.esi.CucumberTestContextConfiguration]: CucumberTestContextConfiguration does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+
+
+# Created at 2020-12-15T16:55:34.633
+Unexpected IOException with stream: 2020-12-15 16:55:34 - Found @SpringBootConfiguration es.uclm.esi.SigetApplication for test class es.uclm.esi.CucumberTestContextConfiguration
+
+
+# Created at 2020-12-15T16:55:34.634
+Unexpected IOException with stream: 2020-12-15 16:55:34 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+
+
+# Created at 2020-12-15T16:55:34.635
+Unexpected IOException with stream: 2020-12-15 16:55:34 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@557e6e4b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7fb5cf0b, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@53c8fcc5, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6547ad5e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@436d9b8b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@12f1c97a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6cb3135, org.springframework.test.context.event.EventPublishingTestExecutionListener@5ebe41ef, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@71203870, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@6d069537, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@321b533b, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1e06cdae, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6e9595a6, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@37e31a6e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5f090522, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@774ac8d0]
+
+
+# Created at 2020-12-15T16:55:34.638
+Unexpected IOException with stream: 
+
+
+# Created at 2020-12-15T16:55:34.638
+Unexpected IOException with stream: Scenario Outline: registro                                                                             [90m# src/test/java/es/uclm/esi/features/9registro.feature:14[0m
+
+
+# Created at 2020-12-15T16:55:34.641
+Unexpected IOException with stream:   [32mWhen [0m[32mregistro un usuario con usuario [0m[32m[1m"mail-existente"[0m[32m, pass [0m[32m[1m"asasds"[0m[32m y email [0m[32m[1m"trabajador1@admin.com"[0m [90m# es.uclm.esi.RegistroStepDefinitions.registro_un_usuario_con_usuario_pass_y_email(java.lang.String,java.lang.String,java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:34.642
+Unexpected IOException with stream:   [32mAnd [0m[32m[0m[32m[1m"no"[0m[32m es nuevo para borrarlo[0m                                                                      [90m# es.uclm.esi.RegistroStepDefinitions.es_nuevo_para_borrarlo(java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:34.767
+Unexpected IOException with stream:   [32mThen [0m[32mel mensaje sera [0m[32m[1m"Error: Email is already in use!"[0m                                               [90m# es.uclm.esi.RegistroStepDefinitions.el_mensaje_sera(java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:34.768
+Unexpected IOException: 6,1,es.uclm.esi.RunCucumberTest,registro #4,null,null,null
+
+
+# Created at 2020-12-15T16:55:34.769
+Unexpected IOException: 5,1,es.uclm.esi.RunCucumberTest,registro #5,null,null,null
+
+
+# Created at 2020-12-15T16:55:34.770
+Unexpected IOException with stream: 2020-12-15 16:55:34 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [es.uclm.esi.CucumberTestContextConfiguration], using SpringBootContextLoader
+
+
+# Created at 2020-12-15T16:55:34.771
+Unexpected IOException with stream: 2020-12-15 16:55:34 - Could not detect default resource locations for test class [es.uclm.esi.CucumberTestContextConfiguration]: no resource found for suffixes {-context.xml, Context.groovy}.
+
+
+# Created at 2020-12-15T16:55:34.771
+Unexpected IOException with stream: 2020-12-15 16:55:34 - Could not detect default configuration classes for test class [es.uclm.esi.CucumberTestContextConfiguration]: CucumberTestContextConfiguration does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+
+
+# Created at 2020-12-15T16:55:34.773
+Unexpected IOException with stream: 2020-12-15 16:55:34 - Found @SpringBootConfiguration es.uclm.esi.SigetApplication for test class es.uclm.esi.CucumberTestContextConfiguration
+
+
+# Created at 2020-12-15T16:55:34.774
+Unexpected IOException with stream: 2020-12-15 16:55:34 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+
+
+# Created at 2020-12-15T16:55:34.775
+Unexpected IOException with stream: 2020-12-15 16:55:34 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@35b04b3a, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1a2f1788, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@d9831fa, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2c3574d1, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1b6b13f6, org.springframework.test.context.transaction.TransactionalTestExecutionListener@791ad444, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@35c13d7c, org.springframework.test.context.event.EventPublishingTestExecutionListener@325554e9, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@71e205f6, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@5e75477a, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6263bb15, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7a0959ac, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1ba53eae, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6f1ff437, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@10db51d2, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@20afae5c]
+
+
+# Created at 2020-12-15T16:55:34.777
+Unexpected IOException with stream: 
+
+
+# Created at 2020-12-15T16:55:34.778
+Unexpected IOException with stream: Scenario Outline: registro                                                                             [90m# src/test/java/es/uclm/esi/features/9registro.feature:15[0m
+
+
+# Created at 2020-12-15T16:55:34.781
+Unexpected IOException with stream:   [32mWhen [0m[32mregistro un usuario con usuario [0m[32m[1m"mail.existente"[0m[32m, pass [0m[32m[1m"patata"[0m[32m y email [0m[32m[1m"trabajador2@admin.com"[0m [90m# es.uclm.esi.RegistroStepDefinitions.registro_un_usuario_con_usuario_pass_y_email(java.lang.String,java.lang.String,java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:34.782
+Unexpected IOException with stream:   [32mAnd [0m[32m[0m[32m[1m"no"[0m[32m es nuevo para borrarlo[0m                                                                      [90m# es.uclm.esi.RegistroStepDefinitions.es_nuevo_para_borrarlo(java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:34.898
+Unexpected IOException with stream:   [32mThen [0m[32mel mensaje sera [0m[32m[1m"Error: Email is already in use!"[0m                                               [90m# es.uclm.esi.RegistroStepDefinitions.el_mensaje_sera(java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:34.899
+Unexpected IOException: 6,1,es.uclm.esi.RunCucumberTest,registro #5,null,null,null
+
+
+# Created at 2020-12-15T16:55:34.899
+Unexpected IOException: 5,1,es.uclm.esi.RunCucumberTest,registro #6,null,null,null
+
+
+# Created at 2020-12-15T16:55:34.900
+Unexpected IOException with stream: 2020-12-15 16:55:34 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [es.uclm.esi.CucumberTestContextConfiguration], using SpringBootContextLoader
+
+
+# Created at 2020-12-15T16:55:34.901
+Unexpected IOException with stream: 2020-12-15 16:55:34 - Could not detect default resource locations for test class [es.uclm.esi.CucumberTestContextConfiguration]: no resource found for suffixes {-context.xml, Context.groovy}.
+
+
+# Created at 2020-12-15T16:55:34.901
+Unexpected IOException with stream: 2020-12-15 16:55:34 - Could not detect default configuration classes for test class [es.uclm.esi.CucumberTestContextConfiguration]: CucumberTestContextConfiguration does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+
+
+# Created at 2020-12-15T16:55:34.903
+Unexpected IOException with stream: 2020-12-15 16:55:34 - Found @SpringBootConfiguration es.uclm.esi.SigetApplication for test class es.uclm.esi.CucumberTestContextConfiguration
+
+
+# Created at 2020-12-15T16:55:34.904
+Unexpected IOException with stream: 2020-12-15 16:55:34 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+
+
+# Created at 2020-12-15T16:55:34.905
+Unexpected IOException with stream: 2020-12-15 16:55:34 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@124da4a9, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@263549b, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@48fcd0c4, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@15fc4ac9, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6aebdc33, org.springframework.test.context.transaction.TransactionalTestExecutionListener@72b48a79, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5c600e1b, org.springframework.test.context.event.EventPublishingTestExecutionListener@2bbdbd5c, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@1f03e65c, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@49324087, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@15fe9f6c, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@53ef97d2, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@53deaaf5, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@8b3ee71, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@695715f4, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@46295e0b]
+
+
+# Created at 2020-12-15T16:55:34.907
+Unexpected IOException with stream: 
+
+
+# Created at 2020-12-15T16:55:34.908
+Unexpected IOException with stream: Scenario Outline: registro                                                               [90m# src/test/java/es/uclm/esi/features/9registro.feature:16[0m
+
+
+# Created at 2020-12-15T16:55:34.915
+Unexpected IOException with stream:   [32mWhen [0m[32mregistro un usuario con usuario [0m[32m[1m"ejemplo1"[0m[32m, pass [0m[32m[1m"pass11"[0m[32m y email [0m[32m[1m"ej1@admin.com"[0m [90m# es.uclm.esi.RegistroStepDefinitions.registro_un_usuario_con_usuario_pass_y_email(java.lang.String,java.lang.String,java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:34.916
+Unexpected IOException with stream:   [32mAnd [0m[32m[0m[32m[1m"si"[0m[32m es nuevo para borrarlo[0m                                                        [90m# es.uclm.esi.RegistroStepDefinitions.es_nuevo_para_borrarlo(java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:35.328
+Unexpected IOException with stream:   [32mThen [0m[32mel mensaje sera [0m[32m[1m"User registered successfully!"[0m                                   [90m# es.uclm.esi.RegistroStepDefinitions.el_mensaje_sera(java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:35.328
+Unexpected IOException: 6,1,es.uclm.esi.RunCucumberTest,registro #6,null,null,null
+
+
+# Created at 2020-12-15T16:55:35.329
+Unexpected IOException: 5,1,es.uclm.esi.RunCucumberTest,registro #7,null,null,null
+
+
+# Created at 2020-12-15T16:55:35.330
+Unexpected IOException with stream: 2020-12-15 16:55:35 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [es.uclm.esi.CucumberTestContextConfiguration], using SpringBootContextLoader
+
+
+# Created at 2020-12-15T16:55:35.330
+Unexpected IOException with stream: 2020-12-15 16:55:35 - Could not detect default resource locations for test class [es.uclm.esi.CucumberTestContextConfiguration]: no resource found for suffixes {-context.xml, Context.groovy}.
+
+
+# Created at 2020-12-15T16:55:35.331
+Unexpected IOException with stream: 2020-12-15 16:55:35 - Could not detect default configuration classes for test class [es.uclm.esi.CucumberTestContextConfiguration]: CucumberTestContextConfiguration does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+
+
+# Created at 2020-12-15T16:55:35.333
+Unexpected IOException with stream: 2020-12-15 16:55:35 - Found @SpringBootConfiguration es.uclm.esi.SigetApplication for test class es.uclm.esi.CucumberTestContextConfiguration
+
+
+# Created at 2020-12-15T16:55:35.334
+Unexpected IOException with stream: 2020-12-15 16:55:35 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+
+
+# Created at 2020-12-15T16:55:35.335
+Unexpected IOException with stream: 2020-12-15 16:55:35 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6f694dd2, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@741e4061, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@8bbce0b, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6346d29e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@46e404f9, org.springframework.test.context.transaction.TransactionalTestExecutionListener@40ff490c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@16620c8e, org.springframework.test.context.event.EventPublishingTestExecutionListener@43e5eefe, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@25c0f9b7, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@1f4d632a, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@19cd1a31, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@75b385e8, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@579cc7a8, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@23bcaa42, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@52512096, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@3b2463f1]
+
+
+# Created at 2020-12-15T16:55:35.337
+Unexpected IOException with stream: 
+
+
+# Created at 2020-12-15T16:55:35.337
+Unexpected IOException with stream: Scenario Outline: registro                                                                     [90m# src/test/java/es/uclm/esi/features/9registro.feature:17[0m
+
+
+# Created at 2020-12-15T16:55:35.340
+Unexpected IOException with stream:   [32mWhen [0m[32mregistro un usuario con usuario [0m[32m[1m"2ejemplo"[0m[32m, pass [0m[32m[1m"2pass2"[0m[32m y email [0m[32m[1m"trabajador2@ej2.com"[0m [90m# es.uclm.esi.RegistroStepDefinitions.registro_un_usuario_con_usuario_pass_y_email(java.lang.String,java.lang.String,java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:35.340
+Unexpected IOException with stream:   [32mAnd [0m[32m[0m[32m[1m"si"[0m[32m es nuevo para borrarlo[0m                                                              [90m# es.uclm.esi.RegistroStepDefinitions.es_nuevo_para_borrarlo(java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:35.757
+Unexpected IOException with stream:   [32mThen [0m[32mel mensaje sera [0m[32m[1m"User registered successfully!"[0m                                         [90m# es.uclm.esi.RegistroStepDefinitions.el_mensaje_sera(java.lang.String)[0m
+
+
+# Created at 2020-12-15T16:55:35.757
+Unexpected IOException: 6,1,es.uclm.esi.RunCucumberTest,registro #7,null,null,null
+
+
+# Created at 2020-12-15T16:55:35.763
+Unexpected IOException with stream: [32m[1m???????????????????????????????????????????????????????????????????????????????[0m
+[32m[1m?[0m Share your Cucumber Report with your team at [36m[1m[4mhttps://reports.cucumber.io[0m    [32m[1m?[0m
+[32m[1m?[0m Activate publishing with one of the following:                              [32m[1m?[0m
+[32m[1m?[0m                                                                             [32m[1m?[0m
+[32m[1m?[0m src/test/resources/cucumber.properties:    [36mcucumber.publish.enabled[0m=[36mtrue[0m    [32m[1m?[0m
+[32m[1m?[0m Environment variable:                      [36mCUCUMBER_PUBLISH_ENABLED[0m=[36mtrue[0m    [32m[1m?[0m
+[32m[1m?[0m JUnit:                                     [36m@CucumberOptions[0m(publish = [36mtrue[0m) [32m[1m?[0m
+[32m[1m?[0m                                                                             [32m[1m?[0m
+[32m[1m?[0m More information at [36mhttps://reports.cucumber.io/docs/cucumber-jvm[0m           [32m[1m?[0m
+[32m[1m?[0m                                                                             [32m[1m?[0m
+[32m[1m?[0m To disable this message, add [1mcucumber.publish.quiet[0m[1m=[0m[1mtrue[0m to                 [32m[1m?[0m
+[32m[1m?[0m [1msrc/test/resources/cucumber.properties[0m                                      [32m[1m?[0m
+[32m[1m???????????????????????????????????????????????????????????????????????????????[0m
+
+
+# Created at 2020-12-15T16:55:35.765
+Unexpected IOException: 2,1,org.apache.maven.surefire.junitplatform.JUnitPlatformProvider,es.uclm.esi.RunCucumberTest,null,null,null
+
+
