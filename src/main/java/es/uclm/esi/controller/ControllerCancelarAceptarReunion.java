@@ -45,19 +45,19 @@ public class ControllerCancelarAceptarReunion {
 
 		List<Reunion> lista = this.rReuniones.findAll();
 		
-		List<Reunion> lista_aux = new ArrayList<Reunion>();
+		List<Reunion> listaaux = new ArrayList<>();
 		
 		for(int i = 0; i < lista.size(); i++) {
 			List<Asistente> as = lista.get(i).getAsistentes();
 			for(Asistente asis: as) {
 				if(asis.getUsuario().equals(asistentes)) {
-					lista_aux.add(lista.get(i));
+					listaaux.add(lista.get(i));
 				}
 			}
 		}
 		
 		
-        return lista_aux;
+        return listaaux;
     }
 	
 

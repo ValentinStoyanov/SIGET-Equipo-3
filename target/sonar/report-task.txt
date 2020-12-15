@@ -3,5 +3,5 @@ projectKey=ValentinStoyanov_SIGET-Equipo-3
 serverUrl=https://sonarcloud.io
 serverVersion=8.0.0.15678
 dashboardUrl=https://sonarcloud.io/dashboard?id=ValentinStoyanov_SIGET-Equipo-3
-ceTaskId=AXZmyvsFdSRYP2bKHrBn
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXZmyvsFdSRYP2bKHrBn
+ceTaskId=AXZnPX3Tw5lrBA3z5WJj
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXZnPX3Tw5lrBA3z5WJj

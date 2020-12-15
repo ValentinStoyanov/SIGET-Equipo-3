@@ -1,16 +1,17 @@
 
-3es.uclm.esi.model.User#getEmail()Ljava/lang/String;e
-[C:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/model/User.java< <("1* 
+6es.uclm.esi.model.User#getUsername()Ljava/lang/String;e
+[C:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/model/User.java< <("1*£
 1e
-[C:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/model/User.java= =(¯
-¬
+[C:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/model/User.java=	 =(²
+¯
 e
-[C:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/model/User.java= =(
-%0java.lang.String"__id*%*#
-es.uclm.esi.model.User"
-email"
+[C:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/model/User.java=	 =(
+%0java.lang.String"__id*(*&
+es.uclm.esi.model.User"
+
+username"
 e
-[C:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/model/User.java= =(
+[C:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/model/User.java= =(
 
 %0java.lang.StringB
 es.uclm.esi.model.User

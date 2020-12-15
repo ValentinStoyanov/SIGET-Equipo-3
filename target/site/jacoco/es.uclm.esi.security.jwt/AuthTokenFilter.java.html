@@ -27,7 +27,7 @@ import es.uclm.esi.security.services.UserDetailsServiceImpl;
   @Autowired
   private UserDetailsServiceImpl userDetailsService;
 
-<span class="fc" id="L30">  private static final Logger logger = LoggerFactory.getLogger(AuthTokenFilter.class);</span>
+<span class="fc" id="L30">  private static final Logger personal = LoggerFactory.getLogger(AuthTokenFilter.class);</span>
 
   @Override
   protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
@@ -45,8 +45,8 @@ import es.uclm.esi.security.services.UserDetailsServiceImpl;
 <span class="nc" id="L45">        SecurityContextHolder.getContext().setAuthentication(authentication);</span>
       }
 <span class="nc" id="L47">    } catch (Exception e) {</span>
-<span class="nc" id="L48">      logger.error(&quot;Cannot set user authentication: {}&quot;, e);</span>
-<span class="nc" id="L49">    }</span>
+<span class="nc" id="L48">    	personal.error(&quot;Cannot set user authentication: {}&quot;, e);</span>
+    }
 
 <span class="nc" id="L51">    filterChain.doFilter(request, response);</span>
 <span class="nc" id="L52">  }</span>

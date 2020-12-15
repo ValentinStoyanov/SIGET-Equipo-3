@@ -52,7 +52,7 @@ import es.uclm.esi.security.services.UserDetailsImpl;
 	JwtUtils jwtUtils;
 
 	@PostMapping(&quot;/signin&quot;)
-	public ResponseEntity&lt;?&gt; authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
+	public ResponseEntity&lt;JwtResponse&gt; authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
 
 <span class="nc" id="L57">		Authentication authentication = authenticationManager.authenticate(</span>
 <span class="nc" id="L58">				new UsernamePasswordAuthenticationToken(loginRequest.getUsername(), loginRequest.getPassword()));</span>
@@ -69,38 +69,40 @@ import es.uclm.esi.security.services.UserDetailsImpl;
 <span class="nc" id="L69">												 userDetails.getId(), </span>
 <span class="nc" id="L70">												 userDetails.getUsername(), </span>
 <span class="nc" id="L71">												 userDetails.getEmail(), </span>
-												 roles));
+<span class="nc" id="L72">												 roles));</span>
 	}
 
 	@PostMapping(&quot;/signup&quot;)
-	public ResponseEntity&lt;?&gt; registerUser(@Valid @RequestBody SignupRequest signUpRequest) {
-<span class="nc bnc" id="L77" title="All 2 branches missed.">		if (userRepository.existsByUsername(signUpRequest.getUsername())) {</span>
-<span class="nc" id="L78">			return ResponseEntity</span>
-<span class="nc" id="L79">					.badRequest()</span>
-<span class="nc" id="L80">					.body(new MessageResponse(&quot;Error: Username is already taken!&quot;));</span>
+	public ResponseEntity&lt;MessageResponse&gt; registerUser(@Valid @RequestBody SignupRequest signUpRequest) {
+<span class="nc" id="L77">		boolean b = userRepository.existsByUsername(signUpRequest.getUsername());</span>
+<span class="nc bnc" id="L78" title="All 2 branches missed.">		if (Boolean.TRUE.equals(b)) {</span>
+<span class="nc" id="L79">			return ResponseEntity</span>
+<span class="nc" id="L80">					.badRequest()</span>
+<span class="nc" id="L81">					.body(new MessageResponse(&quot;Error: Username is already taken!&quot;));</span>
 		}
-
-<span class="nc bnc" id="L83" title="All 2 branches missed.">		if (userRepository.existsByEmail(signUpRequest.getEmail())) {</span>
-<span class="nc" id="L84">			return ResponseEntity</span>
-<span class="nc" id="L85">					.badRequest()</span>
-<span class="nc" id="L86">					.body(new MessageResponse(&quot;Error: Email is already in use!&quot;));</span>
+		
+<span class="nc" id="L84">		b = userRepository.existsByEmail(signUpRequest.getEmail());</span>
+<span class="nc bnc" id="L85" title="All 2 branches missed.">		if (Boolean.TRUE.equals(b)) {</span>
+<span class="nc" id="L86">			return ResponseEntity</span>
+<span class="nc" id="L87">					.badRequest()</span>
+<span class="nc" id="L88">					.body(new MessageResponse(&quot;Error: Email is already in use!&quot;));</span>
 		}
 
 		// Create new user's account
-<span class="nc" id="L90">		User user = new User(signUpRequest.getUsername(), </span>
-<span class="nc" id="L91">							 signUpRequest.getEmail(),</span>
-<span class="nc" id="L92">							 encoder.encode(signUpRequest.getPassword()));</span>
+<span class="nc" id="L92">		User user = new User(signUpRequest.getUsername(), </span>
+<span class="nc" id="L93">							 signUpRequest.getEmail(),</span>
+<span class="nc" id="L94">							 encoder.encode(signUpRequest.getPassword()));</span>
 		
 		//lo de arriba lo comento ya que solo se registra el usuario como USER y el rol solo se lo puede asignar un admin en el panel (no implementado)
-<span class="nc" id="L95">		Set&lt;Role&gt; roles = new HashSet&lt;&gt;();</span>
-<span class="nc" id="L96">		Role userRole = roleRepository.findByName(ERole.ROLE_USER)</span>
-<span class="nc" id="L97">					.orElseThrow(() -&gt; new RuntimeException(&quot;Error: Role is not found.&quot;));</span>
-<span class="nc" id="L98">			roles.add(userRole);</span>
+<span class="nc" id="L97">		Set&lt;Role&gt; roles = new HashSet&lt;&gt;();</span>
+<span class="nc" id="L98">		Role userRole = roleRepository.findByName(ERole.ROLE_USER)</span>
+<span class="nc" id="L99">					.orElseThrow(() -&gt; new RuntimeException(&quot;Error: Role is not found.&quot;));</span>
+<span class="nc" id="L100">			roles.add(userRole);</span>
 		//fin de lo que sustituye a lo comentado
-<span class="nc" id="L100">		user.setRoles(roles);</span>
-<span class="nc" id="L101">		userRepository.save(user);</span>
+<span class="nc" id="L102">		user.setRoles(roles);</span>
+<span class="nc" id="L103">		userRepository.save(user);</span>
 
-<span class="nc" id="L103">		return ResponseEntity.ok(new MessageResponse(&quot;User registered successfully!&quot;));</span>
+<span class="nc" id="L105">		return ResponseEntity.ok(new MessageResponse(&quot;User registered successfully!&quot;));</span>
 	}
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

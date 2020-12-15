@@ -21,7 +21,7 @@ import es.uclm.esi.repository.UserRepository;
 	@Transactional
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 <span class="fc" id="L23">		User user = userRepository.findByUsername(username)</span>
-<span class="pc" id="L24">				.orElseThrow(() -&gt; new UsernameNotFoundException(&quot;User Not Found with username: &quot; + username));</span>
+<span class="fc" id="L24">				.orElseThrow(() -&gt; new UsernameNotFoundException(&quot;User Not Found with username: &quot; + username));</span>
 
 <span class="fc" id="L26">		return UserDetailsImpl.build(user);</span>
 	}

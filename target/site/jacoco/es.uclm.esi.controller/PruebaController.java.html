@@ -2,20 +2,22 @@
 
 import org.springframework.web.bind.annotation.*;
 
+import jdk.jfr.internal.Logger;
+
 import java.util.Map;
 
 import org.json.JSONObject;
 
 @RestController
-<span class="fc" id="L10">public class PruebaController {</span>
+<span class="fc" id="L12">public class PruebaController {</span>
 
 	@PostMapping(&quot;/pruebaConexion&quot;)
     public String pruebaConexion(@RequestBody Map&lt;String, Object&gt; prueba){
-<span class="nc" id="L14">		JSONObject jso=new JSONObject(prueba);</span>
-<span class="nc" id="L15">		System.out.println(&quot;Pues mira me ha llegao esto: &quot;+ jso.getInt(&quot;id&quot;));</span>
-<span class="nc" id="L16">		JSONObject jsoret = new JSONObject();</span>
-<span class="nc" id="L17">		jsoret.put(&quot;hey&quot;, &quot;hola&quot;);</span>
-<span class="nc" id="L18">        return jsoret.toString();</span>
+<span class="nc" id="L16">		JSONObject jso=new JSONObject(prueba);</span>
+<span class="nc" id="L17">		Logger.log(null, null, &quot;Pues mira me ha llegao esto: &quot;+ jso.getInt(&quot;id&quot;));</span>
+<span class="nc" id="L18">		JSONObject jsoret = new JSONObject();</span>
+<span class="nc" id="L19">		jsoret.put(&quot;hey&quot;, &quot;hola&quot;);</span>
+<span class="nc" id="L20">        return jsoret.toString();</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

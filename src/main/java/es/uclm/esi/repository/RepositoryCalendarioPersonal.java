@@ -9,7 +9,7 @@ import es.uclm.esi.model.Reunion;
 
 public interface RepositoryCalendarioPersonal extends MongoRepository<Reunion,String> {
 	
-	Reunion findById(int _id);
+	Reunion findById(int id);
 
 	@Query(value = "{'dia': ?0, 'mes': ?1, 'ano' : ?2 }")
 	List<Reunion> findByDia(int dia, int mes, int ano);

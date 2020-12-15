@@ -9,11 +9,9 @@ import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import es.uclm.esi.model.Asistente;
@@ -27,7 +25,7 @@ import io.jsonwebtoken.Jwts;
  *         el calendario personal
  */
 @RestController
-<span class="fc" id="L30">public class ControllerCalendarioPersonal { </span>
+<span class="fc" id="L28">public class ControllerCalendarioPersonal { </span>
 
 	@Autowired
 	RepositoryCalendarioPersonal calendarioRepository;
@@ -42,72 +40,72 @@ import io.jsonwebtoken.Jwts;
 	@PostMapping(&quot;/getCalendarioPersonalMes&quot;)
 	@PreAuthorize(&quot;hasRole('USER') or hasRole('ADMIN')&quot;)
 	public String getCalendarioPersonalMes(@RequestBody Map&lt;String, Object&gt; entrada,@RequestHeader(&quot;Authorization&quot;) String token) {
-<span class="nc" id="L45">		JSONObject jso = new JSONObject(entrada);</span>
-<span class="nc" id="L46">		int mespeticion = jso.getInt(&quot;mes&quot;);</span>
-<span class="nc" id="L47">		int anopeticion = jso.getInt(&quot;ano&quot;);</span>
-<span class="nc" id="L48">		String usuario = Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(token.substring(7, token.length())).getBody().getSubject();</span>
-<span class="nc" id="L49">		List&lt;Reunion&gt; reuniones = calendarioRepository.findReunionesMes(mespeticion, anopeticion);</span>
-<span class="nc" id="L50">		ArrayList&lt;Integer&gt; dias = new ArrayList&lt;Integer&gt;();</span>
+<span class="nc" id="L43">		JSONObject jso = new JSONObject(entrada);</span>
+<span class="nc" id="L44">		int mespeticion = jso.getInt(&quot;mes&quot;);</span>
+<span class="nc" id="L45">		int anopeticion = jso.getInt(&quot;ano&quot;);</span>
+<span class="nc" id="L46">		String usuario = Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(token.substring(7, token.length())).getBody().getSubject();</span>
+<span class="nc" id="L47">		List&lt;Reunion&gt; reuniones = calendarioRepository.findReunionesMes(mespeticion, anopeticion);</span>
+<span class="nc" id="L48">		ArrayList&lt;Integer&gt; dias = new ArrayList&lt;&gt;();</span>
 		int dia;
 		ArrayList&lt;Asistente&gt; asistentes;
 		//Hay que controlar que no exista usuario porque no se haya pasado el token o cualquier tipo de error
-<span class="nc bnc" id="L54" title="All 2 branches missed.">		for (Reunion reunion : reuniones) {</span>
-<span class="nc" id="L55">			asistentes = reunion.getAsistentes();</span>
-<span class="nc bnc" id="L56" title="All 2 branches missed.">			for (Asistente asistente : asistentes) {</span>
-<span class="nc bnc" id="L57" title="All 2 branches missed.">				if(asistente.getUsuario().equalsIgnoreCase(usuario)) { </span>
-<span class="nc" id="L58">					dia = reunion.getDia();</span>
-<span class="nc bnc" id="L59" title="All 2 branches missed.">					if(!dias.contains(dia)) {</span>
-<span class="nc" id="L60">						dias.add(dia);</span>
+<span class="nc bnc" id="L52" title="All 2 branches missed.">		for (Reunion reunion : reuniones) {</span>
+<span class="nc" id="L53">			asistentes = reunion.getAsistentes();</span>
+<span class="nc bnc" id="L54" title="All 2 branches missed.">			for (Asistente asistente : asistentes) {</span>
+<span class="nc bnc" id="L55" title="All 2 branches missed.">				if(asistente.getUsuario().equalsIgnoreCase(usuario)) { </span>
+<span class="nc" id="L56">					dia = reunion.getDia();</span>
+<span class="nc bnc" id="L57" title="All 2 branches missed.">					if(!dias.contains(dia)) {</span>
+<span class="nc" id="L58">						dias.add(dia);</span>
 					}
 				}
-<span class="nc" id="L63">			}</span>
-<span class="nc" id="L64">		}</span>
-<span class="nc" id="L65">		JSONObject jsoret = new JSONObject();</span>
+			}
+		}
+<span class="nc" id="L63">		JSONObject jsoret = new JSONObject();</span>
 
-<span class="nc" id="L67">		int[] diasjson = new int[dias.size()];</span>
-<span class="nc bnc" id="L68" title="All 2 branches missed.">		for (int i = 0; i &lt; dias.size(); i++) {</span>
-<span class="nc" id="L69">			diasjson[i] = dias.get(i);</span>
+<span class="nc" id="L65">		int[] diasjson = new int[dias.size()];</span>
+<span class="nc bnc" id="L66" title="All 2 branches missed.">		for (int i = 0; i &lt; dias.size(); i++) {</span>
+<span class="nc" id="L67">			diasjson[i] = dias.get(i);</span>
 		}
 		
-<span class="nc" id="L72">		jsoret.put(&quot;reuniones&quot;, diasjson);</span>
-<span class="nc" id="L73">		jsoret.put(&quot;mes&quot;, mespeticion);</span>
-<span class="nc" id="L74">		jsoret.put(&quot;ano&quot;, anopeticion);</span>
-<span class="nc" id="L75">		jsoret.put(&quot;usuario&quot;, usuario);</span>
-<span class="nc" id="L76">		return jsoret.toString();</span>
+<span class="nc" id="L70">		jsoret.put(&quot;reuniones&quot;, diasjson);</span>
+<span class="nc" id="L71">		jsoret.put(&quot;mes&quot;, mespeticion);</span>
+<span class="nc" id="L72">		jsoret.put(&quot;ano&quot;, anopeticion);</span>
+<span class="nc" id="L73">		jsoret.put(&quot;usuario&quot;, usuario);</span>
+<span class="nc" id="L74">		return jsoret.toString();</span>
 	}
 
 	@PostMapping(&quot;/getDetallesReunion&quot;)
 	@PreAuthorize(&quot;hasRole('USER') or hasRole('ADMIN')&quot;)
 	public String getDetallesReunion(@RequestBody Map&lt;String, Object&gt; entrada,@RequestHeader(&quot;Authorization&quot;) String token) {
-<span class="nc" id="L82">		JSONObject jso = new JSONObject(entrada);		</span>
-<span class="nc" id="L83">		JSONObject jsoret = new JSONObject();</span>
-<span class="nc" id="L84">		JSONArray jsa = new JSONArray();</span>
-<span class="nc" id="L85">		String usuario = Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(token.substring(7, token.length())).getBody().getSubject();</span>
-<span class="nc" id="L86">		List&lt;Reunion&gt; reuniones = calendarioRepository.findByDia(jso.getInt(&quot;dia&quot;),jso.getInt(&quot;mes&quot;),jso.getInt(&quot;ano&quot;));</span>
+<span class="nc" id="L80">		JSONObject jso = new JSONObject(entrada);		</span>
+<span class="nc" id="L81">		JSONObject jsoret = new JSONObject();</span>
+<span class="nc" id="L82">		JSONArray jsa = new JSONArray();</span>
+<span class="nc" id="L83">		String usuario = Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(token.substring(7, token.length())).getBody().getSubject();</span>
+<span class="nc" id="L84">		List&lt;Reunion&gt; reuniones = calendarioRepository.findByDia(jso.getInt(&quot;dia&quot;),jso.getInt(&quot;mes&quot;),jso.getInt(&quot;ano&quot;));</span>
 		ArrayList&lt;Asistente&gt; asistentes;
-<span class="nc" id="L88">		int contadorReuniones = 1;</span>
-<span class="nc bnc" id="L89" title="All 2 branches missed.">		for (Reunion reunion : reuniones) {</span>
-<span class="nc" id="L90">			asistentes = reunion.getAsistentes();</span>
-<span class="nc bnc" id="L91" title="All 2 branches missed.">			for (Asistente asistente : asistentes) {</span>
-<span class="nc bnc" id="L92" title="All 2 branches missed.">				if (asistente.getUsuario().equalsIgnoreCase(usuario)) {</span>
-<span class="nc" id="L93">					JSONObject jsoreunion = new JSONObject();</span>
-<span class="nc" id="L94">					jsoreunion.put(&quot;identificador&quot;, reunion.getId());</span>
-<span class="nc" id="L95">					jsoreunion.put(&quot;titulo&quot;, reunion.getTitulo());</span>
-<span class="nc" id="L96">					jsoreunion.put(&quot;id&quot;, contadorReuniones);</span>
-<span class="nc" id="L97">					jsoreunion.put(&quot;hora&quot;, reunion.getHora());</span>
-<span class="nc" id="L98">					jsoreunion.put(&quot;asistentes&quot;, asistentes);</span>
-<span class="nc" id="L99">					jsoreunion.put(&quot;descripcion&quot;, reunion.getDescripcion());</span>
-<span class="nc" id="L100">					jsa.put(jsoreunion);</span>
-<span class="nc" id="L101">					contadorReuniones++;</span>
+<span class="nc" id="L86">		int contadorReuniones = 1;</span>
+<span class="nc bnc" id="L87" title="All 2 branches missed.">		for (Reunion reunion : reuniones) {</span>
+<span class="nc" id="L88">			asistentes = reunion.getAsistentes();</span>
+<span class="nc bnc" id="L89" title="All 2 branches missed.">			for (Asistente asistente : asistentes) {</span>
+<span class="nc bnc" id="L90" title="All 2 branches missed.">				if (asistente.getUsuario().equalsIgnoreCase(usuario)) {</span>
+<span class="nc" id="L91">					JSONObject jsoreunion = new JSONObject();</span>
+<span class="nc" id="L92">					jsoreunion.put(&quot;identificador&quot;, reunion.getId());</span>
+<span class="nc" id="L93">					jsoreunion.put(&quot;titulo&quot;, reunion.getTitulo());</span>
+<span class="nc" id="L94">					jsoreunion.put(&quot;id&quot;, contadorReuniones);</span>
+<span class="nc" id="L95">					jsoreunion.put(&quot;hora&quot;, reunion.getHora());</span>
+<span class="nc" id="L96">					jsoreunion.put(&quot;asistentes&quot;, asistentes);</span>
+<span class="nc" id="L97">					jsoreunion.put(&quot;descripcion&quot;, reunion.getDescripcion());</span>
+<span class="nc" id="L98">					jsa.put(jsoreunion);</span>
+<span class="nc" id="L99">					contadorReuniones++;</span>
 				}
-<span class="nc" id="L103">			}</span>
-<span class="nc" id="L104">		}</span>
+			}
+		}
 		
-<span class="nc" id="L106">		jsoret.put(&quot;dia&quot;, jso.getInt(&quot;dia&quot;));</span>
-<span class="nc" id="L107">		jsoret.put(&quot;mes&quot;, jso.getInt(&quot;mes&quot;));</span>
-<span class="nc" id="L108">		jsoret.put(&quot;ano&quot;, jso.getInt(&quot;ano&quot;));</span>
-<span class="nc" id="L109">		jsoret.put(&quot;reuniones&quot;, jsa);</span>
-<span class="nc" id="L110">		return jsoret.toString();</span>
+<span class="nc" id="L104">		jsoret.put(&quot;dia&quot;, jso.getInt(&quot;dia&quot;));</span>
+<span class="nc" id="L105">		jsoret.put(&quot;mes&quot;, jso.getInt(&quot;mes&quot;));</span>
+<span class="nc" id="L106">		jsoret.put(&quot;ano&quot;, jso.getInt(&quot;ano&quot;));</span>
+<span class="nc" id="L107">		jsoret.put(&quot;reuniones&quot;, jsa);</span>
+<span class="nc" id="L108">		return jsoret.toString();</span>
 	}
 
 }

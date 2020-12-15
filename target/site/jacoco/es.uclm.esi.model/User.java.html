@@ -13,72 +13,72 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = &quot;users&quot;)
 public class User {
-  @Id
-  private String id;
+	@Id
+	private String id;
 
-  @NotBlank
-  @Size(max = 20)
-  private String username;
+	@NotBlank
+	@Size(max = 20)
+	private String username;
 
-  @NotBlank
-  @Size(max = 50)
-  @Email
-  private String email;
+	@NotBlank
+	@Size(max = 50)
+	@Email
+	private String email;
 
-  @NotBlank
-  @Size(max = 120)
-  private String password;
+	@NotBlank
+	@Size(max = 120)
+	private String password;
 
-<span class="pc" id="L32">  @DBRef</span>
-  private Set&lt;Role&gt; roles = new HashSet&lt;&gt;();
+	@DBRef
+<span class="pc" id="L33">	private Set&lt;Role&gt; roles = new HashSet&lt;&gt;();</span>
 
-<span class="fc" id="L35">  public User() {</span>
-<span class="fc" id="L36">  }</span>
+<span class="fc" id="L35">	public User() {</span>
+<span class="fc" id="L36">	}</span>
 
-<span class="nc" id="L38">  public User(String username, String email, String password) {</span>
-<span class="nc" id="L39">    this.username = username;</span>
-<span class="nc" id="L40">    this.email = email;</span>
-<span class="nc" id="L41">    this.password = password;</span>
-<span class="nc" id="L42">  }</span>
+<span class="nc" id="L38">	public User(String username, String email, String password) {</span>
+<span class="nc" id="L39">		this.username = username;</span>
+<span class="nc" id="L40">		this.email = email;</span>
+<span class="nc" id="L41">		this.password = password;</span>
+<span class="nc" id="L42">	}</span>
 
-  public String getId() {
-<span class="fc" id="L45">    return id;</span>
-  }
+	public String getId() {
+<span class="fc" id="L45">		return id;</span>
+	}
 
-  public void setId(String id) {
-<span class="nc" id="L49">    this.id = id;</span>
-<span class="nc" id="L50">  }</span>
+	public String getEmail() {
+<span class="fc" id="L49">		return email;</span>
+	}
 
-  public String getUsername() {
-<span class="fc" id="L53">    return username;</span>
-  }
+	public void setEmail(String email) {
+<span class="nc" id="L53">		this.email = email;</span>
+<span class="nc" id="L54">	}</span>
 
-  public void setUsername(String username) {
-<span class="nc" id="L57">    this.username = username;</span>
-<span class="nc" id="L58">  }</span>
+	public void setId(String id) {
+<span class="nc" id="L57">		this.id = id;</span>
+<span class="nc" id="L58">	}</span>
 
-  public String getEmail() {
-<span class="fc" id="L61">    return email;</span>
-  }
+	public String getUsername() {
+<span class="fc" id="L61">		return username;</span>
+	}
 
-  public void setEmail(String email) {
-<span class="nc" id="L65">    this.email = email;</span>
-<span class="nc" id="L66">  }</span>
+	public void setUsername(String username) {
+<span class="nc" id="L65">		this.username = username;</span>
+<span class="nc" id="L66">	}</span>
 
-  public String getPassword() {
-<span class="fc" id="L69">    return password;</span>
-  }
+	public String getPassword() {
+<span class="fc" id="L69">		return password;</span>
+	}
 
-  public void setPassword(String password) {
-<span class="nc" id="L73">    this.password = password;</span>
-<span class="nc" id="L74">  }</span>
+	public void setPassword(String password) {
+<span class="nc" id="L73">		this.password = password;</span>
+<span class="nc" id="L74">	}</span>
 
-  public Set&lt;Role&gt; getRoles() {
-<span class="fc" id="L77">    return roles;</span>
-  }
+	public Set&lt;Role&gt; getRoles() {
+<span class="fc" id="L77">		return roles;</span>
+	}
 
-  public void setRoles(Set&lt;Role&gt; roles) {
-<span class="nc" id="L81">    this.roles = roles;</span>
-<span class="nc" id="L82">  }</span>
+	public void setRoles(Set&lt;Role&gt; roles) {
+<span class="nc" id="L81">		this.roles = roles;</span>
+<span class="nc" id="L82">	}</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

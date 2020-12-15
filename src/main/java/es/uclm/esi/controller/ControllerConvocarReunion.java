@@ -82,9 +82,9 @@
 				@RequestParam(name = "ano") int ano,
 				@RequestParam(name = "hora") String hora,
 				@RequestParam(name = "descripcion") String descripcion){
-			Reunion r = null;
+	
 			if(this.rReuniones.findById(id) !=null) {
-				r = this.rReuniones.findById(id);
+			
 				this.rReuniones.deleteById(id);
 	        	this.rReuniones.insert(new Reunion(id,organizador,titulo,
 						estado,dia,mes,ano,hora,descripcion));
