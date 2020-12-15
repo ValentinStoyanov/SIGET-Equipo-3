@@ -1,35 +1,113 @@
 
-Yes.uclm.esi.controller.ControllerConvocarReunion#numeroDias(Les/uclm/esi/model/Reunion;)Ip
-dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.java– –("2*×
-2p
-dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.java— —(×Ô
-p
-dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.java™
- ™(	
-%0int"#es.uclm.esi.model.Reunion#getMes()I*&
-$
-reuniones.uclm.esi.model.Reunion2getMes()*
-7
-1*Ú
-7p
-dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.java© °(
-×Ô
-p
-dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.javaª ª(!	
-%1int"#es.uclm.esi.model.Reunion#getAno()I*&
-$
-reuniones.uclm.esi.model.Reunion2getAno()ƒ
-€
-p
-dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.java« «(%
-%2boolean"?es.uclm.esi.controller.ControllerConvocarReunion#esBisiesto(I)Z*4"2
-0es.uclm.esi.controller.ControllerConvocarReunion*
-""*
-1*ñ
-1p
-dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.javaµ	 µ("z
-p
-dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.javaµ µ(
-"":$
-reuniones.uclm.esi.model.ReunionB42
+`es.uclm.esi.controller.ControllerConvocarReunion#delete(IIILjava/lang/String;)Ljava/lang/String;
+uC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.java3 3("startingBlock*–
+2
+uC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.java> >(‚
+ÿ
+
+uC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.java> >(0
+%2*es.uclm.esi.repository.RepositoryReuniones"__id*D*B2
+0es.uclm.esi.controller.ControllerConvocarReunion"
+
+rReuniones½º
+
+uC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.java> >(I
+%3es.uclm.esi.model.Reunion"yes.uclm.esi.repository.RepositoryReuniones#findByDiaAndMesAndAnoAndHora(IIILjava/lang/String;)Les/uclm/esi/model/Reunion;*2
+0
+%2*es.uclm.esi.repository.RepositoryReuniones*
+""*
+""*
+""*
+
+horajava.lang.String23findByDiaAndMesAndAnoAndHora(IIILjava/lang/String;)Í
+Ê
+
+uC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.java> >(I
+res.uclm.esi.model.Reunion"__id*!
+
+%3es.uclm.esi.model.Reunion‚
+ÿ
+
+uC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.java@ @(0
+%4*es.uclm.esi.repository.RepositoryReuniones"__id*D*B2
+0es.uclm.esi.controller.ControllerConvocarReunion"
+
+rReunionesÞÛ
+
+uC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.java@ @((	
+%5int""es.uclm.esi.model.Reunion#getId()I* 
+
+res.uclm.esi.model.Reunion2getId()ÊÇ
+
+uC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.java@ @()
+%6es.uclm.esi.model.Reunion"Ses.uclm.esi.repository.RepositoryReuniones#deleteById(I)Les/uclm/esi/model/Reunion;*2
+0
+%4*es.uclm.esi.repository.RepositoryReuniones*
+	
+%5int2deleteById(I)Â
+¿
+
+uC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.javaB B(%
+	resultadojava.lang.String"__id*
+Eliminacion exitosa*
+1*Ú	
+3
+uC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.java8 8(²
+¯
+
+uC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.java8 8(
+res.uclm.esi.model.Reunion"__id*
+""Ñ
+Î
+
+uC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.java: :(;
+	resultadojava.lang.String"__id*&$
+"Operacion de eliminacion sin exito‚
+ÿ
+
+uC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.java< <(0
+%0*es.uclm.esi.repository.RepositoryReuniones"__id*D*B2
+0es.uclm.esi.controller.ControllerConvocarReunion"
+
+rReuniones½º
+
+uC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.java< <(G
+%1es.uclm.esi.model.Reunion"yes.uclm.esi.repository.RepositoryReuniones#findByDiaAndMesAndAnoAndHora(IIILjava/lang/String;)Les/uclm/esi/model/Reunion;*2
+0
+%0*es.uclm.esi.repository.RepositoryReuniones*
+""*
+""*
+""*
+
+horajava.lang.String23findByDiaAndMesAndAnoAndHora(IIILjava/lang/String;)*
+2
+1*»
+startingBlock
+uC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.java3 6(0ì
+é
+
+uC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.java6 6(#
+%7"
+__annotate*86
+4org.springframework.web.bind.annotation.RequestParam*
+
+horajava.lang.String´
+±
+
+uC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.java6+ 6(/
+horajava.lang.String"__annotation*
+
+%7*
+3*©
+1
+uC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.javaH
+ H("¢
+
+uC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.javaH H(
+
+	resultadojava.lang.String:
+"":
+"":
+"":
+horajava.lang.StringB42
 0es.uclm.esi.controller.ControllerConvocarReunion

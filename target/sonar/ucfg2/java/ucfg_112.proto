@@ -1,16 +1,10 @@
 
-Tes.uclm.esi.security.services.UserDetailsImpl#getAuthorities()Ljava/util/Collection;k
-aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.java6/ 6(="1*◊
-1k
-aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.java7	 7(÷
-”
-k
-aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.java7	 7(
-%0java.util.Collection"__id*B*@/
--es.uclm.esi.security.services.UserDetailsImpl"
-authorities"ã
-k
-aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.java7 7(
-
-%0java.util.CollectionB1/
--es.uclm.esi.security.services.UserDetailsImpl
+:es.uclm.esi.payload.request.CalendarioMesRequest#getMes()I
+uC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/payload/request/CalendarioMesRequest.java ("1*ê
+1
+uC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/payload/request/CalendarioMesRequest.java
+ ("â
+
+uC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/payload/request/CalendarioMesRequest.java (
+""B42
+0es.uclm.esi.payload.request.CalendarioMesRequest

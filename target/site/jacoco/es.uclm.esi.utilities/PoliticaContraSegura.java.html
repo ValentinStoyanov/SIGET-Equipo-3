@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PoliticaContraSegura.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">SIGET</a> &gt; <a href="index.source.html" class="el_package">es.uclm.esi.utilities</a> &gt; <span class="el_source">PoliticaContraSegura.java</span></div><h1>PoliticaContraSegura.java</h1><pre class="source lang-java linenums">package es.uclm.esi.utilities;
+
+import org.apache.commons.lang3.StringUtils;
+
+/**
+ * La clase contiene distintas comprobaciones para la contrasena. Se ha
+ * programado de tal manera que se puedan ir llamando a los metodos de uno en
+ * uno, devolviendo true en caso de que cumplan los requisitos y false en caso
+ * de que no para asi poder informar del fallo concreto de la contrasena al
+ * usuario.
+ * 
+ * @author German
+ *
+ */
+
+public class PoliticaContraSegura {
+
+<span class="nc" id="L18">	private PoliticaContraSegura() {</span>
+<span class="nc" id="L19">		throw new IllegalStateException(&quot;Clase de utilidades&quot;);</span>
+	}
+
+	/**
+	 * Metodo para comprobar que la contrasena tiene más de 8 caracteres
+	 * 
+	 * @author German
+	 * @param String contrasena a comprobar
+	 * @return boolean, true en caso de que cumpla el requisito, false en caso
+	 *         contrario
+	 */
+
+	public static boolean caracteres(String contra) {
+<span class="nc bnc" id="L32" title="All 2 branches missed.">		return contra.length() &gt; 8;</span>
+	}
+
+	/**
+	 * Metodo para comprobar que la contrasena tiene, al menos, un número
+	 * 
+	 * @author German
+	 * @param String contrasena a comprobar
+	 * @return boolean, true en caso de que cumpla el requisito, false en caso
+	 *         contrario
+	 */
+
+	public static boolean numero(String contra) {
+<span class="nc bnc" id="L45" title="All 2 branches missed.">		for (int i = 0; i &lt; contra.length(); i++) {</span>
+<span class="nc bnc" id="L46" title="All 2 branches missed.">			if (esNumerico(String.valueOf(contra.charAt(i))))</span>
+<span class="nc" id="L47">				return true;</span>
+		}
+<span class="nc" id="L49">		return false;</span>
+	}
+
+	/**
+	 * Metodo para comprobar si es numerico
+	 * 
+	 * @param String contrasena a comprobar
+	 * @return boolean, true en caso de que cumpla el requisito, false en caso
+	 *         contrario
+	 */
+
+	public static boolean esNumerico(String str) {
+		try {
+<span class="nc" id="L62">			Double.parseDouble(str);</span>
+<span class="nc" id="L63">		} catch (NumberFormatException nfe) {</span>
+<span class="nc" id="L64">			return false;</span>
+<span class="nc" id="L65">		}</span>
+<span class="nc" id="L66">		return true;</span>
+	}
+
+	/**
+	 * Metodo para comprobar que tiene, al menos, una mayuscula
+	 * 
+	 * @author German
+	 * @param String contrasena a comprobar
+	 * @return boolean, true en caso de que cumpla el requisito, false en caso
+	 *         contrario
+	 */
+
+	public static boolean mayuscula(String contra) {
+<span class="nc bnc" id="L79" title="All 2 branches missed.">		for (int i = 0; i &lt; contra.length(); i++)</span>
+<span class="nc bnc" id="L80" title="All 2 branches missed.">			if (Character.isUpperCase(contra.charAt(i)))</span>
+<span class="nc" id="L81">				return true;</span>
+<span class="nc" id="L82">		return false;</span>
+	}
+
+	/**
+	 * Metodo para comprobar que tiene, al menos, una minúscula
+	 * 
+	 * @author German
+	 * @param String contrasena a comprobar
+	 * @return boolean, true en caso de que cumpla el requisito, false en caso
+	 *         contrario
+	 */
+
+	public static boolean minuscula(String contra) {
+<span class="nc bnc" id="L95" title="All 2 branches missed.">		for (int i = 0; i &lt; contra.length(); i++)</span>
+<span class="nc bnc" id="L96" title="All 2 branches missed.">			if (Character.isLowerCase(contra.charAt(i)))</span>
+<span class="nc" id="L97">				return true;</span>
+<span class="nc" id="L98">		return false;</span>
+	}
+
+	/**
+	 * Metodo para comprobar que solo tiene caracteres alfanumericos sin espacios.
+	 * En caso de querer espacios podría usar isAlphanumericSpace().
+	 * 
+	 * @author German
+	 * @param String contrasena a comprobar
+	 * @return boolean, true en caso de que cumpla el requisito, false en caso
+	 *         contrario
+	 */
+
+	public static boolean alfanum(String contra) {
+<span class="nc" id="L112">		return StringUtils.isAlphanumeric(contra);</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

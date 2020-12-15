@@ -1,17 +1,16 @@
 
-6es.uclm.esi.model.User#getPassword()Ljava/lang/String;T
-JC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/User.javaD D("1*Ô
-1T
-JC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/User.javaE E(°
-û
-T
-JC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/User.javaE E(
-%0java.lang.String"__id*(*&
-es.uclm.esi.model.User"
-
-password"p
-T
-JC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/User.javaE E(
+0es.uclm.esi.model.User#getId()Ljava/lang/String;e
+[C:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/model/User.java, ,("1*ù
+1e
+[C:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/model/User.java- -(¨
+©
+e
+[C:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/model/User.java- -(
+%0java.lang.String"__id*"* 
+es.uclm.esi.model.User"
+id"Å
+e
+[C:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/model/User.java- -(
 
 %0java.lang.StringB
 es.uclm.esi.model.User

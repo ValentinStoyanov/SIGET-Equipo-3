@@ -1,16 +1,17 @@
 
-0es.uclm.esi.model.User#getRoles()Ljava/util/Set;T
-JC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/User.javaL L("1*Ê
-1T
-JC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/User.javaM M(õ
-ò
-T
-JC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/User.javaM M(
-%0java.util.Set"__id*%*#
-es.uclm.esi.model.User"
-roles"m
-T
-JC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/User.javaM M(
-
-%0java.util.SetB
+6es.uclm.esi.model.User#getUsername()Ljava/lang/String;e
+[C:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/model/User.java4 4("1*£
+1e
+[C:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/model/User.java5 5(≤
+Ø
+e
+[C:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/model/User.java5 5(
+%0java.lang.String"__id*(*&
+es.uclm.esi.model.User"
+
+username"Å
+e
+[C:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/model/User.java5 5(
+
+%0java.lang.StringB
 es.uclm.esi.model.User

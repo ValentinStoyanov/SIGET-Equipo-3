@@ -1,43 +1,9 @@
 
-Ies.uclm.esi.utilities.PoliticaContraSegura#mayuscula(Ljava/lang/String;)Zh
-^C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/utilities/PoliticaContraSegura.javaN N( "5*·
-3h
-^C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/utilities/PoliticaContraSegura.javaQ Q("r
-h
-^C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/utilities/PoliticaContraSegura.javaQ Q(
-""*ä
-4h
-^C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/utilities/PoliticaContraSegura.javaP P(«ƒ
-h
-^C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/utilities/PoliticaContraSegura.javaP P(-
-
-%1char"java.lang.String#charAt(I)C*
-
-contrajava.lang.String*
-""2	charAt(I)»
-≈
-h
-^C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/utilities/PoliticaContraSegura.javaP P(.
-%2boolean"#java.lang.Character#isUpperCase(C)Z*"
-java.lang.Character*
-
-
-%1char*
-3
-5*¥
-5h
-^C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/utilities/PoliticaContraSegura.javaO O(ºπ
-h
-^C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/utilities/PoliticaContraSegura.javaO O(%	
-%0int"java.lang.String#length()I*
-
-contrajava.lang.String2length()*
-4
-1*·
-1h
-^C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/utilities/PoliticaContraSegura.javaR	 R("r
-h
-^C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/utilities/PoliticaContraSegura.javaR R(
-"":
-contrajava.lang.StringB.",
-*es.uclm.esi.utilities.PoliticaContraSegura
+Jes.uclm.esi.controller.TestRolesController#adminAccess()Ljava/lang/String;y
+oC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/TestRolesController.java ("1*é
+1y
+oC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/TestRolesController.java	 ("ç
+y
+oC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/TestRolesController.java (
+Admin Board.B.,
+*es.uclm.esi.controller.TestRolesController

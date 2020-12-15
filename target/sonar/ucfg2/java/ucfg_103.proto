@@ -1,16 +1,42 @@
 
-9es.uclm.esi.model.Role#getName()Les/uclm/esi/model/ERole;T
-JC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Role.java ("1*ù
-1T
-JC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Role.java (¤
-¡
-T
-JC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Role.java (
-%0es.uclm.esi.model.ERole"__id*$*"
-es.uclm.esi.model.Role"
-name"w
-T
-JC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Role.java (
-
-%0es.uclm.esi.model.ERoleB
-es.uclm.esi.model.Role
+ƒes.uclm.esi.config.TomcatConfig#webServerFactory()Lorg/springframework/boot/web/servlet/server/ConfigurableServletWebServerFactory;n
+dC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/config/TomcatConfig.java, (<"1*À
+1n
+dC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/config/TomcatConfig.java* (M‘Ž
+n
+dC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/config/TomcatConfig.java. (KP
+%0Jorg.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory"Jorg.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory£
+ 
+n
+dC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/config/TomcatConfig.java* (M
+%1"Torg.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory#<init>()V*R
+P
+%0Jorg.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory¤
+¡
+n
+dC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/config/TomcatConfig.java (NU
+factoryJorg.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory"__id*R
+P
+%0Jorg.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory¿¼
+n
+dC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/config/TomcatConfig.java& (?'
+%2!es.uclm.esi.config.TomcatConfig$1"!es.uclm.esi.config.TomcatConfig$1À
+½
+n
+dC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/config/TomcatConfig.java" (
+%3"java.lang.Object#<init>()V*)
+'
+%2!es.uclm.esi.config.TomcatConfig$1˜•
+n
+dC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/config/TomcatConfig.java (
+
+%4void"®org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory#addConnectorCustomizers([Lorg/springframework/boot/web/embedded/tomcat/TomcatConnectorCustomizer;)V*W
+U
+factoryJorg.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory*)
+'
+%2!es.uclm.esi.config.TomcatConfig$12baddConnectorCustomizers([Lorg/springframework/boot/web/embedded/tomcat/TomcatConnectorCustomizer;)"É
+n
+dC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/config/TomcatConfig.java (W
+U
+factoryJorg.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactoryB#!
+es.uclm.esi.config.TomcatConfig

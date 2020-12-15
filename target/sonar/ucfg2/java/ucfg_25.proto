@@ -1,16 +1,17 @@
 
-7es.uclm.esi.model.Reunion#getEstado()Ljava/lang/String;W
-MC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Reunion.java{ {("1*ù
-1W
-MC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Reunion.java|	 |(¥
-¢
-W
-MC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Reunion.java|	 |(
-%0java.lang.String"__id*)*'
-es.uclm.esi.model.Reunion"
-estado"s
-W
-MC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Reunion.java| |(
-
-%0java.lang.StringB
+>es.uclm.esi.model.Reunion#getAsistentes()Ljava/util/ArrayList;h
+^C:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/model/Reunion.javag g(*"1*·
+1h
+^C:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/model/Reunion.javah	 h(½
+º
+h
+^C:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/model/Reunion.javah	 h(
+%0java.util.ArrayList"__id*-*+
+es.uclm.esi.model.Reunion"
+
+asistentes"‡
+h
+^C:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/model/Reunion.javah h(
+
+%0java.util.ArrayListB
 es.uclm.esi.model.Reunion

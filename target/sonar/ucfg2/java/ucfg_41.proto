@@ -1,16 +1,18 @@
 
-9es.uclm.esi.model.Asistente#getEstado()Ljava/lang/String;Y
-OC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Asistente.java ("1*Å
-1Y
-OC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Asistente.java	 (©
-¶
-Y
-OC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Asistente.java	 (
-%0java.lang.String"__id*+*)
-es.uclm.esi.model.Asistente"
-estado"u
-Y
-OC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Asistente.java (
+Kes.uclm.esi.payload.response.MessageResponse#getMessage()Ljava/lang/String;{
+qC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/payload/response/MessageResponse.java
+ 
+("1*˙
+1{
+qC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/payload/response/MessageResponse.java	 (›
+⁄
+{
+qC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/payload/response/MessageResponse.java	 (
+%0java.lang.String"__id*=*;.
+,es.uclm.esi.payload.response.MessageResponse"	
+message"ó
+{
+qC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/payload/response/MessageResponse.java (
 
-%0java.lang.StringB
-es.uclm.esi.model.Asistente
+%0java.lang.StringB0.
+,es.uclm.esi.payload.response.MessageResponse

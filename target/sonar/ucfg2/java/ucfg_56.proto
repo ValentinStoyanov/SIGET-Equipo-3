@@ -1,16 +1,16 @@
 
-Ces.uclm.esi.payload.response.JwtResponse#getRoles()Ljava/util/List;f
-\C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/payload/response/JwtResponse.java= =("1*±
-1f
-\C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/payload/response/JwtResponse.java>	 >(À
-½
-f
-\C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/payload/response/JwtResponse.java>	 >(
-%0java.util.List"__id*7*5*
-(es.uclm.esi.payload.response.JwtResponse"
-roles"€
-f
-\C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/payload/response/JwtResponse.java> >(
-
-%0java.util.ListB,*
+Bes.uclm.esi.payload.response.JwtResponse#getId()Ljava/lang/String;w
+mC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/payload/response/JwtResponse.java% %("1*å
+1w
+mC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/payload/response/JwtResponse.java&	 &(Ð
+Í
+w
+mC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/payload/response/JwtResponse.java&	 &(
+%0java.lang.String"__id*4*2*
+(es.uclm.esi.payload.response.JwtResponse"
+id"“
+w
+mC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/payload/response/JwtResponse.java& &(
+
+%0java.lang.StringB,*
 (es.uclm.esi.payload.response.JwtResponse

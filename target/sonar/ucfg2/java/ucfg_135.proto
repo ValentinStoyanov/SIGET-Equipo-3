@@ -1,19 +1,19 @@
 
-ves.uclm.esi.security.WebSecurityConfig#passwordEncoder()Lorg/springframework/security/crypto/password/PasswordEncoder;d
-ZC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/WebSecurityConfig.java5 5('"1*š
-1d
-ZC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/WebSecurityConfig.java6	 6($óð
-d
-ZC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/WebSecurityConfig.java6 6("F
-%0@org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"@org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder…
-‚
-d
-ZC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/WebSecurityConfig.java6	 6($
-%1"Jorg.springframework.security.crypto.bcrypt.BCryptPasswordEncoder#<init>()V*H
-F
-%0@org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"°
-d
-ZC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/WebSecurityConfig.java6 6(%H
-F
-%0@org.springframework.security.crypto.bcrypt.BCryptPasswordEncoderB*(
+oes.uclm.esi.security.WebSecurityConfig#authenticationJwtTokenFilter()Les/uclm/esi/security/jwt/AuthTokenFilter;u
+kC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/security/WebSecurityConfig.java% %(4"1*æ
+1u
+kC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/security/WebSecurityConfig.java&	 &(ÔÑ
+u
+kC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/security/WebSecurityConfig.java& &(.
+%0(es.uclm.esi.security.jwt.AuthTokenFilter"(es.uclm.esi.security.jwt.AuthTokenFilteræ
+ã
+u
+kC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/security/WebSecurityConfig.java&	 &(
+%1"2es.uclm.esi.security.jwt.AuthTokenFilter#<init>()V*0
+.
+%0(es.uclm.esi.security.jwt.AuthTokenFilter"©
+u
+kC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/security/WebSecurityConfig.java& &(0
+.
+%0(es.uclm.esi.security.jwt.AuthTokenFilterB*(
 &es.uclm.esi.security.WebSecurityConfig

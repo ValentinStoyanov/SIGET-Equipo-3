@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ControllerConvocarReunion.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">SIGET</a> &gt; <a href="index.source.html" class="el_package">es.uclm.esi.controller</a> &gt; <span class="el_source">ControllerConvocarReunion.java</span></div><h1>ControllerConvocarReunion.java</h1><pre class="source lang-java linenums">	package es.uclm.esi.controller;
+
+	import java.util.ArrayList;
+	import java.util.GregorianCalendar;
+	import java.util.List;
+	import java.util.Map;
+
+	import org.json.JSONArray;
+	import org.json.JSONObject;
+	import org.springframework.beans.factory.annotation.Autowired;
+	import org.springframework.beans.factory.annotation.Value;
+	import org.springframework.http.HttpStatus;
+	import org.springframework.http.ResponseEntity;
+	import org.springframework.security.access.prepost.PreAuthorize;
+	import org.springframework.web.bind.annotation.CrossOrigin;
+	import org.springframework.web.bind.annotation.PostMapping;
+	import org.springframework.web.bind.annotation.RequestBody;
+	import org.springframework.web.bind.annotation.RequestHeader;
+	import org.springframework.web.bind.annotation.RequestMapping;
+	import org.springframework.web.bind.annotation.RequestParam;
+	import org.springframework.web.bind.annotation.RestController;
+
+	import es.uclm.esi.model.Asistente;
+	import es.uclm.esi.model.Reunion;
+	import es.uclm.esi.model.User;
+	import es.uclm.esi.repository.RepositoryReuniones;
+	import es.uclm.esi.repository.UserRepository;
+	import es.uclm.esi.security.jwt.JwtUtils;
+
+	import io.jsonwebtoken.Jwts;
+
+	@CrossOrigin(origins = &quot;*&quot;, maxAge = 3600)
+	@RestController
+	@RequestMapping(value=&quot;/reunion&quot;)
+<span class="fc" id="L35">	public class ControllerConvocarReunion {</span>
+		
+		@Autowired
+		RepositoryReuniones rReuniones;
+		
+		@Autowired
+		UserRepository usuarios;
+		
+		@Autowired
+		JwtUtils jwt;
+		
+		@Value(&quot;${siget.app.jwtSecret}&quot;)
+		private String jwtSecret;
+
+		
+		@PostMapping(&quot;delete&quot;)
+	    public String delete(@RequestParam(name = &quot;dia&quot;) int  dia,
+	    		@RequestParam(name = &quot;mes&quot;) int mes,
+	    		@RequestParam(name = &quot;ano&quot;) int ano,
+	    		@RequestParam(name = &quot;hora&quot;) String hora){
+			
+<span class="nc" id="L56">			Reunion r = null;</span>
+			
+<span class="nc" id="L58">			String resultado = &quot;Operacion de eliminacion sin exito&quot;;</span>
+			
+<span class="nc bnc" id="L60" title="All 2 branches missed.">			if(this.rReuniones.findByDiaAndMesAndAnoAndHora(dia, mes, ano, hora)!=null) {</span>
+				
+<span class="nc" id="L62">				r = this.rReuniones.findByDiaAndMesAndAnoAndHora(dia, mes, ano, hora);</span>
+				
+<span class="nc" id="L64">				this.rReuniones.deleteById(r.getId());</span>
+				
+<span class="nc" id="L66">				resultado = &quot;Eliminacion exitosa&quot;;</span>
+				
+			}
+			
+			
+			
+<span class="nc" id="L72">			return resultado;</span>
+		}
+		
+		@PostMapping(value = &quot;/update&quot;)
+		public String update(@RequestParam(name = &quot;id&quot;) int id,
+	    		@RequestParam(name = &quot;organizador&quot;) String organizador,
+	    		@RequestParam(name = &quot;titulo&quot;) String titulo,
+	    		@RequestParam(name = &quot;estado&quot;) String estado,
+	    		@RequestParam(name = &quot;dia&quot;) int dia,
+	    		@RequestParam(name = &quot;mes&quot;) int mes,
+				@RequestParam(name = &quot;ano&quot;) int ano,
+				@RequestParam(name = &quot;hora&quot;) String hora,
+				@RequestParam(name = &quot;descripcion&quot;) String descripcion){
+<span class="nc" id="L85">			Reunion r = null;</span>
+<span class="nc bnc" id="L86" title="All 2 branches missed.">			if(this.rReuniones.findById(id) !=null) {</span>
+<span class="nc" id="L87">				r = this.rReuniones.findById(id);</span>
+<span class="nc" id="L88">				this.rReuniones.deleteById(id);</span>
+<span class="nc" id="L89">	        	this.rReuniones.insert(new Reunion(id,organizador,titulo,</span>
+						estado,dia,mes,ano,hora,descripcion));
+<span class="nc" id="L91">	        	return &quot;Se ha modificado&quot;;</span>
+	        }
+<span class="nc" id="L93">	        return &quot;No hace nada&quot;;</span>
+	    }
+		
+		
+		@PostMapping(value = &quot;/convocar&quot;)
+		@PreAuthorize(&quot;hasRole('USER') or hasRole('ADMIN')&quot;)
+		public ResponseEntity&lt;HttpStatus&gt; convocarReunion(@RequestBody Map&lt;String, Object&gt; entrada,
+				@RequestHeader(&quot;Authorization&quot;) String token) {
+<span class="nc" id="L101">			JSONObject reu = new JSONObject(entrada);</span>
+<span class="nc" id="L102">			String nombreOrganizador = Jwts.parser().setSigningKey(jwtSecret)</span>
+<span class="nc" id="L103">					.parseClaimsJws(token.substring(7, token.length())).getBody().getSubject();</span>
+<span class="nc" id="L104">			Reunion reunion = new Reunion();</span>
+<span class="nc" id="L105">			reunion.setOrganizador(nombreOrganizador);</span>
+			
+<span class="nc" id="L107">			reunion.setId(last());</span>
+			
+<span class="nc" id="L109">			reunion.setEstado(&quot;pendiente&quot;);</span>
+<span class="nc" id="L110">			reunion.setTitulo(reu.getString(&quot;titulo&quot;));	</span>
+			
+<span class="nc" id="L112">			JSONArray asistentes = (JSONArray) reu.get(&quot;asistentes&quot;);</span>
+<span class="nc" id="L113">			ArrayList&lt;Asistente&gt; asistentesR = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L114">			boolean existe = false;</span>
+<span class="nc bnc" id="L115" title="All 2 branches missed.">			for (int i = 0; i &lt; asistentes.length(); i++) {</span>
+<span class="nc" id="L116">				String nombre = (String) asistentes.get(i);</span>
+<span class="nc" id="L117">				String estado = &quot;pendiente&quot;;</span>
+<span class="nc bnc" id="L118" title="All 2 branches missed.">				if(nombre.equals(nombreOrganizador)) {</span>
+<span class="nc" id="L119">					existe = true;</span>
+				}
+<span class="nc" id="L121">				asistentesR.add(new Asistente(nombre,estado));</span>
+			}
+<span class="nc bnc" id="L123" title="All 2 branches missed.">			if(!existe) {</span>
+<span class="nc" id="L124">				asistentesR.add(new Asistente(nombreOrganizador,&quot;aceptada&quot;));</span>
+			}
+<span class="nc" id="L126">			reunion.setAsistentes(asistentesR);</span>
+			
+			int dia;
+			int mes;
+			int ano;
+<span class="nc" id="L131">			String[] parts = reu.getString(&quot;fecha&quot;).split(&quot;-&quot;);</span>
+<span class="nc" id="L132">			ano = Integer.parseInt(parts[0]);</span>
+<span class="nc" id="L133">			mes = Integer.parseInt(parts[1]);</span>
+<span class="nc" id="L134">			dia = Integer.parseInt(parts[2]);</span>
+<span class="nc" id="L135">			reunion.setDia(dia);</span>
+<span class="nc" id="L136">			reunion.setMes(mes);</span>
+<span class="nc" id="L137">			reunion.setAno(ano);</span>
+			
+<span class="nc" id="L139">			reunion.setHora(reu.getString(&quot;hora&quot;));</span>
+<span class="nc" id="L140">			reunion.setDescripcion(reu.getString(&quot;descripcion&quot;));</span>
+			
+<span class="nc bnc" id="L142" title="All 2 branches missed.">			if (filtroRestricciones(reunion)) {</span>
+<span class="nc" id="L143">				rReuniones.save(reunion);</span>
+<span class="nc" id="L144">				return new ResponseEntity&lt;&gt;(HttpStatus.OK);</span>
+			}else {
+<span class="nc" id="L146">				return new ResponseEntity&lt;&gt;(HttpStatus.BAD_REQUEST);</span>
+			}
+		}
+		
+		@PostMapping(&quot;/getAsistentes&quot;)
+		@PreAuthorize(&quot;hasRole('USER') or hasRole('ADMIN')&quot;)
+		public String getAsistentes(@RequestBody Map&lt;String, Object&gt; entrada,
+				@RequestHeader(&quot;Authorization&quot;) String token) {
+<span class="nc" id="L154">			JSONObject jsoresp = new JSONObject();</span>
+<span class="nc" id="L155">			JSONArray jsa = new JSONArray();</span>
+<span class="nc" id="L156">			List&lt;User&gt; listaUsuarios = usuarios.findAll();</span>
+<span class="nc bnc" id="L157" title="All 2 branches missed.">			for (User user : listaUsuarios) {</span>
+<span class="nc" id="L158">				jsa.put(user.getUsername());</span>
+<span class="nc" id="L159">			}</span>
+<span class="nc" id="L160">			jsoresp.put(&quot;usuarios&quot;, jsa);</span>
+<span class="nc" id="L161">			return jsoresp.toString();</span>
+		}
+		
+		public int last() {
+			Reunion reun;
+			try {
+<span class="nc" id="L167">				reun = rReuniones.findFirstByOrderByIdDesc();</span>
+<span class="nc" id="L168">				return reun.getId()+1;</span>
+<span class="nc" id="L169">			} catch(Exception e) {</span>
+<span class="nc" id="L170">				return 1;</span>
+			}
+		}
+		
+		//FILTROS
+		public boolean filtroRestricciones(Reunion reunion) {
+<span class="nc" id="L176">			boolean ok=true;</span>
+<span class="nc bnc" id="L177" title="All 2 branches missed.">			if(reunion.getTitulo().equals(&quot;&quot;)) {</span>
+<span class="nc" id="L178">				ok=false;</span>
+			}
+<span class="nc bnc" id="L180" title="All 4 branches missed.">			if(reunion.getDia() &lt;1 || reunion.getDia() &gt; numeroDias(reunion)) {</span>
+<span class="nc" id="L181">				ok=false;</span>
+			}
+<span class="nc bnc" id="L183" title="All 4 branches missed.">			if(reunion.getMes() &lt;1 || reunion.getMes()&gt;12) {</span>
+<span class="nc" id="L184">				ok=false;</span>
+			}
+<span class="nc bnc" id="L186" title="All 2 branches missed.">			if(reunion.getAno() &lt; 2020) {</span>
+<span class="nc" id="L187">				ok=false;</span>
+			}
+<span class="nc bnc" id="L189" title="All 2 branches missed.">			if(reunion.getHora().equals(&quot;&quot;)) {</span>
+<span class="nc" id="L190">				ok=false;</span>
+			}
+<span class="nc bnc" id="L192" title="All 2 branches missed.">			if(reunion.getDescripcion().equals(&quot;&quot;)) {</span>
+<span class="nc" id="L193">				ok=false;</span>
+			}
+<span class="nc bnc" id="L195" title="All 2 branches missed.">			if(reunion.getAsistentes() == null) {</span>
+<span class="nc" id="L196">				ok=false;</span>
+			}
+<span class="nc" id="L198">			return ok;</span>
+		}
+		
+		public int numeroDias(Reunion reunion) {
+<span class="nc" id="L202">			int numeroDias = 0;</span>
+			int anioActual;
+<span class="nc bnc" id="L204" title="All 4 branches missed.">			switch (reunion.getMes()) {</span>
+				case 1:
+				case 3:
+				case 5:
+				case 7:
+				case 8:
+				case 10:
+				case 12:
+<span class="nc" id="L212">					numeroDias = 31;</span>
+<span class="nc" id="L213">					break;</span>
+				case 4:
+				case 6:
+				case 9:
+				case 11:
+<span class="nc" id="L218">					numeroDias = 30;</span>
+<span class="nc" id="L219">					break;</span>
+				case 2:
+<span class="nc" id="L221">					anioActual = reunion.getAno();</span>
+<span class="nc bnc" id="L222" title="All 2 branches missed.">					if (esBisiesto(1900 + anioActual)) {</span>
+<span class="nc" id="L223">						numeroDias = 29;</span>
+					} else {
+<span class="nc" id="L225">						numeroDias = 28;</span>
+					}
+<span class="nc" id="L227">					break;</span>
+				default:
+					break;
+				}
+
+<span class="nc" id="L232">			return numeroDias;</span>
+		}
+
+		public static boolean esBisiesto(int anio) {
+
+<span class="nc" id="L237">			GregorianCalendar calendar = new GregorianCalendar();</span>
+<span class="nc" id="L238">			boolean esBisiesto = false;</span>
+<span class="nc bnc" id="L239" title="All 2 branches missed.">			if (calendar.isLeapYear(anio)) {</span>
+<span class="nc" id="L240">				esBisiesto = true;</span>
+			}
+<span class="nc" id="L242">			return esBisiesto;</span>
+
+		}
+
+	}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

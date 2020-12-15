@@ -1,16 +1,16 @@
 
-Ees.uclm.esi.payload.response.JwtResponse#getEmail()Ljava/lang/String;f
-\C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/payload/response/JwtResponse.java- -("1*µ
-1f
-\C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/payload/response/JwtResponse.java.	 .(Â
-¿
-f
-\C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/payload/response/JwtResponse.java.	 .(
+Kes.uclm.esi.payload.response.JwtResponse#getAccessToken()Ljava/lang/String;w
+mC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/payload/response/JwtResponse.java ("1*è
+1w
+mC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/payload/response/JwtResponse.java	 (Ó
+Ð
+w
+mC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/payload/response/JwtResponse.java	 (
 %0java.lang.String"__id*7*5*
 (es.uclm.esi.payload.response.JwtResponse"
-email"‚
-f
-\C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/payload/response/JwtResponse.java. .(
+token"“
+w
+mC:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/payload/response/JwtResponse.java (
 
 %0java.lang.StringB,*
 (es.uclm.esi.payload.response.JwtResponse

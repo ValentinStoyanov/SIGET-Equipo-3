@@ -1,16 +1,17 @@
 
-Fes.uclm.esi.payload.request.SignupRequest#getEmail()Ljava/lang/String;g
-]C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/payload/request/SignupRequest.java ("1*π
-1g
-]C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/payload/request/SignupRequest.java   (ƒ
-¡
-g
-]C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/payload/request/SignupRequest.java   (
-%0java.lang.String"__id*8*6+
-)es.uclm.esi.payload.request.SignupRequest"
-email"É
-g
-]C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/payload/request/SignupRequest.java   (
+6es.uclm.esi.model.User#getPassword()Ljava/lang/String;e
+[C:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/model/User.javaD D("1*£
+1e
+[C:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/model/User.javaE E(≤
+Ø
+e
+[C:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/model/User.javaE E(
+%0java.lang.String"__id*(*&
+es.uclm.esi.model.User"
+
+password"Å
+e
+[C:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/model/User.javaE E(
 
-%0java.lang.StringB-+
-)es.uclm.esi.payload.request.SignupRequest
+%0java.lang.StringB
+es.uclm.esi.model.User

@@ -1,17 +1,39 @@
 
-Hes.uclm.esi.payload.request.LoginRequest#getPassword()Ljava/lang/String;f
-\C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/payload/request/LoginRequest.java ("1*¸
-1f
-\C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/payload/request/LoginRequest.java	 (Å
-Â
-f
-\C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/payload/request/LoginRequest.java	 (
-%0java.lang.String"__id*:*8*
-(es.uclm.esi.payload.request.LoginRequest"
+’es.uclm.esi.controller.ControllerCancelarAceptarReunion#aceptarReunion(Ljava/util/Map;Ljava/lang/String;)Lorg/springframework/http/ResponseEntity;†
+|C:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/ControllerCancelarAceptarReunion.javaU# U(1"startingBlock*Ù
+startingBlock‡
+|C:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/ControllerCancelarAceptarReunion.javaU1 U(†ö
+ó
+†
+|C:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/ControllerCancelarAceptarReunion.javaUY U(x
+%1"
+__annotate*97
+5org.springframework.web.bind.annotation.RequestHeader*
+
+tokenjava.lang.String¿
+¼
+ˆ
+|C:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/ControllerCancelarAceptarReunion.javaU€ U(…
+tokenjava.lang.String"__annotation*
+
+%1*
+1*ï
+1†
+|C:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/ControllerCancelarAceptarReunion.javaV	 V(£ 
+†
+|C:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/ControllerCancelarAceptarReunion.javaV	 V(--
+%0'org.springframework.http.ResponseEntity"¢es.uclm.esi.controller.ControllerCancelarAceptarReunion#comprobacion(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)Lorg/springframework/http/ResponseEntity;*;9
+7es.uclm.esi.controller.ControllerCancelarAceptarReunion*
+
+reqjava.util.Map*
 
-password"‚
-f
-\C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/payload/request/LoginRequest.java (
-
-%0java.lang.StringB,*
-(es.uclm.esi.payload.request.LoginRequest
+Aceptado*
+
+tokenjava.lang.String2Acomprobacion(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)"º
+†
+|C:/Users/Valentin/Documents/GitHub/SIGET-Equipo-3/src/main/java/es/uclm/esi/controller/ControllerCancelarAceptarReunion.javaV V(./
+-
+%0'org.springframework.http.ResponseEntity:
+reqjava.util.Map:
+tokenjava.lang.StringB;9
+7es.uclm.esi.controller.ControllerCancelarAceptarReunion
